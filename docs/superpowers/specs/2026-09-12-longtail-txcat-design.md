@@ -198,8 +198,10 @@ Figures saved as PDF + PNG. All tables CSV. Every experiment takes `--config`, `
   ids, prompt hashes, HNSW params, git commit, timestamp, host, Python/lib versions to
   `results/logs/run_<ts>.json`.
 - `prompts/model_versions.json` pins every model id and the Brave snapshot date.
-- Seeds: `PYTHONHASHSEED`, `random`, `numpy`, `torch`, hnswlib `random_seed`. **3 seeds for
-  development, 5 for the final paper run.**
+- Seeds: `random`, `numpy`, `torch`, hnswlib `random_seed` (single-threaded inserts). Anything that
+  samples uses an explicit `np.random.default_rng(seed)`; `set_seed` is a best-effort global helper.
+  `PYTHONHASHSEED` is set in the Dockerfile/`reproduce.py` environment, not from inside Python.
+  **3 seeds for development, 5 for the final paper run.**
 - **Hard API spend cap** in config (`budget.max_usd`, default 40). Every live client accumulates
   estimated spend in `cache/spend_ledger.json` and raises `BudgetExceeded` before the call that
   would cross the cap.

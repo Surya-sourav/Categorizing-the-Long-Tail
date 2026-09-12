@@ -56,7 +56,7 @@ Processed transaction schema (every loader must emit exactly this):
 | column | dtype | meaning |
 |---|---|---|
 | `txn_id` | str | source row id, prefixed with source (`dc:123`, `ok:AAAJ...`) |
-| `date` | datetime64[ns] | transaction date |
+| `date` | datetime64 (pandas 3 emits `[us]`; check with `is_datetime64_any_dtype`, never a literal `[ns]`) | transaction date |
 | `raw_merchant` | str | descriptor exactly as posted |
 | `mcc_description` | str | label text exactly as posted |
 | `source` | str | `dc` or `ok` |

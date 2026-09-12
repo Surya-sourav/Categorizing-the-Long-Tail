@@ -1751,7 +1751,7 @@ if __name__ == "__main__":
 
 - [ ] **Step 5: README** — replace the stub with sections: Overview (paper title, author), Evidence stack (DC / Oklahoma / generator / DoDataThings table), Setup (uv), Data download (never redistributed), Reproduce from cache (`python reproduce.py ...`), Re-running the live cache pass (keys, spend cap, resumability), Repository layout, Privacy statement (only normalized merchant strings leave the machine), Taxonomy (mcc_to_category.csv, ambiguous codes, label-noise audit), Citation placeholder. No employer mentioned anywhere.
 
-- [ ] **Step 6: Cache size check and commit**
+- [ ] **Step 6: Cache size check and commit.** `.gitignore` currently ignores `cache/embeddings/*/vectors.npy` (added in Day 1 Task 0 while caches were unfrozen). A fresh clone would then have `keys.json` pointing at vectors that do not exist and `reproduce.py` would raise on every text. Resolve it here, one way or the other:
 ```bash
 du -sh cache/web_search cache/llm cache/embeddings
 ```
