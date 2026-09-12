@@ -27,10 +27,17 @@ def main() -> None:
     if "mcc_codes" in args.targets:
         dest = Path(cfg.taxonomy_dir) / "mcc_codes_source.csv"
         dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_bytes(requests.get(MCC_CODES_URL, timeout=60).content)
+        r = requests.get(MCC_CODES_URL, timeout=60)
+        r.raise_for_status()
+        first_line = r.content.split(b"\n", 1)[0]
+        if not first_line.startswith(b"mcc,"):
+            raise RuntimeError(f"{MCC_CODES_URL} is not the expected CSV (header: {first_line!r})")
+        dest.write_bytes(r.content)
         logger.info(f"mcc codes -> {dest}")
     if "dc" in args.targets:
         d = cfg.datasets["dc"]
+        if d.window is None:
+            raise RuntimeError("dataset 'dc' has no window; set datasets.dc.window.train_start")
         dc.download_dc(d.raw_dir, start_date=d.window.train_start)
         dc.build_processed(d.raw_dir, d.processed_path)
     if "oklahoma" in args.targets:

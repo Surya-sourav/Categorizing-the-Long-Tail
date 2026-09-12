@@ -7,13 +7,16 @@ vendor state never leave the API response.
 from __future__ import annotations
 
 import json
+import os
 import time
+from datetime import UTC, datetime
 from pathlib import Path
 
 import pandas as pd
 import requests
 from loguru import logger
 
+from txcat.data import RETRIES, is_fatal_http_error
 from txcat.data.schema import PROCESSED_COLUMNS, validate_processed
 
 LAYER_URL = (
@@ -22,12 +25,17 @@ LAYER_URL = (
 )
 OUT_FIELDS = "OBJECTID,TRANSACTION_DATE,VENDOR_NAME,MCC_DESCRIPTION"
 PAGE_SIZE = 1000  # layer maxRecordCount
+META_NAME = "_meta.json"
+
+
+def _where(start_date: str) -> str:
+    return f"TRANSACTION_DATE >= DATE '{start_date}'"
 
 
 def build_query_params(start_date: str, offset: int, page_size: int = PAGE_SIZE) -> dict:
     """ArcGIS query params for one page of rows on/after ``start_date`` (YYYY-MM-DD)."""
     return {
-        "where": f"TRANSACTION_DATE >= DATE '{start_date}'",
+        "where": _where(start_date),
         "outFields": OUT_FIELDS,
         "returnGeometry": "false",
         "orderByFields": "OBJECTID ASC",
@@ -35,6 +43,11 @@ def build_query_params(start_date: str, offset: int, page_size: int = PAGE_SIZE)
         "resultRecordCount": page_size,
         "f": "json",
     }
+
+
+def build_count_params(start_date: str) -> dict:
+    """ArcGIS params for the row count of the same window, used to verify a finished download."""
+    return {"where": _where(start_date), "returnCountOnly": "true", "f": "json"}
 
 
 def features_to_frame(features: list[dict]) -> pd.DataFrame:
@@ -54,52 +67,162 @@ def features_to_frame(features: list[dict]) -> pd.DataFrame:
             }
         )
     df = pd.DataFrame(rows, columns=PROCESSED_COLUMNS)
-    df["date"] = pd.to_datetime(df["date"])
+    # One unit across both loaders so a cross-dataset concat never has to reconcile resolutions.
+    df["date"] = pd.to_datetime(df["date"]).astype("datetime64[us]")
     return df
 
 
-def download_dc(raw_dir: str | Path, start_date: str = "2019-01-01", sleep_s: float = 0.2) -> Path:
-    """Page through the layer and checkpoint each page to ``raw_dir`` as JSON. Resumable."""
+def _write_json_atomic(path: Path, payload: dict) -> None:
+    """Write via a .tmp sibling and os.replace so an interrupted write never looks complete."""
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    try:
+        tmp.write_text(json.dumps(payload))
+        os.replace(tmp, path)
+    except BaseException:
+        tmp.unlink(missing_ok=True)
+        raise
+
+
+def _get_json(session: requests.Session, params: dict, what: str) -> dict:
+    """GET one ArcGIS response, retrying transient failures; ArcGIS error payloads are failures."""
+    last_exc: BaseException | None = None
+    for attempt in range(RETRIES):
+        try:
+            r = session.get(LAYER_URL, params=params, timeout=60)
+            r.raise_for_status()
+            payload = r.json()
+            if "error" in payload:
+                raise RuntimeError(f"ArcGIS error payload: {payload['error']}")
+            return payload
+        except Exception as e:  # noqa: BLE001
+            last_exc = e
+            if is_fatal_http_error(e):
+                logger.error(f"DC {what} failed with a client error ({e}); not retrying")
+                break
+            if attempt < RETRIES - 1:
+                wait = 2**attempt
+                logger.warning(f"DC {what} failed ({e}); retry in {wait}s")
+                time.sleep(wait)
+    raise RuntimeError(f"DC download failed at {what}") from last_exc
+
+
+def _read_meta(raw_dir: Path) -> dict | None:
+    meta_path = raw_dir / META_NAME
+    if not meta_path.exists():
+        return None
+    try:
+        return json.loads(meta_path.read_text())
+    except json.JSONDecodeError:
+        logger.warning(f"{meta_path} is corrupt; ignoring it")
+        return None
+
+
+def write_meta(raw_dir: str | Path, start_date: str, page_size: int, total_count: int) -> Path:
+    """Record what window these raw pages came from, so a later resume cannot mix windows."""
+    meta_path = Path(raw_dir) / META_NAME
+    meta_path.write_text(
+        json.dumps(
+            {
+                "layer_url": LAYER_URL,
+                "where": _where(start_date),
+                "start_date": start_date,
+                "page_size": page_size,
+                "fetched_at": datetime.now(UTC).isoformat(timespec="seconds"),
+                "total_count": total_count,
+            },
+            indent=2,
+        )
+    )
+    return meta_path
+
+
+def _check_meta(raw_dir: Path, start_date: str) -> None:
+    meta = _read_meta(raw_dir)
+    if meta is None:
+        return
+    if meta.get("where") != _where(start_date) or meta.get("start_date") != start_date:
+        raise RuntimeError(
+            f"{raw_dir} holds pages for start_date={meta.get('start_date')!r} "
+            f"(where={meta.get('where')!r}) but this run asks for {start_date!r}; "
+            f"clear {raw_dir} before downloading a different window"
+        )
+
+
+def _load_page(page_path: Path) -> dict | None:
+    """Return a cached page, or None if it is missing or corrupt (then it is deleted)."""
+    if not page_path.exists():
+        return None
+    try:
+        return json.loads(page_path.read_text())
+    except json.JSONDecodeError as e:
+        logger.warning(f"{page_path.name} is corrupt ({e}); deleting and refetching")
+        page_path.unlink()
+        return None
+
+
+def download_dc(
+    raw_dir: str | Path,
+    start_date: str = "2019-01-01",
+    sleep_s: float = 0.2,
+    page_size: int = PAGE_SIZE,
+) -> Path:
+    """Page through the layer and checkpoint each page to ``raw_dir`` as JSON. Resumable.
+
+    Paging follows the layer's ``exceededTransferLimit`` flag rather than page fullness, and the
+    finished download is checked against a ``returnCountOnly`` query (the layer is static per day,
+    so the tolerance is zero).
+    """
     raw_dir = Path(raw_dir)
     raw_dir.mkdir(parents=True, exist_ok=True)
-    offset = 0
+    _check_meta(raw_dir, start_date)
     session = requests.Session()
+    offset = 0
+    total = 0
     while True:
         page_path = raw_dir / f"page_{offset:07d}.json"
-        if page_path.exists():
-            feats = json.loads(page_path.read_text()).get("features", [])
-        else:
-            for attempt in range(5):
-                try:
-                    params = build_query_params(start_date, offset)
-                    r = session.get(LAYER_URL, params=params, timeout=60)
-                    r.raise_for_status()
-                    payload = r.json()
-                    if "error" in payload:
-                        raise RuntimeError(payload["error"])
-                    break
-                except Exception as e:  # noqa: BLE001
-                    wait = 2**attempt
-                    logger.warning(f"DC page {offset} failed ({e}); retry in {wait}s")
-                    time.sleep(wait)
-            else:
-                raise RuntimeError(f"DC download failed at offset {offset}")
-            page_path.write_text(json.dumps(payload))
-            feats = payload.get("features", [])
+        payload = _load_page(page_path)
+        if payload is None:
+            payload = _get_json(session, build_query_params(start_date, offset, page_size),
+                                f"offset {offset}")
+            _write_json_atomic(page_path, payload)
             time.sleep(sleep_s)
+        if "features" not in payload:
+            raise RuntimeError(
+                f"DC offset {offset}: response has no 'features' key (got {sorted(payload)})"
+            )
+        feats = payload["features"]
+        total += len(feats)
         logger.info(f"DC offset {offset}: {len(feats)} features")
-        if len(feats) < PAGE_SIZE:
+        if not payload.get("exceededTransferLimit"):
             break
-        offset += PAGE_SIZE
+        offset += page_size
+
+    expected = _get_json(session, build_count_params(start_date), "count")["count"]
+    if total != expected:
+        raise RuntimeError(
+            f"DC download incomplete: {total} rows across pages but the layer reports {expected}"
+        )
+    write_meta(raw_dir, start_date, page_size, expected)
+    logger.info(f"DC download verified: {total} rows == layer count")
     return raw_dir
+
+
+def _page_features(page_path: Path) -> list[dict]:
+    """Features of a checkpointed page; a page without them is a bug, not an empty page."""
+    payload = json.loads(page_path.read_text())
+    if "features" not in payload:
+        raise ValueError(f"{page_path} has no 'features' key (got {sorted(payload)})")
+    return payload["features"]
 
 
 def build_processed(raw_dir: str | Path, out_path: str | Path) -> pd.DataFrame:
     """Concatenate checkpointed pages into the processed parquet."""
-    frames = [features_to_frame(json.loads(p.read_text()).get("features", []))
+    frames = [features_to_frame(_page_features(p))
               for p in sorted(Path(raw_dir).glob("page_*.json"))]
-    df = pd.concat(frames, ignore_index=True).drop_duplicates("txn_id").sort_values("date")
-    df = df.reset_index(drop=True)
+    if not frames:
+        raise ValueError(f"no DC pages found under {raw_dir}")
+    df = pd.concat(frames, ignore_index=True).drop_duplicates("txn_id")
+    df = df.sort_values(["date", "txn_id"], kind="stable").reset_index(drop=True)
     validate_processed(df)
     Path(out_path).parent.mkdir(parents=True, exist_ok=True)
     df.to_parquet(out_path, index=False)
