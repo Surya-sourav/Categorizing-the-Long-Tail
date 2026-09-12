@@ -771,7 +771,7 @@ def build_processed(raw_dir: str | Path, out_path: str | Path) -> pd.DataFrame:
 
 ### Task 3: Oklahoma loader (CKAN monthly CSVs)
 
-> **Implemented with one approved deviation (2026-09-13):** Oklahoma `ROWID` is an Oracle rowid the publisher reuses across monthly extracts for different transactions (28k collisions between two adjacent months), and `PCard_Public_202308/202309.csv` have no `ROWID` column. The shipped loader therefore emits `txn_id = ok:<file stem>:<ROWID>`, falling back to `ok:<file stem>:row<pos>` when the column is absent, and is BOM-tolerant. The bare-`ROWID` behaviour below is kept when no `file_id` is passed, so the test in Step 1 is unchanged. Real result: 1,256,589 rows (the plan's dedupe-on-bare-ROWID would have kept only 358,170).
+> **Implemented with one approved deviation (2026-09-13):** Oklahoma `ROWID` is an Oracle rowid the publisher reuses across monthly extracts for different transactions (28k collisions between two adjacent months), and `PCard_Public_202308/202309.csv` have no `ROWID` column. The shipped loader therefore emits `txn_id = ok:<file stem>:<ROWID>`, falling back to `ok:<file stem>:row<pos>` when the column is absent (pandas 3 strips a UTF-8 BOM itself; a regression test pins that). The bare-`ROWID` behaviour below is kept when no `file_id` is passed, so the test in Step 1 is unchanged. Real result: 1,256,589 rows (the plan's dedupe-on-bare-ROWID would have kept only 358,170).
 
 **Files:**
 - Create: `src/txcat/data/oklahoma.py`, `tests/test_data_oklahoma.py`
