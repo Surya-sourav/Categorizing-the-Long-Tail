@@ -87,11 +87,11 @@ llm:
       price_out_per_1m: 2.00
       reasoning_effort: minimal
       json_mode: json_schema
-    - name: meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo
+    - name: Qwen/Qwen3.5-9B
       provider: together
       base_url: https://api.together.xyz/v1
       api_key_env: TOGETHER_API_KEY
-      price_in_per_1m: 0.18
-      price_out_per_1m: 0.18
+      price_in_per_1m: 0.17
+      price_out_per_1m: 0.25
       reasoning_effort: null
-      json_mode: json_object
+      json_mode: json_schema

@@ -144,10 +144,11 @@ Expected: `ok 2.x.y`. If `hnswlib` fails to build, run `uv pip install hnswlib -
 
 `tests/test_utils.py`:
 ```python
-import numpy as np
 import random
 
-from txcat.utils import set_seed, sha1_text, sha256_text, model_slug
+import numpy as np
+
+from txcat.utils import model_slug, set_seed, sha1_text, sha256_text
 
 
 def test_set_seed_is_reproducible():
@@ -166,7 +167,8 @@ def test_hashes_are_stable():
 
 
 def test_model_slug():
-    assert model_slug("sentence-transformers/all-MiniLM-L6-v2") == "sentence-transformers__all-MiniLM-L6-v2"
+    slug = model_slug("sentence-transformers/all-MiniLM-L6-v2")
+    assert slug == "sentence-transformers__all-MiniLM-L6-v2"
     assert model_slug("text-embedding-3-small") == "text-embedding-3-small"
 ```
 
@@ -340,14 +342,14 @@ llm:
       price_out_per_1m: 2.00
       reasoning_effort: minimal
       json_mode: json_schema
-    - name: meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo
+    - name: Qwen/Qwen3.5-9B
       provider: together
       base_url: https://api.together.xyz/v1
       api_key_env: TOGETHER_API_KEY
-      price_in_per_1m: 0.18
-      price_out_per_1m: 0.18
+      price_in_per_1m: 0.17
+      price_out_per_1m: 0.25
       reasoning_effort: null
-      json_mode: json_object
+      json_mode: json_schema
 ```
 
 `configs/dc.yaml`:
@@ -2905,6 +2907,8 @@ class WebSearchClient:
 
 ### Task 17: LLM fallback (OpenAI-compatible), prompts, JSON cache
 
+Provider notes (verified 2026-09-12): Together's structured output uses `response_format={"type":"json_schema","json_schema":{"name":..., "schema":...}}` with NO `strict` key; OpenAI accepts the same plus `"strict": true`. The open-weight row is `Qwen/Qwen3.5-9B` on Together ($0.17/$0.25 per 1M, structured outputs supported); Llama 3.1 8B is no longer served there. gpt-5-nano's current snapshot is `gpt-5-nano-2025-08-07`.
+
 **Files:**
 - Create: `prompts/fallback_with_web.txt`, `prompts/fallback_no_web.txt`, `src/txcat/llm_fallback.py`, `tests/test_llm_fallback.py`, `cache/llm/.gitkeep`
 
@@ -3112,7 +3116,10 @@ class LLMFallback:
         if self.m.reasoning_effort:
             kw["reasoning_effort"] = self.m.reasoning_effort
         if self.m.json_mode == "json_schema":
-            kw["response_format"] = {"type": "json_schema", "json_schema": {"name": "categorization", "strict": True, "schema": SCHEMA}}
+            js = {"name": "categorization", "schema": SCHEMA}
+            if self.m.provider == "openai":
+                js["strict"] = True  # Together rejects the strict key
+            kw["response_format"] = {"type": "json_schema", "json_schema": js}
         elif self.m.json_mode == "json_object":
             kw["response_format"] = {"type": "json_object"}
         return kw

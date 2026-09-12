@@ -151,7 +151,7 @@ the network.
 `LLMFallback(model, cache_dir, prompt_template).categorize(merchant, evidence | None, taxonomy)
 -> LLMResult(category, confidence, evidence_used, tokens_in, tokens_out, latency_ms)`. One
 OpenAI-compatible client with `base_url` switch: OpenAI (`gpt-5-nano`, `gpt-5-mini`, pinned
-snapshot ids, `reasoning.effort="minimal"`), Together (`meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo`).
+snapshot ids, `reasoning.effort="minimal"`), Together (`Qwen/Qwen3.5-9B`, the open-weight row; Llama 3.1 8B is no longer served on Together).
 JSON-schema structured output `{category: enum(taxonomy), confidence: number, evidence: string}`.
 Prompts `prompts/fallback_with_web.txt` and `prompts/fallback_no_web.txt` differ only by the
 evidence block. Cache key `sha256(model|prompt_hash|rendered_prompt)`; file stores full request
@@ -215,7 +215,7 @@ Figures saved as PDF + PNG. All tables CSV. Every experiment takes `--config`, `
 |---|---|
 | Brave: ~3,300 FES merchants (DC 3,000 + Oklahoma cold-start 800, minus overlap) | ~$12–17 after $5 credit |
 | Two small OpenAI models: ~3,300 merchants x 2 conditions x 2 models | ~$3–5 |
-| Llama 3.1 8B via Together: same calls | ~$2 |
+| Qwen3.5 9B (open-weight) via Together: same calls | ~$2 |
 | text-embedding-3-small: unique strings across DC + Oklahoma + generator | < $1 |
 | Prompt-sensitivity: 2 variants x 300 tail merchants x 3 models | ~$1 |
 | OpenAI built-in web search ablation, 300 merchants | ~$7 |

@@ -1,7 +1,8 @@
-import numpy as np
 import random
 
-from txcat.utils import set_seed, sha1_text, sha256_text, model_slug
+import numpy as np
+
+from txcat.utils import model_slug, set_seed, sha1_text, sha256_text
 
 
 def test_set_seed_is_reproducible():
@@ -20,5 +21,6 @@ def test_hashes_are_stable():
 
 
 def test_model_slug():
-    assert model_slug("sentence-transformers/all-MiniLM-L6-v2") == "sentence-transformers__all-MiniLM-L6-v2"
+    slug = model_slug("sentence-transformers/all-MiniLM-L6-v2")
+    assert slug == "sentence-transformers__all-MiniLM-L6-v2"
     assert model_slug("text-embedding-3-small") == "text-embedding-3-small"
