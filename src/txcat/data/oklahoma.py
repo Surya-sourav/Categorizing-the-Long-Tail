@@ -19,13 +19,25 @@ CKAN_SHOW = "https://data.ok.gov/api/3/action/package_show?id={pkg}"
 KEEP = ["ROWID", "TRANSACTION_DATE", "MERCHANT", "MCC_DESCRIPTION"]
 
 
-def csv_to_frame(src: str | Path | IO[str]) -> pd.DataFrame:
-    """Read one monthly CSV, keep only the four needed columns, emit the processed schema."""
-    raw = pd.read_csv(src, usecols=KEEP, dtype=str, keep_default_na=False)
+def csv_to_frame(src: str | Path | IO[str], file_id: str = "") -> pd.DataFrame:
+    """Read one monthly CSV, keep only the four needed columns, emit the processed schema.
+
+    ``ROWID`` is an Oracle rowid that the publisher reuses across monthly extracts, so it is unique
+    only within one file; ``file_id`` (the file stem) namespaces it into a corpus-unique txn_id.
+    Two published months (Aug/Sep 2023) ship without ``ROWID`` at all; for those the txn_id falls
+    back to the source row position, which is stable because the downloaded files are immutable.
+    """
+    raw = pd.read_csv(src, usecols=lambda c: c in KEEP, dtype=str, keep_default_na=False)
+    has_rowid = "ROWID" in raw.columns
     raw = raw[(raw["MERCHANT"].str.strip() != "") & (raw["TRANSACTION_DATE"].str.strip() != "")]
+    prefix = f"ok:{file_id}:" if file_id else "ok:"
+    if has_rowid:
+        txn_id = prefix + raw["ROWID"].str.strip()
+    else:
+        txn_id = prefix + "row" + raw.index.astype(str)
     df = pd.DataFrame(
         {
-            "txn_id": "ok:" + raw["ROWID"].str.strip(),
+            "txn_id": txn_id,
             "date": pd.to_datetime(
                 raw["TRANSACTION_DATE"].str.strip(), format="%d-%b-%y", errors="coerce"
             ),
@@ -75,7 +87,7 @@ def download_oklahoma(raw_dir: str | Path, packages: list[str]) -> Path:
 
 def build_processed(raw_dir: str | Path, out_path: str | Path) -> pd.DataFrame:
     """Concatenate all monthly CSVs to the processed parquet."""
-    frames = [csv_to_frame(p) for p in sorted(Path(raw_dir).glob("*.csv"))]
+    frames = [csv_to_frame(p, file_id=p.stem) for p in sorted(Path(raw_dir).glob("*.csv"))]
     df = pd.concat(frames, ignore_index=True).drop_duplicates("txn_id").sort_values("date")
     df = df.reset_index(drop=True)
     validate_processed(df)
