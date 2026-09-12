@@ -6,9 +6,11 @@ from the rules below, then hand-reviewed). Ranges are the default; OVERRIDES win
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 import pandas as pd
+from rapidfuzz import fuzz, process
 
 CATEGORIES = [
     "groceries", "restaurants", "retail", "office_supplies", "software_electronics",
@@ -115,3 +117,52 @@ def categorize_mcc(mcc: int) -> tuple[str, int]:
 def load_mapping(taxonomy_dir: str | Path) -> pd.DataFrame:
     """Load the committed mcc_to_category.csv."""
     return pd.read_csv(Path(taxonomy_dir) / "mcc_to_category.csv", dtype={"mcc": int})
+
+
+_DESC_COLS = ["edited_description", "combined_description", "usda_description", "irs_description"]
+
+
+def norm_desc(s: str) -> str:
+    """Uppercase, strip punctuation, collapse whitespace."""
+    s = re.sub(r"[^A-Za-z0-9 ]+", " ", str(s)).upper()
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def match_description(
+    observed: str, source: pd.DataFrame, fuzzy_cutoff: int = 90
+) -> tuple[int | None, str]:
+    """Map an observed MCC description to an MCC via exact normalized match, then fuzzy."""
+    target = norm_desc(observed)
+    lookup: dict[str, int] = {}
+    for col in _DESC_COLS:
+        if col in source.columns:
+            for mcc, d in zip(source["mcc"], source[col], strict=False):
+                if isinstance(d, str) and d:
+                    lookup.setdefault(norm_desc(d), int(mcc))
+    if target in lookup:
+        return lookup[target], "exact"
+    best = process.extractOne(target, list(lookup.keys()), scorer=fuzz.token_set_ratio)
+    if best and best[1] >= fuzzy_cutoff:
+        return lookup[best[0]], "fuzzy"
+    return None, "none"
+
+
+def attach_labels(df: pd.DataFrame, taxonomy_dir: str | Path) -> pd.DataFrame:
+    """Add ``mcc``, ``category``, ``ambiguous`` columns using the committed alias + mapping files.
+
+    Rows whose description has no alias get category None and ambiguous=1 (they are excluded from
+    headline tables like other ambiguous rows, and counted in the coverage table).
+    """
+    taxonomy_dir = Path(taxonomy_dir)
+    aliases = pd.read_csv(taxonomy_dir / "mcc_description_aliases.csv", dtype={"mcc": "Int64"})
+    mapping = pd.read_csv(taxonomy_dir / "mcc_to_category.csv", dtype={"mcc": int})
+    alias_key = aliases.set_index(["source", "observed_description"])["mcc"]
+    keys = list(zip(df["source"], df["mcc_description"], strict=False))
+    mcc = pd.Series([alias_key.get(k, pd.NA) for k in keys], index=df.index, dtype="Int64")
+    cat_map = mapping.set_index("mcc")["category"]
+    amb_map = mapping.set_index("mcc")["ambiguous"]
+    out = df.copy()
+    out["mcc"] = mcc
+    out["category"] = [cat_map.get(int(m)) if pd.notna(m) else None for m in mcc]
+    out["ambiguous"] = [int(amb_map.get(int(m), 1)) if pd.notna(m) else 1 for m in mcc]
+    return out
