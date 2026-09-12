@@ -494,14 +494,14 @@ from sklearn.metrics import f1_score
 
 
 def macro_f1(y_true, y_pred, mask=None) -> float:
-    """Macro-F1 over the labels present in the (masked) truth set. NaN if mask selects nothing."""
+    """Macro-F1 over the union of labels in the (masked) truth and predictions. NaN if mask selects nothing."""
     y_true, y_pred = np.asarray(y_true), np.asarray(y_pred)
     if mask is not None:
         y_true, y_pred = y_true[np.asarray(mask, bool)], y_pred[np.asarray(mask, bool)]
     if len(y_true) == 0:
         return float("nan")
-    labels = sorted(set(y_true.tolist()))
-    return float(f1_score(y_true, y_pred, labels=labels, average="macro", zero_division=0))
+    # labels = union of truth and prediction (sklearn default): a predicted-but-absent class counts as F1 = 0
+    return float(f1_score(y_true, y_pred, average="macro", zero_division=0))
 
 
 def latency_p50_p95(timings_ms) -> tuple[float, float]:
