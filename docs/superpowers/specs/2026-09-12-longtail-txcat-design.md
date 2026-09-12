@@ -3,7 +3,7 @@
 **Paper:** "Categorizing the Long Tail: An Empirical Study of Web-Search-Augmented Fallback for Embedding-Based Transaction Classification"
 **Author:** Surya Parida, Independent Researcher
 **Date:** 2026-09-12
-**Status:** approved design, pre-implementation
+**Status:** FINAL — decisions locked by author 2026-09-12. Build against this.
 
 ## 1. Research question
 
@@ -27,10 +27,10 @@ a failure taxonomy, and a reproducible public benchmark with frozen caches. CPU 
 
 | Role | Dataset | Source | Fields kept | Notes |
 |---|---|---|---|---|
-| Primary (real) | Washington DC Purchase Card Transactions | ArcGIS REST, `maps2.dcgis.dc.gov/.../Public_Service_WebMercator/MapServer/50`, 639k records, 2009–present | `OBJECTID`, `TRANSACTION_DATE`, `VENDOR_NAME`, `MCC_DESCRIPTION` | Real acquirer descriptors (`STAPLES       00102186`, `WW GRAINGER 912`), real MCC labels, real dates |
-| Second real | Oklahoma State PCard FY2023–2025 | CKAN `data.ok.gov`, 36 monthly CSVs, ~8 MB each | `ROWID`, `TRANSACTION_DATE`, `MERCHANT`, `MCC_DESCRIPTION` | Descriptors like `AMZN Mktp US RC9J295A2`, `WAL-MART #4241` |
-| Controlled instrument | Own generator | OSM name-suggestion-index (BSD-3) vocabulary + templated statement noise + Zipf(alpha) frequencies + synthetic dates | `txn_id`, `date`, `raw`, `category`, `merchant_id`, `alpha` | Only dataset where tail severity can be dialed |
-| Sanity only | DoDataThings/us-bank-transaction-categories-v2 | HuggingFace, MIT, 68k rows | `description`, `category` | Template-generated; quick check, not evidence |
+| Primary (real) | Washington DC Purchase Card Transactions, **2019-01-01 → present** | ArcGIS REST, `maps2.dcgis.dc.gov/.../Public_Service_WebMercator/MapServer/50` (639k records total, 2009–present; we use 2019+) | `OBJECTID`, `TRANSACTION_DATE`, `VENDOR_NAME`, `MCC_DESCRIPTION` | All headline numbers. Real acquirer descriptors (`STAPLES       00102186`, `WW GRAINGER 912`), real MCC labels, real dates |
+| Second real | Oklahoma State PCard FY2023–2025 | CKAN `data.ok.gov`, 36 monthly CSVs, ~8 MB each | `ROWID`, `TRANSACTION_DATE`, `MERCHANT`, `MCC_DESCRIPTION` | **Cross-dataset cold-start only:** index built from DC train, tested on Oklahoma merchants that never appear in DC. No Oklahoma-trained index. |
+| Instrument | Own generator | OSM name-suggestion-index (BSD-3) vocabulary + templated statement noise + Zipf(alpha) frequencies + synthetic dates | `txn_id`, `date`, `raw`, `category`, `merchant_id`, `alpha` | **Tail-severity sweep only.** No headline numbers. |
+| Sanity | DoDataThings/us-bank-transaction-categories-v2 | HuggingFace, MIT, 68k rows | `description`, `category` | Internal check only. **No paper numbers.** |
 
 **Privacy rule.** Loaders drop cardholder names, amounts, item descriptions, agency, and any field
 not listed above before anything reaches the pipeline. Only the *normalized merchant string* is ever
@@ -58,30 +58,36 @@ Services; Health & Medical; Education, Membership & Government; Entertainment, R
 Financial, Insurance, Postal & Shipping.
 
 **Ambiguous MCCs** (5999 Misc Retail, 5399 Misc General Merchandise, 7399 Business Services NEC,
-8999 Professional Services NEC, and any description containing "NOT ELSEWHERE CLASSIFIED" that
-does not fit a category) are flagged `ambiguous=1`. All headline tables are reported with these rows
-excluded; an appendix table reports them included.
+8999 Professional Services NEC, and any "NOT ELSEWHERE CLASSIFIED" description that does not fit a
+category) are flagged `ambiguous=1`. They are **excluded from headline tables** and **reported as
+their own slice** in every main table.
 
-**Label-noise audit.** `data/taxonomy/label_noise_audit_sample.csv`: 100 random DC
+**Label-noise audit.** `data/taxonomy/label_noise_audit_sample.csv`: 300 random DC
 (merchant, MCC description, mapped category) rows with columns `judgement`
 (`correct` / `wrong` / `unclear`) and `note`. Pre-filled by the implementer, verified by the author,
 reported as one sentence + `results/tables/tab0_label_noise.csv`.
 
 ## 3. Splits and evaluation sets
 
-- **Temporal split** on real data: train = transactions before cutoff date T, test = after. DC:
-  T = 2020-01-01 (train ~2009–2019, test 2020–present). Oklahoma: train = FY2023–FY2024, test = FY2025.
+**Temporal split, never random. No row-level randomization anywhere.**
+
+- **DC train / index:** 2019-01-01 → 2023-12-31. **DC test:** 2024-01-01 → present.
+- **Conditional volume rule (verified by Exp 0):** the test window must contain >= 20,000
+  transactions and >= 2,500 unique tail merchants. If short, slide to train 2019–2022 / test 2023+.
+  The chosen window is written to `configs/dc.yaml` and reported in the paper.
 - **Tail definition:** normalized merchant frequency in the *training index* <= 3. Sensitivity at
   <= 2 and <= 5. Head = frequency > 3.
+- **Oklahoma cold-start:** index = DC train. Test = Oklahoma transactions whose normalized merchant
+  never appears in DC train (every such merchant is, by construction, frequency 0 in the index).
 - **Full test set** — used for kNN-only rows and Exp 1 (no API cost).
-- **Fallback evaluation set (FES)** — budget-bounded: a stratified random sample of unique
-  normalized test merchants, 2,000 tail + 500 head for DC, 800 + 200 for Oklahoma, 800 + 200 for
-  the generator, with all their test transactions. Every API-backed method (search, LLM with/without
-  web, all models) is run on **every** FES merchant once and cached. The gate-threshold frontier is
-  then a pure offline re-mix of cached results, so the sweep costs nothing.
-- **Streaming set** — the DC test period in real temporal order, capped at 100k transactions, with
-  merchants outside the FES falling back to cached results where present and counted as
-  "fallback (uncached)" otherwise; the uncached count is reported.
+- **Fallback evaluation set (FES)** — budget-bounded, drawn *by merchant*: all tail merchants in the
+  DC test window if <= 2,500, else a seeded sample of 2,500 tail merchants plus 500 head merchants,
+  with all their test transactions. Oklahoma cold-start FES: 800 merchants. Generator FES: 800
+  merchants at each alpha in the sweep only for the kNN rows (no API calls; generator is $0).
+  Every API-backed method (search, each LLM, with/without web) runs on **every** FES merchant once
+  and is cached. The gate-threshold frontier is a pure offline re-mix of cached results.
+- **Streaming set** — the DC test window in real temporal order; merchants outside the FES reuse
+  cached results where present and are counted as "fallback (uncached)" otherwise; count reported.
 
 ## 4. System architecture
 
@@ -171,18 +177,18 @@ per-merchant correctness for the critical ablation. Prices in `configs/model_pri
 truncation at 22/25 chars, whitespace padding, vowel-dropped abbreviations), synthetic dates over a
 2-year window. Output parquet with same schema as real loaders.
 
-## 5. Experiments and outputs
+## 5. Experiments — exactly six, run in order 0 → 1 → 2 → 3 → 4 → 5
 
-| Exp | Script | Outputs |
-|---|---|---|
-| 0 | `experiments/exp0_data_audit.py` | `tab0_dataset_stats.csv`, `tab0_label_noise.csv`, taxonomy coverage |
-| 1 | `exp1_tail_characterization.py` | `fig1_zipf`, `fig2_acc_by_freq` (bins 1, 2–5, 6–20, 21–100, 100+), `fig3_acc_vs_sim` head/tail overlay, `tab1_tail_stats.csv` (tail at <=2, <=3, <=5) |
-| 2 | `exp2_fallback_comparison.py` | `tab2_main_results.csv` (rows: kNN per backbone, emb+LR, LLM no-web, LLM with-web, routed system; cols: macro-F1 head/tail/overall, p50/p95 latency, cost/1k, fallback rate), `tab3_critical_ablation.csv` (tail-only with-web vs no-web, paired bootstrap CI, per model), `fig4_acc_cost_frontier` (threshold 0.30–0.95 step 0.05, knee marked) |
-| 3 | `exp3_streaming_convergence.py` | `fig5_fallback_decay`, `fig6_cumulative_cost`, `fig7_cumulative_f1`, `tab5_writeback_policies.csv` |
-| 4 | `exp4_failure_taxonomy.py` | `failure_sample_template.csv` (~200 tail errors, categories: ambiguous merchant / no web presence / web search failure / LLM reasoning error / taxonomy mismatch / normalization failure / label noise); after labelling -> `tab6_failure_taxonomy.csv` |
-| 5 | `exp5_backbone_comparison.py` | `tab4_backbone_comparison.csv` (5 backbones x head/tail/overall F1, embed latency) |
+| # | Script | Cost | Paper output |
+|---|---|---|---|
+| 0 | `exp0_data_audit.py` | $0 | `tab0_dataset_stats.csv` (rows, unique merchants, tail share, per dataset/window), `tab0_label_noise.csv` (300-row audit), taxonomy coverage, **final window decision** logged to config |
+| 1 | `exp1_tail_characterization.py` | $0 | `fig1_zipf`, `fig2_acc_by_freq` (bins 1, 2–5, 6–20, 21–100, 100+), `fig3_acc_vs_sim` head/tail overlay, `tab1_tail_stats.csv` (tail at <=2, <=3, <=5). Also the generator alpha-sweep panel. |
+| 2 | `exp2_fallback_comparison.py` | ~$20 (the one expensive cache pass) | `tab2_main_results.csv`: rows kNN per backbone, emb+LR, LLM no-web, LLM with-web, routed system; cols macro-F1 head/tail/overall/ambiguous-slice, p50/p95 latency, cost/1k, fallback rate. LLM rows are reported on head too so "kNN beats LLM on head" is visible. `tab3_critical_ablation.csv`: tail-only with-web vs no-web, paired bootstrap CI, per model. `fig4_acc_cost_frontier` (threshold 0.30–0.95 step 0.05, knee marked). **Folded in:** `tab3b_prompt_sensitivity.csv` (2 prompt variants x 300 tail merchants) and `tab3c_agentic_search.csv` (OpenAI built-in web search, 300 merchants, ~$7). Oklahoma cold-start rows reported in `tab2b_oklahoma_coldstart.csv`. |
+| 3 | `exp3_streaming_convergence.py` | ~$0 (cache replay) | `fig5_fallback_decay`, `fig6_cumulative_cost`, `fig7_cumulative_f1`, `tab5_writeback_policies.csv` (never / always / confidence-gated) |
+| 4 | `exp4_failure_taxonomy.py` | $0 (author labels ~200 tail errors) | `failure_sample_template.csv` with categories: ambiguous merchant / no web presence / web search failure / LLM reasoning error / taxonomy mismatch / normalization failure / label noise. After labelling -> `tab6_failure_taxonomy.csv` + qualitative section examples |
+| 5 | `exp5_backbone_comparison.py` | < $1 | `tab4_backbone_comparison.csv`: MiniLM-L6-v2, bge-small-en-v1.5, mpnet-base-v2, FinBERT-as-encoder, text-embedding-3-small x head/tail/overall macro-F1 + embed latency |
 
-Figures saved as PDF + PNG. All tables CSV. Every experiment takes `--config`, `--seed(s)`,
+Figures saved as PDF + PNG. All tables CSV. Every experiment takes `--config`, `--seeds`,
 `--dataset`, `--mode {live,reproduce}`.
 
 ## 6. Reproducibility contract
@@ -192,38 +198,46 @@ Figures saved as PDF + PNG. All tables CSV. Every experiment takes `--config`, `
   ids, prompt hashes, HNSW params, git commit, timestamp, host, Python/lib versions to
   `results/logs/run_<ts>.json`.
 - `prompts/model_versions.json` pins every model id and the Brave snapshot date.
-- Seeds: `PYTHONHASHSEED`, `random`, `numpy`, `torch`, hnswlib `random_seed`. 3 seeds in the 2-day
-  core, 5 for the final paper run.
+- Seeds: `PYTHONHASHSEED`, `random`, `numpy`, `torch`, hnswlib `random_seed`. **3 seeds for
+  development, 5 for the final paper run.**
+- **Hard API spend cap** in config (`budget.max_usd`, default 40). Every live client accumulates
+  estimated spend in `cache/spend_ledger.json` and raises `BudgetExceeded` before the call that
+  would cross the cap.
+- Exact LLM snapshot ids are resolved from the provider's models endpoint at the pilot run and
+  written to `prompts/model_versions.json`; all later calls use the pinned id.
 - Tooling: `uv` with Python 3.12 (hnswlib/torch wheels), `pyproject.toml` + pinned
   `requirements.txt`, `loguru`, `pydantic-settings` for YAML configs, `pytest`, `ruff`. Secrets via
   `.env` (gitignored). Dockerfile after the core lands.
 
-## 7. Budget (target < $50)
+## 7. Budget (target ~$30–40, hard cap $40)
 
 | Item | Estimate |
 |---|---|
-| Brave: ~3,600 FES merchants (DC 2,500 + OK 1,000 + gen 1,000, minus overlap) | ~$13–18 after $5 credit |
-| gpt-5-nano + gpt-5-mini: ~3,600 merchants x 2 conditions x 2 models | ~$3–5 |
+| Brave: ~3,300 FES merchants (DC 3,000 + Oklahoma cold-start 800, minus overlap) | ~$12–17 after $5 credit |
+| Two small OpenAI models: ~3,300 merchants x 2 conditions x 2 models | ~$3–5 |
 | Llama 3.1 8B via Together: same calls | ~$2 |
-| text-embedding-3-small: ~150k unique strings | < $1 |
-| Optional: OpenAI built-in web search ablation, 300 merchants | ~$7 |
-| **Total** | **~$25–33** |
+| text-embedding-3-small: unique strings across DC + Oklahoma + generator | < $1 |
+| Prompt-sensitivity: 2 variants x 300 tail merchants x 3 models | ~$1 |
+| OpenAI built-in web search ablation, 300 merchants | ~$7 |
+| **Total** | **~$26–33** |
 
 ## 8. Two-day core scope and cut lines
 
-**Day 1:** repo scaffold, loaders + download scripts (DC, OK, NSI, DoDataThings), taxonomy files,
-normalizer + tests, embedder + cache, index + tests, gate + tests, Exp 0 + Exp 1 on DC, 100-merchant
-pilot of search + LLM, prompts frozen.
-**Day 2 (author runs the cache passes):** full FES cache run, Exp 2 (main table, critical ablation,
-frontier), write-back + stream + tests, Exp 3 on DC stream, `reproduce.py`, README.
-**Days 3–5:** Oklahoma as second real set through Exp 1–3, Exp 5 with mpnet + FinBERT at 5 seeds,
-Exp 4 labelling (author), Dockerfile, coverage > 80%, OpenAI agentic-search ablation.
+**Day 1:** repo scaffold, loaders + download scripts (DC 2019+, Oklahoma, NSI, DoDataThings),
+taxonomy files, normalizer + tests, embedder + cache, index + tests, gate + tests, Exp 0 (window
+decision, audit sample) + Exp 1 on DC, 100-merchant pilot of search + LLM, prompts frozen, spend cap.
+**Day 2 (author runs the cache pass):** full FES cache run (Exp 2 live mode), Exp 2 tables and
+frontier, write-back + stream + tests, Exp 3 replay, `reproduce.py`, README.
+**Days 3–5:** Exp 5 with mpnet + FinBERT at 5 seeds, Exp 4 labelling (author), final 5-seed run,
+Dockerfile, coverage > 80%.
 
 ## 9. Risks
 
 - Brave rate limit (1 rps) makes the search pass ~1 hour; the pass is resumable and idempotent.
 - Any prompt edit after the LLM cache is frozen invalidates it — hence the pilot-then-freeze rule.
-- Institutional spend skews the category mix; stated as a limitation, generator covers consumer mix.
+- Institutional spend skews the category mix; stated as a limitation.
+- Oklahoma cold-start merchants are frequency 0 in the index by construction, so kNN there measures
+  pure generalization; stated explicitly so it is not read as a tail-<=3 result.
 - MCC label noise bounds achievable accuracy; measured and reported (Exp 0).
 - DC ArcGIS `maxRecordCount` paging (~1–2k/request) means ~400–640 requests; download script retries
   and checkpoints.
