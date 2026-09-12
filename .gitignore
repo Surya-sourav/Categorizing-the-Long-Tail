@@ -14,3 +14,6 @@ __pycache__/
 results/logs/*.log
 *.bin
 .DS_Store
+cache/embeddings/*/vectors.npy
+results/*.parquet
+results/index/

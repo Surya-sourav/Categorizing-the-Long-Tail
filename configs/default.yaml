@@ -1,0 +1,97 @@
+seed: 42
+seeds: [42, 43, 44]
+tail_k: 3
+tail_sensitivity: [2, 5]
+results_dir: results
+logs_dir: results/logs
+taxonomy_dir: data/taxonomy
+
+datasets:
+  dc:
+    name: dc
+    raw_dir: data/raw/dc
+    processed_path: data/processed/dc.parquet
+    window:
+      train_start: "2019-01-01"
+      train_end: "2023-12-31"
+      test_start: "2024-01-01"
+      test_end: null
+    volume_rule:
+      min_test_txns: 20000
+      min_tail_merchants: 2500
+      fallback_window:
+        train_start: "2019-01-01"
+        train_end: "2022-12-31"
+        test_start: "2023-01-01"
+        test_end: null
+  oklahoma:
+    name: oklahoma
+    raw_dir: data/raw/oklahoma
+    processed_path: data/processed/oklahoma.parquet
+    ckan_packages: [purchase-card-pcard-fiscal-year-2023, purchase-card-pcard-fiscal-year-2024, purchase-card-pcard-fiscal-year-2025]
+
+fes:
+  n_tail: 2500
+  n_head: 500
+  n_oklahoma: 800
+  pilot_n: 100
+
+embed:
+  cache_dir: cache/embeddings
+  backbones:
+    - sentence-transformers/all-MiniLM-L6-v2
+    - BAAI/bge-small-en-v1.5
+  openai_model: text-embedding-3-small
+  openai_price_per_1m: 0.02
+  batch_size: 256
+
+index:
+  M: 32
+  ef_construction: 200
+  ef_search: 64
+  k: 5
+
+gate:
+  mode: threshold
+  threshold: 0.65
+
+budget:
+  max_usd: 40.0
+  ledger_path: cache/spend_ledger.json
+
+search:
+  provider: brave
+  cache_dir: cache/web_search
+  num_results: 5
+  price_per_1k_usd: 5.0
+  min_interval_s: 1.1
+  api_key_env: BRAVE_API_KEY
+
+llm:
+  cache_dir: cache/llm
+  prompt_with_web: prompts/fallback_with_web.txt
+  prompt_no_web: prompts/fallback_no_web.txt
+  max_completion_tokens: 300
+  models:
+    - name: gpt-5-nano
+      provider: openai
+      api_key_env: OPENAI_API_KEY
+      price_in_per_1m: 0.05
+      price_out_per_1m: 0.40
+      reasoning_effort: minimal
+      json_mode: json_schema
+    - name: gpt-5-mini
+      provider: openai
+      api_key_env: OPENAI_API_KEY
+      price_in_per_1m: 0.25
+      price_out_per_1m: 2.00
+      reasoning_effort: minimal
+      json_mode: json_schema
+    - name: meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo
+      provider: together
+      base_url: https://api.together.xyz/v1
+      api_key_env: TOGETHER_API_KEY
+      price_in_per_1m: 0.18
+      price_out_per_1m: 0.18
+      reasoning_effort: null
+      json_mode: json_object

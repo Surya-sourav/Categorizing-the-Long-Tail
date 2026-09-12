@@ -1,0 +1,45 @@
+[project]
+name = "txcat"
+version = "0.1.0"
+description = "Categorizing the Long Tail: web-search-augmented fallback for embedding-based transaction classification"
+authors = [{ name = "Surya Parida" }]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "pandas>=2.2",
+  "pyarrow>=17",
+  "numpy>=1.26,<3",
+  "hnswlib>=0.8.0",
+  "sentence-transformers>=3.0",
+  "torch>=2.2",
+  "scikit-learn>=1.5",
+  "rapidfuzz>=3.9",
+  "requests>=2.32",
+  "openai>=1.50",
+  "pydantic>=2.8",
+  "pyyaml>=6.0",
+  "loguru>=0.7",
+  "python-dotenv>=1.0",
+  "matplotlib>=3.9",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-cov>=5", "ruff>=0.6"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/txcat"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
