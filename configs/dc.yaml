@@ -1,2 +1,5 @@
-# Primary dataset run. Window is verified/possibly slid by exp0 (see results/window_decision.json).
+# Primary dataset run. Intentionally a near-no-op override of configs/default.yaml:
+# defaults already target dc, so this file exists to name the run explicitly and to
+# hold any dc-specific knobs later. Window is verified/possibly slid by exp0
+# (see results/window_decision.json).
 active_dataset: dc

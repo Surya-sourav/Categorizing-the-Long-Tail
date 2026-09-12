@@ -69,7 +69,6 @@ torch==2.14.0
 tqdm==4.70.1
 transformers==5.17.0
 truststore==0.10.4
--e file:///Users/suryaparida/Documents/PP/txn-cat-long-tail
 typer==0.27.2
 typing-extensions==4.16.0
 typing-inspection==0.4.4

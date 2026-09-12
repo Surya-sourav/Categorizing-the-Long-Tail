@@ -5,6 +5,8 @@ tail_sensitivity: [2, 5]
 results_dir: results
 logs_dir: results/logs
 taxonomy_dir: data/taxonomy
+# Dataset key (under `datasets:`) that experiments run against unless overridden.
+active_dataset: dc
 
 datasets:
   dc:
