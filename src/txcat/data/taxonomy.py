@@ -90,8 +90,8 @@ OVERRIDES = {
     5733: "entertainment_media", 5735: "entertainment_media", 5940: "entertainment_media",
     5941: "entertainment_media", 5945: "entertainment_media", 5946: "entertainment_media",
     5970: "entertainment_media", 5971: "entertainment_media", 5994: "entertainment_media",
-    # personal services that are health/entertainment
-    7221: "entertainment_media", 7298: "health", 7297: "health",
+    # photographic studios are media; barbers, spas and massage stay personal services
+    7221: "entertainment_media",
     # veterinary -> professional (animal health is not human health)
     742: "professional_services",
     # lodging-range personal services -> lodging stays for 7011/7012/7032/7033 only
@@ -99,6 +99,13 @@ OVERRIDES = {
     8351: "education_gov_membership", 8398: "education_gov_membership",
     # education inside 8200 already; testing labs
     8734: "professional_services",
+    # reviewer-flagged consistency fixes (2026-09-13)
+    5960: "financial_postal_shipping",  # direct marketing - insurance services
+    5962: "airlines_travel",            # direct marketing - travel arrangements (cf. 4722)
+    4723: "airlines_travel",            # package tour operators (same business as 4722)
+    5921: "groceries",                  # package stores - beer, wine, liquor (food & beverage)
+    7321: "financial_postal_shipping",  # consumer credit reporting agencies
+    5972: "entertainment_media",        # stamp and coin stores (hobby/collectibles, like 5945/5971)
 }
 
 

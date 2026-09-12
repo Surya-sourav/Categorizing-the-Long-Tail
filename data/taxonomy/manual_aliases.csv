@@ -130,7 +130,7 @@ CARIBE ROYALE RESORT SUITES + VILLAS,7011,lodging,manual: hotel/casino brand -> 
 RYANAIR,4511,airlines_travel,manual: airline brand -> generic airline MCC
 AMERICINN,7011,lodging,manual: hotel brand -> generic lodging MCC
 THE PALACE HOTEL,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
-STAMP & COIN STORES-PHILATELIC & NUMISMA,5972,retail,manual: abbreviated MCC description
+STAMP & COIN STORES-PHILATELIC & NUMISMA,5972,entertainment_media,manual: abbreviated MCC description
 SAM S TOWN HOTEL AND CASINO,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
 TAROM ROMANIAN AIR TRANSPORT,4511,airlines_travel,manual: airline brand -> generic airline MCC
 QATAR AIRWAYS COMPANY W.L.L. (QATAR AIR),4511,airlines_travel,manual: airline brand -> generic airline MCC
