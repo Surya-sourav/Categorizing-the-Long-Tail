@@ -1220,7 +1220,7 @@ def test_attach_labels(tmp_path):
         "source,observed_description,mcc,match\ndc,GROCERY STORES,5411,exact\ndc,MISC RETAIL,5999,exact\n")
     df = pd.DataFrame({"mcc_description": ["GROCERY STORES", "MISC RETAIL", "???"], "source": ["dc"] * 3})
     out = attach_labels(df, tmp_path)
-    assert list(out["category"]) == ["groceries", "AMBIGUOUS", None]
+    assert list(out["category"][:2]) == ["groceries", "AMBIGUOUS"] and pd.isna(out["category"].iloc[2])
     assert list(out["ambiguous"]) == [0, 1, 1]
     assert list(out["mcc"].fillna(-1).astype(int)) == [5411, 5999, -1]
 ```
