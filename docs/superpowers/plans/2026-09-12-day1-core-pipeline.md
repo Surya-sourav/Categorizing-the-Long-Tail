@@ -1182,7 +1182,7 @@ Expected: value counts printed, 3 passed.
 ### Task 6: Description aliases and `attach_labels`
 
 **Files:**
-- Modify: `src/txcat/data/taxonomy.py` (append), Create: `scripts/build_aliases.py`, `tests/test_aliases.py`, outputs `data/taxonomy/mcc_description_aliases.csv`, `data/taxonomy/unmatched_descriptions.csv`
+- Modify: `src/txcat/data/taxonomy.py` (append), Create: `scripts/build_aliases.py`, `tests/test_aliases.py`; input (already committed): `data/taxonomy/manual_aliases.csv`; outputs `data/taxonomy/mcc_description_aliases.csv`, `data/taxonomy/unmatched_descriptions.csv`
 
 - [ ] **Step 1: Failing test**
 
@@ -1289,15 +1289,22 @@ def attach_labels(df: pd.DataFrame, taxonomy_dir: str | Path) -> pd.DataFrame:
 
 import pandas as pd
 
-from txcat.data.taxonomy import match_description
+from txcat.data.taxonomy import match_description, norm_desc
 
 src = pd.read_csv("data/taxonomy/mcc_codes_source.csv", dtype={"mcc": int})
+# Hand-written aliases for descriptions the automatic matcher cannot resolve (abbreviated MCC text such as
+# "TRANSPRTN-SUBRBN + LOCAL COMTR PSNGR", and hotel/airline brand names mapped to the generic MCC of the
+# same category). Committed and reviewed; keyed on norm_desc so spelling variants across sources match.
+manual = pd.read_csv("data/taxonomy/manual_aliases.csv")
+manual_map = {norm_desc(d): int(m) for d, m in zip(manual["observed_description"], manual["mcc"], strict=True)}
 rows, unmatched = [], []
 for name in ["dc", "oklahoma"]:
     df = pd.read_parquet(f"data/processed/{name}.parquet")
     counts = df.groupby("mcc_description").size().sort_values(ascending=False)
     for desc, n in counts.items():
         mcc, how = match_description(desc, src)
+        if mcc is None and norm_desc(desc) in manual_map:
+            mcc, how = manual_map[norm_desc(desc)], "manual"
         if mcc is None:
             unmatched.append({"source": df["source"].iloc[0], "observed_description": desc, "n_rows": n, "mcc": ""})
         else:
@@ -1312,7 +1319,7 @@ print(f"aliases: {len(rows)} matched descriptions covering {matched_rows} rows; 
 - [ ] **Step 4: Run tests, then build aliases**
 
 Run: `.venv/bin/pytest tests/test_aliases.py -v && .venv/bin/python scripts/build_aliases.py`
-Expected: 3 passed; coverage line printed. Unmatched row share should be < 2%. If higher, open `data/taxonomy/unmatched_descriptions.csv`, fill the `mcc` column by hand for the high-`n_rows` entries, append them to the aliases file with `match=manual`, and re-run.
+Expected: 3 passed; coverage line printed. With `data/taxonomy/manual_aliases.csv` (158 hand-mapped descriptions, already committed by the controller after inspecting the real unmatched list) the unmatched row share should be about 0.1% (only `Unknown`, `OTHER FEES`, `POI FUNDING TRANSACTIONS...`, which are deliberately left unmapped). If it is higher, list the new entries in `data/taxonomy/unmatched_descriptions.csv` in your report rather than guessing at MCCs.
 
 - [ ] **Step 5: Commit** — `git add scripts/build_aliases.py src/txcat/data/taxonomy.py tests/test_aliases.py data/taxonomy/*.csv && git commit -m "feat: description->MCC aliases and attach_labels"`
 

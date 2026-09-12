@@ -1,0 +1,159 @@
+observed_description,mcc,category,notes
+TELECOMMUNICATION SERV.INCLUD. LOCAL/L.D,4814,telecom_utilities,manual: abbreviated MCC description
+CATALOG MERCHANTS,5964,retail,manual: abbreviated MCC description
+MISCELLANEOUS AUTOMOTIVE DEALERS,5599,transport_auto_fuel,manual: abbreviated MCC description
+CONTINUITY/SUBSCRIPTION MERCHANTS,5968,retail,manual: abbreviated MCC description
+TRANSPRTN-SUBRBN + LOCAL COMTR PSNGR  INCL FERRIES,4111,transport_auto_fuel,manual: abbreviated MCC description
+EQUIP RENTALS & LEASING SERVICES  TOOL R,7394,professional_services,manual: abbreviated MCC description
+ALL OTHER DIRECT MARKETERS,5969,retail,manual: abbreviated MCC description
+MEN S WOMENS AND CHILDREN S UNIFORMS AND,5137,retail,manual: abbreviated MCC description
+COMP PROGRAMING DATA PRCSNG INTGRTD SYS DSGN SRVS,7372,software_electronics,manual: abbreviated MCC description
+POSTAGE STAMPS,9402,financial_postal_shipping,manual: abbreviated MCC description
+COLLEGES  UNIV  PRO SCHOOLS  JUNIOR COLLEGES,8220,education_gov_membership,manual: abbreviated MCC description
+HEATING  PLUMBING  AIR CONDITIONING CONT,1711,industrial_hardware,manual: abbreviated MCC description
+LA QUINTA INN AND SUITES,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+DENTAL-LAB-MED-OPHTHALMIC HOSP EQUIP + SUPPLIES,5047,health,manual: abbreviated MCC description
+COURTYARD INNS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+MISC FOOD STORES-SPECIALITY CONVENIENCE,5499,groceries,manual: abbreviated MCC description
+TELECOMMUNICATION EQUIPMENT INCLUDING TE,4812,telecom_utilities,manual: abbreviated MCC description
+FUEL DEALERS-FUEL OIL  WOOD  COAL  LIQUE,5983,transport_auto_fuel,manual: abbreviated MCC description
+SPECIALITY CLEANING POLISHING & SANITATI,2842,industrial_hardware,manual: abbreviated MCC description
+HYATT PLACE,7011,lodging,manual: hotel brand -> generic lodging MCC
+FURNITURE  HOME FURNISHINGS AND EQUIPMEN,5712,retail,manual: abbreviated MCC description
+AMUSEMENT RECREATION SERVICES (SWIMMING,7999,entertainment_media,manual: abbreviated MCC description
+MISCELLANEOUS HOUSE FURNISHING SPECIALIT,5719,retail,manual: abbreviated MCC description
+ALOFT,7011,lodging,manual: hotel brand -> generic lodging MCC
+SLEEP INN,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+TELECOM INCL PREPAID-RECURRING PHONE SVCS,4814,telecom_utilities,manual: abbreviated MCC description
+EXTENDED STAY,7011,lodging,manual: hotel brand -> generic lodging MCC
+THEATRICAL PRODUCERS(EXCL MOTION PIX) TICKET AGNCY,7922,entertainment_media,manual: abbreviated MCC description
+HAMPTON INN HOTELS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+JETBLUE AIRWAYS (JETBLUE),4511,airlines_travel,manual: airline brand -> generic airline MCC
+COUNTRY INN BY CARLSON,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+DETECTVE-PROTECTVE AGNCY SECURITY SRVS  ARMOR CARS,7393,professional_services,manual: abbreviated MCC description
+COMM. SPORTS  PROF. SPORTS CLUBS ATHLETI,7941,entertainment_media,manual: abbreviated MCC description
+HEATING  PLUMBING  AIR CONDITIONING CONTRACTORS,1711,industrial_hardware,manual: abbreviated MCC description
+AUTO + TRUCK DLRS-SALES SVC  REPRS PRTS  + LEASING,5511,transport_auto_fuel,manual: abbreviated MCC description
+HILTON GARDEN INN,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+UTLTS-ELCTRC  GAS  HEATING OIL  SANITARY  WATER,4900,telecom_utilities,manual: abbreviated MCC description
+EQUIP  FURNITURE  HOME FURNSHNGS STRS (EXCPT APPL),5712,retail,manual: abbreviated MCC description
+ARTIST SUPPLY STORES  CRAFT SHOPS,5970,entertainment_media,manual: abbreviated MCC description
+MASONRY STONEWORK TILE SETTING PLASTERIN,1740,industrial_hardware,manual: abbreviated MCC description
+AUTOGRAPH,7011,lodging,manual: hotel brand -> generic lodging MCC
+MISC-AUTO-AIRCRAFT-FARM EQUIP  NOT ELSEWHERE CLASS,5599,transport_auto_fuel,manual: abbreviated MCC description
+CLUBS-CNTRY MBRSHIP(ATHLET REC SPRTS PRIVATE GOLF,7997,entertainment_media,manual: abbreviated MCC description
+FREIGHT CARRIER TRUCKING-LCL-LNG DIST  MVG-STORAGE,4214,financial_postal_shipping,manual: abbreviated MCC description
+FRONTIER,4511,airlines_travel,manual: airline brand -> generic airline MCC
+INTERCONTINENTAL HOTELS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+LAQUINTA INNS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+SPRINGHILL SUITES,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+MISC FOOD STORE-CONVENIENCE MRKT SPLTY VENDNG MACS,5499,groceries,manual: abbreviated MCC description
+ALOFT HOTELS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+RADIO  TELEVISION AND STEREO REPAIR SHOP,7622,industrial_hardware,manual: abbreviated MCC description
+GAYLORD OPRYLAND,7011,lodging,manual: hotel brand -> generic lodging MCC
+Autograph,7011,lodging,manual: hotel brand -> generic lodging MCC
+CURIO HOTELS,7011,lodging,manual: hotel brand -> generic lodging MCC
+VENETIAN RESORT HOTEL AND CASINO,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+QATAR AIRWAYS,4511,airlines_travel,manual: airline brand -> generic airline MCC
+HERTZ CORPORATION,7512,transport_auto_fuel,manual: abbreviated MCC description
+ROSEN HOTELS & RESORTS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+USED MERCHANDISE STORES  SECOND HAND STO,5931,retail,manual: abbreviated MCC description
+CAESARS HOTEL AND CASINO,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+AIR CAN,4511,airlines_travel,manual: airline brand -> generic airline MCC
+Curio Hotels,7011,lodging,manual: hotel brand -> generic lodging MCC
+SANITATION  POLISHING + SPECIALITY CLEANING PREP,2842,industrial_hardware,manual: abbreviated MCC description
+BAYMONT INN & SUITES,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+BELLAGIO HOTEL AND CASINO,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+MANDALAY BAY RESORT,7011,lodging,manual: hotel brand -> generic lodging MCC
+RADISSON BLU,7011,lodging,manual: hotel brand -> generic lodging MCC
+FLAMINGO HOTELS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+Country Inn By Carlson,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+COSMOPOLITAN OF LAS VEGAS,7011,lodging,manual: hotel brand -> generic lodging MCC
+W HOTELS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+HOMES2 SUITES BY HILTON,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+MARKETPLACES,5964,retail,manual: abbreviated MCC description
+DISNEY RESORTS,7011,lodging,manual: hotel brand -> generic lodging MCC
+BAR LOUNGE DISCO NIGHTCLUB TAVERN-ALCOHOLIC DRINKS,5813,restaurants,manual: abbreviated MCC description
+STAYBRIDGE SUITES,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+MAINSTAY SUITES,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+WALDORF,7011,lodging,manual: hotel brand -> generic lodging MCC
+PEPPERMILL HOTEL CASINO,7011,lodging,manual: hotel brand -> generic lodging MCC
+WYNN LAS VEGAS,7011,lodging,manual: hotel brand -> generic lodging MCC
+NEW YORK-NEW YORK HOTEL + CASINO,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+FOUR POINTS HOTELS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+ATHLTIC FIELDS COMMRCL SPRT SPRT CLBS SPRT PROMOTR,7941,entertainment_media,manual: abbreviated MCC description
+GAYLORD PALMS,7011,lodging,manual: hotel brand -> generic lodging MCC
+BELLAGIO,7011,lodging,manual: hotel brand -> generic lodging MCC
+FONTAINEBLEAU RESORTS,7011,lodging,manual: hotel brand -> generic lodging MCC
+Cosmopolitan Hotel,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+LUXOR HOTEL AND CASINO,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+FIREPLACE  FIREPLACE SCREENS  AND ACCESS,5718,retail,manual: abbreviated MCC description
+ORTHOPEDIC GOODS-ARTIFICIAL LIMB STORES,5976,health,manual: abbreviated MCC description
+AUTOMOBILE RENTAL AGENCY-NOT ELSEWHERE CLASSIFIED,7512,transport_auto_fuel,manual: abbreviated MCC description
+HOTEL INDIGO,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+Waldorf,7011,lodging,manual: hotel brand -> generic lodging MCC
+ELEMENT,7011,lodging,manual: hotel brand -> generic lodging MCC
+CANDLEWOOD SUITES,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+TRUCK RENTAL,7513,transport_auto_fuel,manual: abbreviated MCC description
+PARIS LAS VEGAS HOTEL,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+AMERICAS BEST VALUE INN,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+CANOPY,7011,lodging,manual: hotel brand -> generic lodging MCC
+MIRAGE HOTEL AND CASINO,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+MICROTEL INN AND SUITES,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+FONTAINEBLEAU RESORT,7011,lodging,manual: hotel brand -> generic lodging MCC
+MONTE CARLO HOTEL AND CASINO,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+EXCALIBUR HOTEL AND CASINO,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+THE FLAMINGO HOTELS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+INSULATION MASONRY PLSTER STONEWRK TILESET CNTRCTR,1740,industrial_hardware,manual: abbreviated MCC description
+VDARA,7011,lodging,manual: hotel brand -> generic lodging MCC
+Canopy,7011,lodging,manual: hotel brand -> generic lodging MCC
+GOLDEN NUGGET,7011,lodging,manual: hotel brand -> generic lodging MCC
+WESTJETAIR,4511,airlines_travel,manual: airline brand -> generic airline MCC
+KENYA AIRWAYS,4511,airlines_travel,manual: airline brand -> generic airline MCC
+BEAU RIVAGE HOTEL AND CASINO,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+SLEEP INNS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+ROSEN HOTELS + RESORTS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+HAWTHORNE BY WYNDHAM,7011,lodging,manual: hotel brand -> generic lodging MCC
+REUPHOLSTERY AND FURNITURE REPAIR  FURNI,7641,industrial_hardware,manual: abbreviated MCC description
+CONRAD HOTELS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+FUEL DEALERS-COAL  FUEL OIL  LIQ PETROLEUM  WOOD,5983,transport_auto_fuel,manual: abbreviated MCC description
+WOMENS ACCESSORY AND SPECIALTY STORES,5631,retail,manual: abbreviated MCC description
+SILVER LEGACY HOTEL AND CASINO,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+DRUGS  DRUP PROPRIETARIES  AND DRUGGISTS SUPPLIES,5122,health,manual: abbreviated MCC description
+SMUGGLERS  NOTCH RESORT,7011,lodging,manual: hotel brand -> generic lodging MCC
+Electric Vehicle Charging to PaymentNet,5541,transport_auto_fuel,manual: abbreviated MCC description
+BRITISH A,4511,airlines_travel,manual: airline brand -> generic airline MCC
+GREAT WOLF,7011,lodging,manual: hotel brand -> generic lodging MCC
+LAUNDRY SERVICES - FAMILY AND COMMERICAL,7211,professional_services,manual: abbreviated MCC description
+SUPER 8 MOTELS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+CARIBE ROYALE RESORT SUITES + VILLAS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+RYANAIR,4511,airlines_travel,manual: airline brand -> generic airline MCC
+AMERICINN,7011,lodging,manual: hotel brand -> generic lodging MCC
+THE PALACE HOTEL,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+STAMP & COIN STORES-PHILATELIC & NUMISMA,5972,retail,manual: abbreviated MCC description
+SAM S TOWN HOTEL AND CASINO,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+TAROM ROMANIAN AIR TRANSPORT,4511,airlines_travel,manual: airline brand -> generic airline MCC
+QATAR AIRWAYS COMPANY W.L.L. (QATAR AIR),4511,airlines_travel,manual: airline brand -> generic airline MCC
+WIG AND TOUPEE SHOPS,5698,retail,manual: abbreviated MCC description
+EXTENDED STAY AMERICA,7011,lodging,manual: hotel brand -> generic lodging MCC
+ITA AIRWAYS,4511,airlines_travel,manual: airline brand -> generic airline MCC
+SWISS,4511,airlines_travel,manual: airline brand -> generic airline MCC
+PREMIER INN,7011,lodging,manual: hotel brand -> generic lodging MCC
+INBOUND TELESERVICES MERCHANTS,5967,retail,manual: abbreviated MCC description
+OSTEOPATHIC PHYSICIANS,8031,health,manual: abbreviated MCC description
+ANTIQUE REPRODUCTION STORES,5937,retail,manual: abbreviated MCC description
+ARIA,7011,lodging,manual: hotel brand -> generic lodging MCC
+LA QUINTA RESORT,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+KUWAIT AIRWAYS,4511,airlines_travel,manual: airline brand -> generic airline MCC
+NEW YORK  NEW YORK HOTEL AND CASINO,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+NORWEGIAN AIR SHUTTLE - NORWEGIAN,4511,airlines_travel,manual: airline brand -> generic airline MCC
+TREASURE ISLAND HOTEL AND CASINO,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+CHINA SOUTHERN,4511,airlines_travel,manual: airline brand -> generic airline MCC
+DIRECT SELLING ESTABLISHMENTS  DOOR TO D,5963,retail,manual: abbreviated MCC description
+KIMPTON HOTELS,7011,lodging,manual: hotel brand -> generic lodging MCC
+ETIHADAIR,4511,airlines_travel,manual: airline brand -> generic airline MCC
+MILLENNIUM HOTELS,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+ALA MOANA HOTEL,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
+SNBRU AIR,4511,airlines_travel,manual: airline brand -> generic airline MCC
+VIDEO ENTERTAINMENT RENTAL STORES,7841,entertainment_media,manual: abbreviated MCC description
+PAL AIR,4511,airlines_travel,manual: airline brand -> generic airline MCC
