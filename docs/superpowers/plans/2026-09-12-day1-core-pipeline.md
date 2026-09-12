@@ -2907,6 +2907,18 @@ class WebSearchClient:
 
 ### Task 17: LLM fallback (OpenAI-compatible), prompts, JSON cache
 
+Path hygiene: config paths are absolute in memory (root-anchored). Anything written into a COMMITTED artifact must be repo-relative. Add this helper to `src/txcat/config.py` as the first step of this task (with a one-line test in tests/test_config.py):
+
+```python
+def rel_to_root(p: str | Path) -> str:
+    """Repo-relative POSIX string for paths written into committed artifacts (caches, manifests)."""
+    p = Path(p)
+    try:
+        return p.resolve().relative_to(_ROOT).as_posix()
+    except ValueError:
+        return p.as_posix()
+```
+
 Provider notes (verified 2026-09-12): Together's structured output uses `response_format={"type":"json_schema","json_schema":{"name":..., "schema":...}}` with NO `strict` key; OpenAI accepts the same plus `"strict": true`. The open-weight row is `Qwen/Qwen3.5-9B` on Together ($0.17/$0.25 per 1M, structured outputs supported); Llama 3.1 8B is no longer served there. gpt-5-nano's current snapshot is `gpt-5-nano-2025-08-07`.
 
 **Files:**
@@ -3044,7 +3056,7 @@ from pathlib import Path
 
 from loguru import logger
 
-from txcat.config import LLMModelCfg
+from txcat.config import LLMModelCfg, rel_to_root
 from txcat.utils import now_iso, sha256_text
 from txcat.web_search import SearchResult
 
@@ -3166,7 +3178,7 @@ class LLMFallback:
             actual = res.tokens_in / 1e6 * self.m.price_in_per_1m + res.tokens_out / 1e6 * self.m.price_out_per_1m
             self.ledger.entries[-1]["usd"] = actual
             self.ledger.path.write_text(json.dumps(self.ledger.entries))
-        p.write_text(json.dumps({"model": self.m.name, "prompt_hash": self.prompt_hash, "prompt_file": str(self.prompt_path),
+        p.write_text(json.dumps({"model": self.m.name, "prompt_hash": self.prompt_hash, "prompt_file": rel_to_root(self.prompt_path),
                                  "merchant": merchant, "timestamp": now_iso(), "request": kw, "raw_response": text,
                                  "result": asdict(res)}, ensure_ascii=False))
         return res
