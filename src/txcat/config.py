@@ -199,6 +199,15 @@ def _resolve_paths(data: dict[str, Any]) -> dict[str, Any]:
     return out
 
 
+def rel_to_root(p: str | Path) -> str:
+    """Repo-relative POSIX string for paths written into committed artifacts (caches, manifests)."""
+    p = Path(p)
+    try:
+        return p.resolve().relative_to(_ROOT).as_posix()
+    except ValueError:
+        return p.as_posix()
+
+
 def _resolve_config_path(path: str | Path) -> Path:
     """Take ``path`` as given; fall back to ``_ROOT / path`` for a relative path from elsewhere."""
     p = Path(path)

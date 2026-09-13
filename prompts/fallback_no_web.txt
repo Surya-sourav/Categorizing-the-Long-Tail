@@ -1,0 +1,11 @@
+You categorize the merchant behind a card transaction descriptor.
+
+Merchant descriptor (normalized): {merchant}
+
+Choose exactly one category from this list:
+{taxonomy}
+
+Return JSON only, with keys:
+- "category": one of the category names above, copied exactly
+- "confidence": a number from 0 to 1 for how sure you are
+- "evidence": one sentence naming what you believe the merchant is and why

@@ -1,7 +1,7 @@
 import pytest
 from pydantic import ValidationError
 
-from txcat.config import _ROOT, load_config
+from txcat.config import _ROOT, load_config, rel_to_root
 
 
 def test_default_config_loads():
@@ -90,3 +90,7 @@ def test_unknown_active_dataset_is_rejected(tmp_path):
     p.write_text("active_dataset: nope\n")
     with pytest.raises(ValidationError):
         load_config(str(p))
+
+
+def test_rel_to_root_is_repo_relative():
+    assert rel_to_root(_ROOT / "prompts/fallback_no_web.txt") == "prompts/fallback_no_web.txt"
