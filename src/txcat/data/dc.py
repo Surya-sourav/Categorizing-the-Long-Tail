@@ -223,6 +223,14 @@ def build_processed(raw_dir: str | Path, out_path: str | Path) -> pd.DataFrame:
         raise ValueError(f"no DC pages found under {raw_dir}")
     df = pd.concat(frames, ignore_index=True).drop_duplicates("txn_id")
     df = df.sort_values(["date", "txn_id"], kind="stable").reset_index(drop=True)
+    meta_path = Path(raw_dir) / "_meta.json"
+    if meta_path.exists():
+        expected = json.loads(meta_path.read_text()).get("total_count")
+        if expected is not None and len(df) != expected:
+            raise RuntimeError(
+                f"DC processed has {len(df)} rows but _meta.json recorded {expected}; "
+                "a page file is missing or truncated - re-run the download"
+            )
     validate_processed(df)
     Path(out_path).parent.mkdir(parents=True, exist_ok=True)
     df.to_parquet(out_path, index=False)

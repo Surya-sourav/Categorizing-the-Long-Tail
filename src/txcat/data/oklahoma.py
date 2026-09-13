@@ -97,7 +97,9 @@ def _download_one(url: str, dest: Path, name: str) -> None:
         try:
             r = requests.get(url, timeout=120)
             r.raise_for_status()
-            declared = r.headers.get("Content-Length")
+            # requests transparently decompresses, so a compressed Content-Length would not match
+            compressed = bool(r.headers.get("Content-Encoding"))
+            declared = None if compressed else r.headers.get("Content-Length")
             _write_bytes_atomic(dest, r.content, int(declared) if declared else None)
             logger.info(f"OK downloaded {dest.name} ({len(r.content) / 1e6:.1f} MB)")
             return
