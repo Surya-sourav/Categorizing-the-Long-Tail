@@ -96,7 +96,7 @@ class BudgetCfg(_Base):
 
 
 class SearchCfg(_Base):
-    provider: Literal["brave"] = "brave"
+    provider: Literal["brave", "tavily"] = "brave"
     cache_dir: str = "cache/web_search"
     num_results: int = 5
     price_per_1k_usd: float = 5.0
@@ -106,12 +106,14 @@ class SearchCfg(_Base):
 
 class LLMModelCfg(_Base):
     name: str
-    provider: Literal["openai", "together"]
+    provider: Literal["openai", "together", "nvidia"]
     api_key_env: str
     base_url: str | None = None
     price_in_per_1m: float
     price_out_per_1m: float
     reasoning_effort: str | None = None
+    min_interval_s: float = 0.0  # client-side throttle (NVIDIA free endpoints allow ~40 RPM)
+    note: str | None = None  # e.g. "free developer endpoint; prices are reference rates"
     json_mode: Literal["json_schema", "json_object", "none"] = "json_schema"
 
 

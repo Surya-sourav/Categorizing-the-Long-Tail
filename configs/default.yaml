@@ -62,12 +62,12 @@ budget:
   ledger_path: cache/spend_ledger.json
 
 search:
-  provider: brave
+  provider: tavily            # brave is also implemented
   cache_dir: cache/web_search
   num_results: 5
-  price_per_1k_usd: 5.0
-  min_interval_s: 1.1
-  api_key_env: BRAVE_API_KEY
+  price_per_1k_usd: 8.0       # Tavily basic search: 1 credit = $0.008 pay-as-you-go (1,000 free/month)
+  min_interval_s: 0.7
+  api_key_env: TAVILY_API_KEY
 
 llm:
   cache_dir: cache/llm
@@ -89,11 +89,23 @@ llm:
       price_out_per_1m: 2.00
       reasoning_effort: minimal
       json_mode: json_schema
-    - name: Qwen/Qwen3.5-9B
-      provider: together
-      base_url: https://api.together.xyz/v1
-      api_key_env: TOGETHER_API_KEY
-      price_in_per_1m: 0.17
-      price_out_per_1m: 0.25
+    - name: google/gemma-4-31b-it
+      provider: nvidia
+      base_url: https://integrate.api.nvidia.com/v1
+      api_key_env: NVIDIA_API_KEY
+      price_in_per_1m: 0.20       # reference rate for a hosted ~30B open-weight model; the NIM endpoint is free
+      price_out_per_1m: 0.60
       reasoning_effort: null
-      json_mode: json_schema
+      json_mode: json_object
+      min_interval_s: 1.6         # ~37 RPM under NVIDIA's 40 RPM free-tier cap
+      note: open-weight row; NVIDIA NIM free developer endpoint; prices are reference rates
+    - name: nvidia/nemotron-3.5-lightning-30b-a3b
+      provider: nvidia
+      base_url: https://integrate.api.nvidia.com/v1
+      api_key_env: NVIDIA_API_KEY
+      price_in_per_1m: 0.20
+      price_out_per_1m: 0.60
+      reasoning_effort: null
+      json_mode: json_object
+      min_interval_s: 1.6
+      note: open-weight row (MoE, 3B active); NVIDIA NIM free developer endpoint; prices are reference rates

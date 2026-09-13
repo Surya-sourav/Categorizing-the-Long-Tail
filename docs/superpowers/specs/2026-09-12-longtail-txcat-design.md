@@ -140,8 +140,8 @@ on a 10% calibration slice of train, predicts P(top-1 wrong); fallback if P > t)
 
 ### 4.5 `src/web_search.py`
 `WebSearchClient(provider, cache_dir).search(query, num_results=5) -> list[SearchResult]`.
-Provider `brave` (GET `api.search.brave.com/res/v1/web/search`, header `X-Subscription-Token`,
-1 req/s throttle, resumable). Cache file `cache/web_search/<sha1(provider|query)>.json` with schema
+Provider `tavily` (POST `api.tavily.com/search`, bearer auth, `search_depth=basic` = 1 credit,
+1,000 free credits/month then $0.008 each; `brave` also implemented). Resumable. Cache file `cache/web_search/<sha1(provider|query)>.json` with schema
 `{"query", "provider", "timestamp", "results": [{"title","snippet","url"}]}`. Optional provider
 `openai_builtin` (Responses API `web_search` tool, model-controlled query, ablation only) stores
 the model's issued queries and `url_citation`s in the same schema. Reproduction mode never calls
@@ -151,7 +151,10 @@ the network.
 `LLMFallback(model, cache_dir, prompt_template).categorize(merchant, evidence | None, taxonomy)
 -> LLMResult(category, confidence, evidence_used, tokens_in, tokens_out, latency_ms)`. One
 OpenAI-compatible client with `base_url` switch: OpenAI (`gpt-5-nano`, `gpt-5-mini`, pinned
-snapshot ids, `reasoning.effort="minimal"`), Together (`Qwen/Qwen3.5-9B`, the open-weight row; Llama 3.1 8B is no longer served on Together).
+snapshot ids, `reasoning.effort="minimal"`), NVIDIA NIM (`google/gemma-4-31b-it` and `nvidia/nemotron-3.5-lightning-30b-a3b`, the open-weight rows;
+free developer endpoint at `integrate.api.nvidia.com/v1`, ~40 requests/minute, so the client throttles to
+1.6 s between calls; cost column uses a labelled reference rate because the endpoint itself is free; latency on
+a shared free endpoint is reported but not treated as a deployment number).
 JSON-schema structured output `{category: enum(taxonomy), confidence: number, evidence: string}`.
 Prompts `prompts/fallback_with_web.txt` and `prompts/fallback_no_web.txt` differ only by the
 evidence block. Cache key `sha256(model|prompt_hash|rendered_prompt)`; file stores full request
@@ -215,9 +218,9 @@ Figures saved as PDF + PNG. All tables CSV. Every experiment takes `--config`, `
 
 | Item | Estimate |
 |---|---|
-| Brave: ~3,300 FES merchants (DC 3,000 + Oklahoma cold-start 800, minus overlap) | ~$12–17 after $5 credit |
+| Tavily: ~3,800 FES merchants (DC 3,000 + Oklahoma cold-start 800) | ~$22 pay-as-you-go after 1,000 free credits, or the $30 plan |
 | Two small OpenAI models: ~3,300 merchants x 2 conditions x 2 models | ~$3–5 |
-| Qwen3.5 9B (open-weight) via Together: same calls | ~$2 |
+| Two open-weight models via NVIDIA NIM free endpoint: same calls | $0 (~3 h each at 40 RPM) |
 | text-embedding-3-small: unique strings across DC + Oklahoma + generator | < $1 |
 | Prompt-sensitivity: 2 variants x 300 tail merchants x 3 models | ~$1 |
 | OpenAI built-in web search ablation, 300 merchants | ~$7 |

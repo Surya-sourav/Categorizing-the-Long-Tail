@@ -73,6 +73,7 @@ class LLMFallback:
         self.prompt_hash = sha256_text(self.prompt_path.read_text())
         self.ledger, self._client, self.allow_live = ledger, client, allow_live
         self.max_completion_tokens = max_completion_tokens
+        self._last_call = 0.0
 
     @property
     def client(self):
@@ -115,6 +116,9 @@ class LLMFallback:
                    + 150 / 1e6 * self.m.price_out_per_1m)
         if self.ledger is not None:
             self.ledger.add("llm", est_usd, self.m.name)
+        wait = self.m.min_interval_s - (time.time() - self._last_call)
+        if wait > 0:
+            time.sleep(wait)
         t0 = time.perf_counter()
         resp = None
         for attempt in range(4):
@@ -127,6 +131,7 @@ class LLMFallback:
         if resp is None:
             raise RuntimeError(f"LLM call failed for {merchant!r}")
         latency = (time.perf_counter() - t0) * 1000
+        self._last_call = time.time()
         text = resp.choices[0].message.content or ""
         try:
             parsed = _extract_json(text)
