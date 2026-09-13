@@ -1,0 +1,11 @@
+Task: assign a spending category to a merchant from a bank card statement.
+
+Statement text for the merchant (already cleaned): {merchant}
+
+Search engine results for that text:
+{evidence_block}
+
+Allowed categories (pick exactly one, copy the name verbatim):
+{taxonomy}
+
+Answer with a single JSON object with fields "category", "confidence" (0-1), and "evidence" (one sentence saying what the merchant is; mention the result number you relied on, if any).

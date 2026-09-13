@@ -108,3 +108,77 @@ def fig_acc_vs_sim(
     ax.legend(loc="lower right")
     style.save(fig, stem)
     plt.close(fig)
+
+
+def fig_frontier(
+    frontier: pd.DataFrame,
+    stem: str | Path,
+    knee_threshold: float | None = None,
+    title: str = "Accuracy–cost frontier over the gate threshold",
+) -> None:
+    """One line per model over the threshold sweep, points labeled by threshold.
+
+    ``frontier`` columns: threshold, macro_f1, cost_per_1k, model.
+    """
+    fig, ax = plt.subplots()
+    colors = [
+        style.SERIES["head"],
+        style.SERIES["tail"],
+        style.SERIES["third"],
+        style.SERIES["fourth"],
+    ]
+    for (model, g), c in zip(frontier.groupby("model", sort=False), colors, strict=False):
+        g = g.sort_values("cost_per_1k")
+        ax.plot(g["cost_per_1k"], g["macro_f1"], marker="o", color=c, label=model)
+        for _, r in g.iloc[::3].iterrows():
+            ax.annotate(
+                f"{r['threshold']:.2f}",
+                (r["cost_per_1k"], r["macro_f1"]),
+                textcoords="offset points",
+                xytext=(4, 4),
+                fontsize=6,
+                color=style.INK2,
+            )
+    if knee_threshold is not None:
+        k = frontier[frontier["threshold"].round(2) == round(knee_threshold, 2)]
+        ax.scatter(
+            k["cost_per_1k"],
+            k["macro_f1"],
+            s=90,
+            facecolors="none",
+            edgecolors=style.INK,
+            linewidths=1.2,
+            zorder=5,
+            label=f"knee t={knee_threshold:.2f}",
+        )
+    ax.set_xlabel("cost per 1k transactions (USD)")
+    ax.set_ylabel("overall macro-F1")
+    ax.set_title(title, loc="left", color=style.INK)
+    ax.legend(loc="lower right")
+    style.save(fig, stem)
+    plt.close(fig)
+
+
+POLICY_COLORS = {
+    "never": style.SERIES["head"],
+    "always": style.SERIES["tail"],
+    "confidence_gated": style.SERIES["third"],
+}
+
+
+def fig_stream_lines(
+    windows_by_policy: dict[str, pd.DataFrame], ycol: str, ylabel: str, stem: str | Path, title: str
+) -> None:
+    """One line per write-back policy over stream windows (x = transactions processed)."""
+    fig, ax = plt.subplots()
+    for policy, w in windows_by_policy.items():
+        x = (w["window"] + 1) * (w.attrs.get("window_size", 500))
+        ax.plot(
+            x, w[ycol], color=POLICY_COLORS.get(policy, style.INK2), label=policy.replace("_", " ")
+        )
+    ax.set_xlabel("transactions processed")
+    ax.set_ylabel(ylabel)
+    ax.set_title(title, loc="left", color=style.INK)
+    ax.legend(loc="best")
+    style.save(fig, stem)
+    plt.close(fig)

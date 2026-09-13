@@ -16,7 +16,7 @@ def macro_f1(y_true, y_pred, mask=None) -> float:
         y_true, y_pred = y_true[np.asarray(mask, bool)], y_pred[np.asarray(mask, bool)]
     if len(y_true) == 0:
         return float("nan")
-    # labels = union of truth and prediction (sklearn default); a predicted-but-absent class scores 0
+    # labels = union of truth and prediction (sklearn default); predicted-but-absent scores 0
     return float(f1_score(y_true, y_pred, average="macro", zero_division=0))
 
 
