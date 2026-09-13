@@ -118,6 +118,7 @@ class LLMModelCfg(_Base):
         None  # provider-specific request extras (e.g. NIM chat_template_kwargs)
     )
     timeout_s: float = 90.0
+    max_completion_tokens: int | None = None  # per-model override of llm.max_completion_tokens
     json_mode: Literal["json_schema", "json_object", "none"] = "json_schema"
 
 
@@ -133,6 +134,7 @@ class ConcurrencyCfg(_Base):
     search_workers: int = 2
     search_rpm: int = 60
     llm_workers: int = 16
+    nvidia_workers: int = 4
     llm_rpm: int = 38
 
 

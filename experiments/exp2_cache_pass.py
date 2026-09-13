@@ -121,7 +121,8 @@ def main() -> None:
                         cfg.llm.cache_dir,
                         prompt,
                         ledger=ledger,
-                        max_completion_tokens=cfg.llm.max_completion_tokens,
+                        max_completion_tokens=mcfg.max_completion_tokens
+                        or cfg.llm.max_completion_tokens,
                         limiter=limiters[mcfg.provider],
                     )
 
@@ -129,9 +130,21 @@ def main() -> None:
                         ev = ws_ro.search(m, cfg.search.num_results) if cond == "with_web" else None
                         return fb.categorize(m, ev, CATEGORIES)
 
-                    run_parallel(
-                        _categorize, merchants, cfg.concurrency.llm_workers, f"{mcfg.name}/{cond}"
+                    out = run_parallel(
+                        _categorize,
+                        merchants,
+                        cfg.concurrency.nvidia_workers
+                        if mcfg.provider == "nvidia"
+                        else cfg.concurrency.llm_workers,
+                        f"{mcfg.name}/{cond}",
+                        on_error="collect",
                     )
+                    failed = [o for o in out if isinstance(o, Exception)]
+                    if failed:
+                        logger.warning(
+                            f"{mcfg.name}/{cond}: {len(failed)} merchants failed after retries "
+                            f"(uncached; re-run resumes them). First: {failed[0]}"
+                        )
                     logger.info(f"{mcfg.name}/{cond} done; spend {ledger.total:.2f} USD")
         except BudgetExceeded as e:
             logger.error(f"STOPPED: {e}")

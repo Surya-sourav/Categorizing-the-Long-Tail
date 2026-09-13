@@ -91,7 +91,7 @@ def main() -> None:
                 cfg.llm.cache_dir,
                 prompt,
                 ledger=ledger,
-                max_completion_tokens=cfg.llm.max_completion_tokens,
+                max_completion_tokens=mcfg.max_completion_tokens or cfg.llm.max_completion_tokens,
                 limiter=limiters[mcfg.provider],
             )
 
@@ -116,11 +116,22 @@ def main() -> None:
             out = run_parallel(
                 _categorize,
                 [r for _, r in merchants.iterrows()],
-                cfg.concurrency.llm_workers,
+                cfg.concurrency.nvidia_workers
+                if mcfg.provider == "nvidia"
+                else cfg.concurrency.llm_workers,
                 f"{mcfg.name}/{cond}",
+                on_error="collect",
             )
-            rows.extend(out)
-            model_ids[mcfg.name] = out[-1]["model_id"] if out else mcfg.name
+            failed = [o for o in out if isinstance(o, Exception)]
+            ok = [o for o in out if not isinstance(o, Exception)]
+            if failed:
+                logger.warning(
+                    f"{mcfg.name}/{cond}: {len(failed)} merchants failed after retries "
+                    f"(left uncached; re-run to retry). First: {failed[0]}"
+                )
+            rows.extend(ok)
+            if ok:
+                model_ids[mcfg.name] = ok[-1]["model_id"]
             logger.info(f"{mcfg.name} {cond} done; spend so far {ledger.total:.3f} USD")
 
     out = pd.DataFrame(rows)

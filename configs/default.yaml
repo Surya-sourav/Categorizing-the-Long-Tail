@@ -97,7 +97,8 @@ llm:
       price_out_per_1m: 0.60
       reasoning_effort: null
       json_mode: none             # prompt asks for JSON; extractor takes the last JSON object
-      timeout_s: 90
+      timeout_s: 180
+      max_completion_tokens: 600  # DeepSeek sometimes rambles before the JSON; 300 truncated 5% of answers
       note: open-weight row (DeepSeek V4 Flash, 284B MoE / 13B active); NVIDIA NIM free developer endpoint; prices are reference rates
     - name: nvidia/nemotron-3-super-120b-a12b
       provider: nvidia
@@ -107,12 +108,13 @@ llm:
       price_out_per_1m: 0.90
       reasoning_effort: null
       json_mode: none
-      timeout_s: 90
+      timeout_s: 180
       note: second open-weight row (Nemotron 3 Super, 120B MoE / 12B active); NVIDIA NIM free developer endpoint; prices are reference rates
 
 # live cache pass concurrency: workers run in parallel behind one global requests-per-minute limiter
 concurrency:
   search_workers: 2             # Firecrawl free/hobby plans allow 2 concurrent requests
   search_rpm: 60
-  llm_workers: 16
+  llm_workers: 16               # OpenAI
+  nvidia_workers: 4             # free NIM endpoint queues badly above a few in-flight requests (pilot: 90 s+ at 16)
   llm_rpm: 38                   # NVIDIA free tier: 40 RPM per key; OpenAI limits are far higher
