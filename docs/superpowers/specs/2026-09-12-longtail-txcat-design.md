@@ -140,8 +140,10 @@ on a 10% calibration slice of train, predicts P(top-1 wrong); fallback if P > t)
 
 ### 4.5 `src/web_search.py`
 `WebSearchClient(provider, cache_dir).search(query, num_results=5) -> list[SearchResult]`.
-Provider `tavily` (POST `api.tavily.com/search`, bearer auth, `search_depth=basic` = 1 credit,
-1,000 free credits/month then $0.008 each; `brave` also implemented). Resumable. Cache file `cache/web_search/<sha1(provider|query)>.json` with schema
+Provider `firecrawl` (POST `api.firecrawl.dev/v2/search`, bearer auth, 2 prepaid credits per query, results
+under `data.web[]`; `tavily` and `brave` also implemented). The author holds 10k credits, enough for the
+~3,900 pilot + FES queries with ~2k spare for Exp 4 page scrapes. Cost column uses Firecrawl's list price
+($0.0053/credit) as a reference. Resumable, sequential (2-concurrency cap). Cache file `cache/web_search/<sha1(provider|query)>.json` with schema
 `{"query", "provider", "timestamp", "results": [{"title","snippet","url"}]}`. Optional provider
 `openai_builtin` (Responses API `web_search` tool, model-controlled query, ablation only) stores
 the model's issued queries and `url_citation`s in the same schema. Reproduction mode never calls
@@ -218,7 +220,7 @@ Figures saved as PDF + PNG. All tables CSV. Every experiment takes `--config`, `
 
 | Item | Estimate |
 |---|---|
-| Tavily: ~3,800 FES merchants (DC 3,000 + Oklahoma cold-start 800) | ~$22 pay-as-you-go after 1,000 free credits, or the $30 plan |
+| Firecrawl: ~3,900 queries x 2 credits from the author's prepaid 10k | $0 incremental (~$41 list-price reference) |
 | Two small OpenAI models: ~3,300 merchants x 2 conditions x 2 models | ~$3–5 |
 | Two open-weight models via NVIDIA NIM free endpoint: same calls | $0 (~3 h each at 40 RPM) |
 | text-embedding-3-small: unique strings across DC + Oklahoma + generator | < $1 |

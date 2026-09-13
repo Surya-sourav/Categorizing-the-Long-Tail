@@ -16,7 +16,8 @@ from txcat.utils import now_iso, sha1_text
 
 BRAVE_URL = "https://api.search.brave.com/res/v1/web/search"
 TAVILY_URL = "https://api.tavily.com/search"
-PROVIDERS = ("brave", "tavily")
+FIRECRAWL_URL = "https://api.firecrawl.dev/v2/search"
+PROVIDERS = ("brave", "tavily", "firecrawl")
 _AMOUNT_OR_DATE = re.compile(r"\$\s?\d|\d{4}-\d{2}-\d{2}|\d{1,2}/\d{1,2}/\d{2,4}")
 
 
@@ -60,6 +61,17 @@ class WebSearchClient:
                 headers={"Accept": "application/json", "X-Subscription-Token": self.api_key},
                 timeout=30,
             )
+        if self.provider == "firecrawl":
+            # Firecrawl v2 search: 2 credits per request (<=10 results); web source, no scraping
+            return self.http.post(
+                FIRECRAWL_URL,
+                json={"query": query, "limit": num_results, "sources": ["web"], "country": "US"},
+                headers={
+                    "Authorization": f"Bearer {self.api_key}",
+                    "Content-Type": "application/json",
+                },
+                timeout=60,
+            )
         # Tavily: JSON body, bearer auth; basic depth = 1 credit; evidence only
         return self.http.post(
             TAVILY_URL,
@@ -77,6 +89,14 @@ class WebSearchClient:
     def _parse(self, payload: dict, num_results: int) -> list[SearchResult]:
         if self.provider == "brave":
             raw = payload.get("web", {}).get("results", [])
+            return [
+                SearchResult(
+                    title=x.get("title", ""), snippet=x.get("description", ""), url=x.get("url", "")
+                )
+                for x in raw[:num_results]
+            ]
+        if self.provider == "firecrawl":
+            raw = (payload.get("data") or {}).get("web", []) or []
             return [
                 SearchResult(
                     title=x.get("title", ""), snippet=x.get("description", ""), url=x.get("url", "")
@@ -120,7 +140,9 @@ class WebSearchClient:
             r.raise_for_status()
             break
         self._last = time.time()
-        results = self._parse(r.json(), num_results)
+        payload = r.json()
+        results = self._parse(payload, num_results)
+        credits_used = payload.get("creditsUsed") if isinstance(payload, dict) else None
         p.write_text(
             json.dumps(
                 {
@@ -128,6 +150,7 @@ class WebSearchClient:
                     "provider": self.provider,
                     "timestamp": now_iso(),
                     "results": [asdict(x) for x in results],
+                    "credits_used": credits_used,
                 },
                 ensure_ascii=False,
             )

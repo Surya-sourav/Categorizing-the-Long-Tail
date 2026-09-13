@@ -62,12 +62,12 @@ budget:
   ledger_path: cache/spend_ledger.json
 
 search:
-  provider: tavily            # brave is also implemented
+  provider: firecrawl         # tavily and brave are also implemented
   cache_dir: cache/web_search
   num_results: 5
-  price_per_1k_usd: 8.0       # Tavily basic search: 1 credit = $0.008 pay-as-you-go (1,000 free/month)
-  min_interval_s: 0.7
-  api_key_env: TAVILY_API_KEY
+  price_per_1k_usd: 10.7      # Firecrawl search = 2 credits/query; reference $0.0053/credit (Hobby plan); credits are prepaid
+  min_interval_s: 0.5         # free/hobby plans allow 2 concurrent requests; we stay sequential
+  api_key_env: FIRECRAWL_API_KEY
 
 llm:
   cache_dir: cache/llm

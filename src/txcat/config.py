@@ -96,7 +96,7 @@ class BudgetCfg(_Base):
 
 
 class SearchCfg(_Base):
-    provider: Literal["brave", "tavily"] = "brave"
+    provider: Literal["brave", "tavily", "firecrawl"] = "brave"
     cache_dir: str = "cache/web_search"
     num_results: int = 5
     price_per_1k_usd: float = 5.0

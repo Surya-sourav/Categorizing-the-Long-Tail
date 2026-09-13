@@ -47,7 +47,7 @@ only. Raw and processed data are never committed; `data/download.py` fetches the
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv venv --python 3.12 .venv && uv pip install -e ".[dev]"
-cp .env.example .env   # OPENAI_API_KEY, TAVILY_API_KEY, NVIDIA_API_KEY (only for live cache passes)
+cp .env.example .env   # OPENAI_API_KEY, FIRECRAWL_API_KEY, NVIDIA_API_KEY (only for live cache passes)
 .venv/bin/pytest       # unit tests, no network
 ```
 
@@ -111,8 +111,8 @@ docs/superpowers/     design spec and implementation plans
 Models pinned in `prompts/model_versions.json`. Embeddings: all-MiniLM-L6-v2, bge-small-en-v1.5,
 all-mpnet-base-v2, FinBERT (mean-pooled, as an encoder), text-embedding-3-small. Fallback LLMs:
 gpt-5-nano, gpt-5-mini, and two open-weight models on NVIDIA's free NIM endpoint (Gemma 4 31B IT,
-Nemotron 3.5 Lightning 30B-A3B). Web evidence: Tavily Search API (Brave also implemented); OpenAI
-built-in web search appears only in a 300-merchant ablation.
+Nemotron 3.5 Lightning 30B-A3B). Web evidence: Firecrawl search API (Tavily and Brave also implemented);
+OpenAI built-in web search appears only in a 300-merchant ablation.
 
 ## Citation
 

@@ -151,3 +151,68 @@ def test_tavily_provider_posts_and_maps_content_to_snippet(tmp_path):
 def test_unknown_provider_rejected(tmp_path):
     with pytest.raises(ValueError):
         WebSearchClient("google", tmp_path, api_key="k")
+
+
+FIRECRAWL_PAYLOAD = {
+    "success": True,
+    "creditsUsed": 2,
+    "data": {
+        "web": [
+            {
+                "url": "https://www.grainger.com/",
+                "title": "Grainger Industrial Supply",
+                "description": "Grainger is your premier industrial supplies provider.",
+                "category": "",
+            },
+            {
+                "url": "https://en.wikipedia.org/wiki/W._W._Grainger",
+                "title": "W. W. Grainger",
+                "description": "American industrial supply company.",
+                "category": "",
+            },
+        ]
+    },
+}
+
+
+class FakeFirecrawlHTTP:
+    def __init__(self):
+        self.calls, self.last = 0, None
+
+    def post(self, url, json, headers, timeout):
+        self.calls += 1
+        self.last = (url, json, headers)
+
+        class R:
+            status_code = 200
+
+            def raise_for_status(self):
+                pass
+
+            def json(self):
+                return FIRECRAWL_PAYLOAD
+
+        return R()
+
+
+def test_firecrawl_provider_uses_v2_search_and_records_credits(tmp_path):
+    led = SpendLedger(tmp_path / "l.json", 10)
+    http = FakeFirecrawlHTTP()
+    c = WebSearchClient(
+        "firecrawl",
+        tmp_path / "ws",
+        api_key="fc",
+        ledger=led,
+        http=http,
+        min_interval_s=0,
+        price_per_1k=10.7,
+    )
+    r = c.search("WW GRAINGER", num_results=5)
+    assert http.last[0].endswith("/v2/search")
+    assert http.last[1] == {"query": "WW GRAINGER", "limit": 5, "sources": ["web"], "country": "US"}
+    assert http.last[2]["Authorization"] == "Bearer fc"
+    assert r[0].title == "Grainger Industrial Supply" and r[0].snippet.startswith("Grainger is")
+    payload = json.loads(next((tmp_path / "ws").glob("*.json")).read_text())
+    assert payload["provider"] == "firecrawl" and payload["credits_used"] == 2
+    assert led.total == pytest.approx(0.0107)
+    assert len(c.search("WW GRAINGER")) == 2 and http.calls == 1
