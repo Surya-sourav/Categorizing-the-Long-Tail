@@ -89,23 +89,31 @@ llm:
       price_out_per_1m: 2.00
       reasoning_effort: minimal
       json_mode: json_schema
-    - name: google/gemma-4-31b-it
+    - name: nvidia/nemotron-3.5-lightning-30b-a3b
       provider: nvidia
       base_url: https://integrate.api.nvidia.com/v1
       api_key_env: NVIDIA_API_KEY
       price_in_per_1m: 0.20       # reference rate for a hosted ~30B open-weight model; the NIM endpoint is free
       price_out_per_1m: 0.60
       reasoning_effort: null
-      json_mode: json_object
-      min_interval_s: 1.6         # ~37 RPM under NVIDIA's 40 RPM free-tier cap
-      note: open-weight row; NVIDIA NIM free developer endpoint; prices are reference rates
-    - name: nvidia/nemotron-3.5-lightning-30b-a3b
+      json_mode: none             # prompt asks for JSON; extractor takes the last JSON object
+      extra_body: {chat_template_kwargs: {thinking: false}}   # reasoning model: suppress the thinking preamble
+      timeout_s: 180
+      note: open-weight row (MoE, 3B active); NVIDIA NIM free developer endpoint; prices are reference rates
+    - name: google/gemma-4-31b-it
       provider: nvidia
       base_url: https://integrate.api.nvidia.com/v1
       api_key_env: NVIDIA_API_KEY
       price_in_per_1m: 0.20
       price_out_per_1m: 0.60
       reasoning_effort: null
-      json_mode: json_object
-      min_interval_s: 1.6
-      note: open-weight row (MoE, 3B active); NVIDIA NIM free developer endpoint; prices are reference rates
+      json_mode: none
+      timeout_s: 240              # ~2 min/call observed on the free endpoint; run only with the parallel pass
+      note: optional second open-weight row (dense 31B); NVIDIA NIM free developer endpoint
+
+# live cache pass concurrency: workers run in parallel behind one global requests-per-minute limiter
+concurrency:
+  search_workers: 2             # Firecrawl free/hobby plans allow 2 concurrent requests
+  search_rpm: 60
+  llm_workers: 16
+  llm_rpm: 38                   # NVIDIA free tier: 40 RPM per key; OpenAI limits are far higher

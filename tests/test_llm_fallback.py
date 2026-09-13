@@ -8,9 +8,15 @@ from txcat.llm_fallback import CacheMissError, LLMFallback, render_prompt
 from txcat.web_search import SearchResult
 
 TAX = ["groceries", "restaurants", "industrial_hardware"]
-MODEL = LLMModelCfg(name="gpt-5-nano", provider="openai", api_key_env="OPENAI_API_KEY",
-                    price_in_per_1m=0.05, price_out_per_1m=0.40, reasoning_effort="minimal",
-                    json_mode="json_schema")
+MODEL = LLMModelCfg(
+    name="gpt-5-nano",
+    provider="openai",
+    api_key_env="OPENAI_API_KEY",
+    price_in_per_1m=0.05,
+    price_out_per_1m=0.40,
+    reasoning_effort="minimal",
+    json_mode="json_schema",
+)
 
 
 class _Obj:
@@ -48,11 +54,19 @@ def test_render_prompt_with_and_without_evidence(tmp_path):
 
 
 def test_categorize_parses_caches_and_bills(tmp_path):
-    client = FakeClient(json.dumps({"category": "industrial_hardware", "confidence": 0.9,
-                                    "evidence": "Grainger sells MRO."}))
+    client = FakeClient(
+        json.dumps(
+            {
+                "category": "industrial_hardware",
+                "confidence": 0.9,
+                "evidence": "Grainger sells MRO.",
+            }
+        )
+    )
     led = SpendLedger(tmp_path / "l.json", 5)
-    fb = LLMFallback(MODEL, tmp_path / "llm", "prompts/fallback_no_web.txt", ledger=led,
-                     client=client)
+    fb = LLMFallback(
+        MODEL, tmp_path / "llm", "prompts/fallback_no_web.txt", ledger=led, client=client
+    )
     r = fb.categorize("WW GRAINGER", None, TAX)
     assert r.category == "industrial_hardware" and r.confidence == 0.9 and r.valid
     assert r.tokens_in == 120 and r.tokens_out == 30 and r.model_id == "gpt-5-nano-2025-08-07"
@@ -66,14 +80,43 @@ def test_categorize_parses_caches_and_bills(tmp_path):
 
 def test_invalid_category_is_flagged_not_crashed(tmp_path):
     client = FakeClient('{"category": "Hardware Store", "confidence": 0.5, "evidence": "x"}')
-    fb = LLMFallback(MODEL, tmp_path / "llm", "prompts/fallback_no_web.txt", ledger=None,
-                     client=client)
+    fb = LLMFallback(
+        MODEL, tmp_path / "llm", "prompts/fallback_no_web.txt", ledger=None, client=client
+    )
     r = fb.categorize("X", None, TAX)
     assert r.valid is False and r.category == "INVALID"
 
 
 def test_reproduce_mode(tmp_path):
-    fb = LLMFallback(MODEL, tmp_path / "llm", "prompts/fallback_no_web.txt", ledger=None,
-                     client=FakeClient("{}"), allow_live=False)
+    fb = LLMFallback(
+        MODEL,
+        tmp_path / "llm",
+        "prompts/fallback_no_web.txt",
+        ledger=None,
+        client=FakeClient("{}"),
+        allow_live=False,
+    )
     with pytest.raises(CacheMissError):
         fb.categorize("X", None, TAX)
+
+
+def test_extract_json_handles_fences_and_reasoning_preambles():
+    from txcat.llm_fallback import _extract_json
+
+    assert (
+        _extract_json('```json\n{"category": "a", "confidence": 0.5, "evidence": "x"}\n```')[
+            "category"
+        ]
+        == "a"
+    )
+    reasoning = (
+        'Here is a thinking process: the user said {"category": "groceries"} ... '
+        'Final answer:\n{"category": "retail", "confidence": 0.7, "evidence": "shop"}'
+    )
+    assert _extract_json(reasoning)["category"] == "retail"
+    import json as _json
+
+    import pytest as _pytest
+
+    with _pytest.raises(_json.JSONDecodeError):
+        _extract_json("no json here")

@@ -74,3 +74,53 @@ def setup_logging(log_dir: str | Path, name: str) -> tuple[Path, int]:
         _ATEXIT_REGISTERED = True
 
     return path, handler_id
+
+
+class RateLimiter:
+    """Thread-safe requests-per-minute limiter (sliding one-minute window)."""
+
+    def __init__(self, rpm: int):
+        import collections
+        import threading
+
+        self.rpm = max(1, int(rpm))
+        self._times: collections.deque[float] = collections.deque()
+        self._lock = threading.Lock()
+
+    def acquire(self) -> None:
+        import time
+
+        while True:
+            with self._lock:
+                now = time.monotonic()
+                while self._times and now - self._times[0] >= 60.0:
+                    self._times.popleft()
+                if len(self._times) < self.rpm:
+                    self._times.append(now)
+                    return
+                wait = 60.0 - (now - self._times[0])
+            time.sleep(max(wait, 0.05))
+
+
+def run_parallel(fn, items, workers: int, desc: str = "", on_error: str = "raise") -> list:
+    """Map ``fn`` over ``items`` with a thread pool, preserving order. ``on_error='collect'`` stores
+    the exception in place of the result instead of raising."""
+    from concurrent.futures import ThreadPoolExecutor
+
+    from tqdm import tqdm
+
+    results: list = [None] * len(items)
+
+    def _one(i_item):
+        i, item = i_item
+        try:
+            return i, fn(item)
+        except Exception as e:  # noqa: BLE001
+            if on_error == "raise":
+                raise
+            return i, e
+
+    with ThreadPoolExecutor(max_workers=max(1, workers)) as ex:
+        for i, out in tqdm(ex.map(_one, enumerate(items)), total=len(items), desc=desc):
+            results[i] = out
+    return results

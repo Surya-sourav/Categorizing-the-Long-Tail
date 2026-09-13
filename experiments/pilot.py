@@ -21,7 +21,7 @@ from txcat.data.prepare import load_prepared
 from txcat.data.splits import merchant_frequencies, sample_fes, temporal_split
 from txcat.data.taxonomy import CATEGORIES
 from txcat.llm_fallback import LLMFallback
-from txcat.utils import set_seed, setup_logging, sha256_text
+from txcat.utils import RateLimiter, run_parallel, set_seed, setup_logging, sha256_text
 from txcat.web_search import WebSearchClient
 
 
@@ -58,12 +58,25 @@ def main() -> None:
         min_interval_s=cfg.search.min_interval_s,
         price_per_1k=cfg.search.price_per_1k_usd,
     )
-    evidence = {m: ws.search(m, cfg.search.num_results) for m in merchants["merchant"]}
+    search_limiter = RateLimiter(cfg.concurrency.search_rpm)
+
+    def _search(m):
+        search_limiter.acquire()
+        return m, ws.search(m, cfg.search.num_results)
+
+    evidence = dict(
+        run_parallel(_search, list(merchants["merchant"]), cfg.concurrency.search_workers, "search")
+    )
     logger.info(
         f"search done; empty results for {sum(1 for v in evidence.values() if not v)} merchants; spend {ledger.total:.3f}"
     )
 
     rows, model_ids = [], {}
+    # one requests-per-minute budget per provider: NVIDIA free tier is 40 RPM per key
+    limiters = {
+        prov: RateLimiter(cfg.concurrency.llm_rpm if prov == "nvidia" else 400)
+        for prov in {m.provider for m in cfg.llm.models}
+    }
     models = [m for m in cfg.llm.models if not args.models or m.name in args.models]
     for mcfg in models:
         if not os.environ.get(mcfg.api_key_env):
@@ -79,26 +92,35 @@ def main() -> None:
                 prompt,
                 ledger=ledger,
                 max_completion_tokens=cfg.llm.max_completion_tokens,
+                limiter=limiters[mcfg.provider],
             )
-            for _, r in merchants.iterrows():
+
+            def _categorize(r, fb=fb, cond=cond, mcfg=mcfg):
                 ev = evidence[r["merchant"]] if cond == "with_web" else None
                 res = fb.categorize(r["merchant"], ev, CATEGORIES)
-                model_ids[mcfg.name] = res.model_id
-                rows.append(
-                    {
-                        "model": mcfg.name,
-                        "condition": cond,
-                        "merchant": r["merchant"],
-                        "gold": r["category"],
-                        "pred": res.category,
-                        "correct": res.category == r["category"],
-                        "valid": res.valid,
-                        "confidence": res.confidence,
-                        "latency_ms": res.latency_ms,
-                        "tokens_in": res.tokens_in,
-                        "tokens_out": res.tokens_out,
-                    }
-                )
+                return {
+                    "model": mcfg.name,
+                    "condition": cond,
+                    "merchant": r["merchant"],
+                    "gold": r["category"],
+                    "pred": res.category,
+                    "correct": res.category == r["category"],
+                    "valid": res.valid,
+                    "confidence": res.confidence,
+                    "latency_ms": res.latency_ms,
+                    "tokens_in": res.tokens_in,
+                    "tokens_out": res.tokens_out,
+                    "model_id": res.model_id,
+                }
+
+            out = run_parallel(
+                _categorize,
+                [r for _, r in merchants.iterrows()],
+                cfg.concurrency.llm_workers,
+                f"{mcfg.name}/{cond}",
+            )
+            rows.extend(out)
+            model_ids[mcfg.name] = out[-1]["model_id"] if out else mcfg.name
             logger.info(f"{mcfg.name} {cond} done; spend so far {ledger.total:.3f} USD")
 
     out = pd.DataFrame(rows)

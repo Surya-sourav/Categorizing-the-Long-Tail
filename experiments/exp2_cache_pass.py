@@ -15,7 +15,6 @@ from pathlib import Path
 import pandas as pd
 from dotenv import load_dotenv
 from loguru import logger
-from tqdm import tqdm
 
 from txcat.budget import BudgetExceeded, SpendLedger
 from txcat.config import WindowCfg, load_config
@@ -24,7 +23,7 @@ from txcat.data.splits import merchant_frequencies, temporal_split
 from txcat.data.taxonomy import CATEGORIES
 from txcat.fes import build_dc_fes, build_oklahoma_coldstart_fes, load_fes, save_fes
 from txcat.llm_fallback import LLMFallback
-from txcat.utils import set_seed, setup_logging
+from txcat.utils import RateLimiter, run_parallel, set_seed, setup_logging
 from txcat.web_search import WebSearchClient
 
 
@@ -89,8 +88,13 @@ def main() -> None:
     )
     if args.stage in ("search", "all"):
         try:
-            for m in tqdm(merchants, desc="search"):
-                ws.search(m, cfg.search.num_results)
+            search_limiter = RateLimiter(cfg.concurrency.search_rpm)
+
+            def _search(m):
+                search_limiter.acquire()
+                return ws.search(m, cfg.search.num_results)
+
+            run_parallel(_search, merchants, cfg.concurrency.search_workers, "search")
         except BudgetExceeded as e:
             logger.error(f"STOPPED: {e}")
             return
@@ -99,6 +103,10 @@ def main() -> None:
     if args.stage in ("llm", "all"):
         ws_ro = WebSearchClient(cfg.search.provider, cfg.search.cache_dir, None, allow_live=False)
         models = [m for m in cfg.llm.models if not args.models or m.name in args.models]
+        limiters = {
+            prov: RateLimiter(cfg.concurrency.llm_rpm if prov == "nvidia" else 400)
+            for prov in {m.provider for m in models}
+        }
         try:
             for mcfg in models:
                 if not os.environ.get(mcfg.api_key_env):
@@ -114,10 +122,16 @@ def main() -> None:
                         prompt,
                         ledger=ledger,
                         max_completion_tokens=cfg.llm.max_completion_tokens,
+                        limiter=limiters[mcfg.provider],
                     )
-                    for m in tqdm(merchants, desc=f"{mcfg.name}/{cond}"):
+
+                    def _categorize(m, fb=fb, cond=cond):
                         ev = ws_ro.search(m, cfg.search.num_results) if cond == "with_web" else None
-                        fb.categorize(m, ev, CATEGORIES)
+                        return fb.categorize(m, ev, CATEGORIES)
+
+                    run_parallel(
+                        _categorize, merchants, cfg.concurrency.llm_workers, f"{mcfg.name}/{cond}"
+                    )
                     logger.info(f"{mcfg.name}/{cond} done; spend {ledger.total:.2f} USD")
         except BudgetExceeded as e:
             logger.error(f"STOPPED: {e}")

@@ -114,6 +114,10 @@ class LLMModelCfg(_Base):
     reasoning_effort: str | None = None
     min_interval_s: float = 0.0  # client-side throttle (NVIDIA free endpoints allow ~40 RPM)
     note: str | None = None  # e.g. "free developer endpoint; prices are reference rates"
+    extra_body: dict | None = (
+        None  # provider-specific request extras (e.g. NIM chat_template_kwargs)
+    )
+    timeout_s: float = 90.0
     json_mode: Literal["json_schema", "json_object", "none"] = "json_schema"
 
 
@@ -123,6 +127,13 @@ class LLMCfg(_Base):
     prompt_no_web: str
     max_completion_tokens: int = 300
     models: list[LLMModelCfg]
+
+
+class ConcurrencyCfg(_Base):
+    search_workers: int = 2
+    search_rpm: int = 60
+    llm_workers: int = 16
+    llm_rpm: int = 38
 
 
 class Config(_Base):
@@ -142,13 +153,13 @@ class Config(_Base):
     budget: BudgetCfg = BudgetCfg()
     search: SearchCfg = SearchCfg()
     llm: LLMCfg
+    concurrency: ConcurrencyCfg = ConcurrencyCfg()
 
     @model_validator(mode="after")
     def _active_dataset_exists(self) -> Config:
         if self.active_dataset not in self.datasets:
             raise ValueError(
-                f"active_dataset {self.active_dataset!r} is not in datasets "
-                f"{sorted(self.datasets)}"
+                f"active_dataset {self.active_dataset!r} is not in datasets {sorted(self.datasets)}"
             )
         return self
 
