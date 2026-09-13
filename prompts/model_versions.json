@@ -1,0 +1,17 @@
+{
+  "embedding_models": {
+    "sentence-transformers/all-MiniLM-L6-v2": "sentence-transformers/all-MiniLM-L6-v2",
+    "BAAI/bge-small-en-v1.5": "BAAI/bge-small-en-v1.5",
+    "openai": "text-embedding-3-small"
+  },
+  "llm_models": {
+    "gpt-5-nano": "gpt-5-nano-2025-08-07",
+    "gpt-5-mini": "gpt-5-mini-2025-08-07",
+    "deepseek-ai/deepseek-v4-flash-0731": "deepseek-ai/deepseek-v4-flash-0731",
+    "nvidia/nemotron-3-super-120b-a12b": "nvidia/nemotron-3-super-120b-a12b"
+  },
+  "web_search": {
+    "provider": "firecrawl",
+    "pilot_date": "2026-09-13"
+  }
+}

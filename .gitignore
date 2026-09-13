@@ -17,3 +17,6 @@ results/logs/*.log
 cache/embeddings/*/vectors.npy
 results/*.parquet
 results/index/
+# per-call API cache files are local working state; the frozen cache is committed as cache/*/packed/*.jsonl.gz
+cache/llm/*.json
+cache/web_search/*.json

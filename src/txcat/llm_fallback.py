@@ -14,6 +14,7 @@ from pathlib import Path
 
 from loguru import logger
 
+from txcat.cachepack import load_packed
 from txcat.config import LLMModelCfg, rel_to_root
 from txcat.utils import now_iso, sha256_text
 from txcat.web_search import SearchResult
@@ -100,6 +101,9 @@ class LLMFallback:
         self.ledger, self._client, self.allow_live = ledger, client, allow_live
         self.max_completion_tokens = max_completion_tokens
         self.limiter = limiter  # optional shared RateLimiter (requests per minute across threads)
+        self._packed = load_packed(
+            self.dir
+        )  # frozen cache (packed JSONL), consulted after per-call files
         self._last_call = 0.0
 
     @property
@@ -140,8 +144,9 @@ class LLMFallback:
         prompt = render_prompt(self.prompt_path, merchant, evidence, taxonomy)
         key = sha256_text(f"{self.m.name}|{self.prompt_hash}|{prompt}")
         p = self.dir / f"{key}.json"
-        if p.exists():
-            d = json.loads(p.read_text())["result"]
+        if p.exists() or key in self._packed:
+            rec = json.loads(p.read_text()) if p.exists() else self._packed[key]
+            d = dict(rec["result"])
             d["cached"] = True
             return LLMResult(**d)
         if not self.allow_live:

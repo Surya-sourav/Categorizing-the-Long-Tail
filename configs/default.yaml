@@ -109,6 +109,7 @@ llm:
       reasoning_effort: null
       json_mode: none
       timeout_s: 180
+      max_completion_tokens: 600  # verbose evidence strings; 300 truncated 39% of answers in the pilot
       note: second open-weight row (Nemotron 3 Super, 120B MoE / 12B active); NVIDIA NIM free developer endpoint; prices are reference rates
 
 # live cache pass concurrency: workers run in parallel behind one global requests-per-minute limiter

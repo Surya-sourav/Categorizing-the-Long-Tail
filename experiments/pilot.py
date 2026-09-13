@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 from loguru import logger
 
 from txcat.budget import SpendLedger
-from txcat.config import WindowCfg, load_config
+from txcat.config import WindowCfg, load_config, rel_to_root
 from txcat.data.prepare import load_prepared
 from txcat.data.splits import merchant_frequencies, sample_fes, temporal_split
 from txcat.data.taxonomy import CATEGORIES
@@ -149,7 +149,7 @@ def main() -> None:
     Path("prompts/PROMPT_HASHES.json").write_text(
         json.dumps(
             {
-                p: sha256_text(Path(p).read_text())
+                rel_to_root(p): sha256_text(Path(p).read_text())
                 for p in (cfg.llm.prompt_no_web, cfg.llm.prompt_with_web)
             },
             indent=2,

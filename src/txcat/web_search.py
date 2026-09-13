@@ -12,6 +12,7 @@ from pathlib import Path
 import requests
 from loguru import logger
 
+from txcat.cachepack import load_packed
 from txcat.utils import now_iso, sha1_text
 
 BRAVE_URL = "https://api.search.brave.com/res/v1/web/search"
@@ -52,6 +53,9 @@ class WebSearchClient:
         self.allow_live, self.min_interval_s = allow_live, min_interval_s
         self.price = price_per_1k / 1000
         self._last = 0.0
+        self._packed = load_packed(
+            self.dir
+        )  # frozen cache (packed JSONL), consulted after per-call files
 
     def _request(self, query: str, num_results: int):
         if self.provider == "brave":
@@ -120,8 +124,8 @@ class WebSearchClient:
                 "query looks like it contains an amount or date; only merchant names are allowed"
             )
         p = self._path(query)
-        if p.exists():
-            data = json.loads(p.read_text())
+        if p.exists() or p.stem in self._packed:
+            data = json.loads(p.read_text()) if p.exists() else self._packed[p.stem]
             return [SearchResult(**r) for r in data["results"][:num_results]]
         if not self.allow_live:
             raise CacheMissError(f"no cached search for {query!r}")
