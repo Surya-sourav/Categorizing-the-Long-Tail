@@ -1,0 +1,799 @@
+model,condition,merchant,gold,pred,correct,valid,confidence,latency_ms,tokens_in,tokens_out,model_id
+gpt-5-nano,no_web,ARIZONA GRAND RESORT,lodging,lodging,True,True,0.72,2427.200083999196,201,48,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,STRIDERBIKE,entertainment_media,retail,False,True,0.55,2242.1122920059133,199,46,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,SHERATON VISTANA VILLA,lodging,lodging,True,True,0.75,2284.629749978194,204,54,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,ALS TWIN AIR,industrial_hardware,airlines_travel,False,True,0.42,2331.112625019159,199,62,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,AUCAREERCENTER,education_gov_membership,professional_services,False,True,0.42,2380.701499991119,199,48,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,LITERACYEMP,retail,education_gov_membership,False,True,0.45,2501.7400410142727,199,60,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,NATIONAL OSHA FDN,education_gov_membership,professional_services,False,True,0.42,2419.6781660139095,199,50,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,ESTRELLITA INC,education_gov_membership,retail,False,True,0.42,2236.0515839827713,200,61,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,WINDRIVERENVIRONMENTAL,industrial_hardware,industrial_hardware,True,True,0.45,2334.0843750047497,201,49,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,SHERATON CHARLOTTE HOTEL,lodging,lodging,True,True,0.78,3385.9751249838155,203,47,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,SWP ACSREADYREFRESH,health,retail,False,True,0.45,2387.9042079788633,201,58,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,LOYOLA UNIVERSITY MARY,education_gov_membership,education_gov_membership,True,True,0.62,2456.973583000945,201,55,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,DMV PARTY RENTAL LLC,professional_services,INVALID,False,False,0.0,2232.76045898092,200,51,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,NCRP,professional_services,retail,False,True,0.45,2319.7197910049,197,51,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,TOTAL RESTROOM,industrial_hardware,retail,False,True,0.55,2437.5017920101527,198,48,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,WINGATE BY WYNDHAM,lodging,lodging,True,True,0.6,2424.5957090170123,202,45,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,SCIENTIFIC SPECIALITIE,health,professional_services,False,True,0.55,1450.743124994915,201,54,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,FOUNDATION ENTERTA,software_electronics,retail,False,True,0.45,1473.0223749938887,198,56,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,FEDERAL CITY COUNC,education_gov_membership,professional_services,False,True,0.42,1333.2629580108915,200,58,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,OURSISTERSCIRCLE,education_gov_membership,retail,False,True,0.45,1350.4076249955688,201,48,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,KLS WORLDWIDE CHAUFFEU,transport_auto_fuel,transport_auto_fuel,True,True,0.42,1276.2552500062156,204,54,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,CC TECH CONSULTING,professional_services,professional_services,True,True,0.65,1579.8351670091506,199,43,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,NIGP,education_gov_membership,retail,False,True,0.28,1367.616583011113,198,59,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,"JOSEPH, MANN & CREED",professional_services,professional_services,True,True,0.42,1151.5921670070384,204,53,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,RESIDENCE INN NEW ORLE,lodging,lodging,True,True,0.72,1144.0199589997064,203,51,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,SEDC,professional_services,professional_services,True,True,0.42,1321.8075000040699,198,57,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,NATIONAL DRUG SCREENIN,health,health,True,True,0.42,1167.9420000000391,200,47,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,PREMIER SUPPLIES USA I,industrial_hardware,office_supplies,False,True,0.55,1101.480333978543,202,50,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,SUPPLYHOUSE,industrial_hardware,retail,False,True,0.55,1163.4212500066496,198,54,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,NCQA,education_gov_membership,health,False,True,0.6,1064.6141250035726,197,52,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,"SONJA L. REEVES, R",professional_services,professional_services,True,True,0.36,1207.4296250066254,204,51,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,GWU STUDENT AFFAIRS MA,education_gov_membership,education_gov_membership,True,True,0.63,1137.765457999194,203,56,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,FRONTIER BYZT9S,airlines_travel,industrial_hardware,False,True,0.38,1046.107915986795,201,59,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,"TRANSCRIPTION, ETC",professional_services,professional_services,True,True,0.6,1146.2114579917397,199,58,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,"PINNACLE TCI, LLC",education_gov_membership,professional_services,False,True,0.55,1047.910708002746,202,56,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,CANVA I04263-72091178,entertainment_media,software_electronics,False,True,0.62,975.0191659841221,204,57,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,FREEDOM SCI STORE,software_electronics,retail,False,True,0.55,1093.5039999894798,200,45,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,POLLO D ORO,restaurants,INVALID,False,False,0.4,1134.952541993698,200,66,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,ASTRACOR LL,education_gov_membership,retail,False,True,0.45,1003.6139590083621,200,57,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,XCELEVENTS,professional_services,entertainment_media,False,True,0.45,1103.738041012548,200,54,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,WILLIAMS CRANE SERVICE,industrial_hardware,industrial_hardware,True,True,0.42,1284.3710840097629,201,54,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,THE REGULATORY GROUP,professional_services,professional_services,True,True,0.42,1006.0824580141343,200,51,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,READABLE,software_electronics,retail,False,True,0.42,1001.3915000017732,197,54,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,MARRIOTT DESERT SPRING,lodging,lodging,True,True,0.72,998.5605840047356,203,47,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,RPS PROSE IN THE PI RD,financial_postal_shipping,retail,False,True,0.42,1200.0662090140395,203,52,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,HILTON GARDEN INN RICHMOND INNSBROOK,lodging,lodging,True,True,0.74,945.0863749952987,211,49,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,UNICOR,education_gov_membership,retail,False,True,0.42,1024.6291249932256,198,55,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,HOLIDAY INN EXPRESS AI,lodging,lodging,True,True,0.82,979.8723340209108,201,45,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,HOMEWOOD STES ANAHEIM,lodging,retail,False,True,0.42,1078.8430410029832,202,57,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,VISPRONET,office_supplies,retail,False,True,0.42,1200.779542006785,199,62,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,STANLEY STEEMER 73R,professional_services,professional_services,True,True,0.55,991.2385839852504,204,56,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,COURSES.SGLADESIGN.COM,education_gov_membership,education_gov_membership,True,True,0.45,946.5766249923036,202,50,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,CANVA I04346-75530363,professional_services,software_electronics,False,True,0.62,994.2262910190038,204,55,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,AUTO AMERICA SERVICE L,transport_auto_fuel,transport_auto_fuel,True,True,0.45,1383.2800830132328,200,53,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,GEORGETOWN BID,groceries,retail,False,True,0.42,1018.2602920103818,200,52,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,CMC-CAREER DEVELOPMENT,education_gov_membership,education_gov_membership,True,True,0.4,1237.8459589963313,201,53,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,SP RESTOCKIT,office_supplies,retail,False,True,0.52,1024.3487090046983,199,59,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,STANFORD EB YOUCUBED G,education_gov_membership,education_gov_membership,True,True,0.4,1127.3527499870397,204,69,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,ATLANTIC MACHINERY,industrial_hardware,industrial_hardware,True,True,0.45,993.6498329916503,201,52,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,"BAG TAGS, INC",professional_services,retail,False,True,0.45,1013.6277079873253,200,51,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,"LIGHTBULB PRESS, I",office_supplies,office_supplies,True,True,0.55,948.6181669926737,202,49,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,FOCUS HEALTH CORP,education_gov_membership,health,False,True,0.65,1036.182292009471,200,50,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,HOTEL INDIGO DOWNTOWN,lodging,lodging,True,True,0.78,851.5660830016714,202,47,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,HOTEL RES-HYATT REGEN,airlines_travel,lodging,False,True,0.75,981.143749988405,202,51,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,INDEED USI25-01502749,professional_services,retail,False,True,0.42,885.4607919929549,205,59,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,GRADUATION SOURCE LLC,retail,education_gov_membership,False,True,0.45,1165.1410830090754,201,55,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,COALITION FOR JUV JUST,education_gov_membership,education_gov_membership,True,True,0.28,1171.5340000228025,202,56,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,HYDRA - LIFT,transport_auto_fuel,retail,False,True,0.45,1183.9576659840532,201,65,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,BRC INTERNATIONAL,professional_services,retail,False,True,0.45,1113.2870829897001,198,52,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,"RWP NETWORK, LLC",education_gov_membership,professional_services,False,True,0.55,1053.6188339756336,200,48,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,EVENT:NASPL PROF,education_gov_membership,entertainment_media,False,True,0.35,1059.2826250067446,200,59,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,PSS K12,office_supplies,software_electronics,False,True,0.36,1021.3628749770578,199,57,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,CDW GOVT #AF2RA6R,software_electronics,INVALID,False,False,0.0,1549.8491670005023,205,72,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,IRS NATIONWIDE TAX FOR,professional_services,professional_services,True,True,0.55,1057.485583005473,202,51,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,DEEPSPACESPARK00 OF 00,retail,entertainment_media,False,True,0.25,1345.0496250006836,204,59,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,SP GLOWFORGE STORE,office_supplies,retail,False,True,0.55,1095.2876670053229,201,63,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,ELITE FORENSIC SER,professional_services,professional_services,True,True,0.45,1116.9128750043456,201,51,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,PAPERSOURCE -4160,retail,office_supplies,False,True,0.68,1018.1892089894973,201,44,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,ICLEI - LOCAL GOVE,professional_services,education_gov_membership,False,True,0.45,1198.2450420036912,202,64,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,AMTRAK TEL01,transport_auto_fuel,transport_auto_fuel,True,True,0.55,1075.7856249983888,200,56,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,RESIDENCE INN ANN ARBO,lodging,lodging,True,True,0.75,802.3809170117602,203,43,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,CARTER MACHINERY - SAL,professional_services,industrial_hardware,False,True,0.55,1021.4789169840515,202,51,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,BUSY SERVICE INC,industrial_hardware,retail,False,True,0.35,1014.9959580157883,199,48,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,HOBBY LOBBY,entertainment_media,retail,False,True,0.72,966.7904170055408,201,41,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,HOLIDAY INN COOKEVILLE,lodging,lodging,True,True,0.82,1218.111208989285,203,49,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,IRS PMT,education_gov_membership,professional_services,False,True,0.55,999.4844580069184,198,59,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,SP VAULTEK SAFE,software_electronics,software_electronics,True,True,0.55,1059.893750003539,201,55,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,HOTEL RES-SPRINGHILL S,airlines_travel,lodging,False,True,0.72,1337.9601670021657,203,48,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,"BOSCH, THERMADOR, GAGG",retail,industrial_hardware,False,True,0.42,968.872375000501,205,46,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,PEMBERTON FABRICATORS,industrial_hardware,industrial_hardware,True,True,0.55,1029.0569579810835,202,50,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,CANVA 04874-6610224,entertainment_media,software_electronics,False,True,0.6,1119.2935420258436,204,47,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,SHERATON DALLAS FD,lodging,lodging,True,True,0.72,938.2795410056133,203,45,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,AMERICAS WINGS,restaurants,airlines_travel,False,True,0.45,1003.9299589989241,200,56,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,THEPRIVATESCHOOLLEADER,software_electronics,education_gov_membership,False,True,0.52,1101.9907080044504,202,49,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,HYATT REG LONG BCH PAR,transport_auto_fuel,lodging,False,True,0.72,1110.569290991407,201,54,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,PERFECTIT,software_electronics,office_supplies,False,True,0.45,862.1044169995002,197,44,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,CANVA I04929-34391790,professional_services,software_electronics,False,True,0.65,833.1802089815028,204,46,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,UNC CHAR AACOED STEM I,education_gov_membership,office_supplies,False,True,0.4,1241.6698750166688,202,63,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,STA CONTRACTING INC,industrial_hardware,professional_services,False,True,0.58,986.7848340072669,199,49,gpt-5-nano-2025-08-07
+gpt-5-nano,no_web,PAYPRO GLOBAL INC,software_electronics,professional_services,False,True,0.45,1110.7124169939198,199,56,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,ARIZONA GRAND RESORT,lodging,lodging,True,True,0.72,1268.1915409921203,1677,68,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,STRIDERBIKE,entertainment_media,retail,False,True,0.62,1063.776124996366,595,65,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,SHERATON VISTANA VILLA,lodging,lodging,True,True,0.72,1419.271207996644,3007,66,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,ALS TWIN AIR,industrial_hardware,professional_services,False,True,0.62,1196.3691669807304,592,61,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,AUCAREERCENTER,education_gov_membership,education_gov_membership,True,True,0.72,1262.3193330073263,513,64,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,LITERACYEMP,retail,education_gov_membership,False,True,0.28,1473.5924160049763,462,93,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,NATIONAL OSHA FDN,education_gov_membership,education_gov_membership,True,True,0.58,1333.4300830028951,469,65,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,ESTRELLITA INC,education_gov_membership,education_gov_membership,True,True,0.58,1236.4032499899622,538,71,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,WINDRIVERENVIRONMENTAL,industrial_hardware,professional_services,False,True,0.66,1342.5606249948032,470,57,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,SHERATON CHARLOTTE HOTEL,lodging,lodging,True,True,0.78,1358.081417012727,648,66,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,SWP ACSREADYREFRESH,health,software_electronics,False,True,0.25,1028.9668749901466,218,64,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,LOYOLA UNIVERSITY MARY,education_gov_membership,education_gov_membership,True,True,0.45,1472.4195419985335,218,58,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,DMV PARTY RENTAL LLC,professional_services,INVALID,False,False,0.0,1106.814917002339,217,50,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,NCRP,professional_services,retail,False,True,0.4,1140.7676659873687,214,68,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,TOTAL RESTROOM,industrial_hardware,office_supplies,False,True,0.63,1294.0369579882827,526,60,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,WINGATE BY WYNDHAM,lodging,lodging,True,True,0.78,1185.7185419939924,976,67,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,SCIENTIFIC SPECIALITIE,health,professional_services,False,True,0.42,985.2264159999322,492,69,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,FOUNDATION ENTERTA,software_electronics,entertainment_media,False,True,0.58,1385.1890419900883,500,59,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,FEDERAL CITY COUNC,education_gov_membership,professional_services,False,True,0.58,1099.3126670073252,503,62,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,OURSISTERSCIRCLE,education_gov_membership,health,False,True,0.68,1051.0844580130652,549,53,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,KLS WORLDWIDE CHAUFFEU,transport_auto_fuel,transport_auto_fuel,True,True,0.68,922.8900840098504,547,58,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,CC TECH CONSULTING,professional_services,professional_services,True,True,0.58,1124.910667014774,479,57,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,NIGP,education_gov_membership,education_gov_membership,True,True,0.55,1157.7230830152985,504,62,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,"JOSEPH, MANN & CREED",professional_services,professional_services,True,True,0.65,951.4448329864535,773,56,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,RESIDENCE INN NEW ORLE,lodging,lodging,True,True,0.65,1091.6581669880543,220,57,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,SEDC,professional_services,retail,False,True,0.35,896.2418329901993,215,51,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,NATIONAL DRUG SCREENIN,health,health,True,True,0.45,907.3707079805899,217,59,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,PREMIER SUPPLIES USA I,industrial_hardware,office_supplies,False,True,0.52,1032.006958994316,219,69,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,SUPPLYHOUSE,industrial_hardware,industrial_hardware,True,True,0.72,1271.0169999918435,558,60,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,NCQA,education_gov_membership,health,False,True,0.72,1063.396040990483,1218,54,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,"SONJA L. REEVES, R",professional_services,professional_services,True,True,0.62,1187.8951249818783,563,77,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,GWU STUDENT AFFAIRS MA,education_gov_membership,education_gov_membership,True,True,0.58,963.5012499929871,483,68,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,FRONTIER BYZT9S,airlines_travel,software_electronics,False,True,0.38,925.8893750084098,496,57,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,"TRANSCRIPTION, ETC",professional_services,professional_services,True,True,0.58,1062.6719590218272,515,60,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,"PINNACLE TCI, LLC",education_gov_membership,education_gov_membership,True,True,0.58,1225.2526660158765,533,74,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,CANVA I04263-72091178,entertainment_media,software_electronics,False,True,0.72,1033.4070000099018,459,53,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,FREEDOM SCI STORE,software_electronics,software_electronics,True,True,0.66,1167.1552920015529,495,77,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,POLLO D ORO,restaurants,restaurants,True,True,0.68,1124.2637080140412,594,66,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,ASTRACOR LL,education_gov_membership,retail,False,True,0.32,992.4342920130584,217,62,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,XCELEVENTS,professional_services,entertainment_media,False,True,0.28,1150.059625011636,217,50,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,WILLIAMS CRANE SERVICE,industrial_hardware,industrial_hardware,True,True,0.42,1088.8670829881448,218,60,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,THE REGULATORY GROUP,professional_services,professional_services,True,True,0.45,1109.8527910071425,217,60,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,READABLE,software_electronics,professional_services,False,True,0.32,1438.5624999995343,752,89,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,MARRIOTT DESERT SPRING,lodging,lodging,True,True,0.72,1070.2634589979425,3597,57,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,RPS PROSE IN THE PI RD,financial_postal_shipping,lodging,False,True,0.58,1060.2852499869186,585,67,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,HILTON GARDEN INN RICHMOND INNSBROOK,lodging,lodging,True,True,0.78,1004.3278330122121,634,59,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,UNICOR,education_gov_membership,industrial_hardware,False,True,0.55,1136.3028330088127,1011,74,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,HOLIDAY INN EXPRESS AI,lodging,lodging,True,True,0.68,1596.575416973792,557,62,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,HOMEWOOD STES ANAHEIM,lodging,lodging,True,True,0.72,1058.9471659914125,635,60,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,VISPRONET,office_supplies,office_supplies,True,True,0.55,918.0622500134632,611,55,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,STANLEY STEEMER 73R,professional_services,professional_services,True,True,0.62,1205.7397089956794,579,63,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,COURSES.SGLADESIGN.COM,education_gov_membership,education_gov_membership,True,True,0.55,1087.5502499984577,571,67,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,CANVA I04346-75530363,professional_services,software_electronics,False,True,0.62,1004.5307079853956,221,55,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,AUTO AMERICA SERVICE L,transport_auto_fuel,transport_auto_fuel,True,True,0.55,1018.0282090150286,217,57,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,GEORGETOWN BID,groceries,retail,False,True,0.4,976.6225829953328,217,57,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,CMC-CAREER DEVELOPMENT,education_gov_membership,education_gov_membership,True,True,0.28,1067.8734579996672,218,68,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,SP RESTOCKIT,office_supplies,office_supplies,True,True,0.66,1043.8460409932304,593,68,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,STANFORD EB YOUCUBED G,education_gov_membership,education_gov_membership,True,True,0.72,1103.0102919903584,504,73,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,ATLANTIC MACHINERY,industrial_hardware,industrial_hardware,True,True,0.55,1308.0394999997225,462,54,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,"BAG TAGS, INC",professional_services,professional_services,True,True,0.58,1086.3751670112833,517,66,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,"LIGHTBULB PRESS, I",office_supplies,education_gov_membership,False,True,0.55,1072.0046670176089,454,62,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,FOCUS HEALTH CORP,education_gov_membership,education_gov_membership,True,True,0.28,1703.4556250146125,685,78,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,HOTEL INDIGO DOWNTOWN,lodging,lodging,True,True,0.71,972.3030840104911,666,70,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,HOTEL RES-HYATT REGEN,airlines_travel,lodging,False,True,0.78,984.0630830149166,542,58,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,INDEED USI25-01502749,professional_services,professional_services,True,True,0.66,1064.0887079935055,578,61,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,GRADUATION SOURCE LLC,retail,education_gov_membership,False,True,0.55,1084.584875003202,588,64,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,COALITION FOR JUV JUST,education_gov_membership,education_gov_membership,True,True,0.42,1166.9854169886094,219,61,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,HYDRA - LIFT,transport_auto_fuel,retail,False,True,0.25,1070.3295829880517,218,70,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,BRC INTERNATIONAL,professional_services,retail,False,True,0.35,1284.426500002155,215,55,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,"RWP NETWORK, LLC",education_gov_membership,professional_services,False,True,0.25,1088.99712501443,217,58,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,EVENT:NASPL PROF,education_gov_membership,education_gov_membership,True,True,0.72,1071.8302080058493,547,74,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,PSS K12,office_supplies,education_gov_membership,False,True,0.58,1108.7616670120042,510,77,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,CDW GOVT #AF2RA6R,software_electronics,education_gov_membership,False,True,0.72,1089.4020830164663,485,91,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,IRS NATIONWIDE TAX FOR,professional_services,education_gov_membership,False,True,0.64,1442.1064170019235,732,72,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,DEEPSPACESPARK00 OF 00,retail,education_gov_membership,False,True,0.58,1047.8977499878965,523,64,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,SP GLOWFORGE STORE,office_supplies,retail,False,True,0.55,1083.1736249965616,622,69,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,ELITE FORENSIC SER,professional_services,professional_services,True,True,0.58,1025.4109170055017,474,57,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,PAPERSOURCE -4160,retail,retail,True,True,0.62,1111.8101250031032,528,61,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,ICLEI - LOCAL GOVE,professional_services,education_gov_membership,False,True,0.62,1177.2575000068173,623,68,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,AMTRAK TEL01,transport_auto_fuel,transport_auto_fuel,True,True,0.65,868.5974169929978,528,54,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,RESIDENCE INN ANN ARBO,lodging,lodging,True,True,0.72,877.6992080092896,220,55,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,CARTER MACHINERY - SAL,professional_services,industrial_hardware,False,True,0.45,1071.406458009733,219,61,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,BUSY SERVICE INC,industrial_hardware,professional_services,False,True,0.42,1611.3589170272462,216,60,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,HOBBY LOBBY,entertainment_media,retail,False,True,0.62,1135.8329580107238,218,62,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,HOLIDAY INN COOKEVILLE,lodging,lodging,True,True,0.74,1132.4027499940712,634,80,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,IRS PMT,education_gov_membership,financial_postal_shipping,False,True,0.42,1171.5604169876315,546,79,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,SP VAULTEK SAFE,software_electronics,retail,False,True,0.58,1059.6829999994952,688,72,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,HOTEL RES-SPRINGHILL S,airlines_travel,lodging,False,True,0.72,1304.779124999186,625,54,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,"BOSCH, THERMADOR, GAGG",retail,retail,True,True,0.55,956.7124169843737,720,66,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,PEMBERTON FABRICATORS,industrial_hardware,industrial_hardware,True,True,0.6,1064.161582995439,540,63,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,CANVA 04874-6610224,entertainment_media,software_electronics,False,True,0.76,2564.1613329935353,473,71,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,SHERATON DALLAS FD,lodging,lodging,True,True,0.73,1111.5525829955004,654,59,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,AMERICAS WINGS,restaurants,restaurants,True,True,0.66,1090.2734579867683,2272,61,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,THEPRIVATESCHOOLLEADER,software_electronics,education_gov_membership,False,True,0.42,1126.7323330102954,219,63,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,HYATT REG LONG BCH PAR,transport_auto_fuel,lodging,False,True,0.82,1111.6833749983925,620,70,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,PERFECTIT,software_electronics,office_supplies,False,True,0.32,973.0253330199048,214,47,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,CANVA I04929-34391790,professional_services,software_electronics,False,True,0.45,1009.0286250051577,221,71,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,UNC CHAR AACOED STEM I,education_gov_membership,retail,False,True,0.25,1023.1507910066284,219,62,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,STA CONTRACTING INC,industrial_hardware,professional_services,False,True,0.62,1029.391082993243,525,70,gpt-5-nano-2025-08-07
+gpt-5-nano,with_web,PAYPRO GLOBAL INC,software_electronics,software_electronics,True,True,0.74,1054.3862089980394,499,68,gpt-5-nano-2025-08-07
+gpt-5-mini,no_web,ARIZONA GRAND RESORT,lodging,lodging,True,True,0.92,1216.9874169921968,201,50,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,STRIDERBIKE,entertainment_media,retail,False,True,0.9,1339.5712909987196,199,59,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,SHERATON VISTANA VILLA,lodging,lodging,True,True,0.9,1310.2748750243336,204,56,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,ALS TWIN AIR,industrial_hardware,retail,False,True,0.65,1295.9293750172947,199,65,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,AUCAREERCENTER,education_gov_membership,education_gov_membership,True,True,0.86,1367.5648749922402,199,64,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,LITERACYEMP,retail,education_gov_membership,False,True,0.85,1524.856042000465,199,76,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,NATIONAL OSHA FDN,education_gov_membership,education_gov_membership,True,True,0.85,1420.3352080076002,199,64,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,ESTRELLITA INC,education_gov_membership,restaurants,False,True,0.6,1308.6833750130609,200,59,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,WINDRIVERENVIRONMENTAL,industrial_hardware,industrial_hardware,True,True,0.7,1686.8087920011021,201,79,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,SHERATON CHARLOTTE HOTEL,lodging,lodging,True,True,0.95,1301.1892919894308,203,54,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,SWP ACSREADYREFRESH,health,software_electronics,False,True,0.65,1575.31299997936,201,79,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,LOYOLA UNIVERSITY MARY,education_gov_membership,education_gov_membership,True,True,0.95,1280.4163340188097,201,62,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,DMV PARTY RENTAL LLC,professional_services,transport_auto_fuel,False,True,0.45,1679.4763329962734,200,72,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,NCRP,professional_services,professional_services,True,True,0.55,1936.569542012876,197,65,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,TOTAL RESTROOM,industrial_hardware,professional_services,False,True,0.75,1286.354542011395,198,61,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,WINGATE BY WYNDHAM,lodging,lodging,True,True,0.9,1221.9811669783667,202,53,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,SCIENTIFIC SPECIALITIE,health,industrial_hardware,False,True,0.82,1311.62554200273,201,63,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,FOUNDATION ENTERTA,software_electronics,entertainment_media,False,True,0.85,1325.7906250073574,198,62,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,FEDERAL CITY COUNC,education_gov_membership,education_gov_membership,True,True,0.86,1222.2108330170158,200,59,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,OURSISTERSCIRCLE,education_gov_membership,education_gov_membership,True,True,0.78,1402.1334160061087,201,63,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,KLS WORLDWIDE CHAUFFEU,transport_auto_fuel,transport_auto_fuel,True,True,0.33,1265.9672499867156,204,67,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,CC TECH CONSULTING,professional_services,professional_services,True,True,0.86,1392.5998749909922,199,54,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,NIGP,education_gov_membership,education_gov_membership,True,True,0.65,1385.6699579919223,198,82,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,"JOSEPH, MANN & CREED",professional_services,retail,False,True,0.6,1245.9009169833735,204,62,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,RESIDENCE INN NEW ORLE,lodging,lodging,True,True,0.9,1176.7568340001162,203,53,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,SEDC,professional_services,education_gov_membership,False,True,0.75,1516.1382079822943,198,74,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,NATIONAL DRUG SCREENIN,health,health,True,True,0.95,1137.1945410210174,200,56,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,PREMIER SUPPLIES USA I,industrial_hardware,office_supplies,False,True,0.78,1339.6076250064652,202,60,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,SUPPLYHOUSE,industrial_hardware,industrial_hardware,True,True,0.9,1264.4785000011325,198,59,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,NCQA,education_gov_membership,health,False,True,0.9,1117.0042919984553,197,55,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,"SONJA L. REEVES, R",professional_services,professional_services,True,True,0.75,1343.1146669900045,204,69,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,GWU STUDENT AFFAIRS MA,education_gov_membership,education_gov_membership,True,True,0.9,1276.920333999442,203,64,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,FRONTIER BYZT9S,airlines_travel,telecom_utilities,False,True,0.9,1340.239292010665,201,61,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,"TRANSCRIPTION, ETC",professional_services,professional_services,True,True,0.78,1279.992041992955,199,58,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,"PINNACLE TCI, LLC",education_gov_membership,industrial_hardware,False,True,0.66,1426.6273750108667,202,69,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,CANVA I04263-72091178,entertainment_media,software_electronics,False,True,0.9,1235.3876669949386,204,56,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,FREEDOM SCI STORE,software_electronics,retail,False,True,0.78,1231.8643330072518,200,63,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,POLLO D ORO,restaurants,restaurants,True,True,0.9,1320.0921249808744,200,57,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,ASTRACOR LL,education_gov_membership,software_electronics,False,True,0.6,1243.314083025325,200,68,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,XCELEVENTS,professional_services,entertainment_media,False,True,0.78,1480.763041996397,200,70,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,WILLIAMS CRANE SERVICE,industrial_hardware,industrial_hardware,True,True,0.9,1472.9804579983465,201,61,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,THE REGULATORY GROUP,professional_services,professional_services,True,True,0.85,1151.2449999863748,200,57,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,READABLE,software_electronics,software_electronics,True,True,0.67,1424.8235839768313,197,68,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,MARRIOTT DESERT SPRING,lodging,lodging,True,True,0.95,1227.407291997224,203,54,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,RPS PROSE IN THE PI RD,financial_postal_shipping,professional_services,False,True,0.72,1229.6353330020793,203,67,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,HILTON GARDEN INN RICHMOND INNSBROOK,lodging,lodging,True,True,0.95,1198.8032090011984,211,54,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,UNICOR,education_gov_membership,industrial_hardware,False,True,0.62,1209.3369160138536,198,60,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,HOLIDAY INN EXPRESS AI,lodging,lodging,True,True,0.95,1150.4299590014853,201,49,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,HOMEWOOD STES ANAHEIM,lodging,lodging,True,True,0.92,1105.5736660200637,202,52,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,VISPRONET,office_supplies,software_electronics,False,True,0.6,1382.1230409957934,199,66,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,STANLEY STEEMER 73R,professional_services,professional_services,True,True,0.9,1155.7212499901652,204,54,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,COURSES.SGLADESIGN.COM,education_gov_membership,education_gov_membership,True,True,0.88,1492.6904999883845,202,74,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,CANVA I04346-75530363,professional_services,software_electronics,False,True,0.9,1370.1307500014082,204,64,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,AUTO AMERICA SERVICE L,transport_auto_fuel,transport_auto_fuel,True,True,0.85,1320.2626669954043,200,63,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,GEORGETOWN BID,groceries,education_gov_membership,False,True,0.7,1569.2332079925109,200,74,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,CMC-CAREER DEVELOPMENT,education_gov_membership,education_gov_membership,True,True,0.86,1288.6765000002924,201,60,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,SP RESTOCKIT,office_supplies,retail,False,True,0.82,1340.34850000171,199,61,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,STANFORD EB YOUCUBED G,education_gov_membership,education_gov_membership,True,True,0.9,1222.7011249924544,204,62,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,ATLANTIC MACHINERY,industrial_hardware,industrial_hardware,True,True,0.9,1124.103166977875,201,54,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,"BAG TAGS, INC",professional_services,retail,False,True,0.78,1367.9759170045145,200,58,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,"LIGHTBULB PRESS, I",office_supplies,education_gov_membership,False,True,0.75,1526.2766249943525,202,62,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,FOCUS HEALTH CORP,education_gov_membership,health,False,True,0.9,1183.1227079965174,200,62,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,HOTEL INDIGO DOWNTOWN,lodging,lodging,True,True,0.95,1176.8203329993412,202,54,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,HOTEL RES-HYATT REGEN,airlines_travel,lodging,False,True,0.92,1091.2881250260398,202,54,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,INDEED USI25-01502749,professional_services,INVALID,False,False,0.01,1427.1107090171427,205,63,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,GRADUATION SOURCE LLC,retail,education_gov_membership,False,True,0.88,1301.2044159986544,201,75,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,COALITION FOR JUV JUST,education_gov_membership,education_gov_membership,True,True,0.85,1278.148916986538,202,71,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,HYDRA - LIFT,transport_auto_fuel,software_electronics,False,True,0.72,1350.4732500005048,201,69,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,BRC INTERNATIONAL,professional_services,retail,False,True,0.6,1256.5395410056226,198,58,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,"RWP NETWORK, LLC",education_gov_membership,software_electronics,False,True,0.55,1181.0808749869466,200,63,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,EVENT:NASPL PROF,education_gov_membership,education_gov_membership,True,True,0.75,1374.9050839978736,200,73,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,PSS K12,office_supplies,education_gov_membership,False,True,0.88,1198.7070000031963,199,64,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,CDW GOVT #AF2RA6R,software_electronics,office_supplies,False,True,0.9,1325.7407920027617,205,63,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,IRS NATIONWIDE TAX FOR,professional_services,financial_postal_shipping,False,True,0.95,1539.8085000051651,202,66,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,DEEPSPACESPARK00 OF 00,retail,entertainment_media,False,True,0.6,1475.2585419919342,204,77,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,SP GLOWFORGE STORE,office_supplies,software_electronics,False,True,0.9,2204.0218329930212,201,73,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,ELITE FORENSIC SER,professional_services,professional_services,True,True,0.92,1199.8504160146695,201,60,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,PAPERSOURCE -4160,retail,retail,True,True,0.9,1490.0135839998256,201,58,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,ICLEI - LOCAL GOVE,professional_services,education_gov_membership,False,True,0.9,1552.560457988875,202,69,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,AMTRAK TEL01,transport_auto_fuel,airlines_travel,False,True,0.95,1247.4848749989178,200,64,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,RESIDENCE INN ANN ARBO,lodging,lodging,True,True,0.9,1214.1103750036564,203,62,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,CARTER MACHINERY - SAL,professional_services,industrial_hardware,False,True,0.86,1325.2397920005023,202,65,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,BUSY SERVICE INC,industrial_hardware,transport_auto_fuel,False,True,0.55,1452.0453750155866,199,68,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,HOBBY LOBBY,entertainment_media,retail,False,True,0.95,1225.708834012039,201,55,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,HOLIDAY INN COOKEVILLE,lodging,lodging,True,True,0.95,1275.9025419945829,203,54,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,IRS PMT,education_gov_membership,financial_postal_shipping,False,True,0.95,1388.6153750063386,198,61,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,SP VAULTEK SAFE,software_electronics,retail,False,True,0.82,1183.5163749929052,201,60,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,HOTEL RES-SPRINGHILL S,airlines_travel,lodging,False,True,0.95,1180.6918339862023,203,57,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,"BOSCH, THERMADOR, GAGG",retail,retail,True,True,0.82,1396.8267090094741,205,71,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,PEMBERTON FABRICATORS,industrial_hardware,industrial_hardware,True,True,0.9,1138.3232499938458,202,55,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,CANVA 04874-6610224,entertainment_media,software_electronics,False,True,0.9,1378.7374999956228,204,62,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,SHERATON DALLAS FD,lodging,lodging,True,True,0.95,1384.7221670148429,203,59,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,AMERICAS WINGS,restaurants,airlines_travel,False,True,0.82,1222.6420000079088,200,56,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,THEPRIVATESCHOOLLEADER,software_electronics,education_gov_membership,False,True,0.9,1510.4709579900373,202,60,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,HYATT REG LONG BCH PAR,transport_auto_fuel,lodging,False,True,0.95,1610.898165992694,201,59,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,PERFECTIT,software_electronics,software_electronics,True,True,0.72,1692.5718749989755,197,60,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,CANVA I04929-34391790,professional_services,software_electronics,False,True,0.9,1357.9591659945436,204,59,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,UNC CHAR AACOED STEM I,education_gov_membership,education_gov_membership,True,True,0.85,1314.8129580076784,202,71,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,STA CONTRACTING INC,industrial_hardware,professional_services,False,True,0.85,1239.0921660116874,199,55,gpt-5-mini-2025-08-07
+gpt-5-mini,no_web,PAYPRO GLOBAL INC,software_electronics,software_electronics,True,True,0.78,1275.3258340235334,199,64,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,ARIZONA GRAND RESORT,lodging,lodging,True,True,0.95,1643.0650830152445,1677,66,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,STRIDERBIKE,entertainment_media,retail,False,True,0.9,1532.435125001939,595,60,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,SHERATON VISTANA VILLA,lodging,lodging,True,True,0.9,1594.0649999829475,3007,63,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,ALS TWIN AIR,industrial_hardware,professional_services,False,True,0.9,1801.0891669837292,592,66,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,AUCAREERCENTER,education_gov_membership,education_gov_membership,True,True,0.9,1700.2041669911705,513,63,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,LITERACYEMP,retail,education_gov_membership,False,True,0.8,1469.7790000063833,462,72,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,NATIONAL OSHA FDN,education_gov_membership,education_gov_membership,True,True,0.86,1356.2645830097608,469,55,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,ESTRELLITA INC,education_gov_membership,education_gov_membership,True,True,0.92,1430.3085420106072,538,67,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,WINDRIVERENVIRONMENTAL,industrial_hardware,professional_services,False,True,0.86,1444.3607080029324,470,59,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,SHERATON CHARLOTTE HOTEL,lodging,lodging,True,True,0.95,1584.8084170138463,648,51,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,SWP ACSREADYREFRESH,health,software_electronics,False,True,0.6,1672.927500010701,218,71,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,LOYOLA UNIVERSITY MARY,education_gov_membership,education_gov_membership,True,True,0.9,1625.4453750152607,218,72,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,DMV PARTY RENTAL LLC,professional_services,retail,False,True,0.77,1319.6215000061784,217,54,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,NCRP,professional_services,retail,False,True,0.25,1418.2043749897275,214,61,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,TOTAL RESTROOM,industrial_hardware,industrial_hardware,True,True,0.9,1631.9550829939544,526,74,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,WINGATE BY WYNDHAM,lodging,lodging,True,True,0.9,1388.376042013988,976,65,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,SCIENTIFIC SPECIALITIE,health,professional_services,False,True,0.7,1230.0601659808308,492,61,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,FOUNDATION ENTERTA,software_electronics,entertainment_media,False,True,0.9,1197.7904579835013,500,60,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,FEDERAL CITY COUNC,education_gov_membership,education_gov_membership,True,True,0.92,1256.1038749990985,503,64,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,OURSISTERSCIRCLE,education_gov_membership,education_gov_membership,True,True,0.84,1335.3054159961175,549,63,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,KLS WORLDWIDE CHAUFFEU,transport_auto_fuel,airlines_travel,False,True,0.82,1497.6784579921514,547,66,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,CC TECH CONSULTING,professional_services,software_electronics,False,True,0.9,1487.2880830080248,479,72,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,NIGP,education_gov_membership,education_gov_membership,True,True,0.9,1442.0889999892097,504,61,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,"JOSEPH, MANN & CREED",professional_services,financial_postal_shipping,False,True,0.86,1777.624874986941,773,66,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,RESIDENCE INN NEW ORLE,lodging,lodging,True,True,0.95,1534.3501250026748,220,66,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,SEDC,professional_services,retail,False,True,0.35,1193.6743340047542,215,63,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,NATIONAL DRUG SCREENIN,health,health,True,True,0.9,1464.0189579804428,217,71,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,PREMIER SUPPLIES USA I,industrial_hardware,office_supplies,False,True,0.8,1331.282667000778,219,57,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,SUPPLYHOUSE,industrial_hardware,industrial_hardware,True,True,0.92,1242.515165999066,558,56,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,NCQA,education_gov_membership,health,False,True,0.9,1811.5734579914715,1218,66,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,"SONJA L. REEVES, R",professional_services,professional_services,True,True,0.82,1269.4309999933466,563,69,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,GWU STUDENT AFFAIRS MA,education_gov_membership,education_gov_membership,True,True,0.9,1538.5452919872478,483,75,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,FRONTIER BYZT9S,airlines_travel,telecom_utilities,False,True,0.85,1343.296500010183,496,71,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,"TRANSCRIPTION, ETC",professional_services,professional_services,True,True,0.9,1455.8997910062317,515,64,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,"PINNACLE TCI, LLC",education_gov_membership,education_gov_membership,True,True,0.86,1256.5210419998039,533,68,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,CANVA I04263-72091178,entertainment_media,software_electronics,False,True,0.9,1270.47625000705,459,47,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,FREEDOM SCI STORE,software_electronics,software_electronics,True,True,0.85,1659.3165840022266,495,71,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,POLLO D ORO,restaurants,restaurants,True,True,0.9,1429.101791989524,594,61,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,ASTRACOR LL,education_gov_membership,software_electronics,False,True,0.35,1292.815666005481,217,65,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,XCELEVENTS,professional_services,entertainment_media,False,True,0.7,1500.623625004664,217,73,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,WILLIAMS CRANE SERVICE,industrial_hardware,industrial_hardware,True,True,0.8,1239.5255410228856,218,61,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,THE REGULATORY GROUP,professional_services,professional_services,True,True,0.75,1269.2270829866175,217,61,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,READABLE,software_electronics,software_electronics,True,True,0.85,1390.8249169762712,752,62,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,MARRIOTT DESERT SPRING,lodging,lodging,True,True,0.9,1477.6850829948671,3597,64,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,RPS PROSE IN THE PI RD,financial_postal_shipping,lodging,False,True,0.82,1308.000874996651,585,68,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,HILTON GARDEN INN RICHMOND INNSBROOK,lodging,lodging,True,True,0.95,1328.0127079924569,634,59,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,UNICOR,education_gov_membership,education_gov_membership,True,True,0.9,1628.079499991145,1011,78,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,HOLIDAY INN EXPRESS AI,lodging,lodging,True,True,0.95,1223.4916250163224,557,65,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,HOMEWOOD STES ANAHEIM,lodging,lodging,True,True,0.9,1273.0728749884292,635,63,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,VISPRONET,office_supplies,retail,False,True,0.86,1198.5037080012262,611,62,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,STANLEY STEEMER 73R,professional_services,professional_services,True,True,0.9,1524.2701660026796,579,61,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,COURSES.SGLADESIGN.COM,education_gov_membership,education_gov_membership,True,True,0.9,1370.0717079918832,571,66,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,CANVA I04346-75530363,professional_services,software_electronics,False,True,0.9,1353.7409999989904,221,60,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,AUTO AMERICA SERVICE L,transport_auto_fuel,transport_auto_fuel,True,True,0.78,1497.089042008156,217,66,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,GEORGETOWN BID,groceries,education_gov_membership,False,True,0.65,1381.7028749908786,217,74,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,CMC-CAREER DEVELOPMENT,education_gov_membership,education_gov_membership,True,True,0.86,1184.7179999749642,218,59,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,SP RESTOCKIT,office_supplies,office_supplies,True,True,0.86,1382.1540419885423,593,64,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,STANFORD EB YOUCUBED G,education_gov_membership,education_gov_membership,True,True,0.9,1452.6723340095486,504,66,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,ATLANTIC MACHINERY,industrial_hardware,industrial_hardware,True,True,0.86,1322.1462079964112,462,61,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,"BAG TAGS, INC",professional_services,retail,False,True,0.86,1678.1764590123203,517,72,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,"LIGHTBULB PRESS, I",office_supplies,education_gov_membership,False,True,0.86,1301.3357919990085,454,62,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,FOCUS HEALTH CORP,education_gov_membership,education_gov_membership,True,True,0.75,1469.976583000971,685,63,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,HOTEL INDIGO DOWNTOWN,lodging,lodging,True,True,0.92,1171.4432920271065,666,61,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,HOTEL RES-HYATT REGEN,airlines_travel,lodging,False,True,0.95,1372.48062499566,542,65,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,INDEED USI25-01502749,professional_services,professional_services,True,True,0.88,1388.5267919977196,578,63,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,GRADUATION SOURCE LLC,retail,education_gov_membership,False,True,0.92,1570.7149590016343,588,60,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,COALITION FOR JUV JUST,education_gov_membership,education_gov_membership,True,True,0.8,1274.698499997612,219,74,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,HYDRA - LIFT,transport_auto_fuel,software_electronics,False,True,0.6,1927.953125006752,218,73,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,BRC INTERNATIONAL,professional_services,retail,False,True,0.45,1181.644124997547,215,63,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,"RWP NETWORK, LLC",education_gov_membership,software_electronics,False,True,0.45,1958.530083997175,217,69,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,EVENT:NASPL PROF,education_gov_membership,education_gov_membership,True,True,0.86,1496.3500419980846,547,62,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,PSS K12,office_supplies,education_gov_membership,False,True,0.88,1777.3266670119483,510,80,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,CDW GOVT #AF2RA6R,software_electronics,software_electronics,True,True,0.9,1537.2163749998435,485,61,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,IRS NATIONWIDE TAX FOR,professional_services,education_gov_membership,False,True,0.9,1788.2037080125883,732,60,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,DEEPSPACESPARK00 OF 00,retail,education_gov_membership,False,True,0.9,1235.2153749961872,523,62,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,SP GLOWFORGE STORE,office_supplies,software_electronics,False,True,0.9,1441.2349160120357,622,69,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,ELITE FORENSIC SER,professional_services,professional_services,True,True,0.9,1287.7801249851473,474,59,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,PAPERSOURCE -4160,retail,office_supplies,False,True,0.9,1353.8073750096373,528,58,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,ICLEI - LOCAL GOVE,professional_services,education_gov_membership,False,True,0.92,1739.082749991212,623,63,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,AMTRAK TEL01,transport_auto_fuel,airlines_travel,False,True,0.9,1390.6937089923304,528,61,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,RESIDENCE INN ANN ARBO,lodging,lodging,True,True,0.95,1586.0682500060648,220,64,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,CARTER MACHINERY - SAL,professional_services,industrial_hardware,False,True,0.85,1568.0551250115968,219,64,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,BUSY SERVICE INC,industrial_hardware,telecom_utilities,False,True,0.72,1424.170165992109,216,65,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,HOBBY LOBBY,entertainment_media,retail,False,True,0.95,1588.6947499820963,218,52,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,HOLIDAY INN COOKEVILLE,lodging,lodging,True,True,0.95,1499.0704170195386,634,60,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,IRS PMT,education_gov_membership,education_gov_membership,True,True,0.92,1309.5163750112988,546,63,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,SP VAULTEK SAFE,software_electronics,retail,False,True,0.86,1421.181624988094,688,64,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,HOTEL RES-SPRINGHILL S,airlines_travel,lodging,False,True,0.9,1475.5447499919683,625,62,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,"BOSCH, THERMADOR, GAGG",retail,retail,True,True,0.85,1467.1710830007214,720,69,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,PEMBERTON FABRICATORS,industrial_hardware,industrial_hardware,True,True,0.9,1647.6122500025667,540,58,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,CANVA 04874-6610224,entertainment_media,software_electronics,False,True,0.9,1495.2997080108617,473,64,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,SHERATON DALLAS FD,lodging,lodging,True,True,0.95,1340.8115839993116,654,62,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,AMERICAS WINGS,restaurants,restaurants,True,True,0.9,1584.6647080034018,2272,65,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,THEPRIVATESCHOOLLEADER,software_electronics,education_gov_membership,False,True,0.85,1397.3823339911178,219,62,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,HYATT REG LONG BCH PAR,transport_auto_fuel,lodging,False,True,0.93,1397.3402080009691,620,60,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,PERFECTIT,software_electronics,software_electronics,True,True,0.45,1601.2110419978853,214,78,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,CANVA I04929-34391790,professional_services,software_electronics,False,True,0.9,1547.545415989589,221,65,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,UNC CHAR AACOED STEM I,education_gov_membership,education_gov_membership,True,True,0.85,1798.9097090030555,219,71,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,STA CONTRACTING INC,industrial_hardware,professional_services,False,True,0.85,1627.9826670070179,525,66,gpt-5-mini-2025-08-07
+gpt-5-mini,with_web,PAYPRO GLOBAL INC,software_electronics,software_electronics,True,True,0.9,1620.5979170044884,499,68,gpt-5-mini-2025-08-07
+deepseek-ai/deepseek-v4-flash-0731,no_web,ARIZONA GRAND RESORT,lodging,lodging,True,True,0.95,3894.9893329991028,170,67,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,STRIDERBIKE,entertainment_media,retail,False,True,0.9,11144.768291997025,165,108,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,SHERATON VISTANA VILLA,lodging,lodging,True,True,0.95,7877.796374988975,171,74,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,ALS TWIN AIR,industrial_hardware,INVALID,False,False,0.0,371725.530332973,165,600,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,AUCAREERCENTER,education_gov_membership,education_gov_membership,True,True,0.6,94170.30733299907,165,86,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,LITERACYEMP,retail,education_gov_membership,False,True,0.7,92619.97508400236,165,196,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,NATIONAL OSHA FDN,education_gov_membership,education_gov_membership,True,True,0.9,14606.29858399625,165,153,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,ESTRELLITA INC,education_gov_membership,retail,False,True,0.3,4477.863707987126,166,145,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,WINDRIVERENVIRONMENTAL,industrial_hardware,professional_services,False,True,0.8,19383.904874994187,167,148,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,SHERATON CHARLOTTE HOTEL,lodging,lodging,True,True,1.0,3827.3365419881884,171,72,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,SWP ACSREADYREFRESH,health,software_electronics,False,True,0.6,2757.1378750144504,169,143,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,LOYOLA UNIVERSITY MARY,education_gov_membership,education_gov_membership,True,True,0.95,92676.57904201769,167,97,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,DMV PARTY RENTAL LLC,professional_services,entertainment_media,False,True,0.7,8772.602624987485,169,109,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,NCRP,professional_services,professional_services,True,True,0.1,189593.7153340201,164,155,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,TOTAL RESTROOM,industrial_hardware,industrial_hardware,True,True,0.3,4968.851958023151,165,252,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,WINGATE BY WYNDHAM,lodging,lodging,True,True,0.99,91926.4020419796,169,83,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,SCIENTIFIC SPECIALITIE,health,industrial_hardware,False,True,0.6,2883.102166990284,167,277,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,FOUNDATION ENTERTA,software_electronics,entertainment_media,False,True,0.8,780.8216249977704,167,77,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,FEDERAL CITY COUNC,education_gov_membership,education_gov_membership,True,True,0.95,924.4267909962218,167,117,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,OURSISTERSCIRCLE,education_gov_membership,education_gov_membership,True,True,0.6,183167.29124999256,167,146,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,KLS WORLDWIDE CHAUFFEU,transport_auto_fuel,transport_auto_fuel,True,True,0.9,7800.26208300842,170,184,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,CC TECH CONSULTING,professional_services,professional_services,True,True,0.9,1216.551666992018,167,68,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,NIGP,education_gov_membership,education_gov_membership,True,True,0.6,184410.99599999143,164,155,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,"JOSEPH, MANN & CREED",professional_services,professional_services,True,True,0.9,185976.74895898672,171,80,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,RESIDENCE INN NEW ORLE,lodging,lodging,True,True,1.0,1437.0911669975612,169,76,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,SEDC,professional_services,INVALID,False,False,0.0,5532.070499990368,164,600,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,NATIONAL DRUG SCREENIN,health,health,True,True,0.95,2717.479499988258,167,76,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,PREMIER SUPPLIES USA I,industrial_hardware,office_supplies,False,True,0.7,185710.39970798302,169,125,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,SUPPLYHOUSE,industrial_hardware,industrial_hardware,True,True,0.7,95128.8206249883,166,147,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,NCQA,education_gov_membership,health,False,True,0.95,3891.0351670056116,163,129,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,"SONJA L. REEVES, R",professional_services,professional_services,True,True,0.3,92455.87849998265,171,147,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,GWU STUDENT AFFAIRS MA,education_gov_membership,education_gov_membership,True,True,0.95,3526.9591659889556,170,124,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,FRONTIER BYZT9S,airlines_travel,airlines_travel,True,True,0.9,278692.88908399176,169,113,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,"TRANSCRIPTION, ETC",professional_services,professional_services,True,True,0.8,8865.94679200789,167,202,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,"PINNACLE TCI, LLC",education_gov_membership,professional_services,False,True,0.3,185682.8590829973,169,148,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,CANVA I04263-72091178,entertainment_media,software_electronics,False,True,1.0,93783.87195800315,170,104,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,FREEDOM SCI STORE,software_electronics,retail,False,True,0.6,92447.94320801157,167,112,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,POLLO D ORO,restaurants,restaurants,True,True,0.9,1915.0947500020266,167,113,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,ASTRACOR LL,education_gov_membership,software_electronics,False,True,0.4,1134.2683330003638,166,149,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,XCELEVENTS,professional_services,entertainment_media,False,True,0.7,95622.9907089728,166,142,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,WILLIAMS CRANE SERVICE,industrial_hardware,professional_services,False,True,0.7,6177.375833998667,167,292,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,THE REGULATORY GROUP,professional_services,professional_services,True,True,0.7,184623.19791701157,167,75,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,READABLE,software_electronics,retail,False,True,0.6,3705.5795419728383,163,151,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,MARRIOTT DESERT SPRING,lodging,lodging,True,True,0.97,184454.4745000021,168,77,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,RPS PROSE IN THE PI RD,financial_postal_shipping,restaurants,False,True,0.3,3711.300625000149,169,357,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,HILTON GARDEN INN RICHMOND INNSBROOK,lodging,lodging,True,True,1.0,1086.9154159736354,178,94,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,UNICOR,education_gov_membership,education_gov_membership,True,True,0.8,7998.531874996843,164,251,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,HOLIDAY INN EXPRESS AI,lodging,lodging,True,True,1.0,91833.23137499974,169,91,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,HOMEWOOD STES ANAHEIM,lodging,lodging,True,True,1.0,4417.062207998242,172,87,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,VISPRONET,office_supplies,software_electronics,False,True,0.7,549498.5101249767,165,101,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,STANLEY STEEMER 73R,professional_services,professional_services,True,True,0.95,836.5576670039445,170,87,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,COURSES.SGLADESIGN.COM,education_gov_membership,education_gov_membership,True,True,0.9,279514.52329198946,170,157,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,CANVA I04346-75530363,professional_services,software_electronics,False,True,0.95,788.1804580101743,170,86,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,AUTO AMERICA SERVICE L,transport_auto_fuel,transport_auto_fuel,True,True,0.9,97038.6216249899,167,110,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,GEORGETOWN BID,groceries,education_gov_membership,False,True,0.7,92983.89375000261,167,268,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,CMC-CAREER DEVELOPMENT,education_gov_membership,education_gov_membership,True,True,0.8,4008.6767910106573,167,119,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,SP RESTOCKIT,office_supplies,retail,False,True,0.6,5206.59191600862,165,245,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,STANFORD EB YOUCUBED G,education_gov_membership,education_gov_membership,True,True,0.95,96517.64579201699,171,110,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,ATLANTIC MACHINERY,industrial_hardware,industrial_hardware,True,True,0.95,700.024999998277,169,82,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,"BAG TAGS, INC",professional_services,retail,False,True,0.9,1775.1450409996323,167,112,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,"LIGHTBULB PRESS, I",office_supplies,entertainment_media,False,True,0.6,5931.679000001168,170,356,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,FOCUS HEALTH CORP,education_gov_membership,health,False,True,0.95,185552.98287500045,167,67,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,HOTEL INDIGO DOWNTOWN,lodging,lodging,True,True,0.99,1254.5721670030616,169,68,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,HOTEL RES-HYATT REGEN,airlines_travel,lodging,False,True,1.0,4335.004874999868,169,80,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,INDEED USI25-01502749,professional_services,professional_services,True,True,0.9,1634.509124996839,171,97,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,GRADUATION SOURCE LLC,retail,retail,True,True,0.7,278004.430083005,168,114,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,COALITION FOR JUV JUST,education_gov_membership,education_gov_membership,True,True,0.9,2807.894083991414,168,126,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,HYDRA - LIFT,transport_auto_fuel,industrial_hardware,False,True,0.7,1897.3859589896165,167,121,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,BRC INTERNATIONAL,professional_services,retail,False,True,0.4,5944.541374978144,164,111,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,"RWP NETWORK, LLC",education_gov_membership,telecom_utilities,False,True,0.6,12548.718708974775,167,156,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,EVENT:NASPL PROF,education_gov_membership,professional_services,False,True,0.7,93655.84037499502,166,151,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,PSS K12,office_supplies,education_gov_membership,False,True,0.8,92739.45812499733,165,161,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,CDW GOVT #AF2RA6R,software_electronics,software_electronics,True,True,0.95,185976.74312497838,171,171,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,IRS NATIONWIDE TAX FOR,professional_services,education_gov_membership,False,True,0.95,188410.05766700255,169,123,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,DEEPSPACESPARK00 OF 00,retail,software_electronics,False,True,0.6,4624.849042011192,171,146,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,SP GLOWFORGE STORE,office_supplies,software_electronics,False,True,0.9,3892.615749995457,168,149,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,ELITE FORENSIC SER,professional_services,professional_services,True,True,0.95,184602.54354099743,167,103,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,PAPERSOURCE -4160,retail,retail,True,True,0.9,96109.56345801242,166,166,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,ICLEI - LOCAL GOVE,professional_services,education_gov_membership,False,True,0.95,184186.54987498303,168,102,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,AMTRAK TEL01,transport_auto_fuel,airlines_travel,False,True,0.95,93630.34879098996,168,172,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,RESIDENCE INN ANN ARBO,lodging,lodging,True,True,1.0,183856.23129201122,169,84,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,CARTER MACHINERY - SAL,professional_services,industrial_hardware,False,True,0.9,282893.3938750124,169,91,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,BUSY SERVICE INC,industrial_hardware,professional_services,False,True,0.3,183955.1317919977,165,96,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,HOBBY LOBBY,entertainment_media,retail,False,True,1.0,190282.88833299302,167,80,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,HOLIDAY INN COOKEVILLE,lodging,lodging,True,True,1.0,363940.0429579837,171,75,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,IRS PMT,education_gov_membership,education_gov_membership,True,True,0.95,1938.1092920084484,164,128,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,SP VAULTEK SAFE,software_electronics,industrial_hardware,False,True,0.7,956.8308750167489,168,108,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,"BOSCH, THERMADOR, GAGG",retail,retail,True,True,0.9,186930.0533750211,172,244,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,PEMBERTON FABRICATORS,industrial_hardware,industrial_hardware,True,True,0.9,701.5026669832878,169,79,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,CANVA 04874-6610224,entertainment_media,software_electronics,False,True,0.95,1649.382916977629,170,73,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,SHERATON DALLAS FD,lodging,lodging,True,True,1.0,183535.08000000147,169,71,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,AMERICAS WINGS,restaurants,restaurants,True,True,0.95,365774.9426669907,166,121,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,THEPRIVATESCHOOLLEADER,software_electronics,education_gov_membership,False,True,0.9,9419.859708024887,170,101,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,HYATT REG LONG BCH PAR,transport_auto_fuel,lodging,False,True,0.95,365234.03491600766,168,86,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,PERFECTIT,software_electronics,software_electronics,True,True,0.9,2688.6625829793047,165,97,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,CANVA I04929-34391790,professional_services,software_electronics,False,True,0.95,184385.42016601423,170,100,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,UNC CHAR AACOED STEM I,education_gov_membership,education_gov_membership,True,True,0.9,4282.535791979171,168,122,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,STA CONTRACTING INC,industrial_hardware,industrial_hardware,True,True,0.7,872.1614999813028,166,118,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,no_web,PAYPRO GLOBAL INC,software_electronics,financial_postal_shipping,False,True,0.85,181911.6034579929,166,97,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,ARIZONA GRAND RESORT,lodging,lodging,True,True,1.0,182651.82941700914,1707,98,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,STRIDERBIKE,entertainment_media,retail,False,True,0.95,1904.4731670001056,576,101,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,SHERATON VISTANA VILLA,lodging,lodging,True,True,1.0,1282.4717920157127,3203,129,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,ALS TWIN AIR,industrial_hardware,professional_services,False,True,0.95,1829.2394999880344,565,80,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,AUCAREERCENTER,education_gov_membership,education_gov_membership,True,True,1.0,183492.31050000526,487,95,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,LITERACYEMP,retail,education_gov_membership,False,True,0.7,199586.58049997757,429,251,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,NATIONAL OSHA FDN,education_gov_membership,professional_services,False,True,0.8,183220.3759170079,443,267,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,ESTRELLITA INC,education_gov_membership,education_gov_membership,True,True,0.95,11538.233625004068,511,109,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,WINDRIVERENVIRONMENTAL,industrial_hardware,professional_services,False,True,0.95,182842.17658397392,442,128,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,SHERATON CHARLOTTE HOTEL,lodging,lodging,True,True,1.0,364291.8911250017,633,97,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,SWP ACSREADYREFRESH,health,office_supplies,False,True,0.5,21933.361584000522,187,577,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,LOYOLA UNIVERSITY MARY,education_gov_membership,education_gov_membership,True,True,0.95,182522.62525001424,185,87,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,DMV PARTY RENTAL LLC,professional_services,retail,False,True,0.7,5323.509125009878,187,248,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,NCRP,professional_services,INVALID,False,False,0.0,6800.202249985887,182,600,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,TOTAL RESTROOM,industrial_hardware,industrial_hardware,True,True,0.9,182667.11608300102,506,227,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,WINGATE BY WYNDHAM,lodging,lodging,True,True,1.0,1723.3422090066597,1040,118,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,SCIENTIFIC SPECIALITIE,health,retail,False,True,0.9,5650.159292010358,459,329,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,FOUNDATION ENTERTA,software_electronics,entertainment_media,False,True,0.95,1780.1694590016268,489,99,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,FEDERAL CITY COUNC,education_gov_membership,education_gov_membership,True,True,0.95,706.8999580224045,469,86,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,OURSISTERSCIRCLE,education_gov_membership,health,False,True,0.95,1715.1847500063013,525,113,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,KLS WORLDWIDE CHAUFFEU,transport_auto_fuel,transport_auto_fuel,True,True,0.97,185838.9544590027,532,172,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,CC TECH CONSULTING,professional_services,professional_services,True,True,0.95,182533.5876249883,454,134,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,NIGP,education_gov_membership,education_gov_membership,True,True,0.95,1813.8306670007296,477,144,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,"JOSEPH, MANN & CREED",professional_services,financial_postal_shipping,False,True,0.95,1497.1449579752516,760,110,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,RESIDENCE INN NEW ORLE,lodging,lodging,True,True,0.95,182094.57237500465,187,107,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,SEDC,professional_services,education_gov_membership,False,True,0.2,958.8732080010232,182,151,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,NATIONAL DRUG SCREENIN,health,health,True,True,0.95,608.2239999959711,185,68,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,PREMIER SUPPLIES USA I,industrial_hardware,office_supplies,False,True,0.6,182697.9618750047,187,154,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,SUPPLYHOUSE,industrial_hardware,industrial_hardware,True,True,0.95,186165.35745799774,538,133,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,NCQA,education_gov_membership,health,False,True,1.0,1505.9969169960823,1193,94,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,"SONJA L. REEVES, R",professional_services,professional_services,True,True,0.95,2066.6192909993697,537,133,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,GWU STUDENT AFFAIRS MA,education_gov_membership,education_gov_membership,True,True,0.95,22698.12766701216,454,156,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,FRONTIER BYZT9S,airlines_travel,software_electronics,False,True,0.7,182614.86670802697,473,174,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,"TRANSCRIPTION, ETC",professional_services,professional_services,True,True,1.0,2160.320041992236,491,159,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,"PINNACLE TCI, LLC",education_gov_membership,professional_services,False,True,0.95,1101.001292001456,517,119,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,CANVA I04263-72091178,entertainment_media,software_electronics,False,True,0.95,548401.6707499977,439,148,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,FREEDOM SCI STORE,software_electronics,software_electronics,True,True,0.95,6855.295084009413,465,122,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,POLLO D ORO,restaurants,restaurants,True,True,1.0,7267.361791018629,573,112,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,ASTRACOR LL,education_gov_membership,industrial_hardware,False,True,0.2,1516.8307079875376,184,189,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,XCELEVENTS,professional_services,entertainment_media,False,True,0.3,6371.945874998346,184,323,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,WILLIAMS CRANE SERVICE,industrial_hardware,industrial_hardware,True,True,0.7,548582.3113750084,185,116,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,THE REGULATORY GROUP,professional_services,professional_services,True,True,0.7,181988.1637909857,185,82,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,READABLE,software_electronics,education_gov_membership,False,True,0.9,183548.22024999885,736,227,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,MARRIOTT DESERT SPRING,lodging,lodging,True,True,1.0,1856.1690830101725,3779,100,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,RPS PROSE IN THE PI RD,financial_postal_shipping,lodging,False,True,0.9,371786.1216669844,567,330,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,HILTON GARDEN INN RICHMOND INNSBROOK,lodging,lodging,True,True,1.0,182093.47220801283,612,118,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,UNICOR,education_gov_membership,education_gov_membership,True,True,1.0,550217.4505000003,1004,120,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,HOLIDAY INN EXPRESS AI,lodging,lodging,True,True,1.0,1238.5352500132285,543,110,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,HOMEWOOD STES ANAHEIM,lodging,lodging,True,True,1.0,548527.3054169957,627,78,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,VISPRONET,office_supplies,retail,False,True,0.95,549109.2452080047,583,158,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,STANLEY STEEMER 73R,professional_services,professional_services,True,True,0.95,2245.3189579828177,552,120,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,COURSES.SGLADESIGN.COM,education_gov_membership,education_gov_membership,True,True,0.95,182410.43879199424,547,145,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,CANVA I04346-75530363,professional_services,software_electronics,False,True,0.95,910.5417919927277,188,113,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,AUTO AMERICA SERVICE L,transport_auto_fuel,transport_auto_fuel,True,True,0.8,5510.259624978062,185,219,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,GEORGETOWN BID,groceries,education_gov_membership,False,True,0.4,365665.2671250049,185,366,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,CMC-CAREER DEVELOPMENT,education_gov_membership,education_gov_membership,True,True,0.7,182048.38633397594,185,152,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,SP RESTOCKIT,office_supplies,office_supplies,True,True,0.95,1355.9704590006731,572,185,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,STANFORD EB YOUCUBED G,education_gov_membership,education_gov_membership,True,True,0.95,181798.62241700175,487,114,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,ATLANTIC MACHINERY,industrial_hardware,industrial_hardware,True,True,0.95,1207.2173329943325,436,190,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,"BAG TAGS, INC",professional_services,professional_services,True,True,0.72,2510.6395420152694,494,444,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,"LIGHTBULB PRESS, I",office_supplies,professional_services,False,True,0.9,1526.1214580095839,428,246,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,FOCUS HEALTH CORP,education_gov_membership,health,False,True,0.85,2499.875958019402,665,214,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,HOTEL INDIGO DOWNTOWN,lodging,lodging,True,True,1.0,2291.7191669985186,651,127,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,HOTEL RES-HYATT REGEN,airlines_travel,lodging,False,True,1.0,1485.4874169977847,529,178,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,INDEED USI25-01502749,professional_services,professional_services,True,True,0.95,3208.3527079958003,539,93,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,GRADUATION SOURCE LLC,retail,retail,True,True,0.95,548556.4897079894,570,116,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,COALITION FOR JUV JUST,education_gov_membership,education_gov_membership,True,True,0.8,1952.029665990267,186,91,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,HYDRA - LIFT,transport_auto_fuel,industrial_hardware,False,True,0.2,996.9491669908166,185,185,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,BRC INTERNATIONAL,professional_services,professional_services,True,True,0.2,1234.9209579988383,182,216,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,"RWP NETWORK, LLC",education_gov_membership,telecom_utilities,False,True,0.3,366365.5466249911,185,183,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,EVENT:NASPL PROF,education_gov_membership,education_gov_membership,True,True,0.95,6538.0192500015255,522,162,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,PSS K12,office_supplies,education_gov_membership,False,True,0.95,952.8405419841874,482,120,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,CDW GOVT #AF2RA6R,software_electronics,software_electronics,True,True,0.95,2242.6198330067564,457,205,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,IRS NATIONWIDE TAX FOR,professional_services,education_gov_membership,False,True,0.95,187044.98254100326,724,146,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,DEEPSPACESPARK00 OF 00,retail,education_gov_membership,False,True,0.95,2625.56833398412,495,136,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,SP GLOWFORGE STORE,office_supplies,retail,False,True,0.95,2428.3599159971345,607,190,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,ELITE FORENSIC SER,professional_services,professional_services,True,True,0.95,182269.45154098212,438,115,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,PAPERSOURCE -4160,retail,retail,True,True,0.95,184490.09962499258,508,188,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,ICLEI - LOCAL GOVE,professional_services,education_gov_membership,False,True,0.95,1193.63299998804,584,120,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,AMTRAK TEL01,transport_auto_fuel,airlines_travel,False,True,0.98,365334.37258302,509,134,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,RESIDENCE INN ANN ARBO,lodging,lodging,True,True,0.95,1012.4977079976816,187,99,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,CARTER MACHINERY - SAL,professional_services,industrial_hardware,False,True,0.9,645.5911250086501,187,90,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,BUSY SERVICE INC,industrial_hardware,professional_services,False,True,0.3,182734.4514170254,183,104,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,HOBBY LOBBY,entertainment_media,retail,False,True,1.0,1286.1152080004103,185,113,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,HOLIDAY INN COOKEVILLE,lodging,lodging,True,True,1.0,948.6058749898802,620,113,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,IRS PMT,education_gov_membership,education_gov_membership,True,True,1.0,183009.60054202005,527,102,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,SP VAULTEK SAFE,software_electronics,industrial_hardware,False,True,0.9,7585.5392910016235,664,291,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,HOTEL RES-SPRINGHILL S,airlines_travel,lodging,False,True,1.0,1054.038959002355,633,153,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,"BOSCH, THERMADOR, GAGG",retail,retail,True,True,0.95,6562.208333984017,702,201,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,PEMBERTON FABRICATORS,industrial_hardware,industrial_hardware,True,True,0.95,1179.7840419749264,519,105,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,CANVA 04874-6610224,entertainment_media,software_electronics,False,True,0.95,2286.3401250215247,450,113,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,SHERATON DALLAS FD,lodging,lodging,True,True,1.0,3941.937041003257,632,101,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,AMERICAS WINGS,restaurants,restaurants,True,True,0.98,188863.99241600884,2315,96,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,THEPRIVATESCHOOLLEADER,software_electronics,education_gov_membership,False,True,0.8,184969.72266599187,188,82,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,HYATT REG LONG BCH PAR,transport_auto_fuel,lodging,False,True,1.0,1846.040583011927,606,122,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,PERFECTIT,software_electronics,software_electronics,True,True,0.6,961.6982080042362,183,98,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,CANVA I04929-34391790,professional_services,software_electronics,False,True,0.95,654.5177500229329,188,97,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,UNC CHAR AACOED STEM I,education_gov_membership,education_gov_membership,True,True,0.9,182874.34845900862,186,169,deepseek-ai/deepseek-v4-flash-0731
+deepseek-ai/deepseek-v4-flash-0731,with_web,PAYPRO GLOBAL INC,software_electronics,software_electronics,True,True,0.9,365109.7087500093,477,262,deepseek-ai/deepseek-v4-flash-0731
+nvidia/nemotron-3-super-120b-a12b,no_web,ARIZONA GRAND RESORT,lodging,lodging,True,True,0.96,1114.6498329762835,185,121,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,STRIDERBIKE,entertainment_media,retail,False,True,0.9,1601.1587500106543,182,143,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,SHERATON VISTANA VILLA,lodging,lodging,True,True,0.96,1658.773041999666,188,186,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,ALS TWIN AIR,industrial_hardware,airlines_travel,False,True,0.85,6922.4535419780295,182,134,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,AUCAREERCENTER,education_gov_membership,education_gov_membership,True,True,0.82,11195.303833985236,183,228,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,LITERACYEMP,retail,education_gov_membership,False,True,0.82,1681.701667024754,184,153,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,NATIONAL OSHA FDN,education_gov_membership,education_gov_membership,True,True,0.78,2143.3944160235114,184,207,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,ESTRELLITA INC,education_gov_membership,restaurants,False,True,0.72,7629.324915993493,182,237,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,WINDRIVERENVIRONMENTAL,industrial_hardware,professional_services,False,True,0.86,7286.939333018381,185,175,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,SHERATON CHARLOTTE HOTEL,lodging,lodging,True,True,0.98,4060.7834580005147,188,119,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,SWP ACSREADYREFRESH,health,INVALID,False,False,0.0,2191.278833022807,184,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,LOYOLA UNIVERSITY MARY,education_gov_membership,education_gov_membership,True,True,0.95,4509.801083011553,187,147,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,DMV PARTY RENTAL LLC,professional_services,retail,False,True,0.82,3048.1615840108134,185,299,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,NCRP,professional_services,software_electronics,False,True,0.82,2750.1160000101663,180,272,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,TOTAL RESTROOM,industrial_hardware,retail,False,True,0.6,3794.816166977398,182,289,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,WINGATE BY WYNDHAM,lodging,lodging,True,True,0.98,1840.6882499984931,186,126,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,SCIENTIFIC SPECIALITIE,health,industrial_hardware,False,True,0.82,1478.5327920108102,184,202,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,FOUNDATION ENTERTA,software_electronics,entertainment_media,False,True,0.86,5364.6224590193015,183,155,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,FEDERAL CITY COUNC,education_gov_membership,education_gov_membership,True,True,0.7,2163.9841250143945,185,230,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,OURSISTERSCIRCLE,education_gov_membership,INVALID,False,False,0.0,5819.072000012966,184,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,KLS WORLDWIDE CHAUFFEU,transport_auto_fuel,transport_auto_fuel,True,True,0.86,2528.1384589907248,186,188,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,CC TECH CONSULTING,professional_services,professional_services,True,True,0.85,1558.05395799689,184,219,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,NIGP,education_gov_membership,office_supplies,False,True,0.85,2704.577666008845,180,254,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,"JOSEPH, MANN & CREED",professional_services,professional_services,True,True,0.85,2307.13816700154,187,159,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,RESIDENCE INN NEW ORLE,lodging,lodging,True,True,0.98,2003.6125829792581,185,183,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,SEDC,professional_services,INVALID,False,False,0.0,6451.586334005697,180,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,NATIONAL DRUG SCREENIN,health,health,True,True,0.92,1496.5325410012156,185,159,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,PREMIER SUPPLIES USA I,industrial_hardware,office_supplies,False,True,0.9,1123.323750012787,186,130,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,SUPPLYHOUSE,industrial_hardware,INVALID,False,False,0.0,4128.481291001663,182,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,NCQA,education_gov_membership,health,False,True,0.92,1352.2126250027213,180,130,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,"SONJA L. REEVES, R",professional_services,professional_services,True,True,0.7,2874.2438330082223,187,169,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,GWU STUDENT AFFAIRS MA,education_gov_membership,education_gov_membership,True,True,0.95,2046.2707499973476,186,150,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,FRONTIER BYZT9S,airlines_travel,airlines_travel,True,True,0.9,3262.64166701003,186,282,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,"TRANSCRIPTION, ETC",professional_services,professional_services,True,True,0.8,3254.021875007311,184,198,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,"PINNACLE TCI, LLC",education_gov_membership,INVALID,False,False,0.0,3292.4919170036446,184,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,CANVA I04263-72091178,entertainment_media,software_electronics,False,True,0.96,7624.593582993839,194,164,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,FREEDOM SCI STORE,software_electronics,retail,False,True,0.82,2258.537999994587,184,195,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,POLLO D ORO,restaurants,restaurants,True,True,0.92,34276.33395901648,182,143,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,ASTRACOR LL,education_gov_membership,INVALID,False,False,0.0,40501.75837497227,182,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,XCELEVENTS,professional_services,entertainment_media,False,True,0.8,29915.93700001249,182,170,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,WILLIAMS CRANE SERVICE,industrial_hardware,INVALID,False,False,0.0,26590.969709010096,187,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,THE REGULATORY GROUP,professional_services,professional_services,True,True,0.85,7808.1050409819,183,199,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,READABLE,software_electronics,software_electronics,True,True,0.55,8899.311999994097,179,210,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,MARRIOTT DESERT SPRING,lodging,lodging,True,True,0.98,3186.0379159916192,185,127,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,RPS PROSE IN THE PI RD,financial_postal_shipping,INVALID,False,False,0.0,5610.962374979863,185,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,HILTON GARDEN INN RICHMOND INNSBROOK,lodging,lodging,True,True,0.95,4499.597417016048,195,124,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,UNICOR,education_gov_membership,retail,False,True,0.6,3943.988916988019,180,277,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,HOLIDAY INN EXPRESS AI,lodging,lodging,True,True,0.96,1577.7786250109784,187,124,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,HOMEWOOD STES ANAHEIM,lodging,lodging,True,True,0.96,1339.417958020931,187,132,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,VISPRONET,office_supplies,telecom_utilities,False,True,0.8,1649.1875830106437,181,190,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,STANLEY STEEMER 73R,professional_services,professional_services,True,True,0.94,1609.618083020905,189,140,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,COURSES.SGLADESIGN.COM,education_gov_membership,education_gov_membership,True,True,0.9,2840.4004579933826,188,247,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,CANVA I04346-75530363,professional_services,software_electronics,False,True,0.95,2585.2581250073854,194,272,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,AUTO AMERICA SERVICE L,transport_auto_fuel,transport_auto_fuel,True,True,0.78,3332.2901250212453,186,163,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,GEORGETOWN BID,groceries,INVALID,False,False,0.0,3261.389582999982,183,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,CMC-CAREER DEVELOPMENT,education_gov_membership,professional_services,False,True,0.85,1993.728542001918,187,182,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,SP RESTOCKIT,office_supplies,office_supplies,True,True,0.88,1097.1347090089694,181,142,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,STANFORD EB YOUCUBED G,education_gov_membership,education_gov_membership,True,True,0.94,1922.1813330077566,188,233,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,ATLANTIC MACHINERY,industrial_hardware,industrial_hardware,True,True,0.9,1942.7655409963336,184,124,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,"BAG TAGS, INC",professional_services,retail,False,True,0.85,3071.2642500002403,183,167,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,"LIGHTBULB PRESS, I",office_supplies,INVALID,False,False,0.0,5694.772415998159,186,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,FOCUS HEALTH CORP,education_gov_membership,health,False,True,0.9,3912.2520000091754,185,187,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,HOTEL INDIGO DOWNTOWN,lodging,lodging,True,True,0.95,3109.8177499952726,187,132,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,HOTEL RES-HYATT REGEN,airlines_travel,lodging,False,True,0.98,1633.9309999893885,186,126,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,INDEED USI25-01502749,professional_services,professional_services,True,True,0.85,16856.535041995812,193,216,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,GRADUATION SOURCE LLC,retail,retail,True,True,0.85,1101.4347079908475,184,162,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,COALITION FOR JUV JUST,education_gov_membership,professional_services,False,True,0.78,4708.440167014487,185,276,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,HYDRA - LIFT,transport_auto_fuel,INVALID,False,False,0.0,13043.266583001241,184,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,BRC INTERNATIONAL,professional_services,retail,False,True,0.55,5797.541874984745,183,246,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,"RWP NETWORK, LLC",education_gov_membership,telecom_utilities,False,True,0.85,1288.0349589977413,183,172,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,EVENT:NASPL PROF,education_gov_membership,professional_services,False,True,0.85,32907.78300000238,184,228,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,PSS K12,office_supplies,education_gov_membership,False,True,0.92,1346.7527499888092,182,162,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,CDW GOVT #AF2RA6R,software_electronics,software_electronics,True,True,0.95,29971.340707998024,187,203,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,IRS NATIONWIDE TAX FOR,professional_services,INVALID,False,False,0.0,26387.967207992915,185,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,DEEPSPACESPARK00 OF 00,retail,INVALID,False,False,0.0,27929.321750008967,189,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,SP GLOWFORGE STORE,office_supplies,INVALID,False,False,0.0,1801.7333330062684,184,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,ELITE FORENSIC SER,professional_services,professional_services,True,True,0.92,1141.585874982411,184,120,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,PAPERSOURCE -4160,retail,office_supplies,False,True,0.96,2960.845749999862,186,127,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,ICLEI - LOCAL GOVE,professional_services,INVALID,False,False,0.0,6151.63133299211,184,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,AMTRAK TEL01,transport_auto_fuel,airlines_travel,False,True,0.92,9729.703165998217,185,151,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,RESIDENCE INN ANN ARBO,lodging,lodging,True,True,0.98,1750.0041669991333,185,134,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,CARTER MACHINERY - SAL,professional_services,industrial_hardware,False,True,0.86,3659.101917000953,186,152,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,BUSY SERVICE INC,industrial_hardware,professional_services,False,True,0.7,3664.026250015013,183,177,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,HOBBY LOBBY,entertainment_media,retail,False,True,0.95,3978.9542499929667,183,112,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,HOLIDAY INN COOKEVILLE,lodging,lodging,True,True,0.99,2459.6776670077816,189,111,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,IRS PMT,education_gov_membership,INVALID,False,False,0.0,9339.978875010274,180,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,SP VAULTEK SAFE,software_electronics,retail,False,True,0.85,3520.172291988274,184,280,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,HOTEL RES-SPRINGHILL S,airlines_travel,lodging,False,True,0.98,5988.490415998967,187,150,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,"BOSCH, THERMADOR, GAGG",retail,retail,True,True,0.95,2839.2873750126455,190,228,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,PEMBERTON FABRICATORS,industrial_hardware,industrial_hardware,True,True,0.85,1543.757250008639,188,163,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,CANVA 04874-6610224,entertainment_media,software_electronics,False,True,0.95,3091.3720409735106,193,176,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,SHERATON DALLAS FD,lodging,INVALID,False,False,0.0,3070.266750000883,185,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,AMERICAS WINGS,restaurants,restaurants,True,True,0.92,8599.69104200718,183,150,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,THEPRIVATESCHOOLLEADER,software_electronics,education_gov_membership,False,True,0.96,6303.407542000059,186,107,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,HYATT REG LONG BCH PAR,transport_auto_fuel,lodging,False,True,0.95,1747.8999170125462,186,112,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,PERFECTIT,software_electronics,software_electronics,True,True,0.82,2529.244166013086,181,149,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,CANVA I04929-34391790,professional_services,software_electronics,False,True,0.95,4109.535833995324,194,125,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,UNC CHAR AACOED STEM I,education_gov_membership,INVALID,False,False,0.0,3558.62949998118,187,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,STA CONTRACTING INC,industrial_hardware,professional_services,False,True,0.86,5023.738082993077,183,149,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,no_web,PAYPRO GLOBAL INC,software_electronics,financial_postal_shipping,False,True,0.92,4310.793290991569,183,266,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,ARIZONA GRAND RESORT,lodging,lodging,True,True,0.95,2999.7816669929307,2007,220,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,STRIDERBIKE,entertainment_media,retail,False,True,0.96,5586.303291987861,610,243,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,SHERATON VISTANA VILLA,lodging,lodging,True,True,0.96,2395.465957990382,3436,194,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,ALS TWIN AIR,industrial_hardware,professional_services,False,True,0.92,1868.8627500087023,652,221,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,AUCAREERCENTER,education_gov_membership,education_gov_membership,True,True,0.95,1646.073540992802,527,185,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,LITERACYEMP,retail,INVALID,False,False,0.0,35666.88158400939,459,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,NATIONAL OSHA FDN,education_gov_membership,INVALID,False,False,0.0,7352.624915976776,486,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,ESTRELLITA INC,education_gov_membership,education_gov_membership,True,True,0.92,26405.26962498552,540,144,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,WINDRIVERENVIRONMENTAL,industrial_hardware,professional_services,False,True,0.95,25737.269957986427,485,155,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,SHERATON CHARLOTTE HOTEL,lodging,lodging,True,True,0.99,22267.98599999165,698,116,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,SWP ACSREADYREFRESH,health,INVALID,False,False,0.0,3616.6734579892363,201,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,LOYOLA UNIVERSITY MARY,education_gov_membership,education_gov_membership,True,True,0.95,3132.1264170110226,204,142,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,DMV PARTY RENTAL LLC,professional_services,retail,False,True,0.78,3431.3436250085942,202,277,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,NCRP,professional_services,INVALID,False,False,0.0,6363.017750001745,197,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,TOTAL RESTROOM,industrial_hardware,industrial_hardware,True,True,0.85,7269.042250001803,542,258,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,WINGATE BY WYNDHAM,lodging,lodging,True,True,0.98,3078.420542005915,1068,142,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,SCIENTIFIC SPECIALITIE,health,INVALID,False,False,0.0,2909.416250011418,493,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,FOUNDATION ENTERTA,software_electronics,entertainment_media,False,True,0.92,3180.322750005871,526,216,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,FEDERAL CITY COUNC,education_gov_membership,education_gov_membership,True,True,0.95,2304.0613329794724,493,187,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,OURSISTERSCIRCLE,education_gov_membership,health,False,True,0.95,4633.820457995171,607,179,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,KLS WORLDWIDE CHAUFFEU,transport_auto_fuel,INVALID,False,False,0.0,3245.1580410124734,574,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,CC TECH CONSULTING,professional_services,professional_services,True,True,0.95,7654.012082988629,482,222,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,NIGP,education_gov_membership,INVALID,False,False,0.0,3369.288375019096,507,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,"JOSEPH, MANN & CREED",professional_services,financial_postal_shipping,False,True,0.96,2136.178375018062,827,265,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,RESIDENCE INN NEW ORLE,lodging,lodging,True,True,0.95,3168.069707986433,202,143,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,SEDC,professional_services,INVALID,False,False,0.0,3968.81916600978,197,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,NATIONAL DRUG SCREENIN,health,health,True,True,0.85,1222.2025840019342,202,194,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,PREMIER SUPPLIES USA I,industrial_hardware,office_supplies,False,True,0.6,2431.1226249847095,203,265,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,SUPPLYHOUSE,industrial_hardware,industrial_hardware,True,True,0.9,2107.7162500005215,563,244,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,NCQA,education_gov_membership,health,False,True,0.95,3767.9409589909483,1303,203,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,"SONJA L. REEVES, R",professional_services,professional_services,True,True,0.95,12370.143665990327,576,177,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,GWU STUDENT AFFAIRS MA,education_gov_membership,education_gov_membership,True,True,0.95,3011.6582909831777,486,191,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,FRONTIER BYZT9S,airlines_travel,INVALID,False,False,0.0,2532.364124985179,511,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,"TRANSCRIPTION, ETC",professional_services,professional_services,True,True,0.96,3377.3130000045057,536,166,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,"PINNACLE TCI, LLC",education_gov_membership,professional_services,False,True,0.85,8334.998208010802,549,222,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,CANVA I04263-72091178,entertainment_media,software_electronics,False,True,0.98,8039.17875001207,467,205,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,FREEDOM SCI STORE,software_electronics,software_electronics,True,True,0.92,4807.279375003418,494,231,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,POLLO D ORO,restaurants,restaurants,True,True,0.96,1425.9582920058165,629,126,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,ASTRACOR LL,education_gov_membership,INVALID,False,False,0.0,3037.1830000076443,199,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,XCELEVENTS,professional_services,INVALID,False,False,0.0,7511.985542019829,199,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,WILLIAMS CRANE SERVICE,industrial_hardware,industrial_hardware,True,True,0.85,10054.47554201237,204,140,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,THE REGULATORY GROUP,professional_services,professional_services,True,True,0.7,3681.5250420186203,200,291,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,READABLE,software_electronics,software_electronics,True,True,0.92,29754.379040998174,764,219,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,MARRIOTT DESERT SPRING,lodging,lodging,True,True,0.98,24387.757291988237,4416,188,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,RPS PROSE IN THE PI RD,financial_postal_shipping,lodging,False,True,0.95,23865.81566600944,616,163,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,HILTON GARDEN INN RICHMOND INNSBROOK,lodging,lodging,True,True,0.98,18049.391832988476,651,121,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,UNICOR,education_gov_membership,industrial_hardware,False,True,0.95,2143.417666986352,1038,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,HOLIDAY INN EXPRESS AI,lodging,lodging,True,True,0.95,1573.2944580086041,571,198,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,HOMEWOOD STES ANAHEIM,lodging,lodging,True,True,0.99,968.5193750192411,683,125,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,VISPRONET,office_supplies,retail,False,True,0.95,2253.60387499677,636,182,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,STANLEY STEEMER 73R,professional_services,professional_services,True,True,0.95,7418.796375015518,621,163,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,COURSES.SGLADESIGN.COM,education_gov_membership,education_gov_membership,True,True,0.95,5805.988000007346,585,167,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,CANVA I04346-75530363,professional_services,software_electronics,False,True,0.9,7157.714208995458,211,233,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,AUTO AMERICA SERVICE L,transport_auto_fuel,INVALID,False,False,0.0,4332.149833004223,203,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,GEORGETOWN BID,groceries,INVALID,False,False,0.0,7073.179917002562,200,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,CMC-CAREER DEVELOPMENT,education_gov_membership,professional_services,False,True,0.7,3952.7050420001615,204,269,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,SP RESTOCKIT,office_supplies,office_supplies,True,True,0.95,2780.589040979976,633,128,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,STANFORD EB YOUCUBED G,education_gov_membership,education_gov_membership,True,True,0.95,2411.871541989967,508,187,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,ATLANTIC MACHINERY,industrial_hardware,industrial_hardware,True,True,0.95,2095.6928330124356,461,191,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,"BAG TAGS, INC",professional_services,retail,False,True,0.9,6256.268541997997,519,296,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,"LIGHTBULB PRESS, I",office_supplies,education_gov_membership,False,True,0.95,2640.6451249786187,449,235,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,FOCUS HEALTH CORP,education_gov_membership,health,False,True,0.95,8053.04716702085,753,266,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,HOTEL INDIGO DOWNTOWN,lodging,lodging,True,True,0.99,4616.254000022309,714,198,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,HOTEL RES-HYATT REGEN,airlines_travel,lodging,False,True,0.95,3316.0911250161007,568,130,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,INDEED USI25-01502749,professional_services,professional_services,True,True,0.95,2052.262459008489,574,203,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,GRADUATION SOURCE LLC,retail,retail,True,True,0.95,4358.624542015605,616,176,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,COALITION FOR JUV JUST,education_gov_membership,INVALID,False,False,0.0,3547.7758329943754,202,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,HYDRA - LIFT,transport_auto_fuel,industrial_hardware,False,True,0.6,2356.2128750199918,201,248,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,BRC INTERNATIONAL,professional_services,INVALID,False,False,0.0,4683.458124985918,200,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,"RWP NETWORK, LLC",education_gov_membership,INVALID,False,False,0.0,12352.91616700124,200,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,EVENT:NASPL PROF,education_gov_membership,education_gov_membership,True,True,0.92,3835.760499991011,573,200,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,PSS K12,office_supplies,office_supplies,True,True,0.92,5241.970082977787,533,231,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,CDW GOVT #AF2RA6R,software_electronics,software_electronics,True,True,0.92,5714.8504170181695,476,190,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,IRS NATIONWIDE TAX FOR,professional_services,education_gov_membership,False,True,0.92,6336.7012910021,776,259,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,DEEPSPACESPARK00 OF 00,retail,education_gov_membership,False,True,0.95,3208.770666999044,533,139,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,SP GLOWFORGE STORE,office_supplies,retail,False,True,0.95,4344.035332993371,646,219,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,ELITE FORENSIC SER,professional_services,professional_services,True,True,0.95,1787.1592919982504,485,243,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,PAPERSOURCE -4160,retail,INVALID,False,False,0.0,26546.883500006516,560,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,ICLEI - LOCAL GOVE,professional_services,INVALID,False,False,0.0,25987.04812498181,645,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,AMTRAK TEL01,transport_auto_fuel,airlines_travel,False,True,0.95,24815.318666980602,560,219,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,RESIDENCE INN ANN ARBO,lodging,lodging,True,True,0.95,22920.006749976892,202,137,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,CARTER MACHINERY - SAL,professional_services,industrial_hardware,False,True,0.7,1896.7362080002204,203,152,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,BUSY SERVICE INC,industrial_hardware,professional_services,False,True,0.55,8511.874290998094,200,206,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,HOBBY LOBBY,entertainment_media,retail,False,True,0.98,3719.396875007078,200,194,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,HOLIDAY INN COOKEVILLE,lodging,INVALID,False,False,0.0,16919.062542001484,686,107,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,IRS PMT,education_gov_membership,education_gov_membership,True,True,0.95,3073.8305829872843,550,215,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,SP VAULTEK SAFE,software_electronics,retail,False,True,0.95,3088.9872920233756,710,169,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,HOTEL RES-SPRINGHILL S,airlines_travel,lodging,False,True,0.99,3502.3324160138145,681,165,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,"BOSCH, THERMADOR, GAGG",retail,retail,True,True,0.95,2617.9318340145983,744,227,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,PEMBERTON FABRICATORS,industrial_hardware,INVALID,False,False,0.0,4452.306040999247,553,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,CANVA 04874-6610224,entertainment_media,software_electronics,False,True,0.95,4751.794457988581,493,182,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,SHERATON DALLAS FD,lodging,lodging,True,True,0.95,3431.440666987328,747,125,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,AMERICAS WINGS,restaurants,restaurants,True,True,0.98,3739.692291012034,2743,149,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,THEPRIVATESCHOOLLEADER,software_electronics,education_gov_membership,False,True,0.85,1240.8868329948746,203,147,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,HYATT REG LONG BCH PAR,transport_auto_fuel,lodging,False,True,0.99,1678.52854100056,650,114,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,PERFECTIT,software_electronics,INVALID,False,False,0.0,3423.8152500183787,198,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,CANVA I04929-34391790,professional_services,software_electronics,False,True,0.85,2640.380874974653,211,229,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,UNC CHAR AACOED STEM I,education_gov_membership,INVALID,False,False,0.0,13001.738332997775,204,300,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,STA CONTRACTING INC,industrial_hardware,professional_services,False,True,0.95,3701.0264580021612,583,135,nvidia/nemotron-3-super-120b-a12b
+nvidia/nemotron-3-super-120b-a12b,with_web,PAYPRO GLOBAL INC,software_electronics,software_electronics,True,True,0.93,1911.0933330084663,506,153,nvidia/nemotron-3-super-120b-a12b
