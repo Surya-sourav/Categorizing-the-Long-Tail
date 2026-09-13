@@ -89,27 +89,26 @@ llm:
       price_out_per_1m: 2.00
       reasoning_effort: minimal
       json_mode: json_schema
-    - name: nvidia/nemotron-3.5-lightning-30b-a3b
+    - name: deepseek-ai/deepseek-v4-flash-0731
       provider: nvidia
       base_url: https://integrate.api.nvidia.com/v1
       api_key_env: NVIDIA_API_KEY
-      price_in_per_1m: 0.20       # reference rate for a hosted ~30B open-weight model; the NIM endpoint is free
+      price_in_per_1m: 0.15       # reference rate for a hosted MoE (~13B active) open-weight model; the NIM endpoint is free
       price_out_per_1m: 0.60
       reasoning_effort: null
       json_mode: none             # prompt asks for JSON; extractor takes the last JSON object
-      extra_body: {chat_template_kwargs: {thinking: false}}   # reasoning model: suppress the thinking preamble
-      timeout_s: 180
-      note: open-weight row (MoE, 3B active); NVIDIA NIM free developer endpoint; prices are reference rates
-    - name: google/gemma-4-31b-it
+      timeout_s: 90
+      note: open-weight row (DeepSeek V4 Flash, 284B MoE / 13B active); NVIDIA NIM free developer endpoint; prices are reference rates
+    - name: nvidia/nemotron-3-super-120b-a12b
       provider: nvidia
       base_url: https://integrate.api.nvidia.com/v1
       api_key_env: NVIDIA_API_KEY
-      price_in_per_1m: 0.20
-      price_out_per_1m: 0.60
+      price_in_per_1m: 0.30
+      price_out_per_1m: 0.90
       reasoning_effort: null
       json_mode: none
-      timeout_s: 240              # ~2 min/call observed on the free endpoint; run only with the parallel pass
-      note: optional second open-weight row (dense 31B); NVIDIA NIM free developer endpoint
+      timeout_s: 90
+      note: second open-weight row (Nemotron 3 Super, 120B MoE / 12B active); NVIDIA NIM free developer endpoint; prices are reference rates
 
 # live cache pass concurrency: workers run in parallel behind one global requests-per-minute limiter
 concurrency:
