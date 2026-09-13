@@ -29,6 +29,8 @@ def main() -> None:
     ap.add_argument("--alphas", type=float, nargs="+", default=[0.8, 1.0, 1.2, 1.5])
     ap.add_argument("--seeds", type=int, nargs="+", default=None)
     ap.add_argument("--n-txns", type=int, default=60000)
+    ap.add_argument("--novel-shares", type=float, nargs="+", default=[0.0, 0.05, 0.1, 0.2, 0.3])
+    ap.add_argument("--fixed-alpha", type=float, default=1.1)
     ap.add_argument("--mode", choices=["live", "reproduce"], default="live")
     args = ap.parse_args()
     cfg = load_config(args.config)
@@ -42,6 +44,95 @@ def main() -> None:
         test_start="2024-01-01",
         test_end="2025-12-31",
     )
+
+    def run_one(alpha: float, novel_share: float, seed: int) -> dict:
+        set_seed(seed)
+        g = generate(
+            vocab, args.n_txns, alpha, seed, novel_share=novel_share, novel_after=win.test_start
+        )
+        g["merchant"] = g["raw_merchant"].map(lambda r: normalize_merchant(r).text)
+        g["ambiguous"] = 0
+        train, test = temporal_split(g, win)
+        freqs = merchant_frequencies(train)
+        test = test.assign(train_freq=freq_of(test, freqs))
+        idx = build_merchant_index(train, emb, cfg.index.M, cfg.index.ef_construction, seed)
+        p = predict_knn(test, idx, emb, cfg.index.k, cfg.index.ef_search)
+        correct = p["pred"].values == test["category"].values
+        tail = test["train_freq"].values <= cfg.tail_k
+        unseen_entity = ~test["merchant_id"].isin(set(train["merchant_id"])).values
+        return {
+            "alpha": alpha,
+            "novel_share": novel_share,
+            "seed": seed,
+            "tail_txn_share": tail.mean(),
+            "acc_tail": correct[tail].mean(),
+            "acc_head": correct[~tail].mean(),
+            "acc_overall": correct.mean(),
+            "unseen_entity_txn_share": unseen_entity.mean(),
+            "acc_unseen_entity": correct[unseen_entity].mean()
+            if unseen_entity.any()
+            else float("nan"),
+            "acc_seen_entity": correct[~unseen_entity].mean(),
+            "n_train_merchants": len(idx),
+        }
+
+    # panel B: novel-brand share at fixed alpha (the tail-severity dial)
+    nrows = [run_one(args.fixed_alpha, ns, seed) for ns in args.novel_shares for seed in seeds]
+    ndf = pd.DataFrame(nrows)
+    nagg = ndf.groupby("novel_share").agg(["mean", "std"]).reset_index()
+    nagg.columns = ["_".join(c).strip("_") for c in nagg.columns]
+    Path(cfg.results_dir, "tables").mkdir(parents=True, exist_ok=True)
+    nagg.to_csv(Path(cfg.results_dir, "tables", "tab1c_novel_share_sweep.csv"), index=False)
+    style.apply()
+    fig, ax = plt.subplots()
+    ax.errorbar(
+        nagg["novel_share"],
+        nagg["acc_overall_mean"],
+        yerr=nagg["acc_overall_std"],
+        marker="o",
+        color=style.SERIES["head"],
+        label="overall",
+    )
+    ax.errorbar(
+        nagg["novel_share"],
+        nagg["acc_tail_mean"],
+        yerr=nagg["acc_tail_std"],
+        marker="o",
+        color=style.SERIES["tail"],
+        label="tail (freq ≤ 3)",
+    )
+    ax.errorbar(
+        nagg["novel_share"],
+        nagg["acc_unseen_entity_mean"],
+        yerr=nagg["acc_unseen_entity_std"],
+        marker="s",
+        color=style.SERIES["third"],
+        label="brand never seen in training",
+    )
+    ax.set_xlabel("share of brands that first appear in the test period")
+    ax.set_ylabel("kNN top-1 accuracy")
+    ax.set_ylim(0, 1)
+    ax.set_title(
+        f"Tail severity sweep: novel brands (α = {args.fixed_alpha})", loc="left", color=style.INK
+    )
+    ax.legend(loc="lower left")
+    style.save(fig, Path(cfg.results_dir, "figures", "fig1c_novel_share_sweep"))
+    plt.close(fig)
+    logger.info(
+        "\n"
+        + nagg[
+            [
+                "novel_share",
+                "unseen_entity_txn_share_mean",
+                "acc_unseen_entity_mean",
+                "acc_tail_mean",
+                "acc_overall_mean",
+            ]
+        ]
+        .round(3)
+        .to_string()
+    )
+
     rows = []
     for alpha in args.alphas:
         for seed in seeds:
@@ -56,6 +147,7 @@ def main() -> None:
             p = predict_knn(test, idx, emb, cfg.index.k, cfg.index.ef_search)
             correct = p["pred"].values == test["category"].values
             tail = test["train_freq"].values <= cfg.tail_k
+            unseen_entity = ~test["merchant_id"].isin(set(train["merchant_id"])).values
             rows.append(
                 {
                     "alpha": alpha,
@@ -64,6 +156,11 @@ def main() -> None:
                     "acc_tail": correct[tail].mean(),
                     "acc_head": correct[~tail].mean(),
                     "acc_overall": correct.mean(),
+                    "unseen_entity_txn_share": unseen_entity.mean(),
+                    "acc_unseen_entity": correct[unseen_entity].mean()
+                    if unseen_entity.any()
+                    else float("nan"),
+                    "acc_seen_entity": correct[~unseen_entity].mean(),
                     "n_train_merchants": len(idx),
                 }
             )
@@ -90,6 +187,14 @@ def main() -> None:
         marker="o",
         color=style.SERIES["tail"],
         label="tail (freq ≤ 3)",
+    )
+    ax.errorbar(
+        agg["alpha"],
+        agg["acc_unseen_entity_mean"],
+        yerr=agg["acc_unseen_entity_std"],
+        marker="s",
+        color=style.SERIES["third"],
+        label="brand never seen in training",
     )
     ax.set_xlabel("Zipf exponent α (larger = heavier head, thinner tail)")
     ax.set_ylabel("kNN top-1 accuracy")
