@@ -229,7 +229,7 @@ def load_config(path: str | Path | None = None, default_path: Path = DEFAULT_PAT
     come back absolute, anchored at the repo root, so any CWD works. ``.env`` is loaded
     as a side effect so every entry point picks up API keys.
     """
-    load_dotenv()
+    load_dotenv(_ROOT / ".env")
     base = yaml.safe_load(default_path.read_text()) or {}
     if path is not None:
         resolved = _resolve_config_path(path)
