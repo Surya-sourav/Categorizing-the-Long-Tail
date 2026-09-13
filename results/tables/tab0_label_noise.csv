@@ -1,2 +1,2 @@
-n,correct,wrong,unclear,noise_rate_excl_unclear,noise_rate_upper_bound,dataset,seed,judged_by
-300,246,11,43,0.0428,0.18,dc,42,author
+dataset,n,correct,wrong,unclear,noise_rate_excl_unclear,noise_rate_upper_bound,seed,judged_by
+dc,300,241,11,48,0.0437,0.1967,42,author
