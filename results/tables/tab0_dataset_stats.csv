@@ -1,0 +1,3 @@
+dataset,train_start,train_end,test_start,n_train_txns,n_train_merchants,n_test_txns,n_test_merchants,tail_le3_txn_share,tail_le3_merchants,tail_le2_txn_share,tail_le2_merchants,tail_le5_txn_share,tail_le5_merchants,unseen_txn_share
+dc,2019-01-01,2023-12-31,2024-01-01,189581,17166.0,90466,10443,0.2529,8093.0,0.2368,7679.0,0.2782,8611.0,0.1906
+oklahoma,,,2022-05-04,0,,1256589,80685,,,,,,,

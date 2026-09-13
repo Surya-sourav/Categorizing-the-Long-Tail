@@ -1,0 +1,3 @@
+dataset,n_rows,rows_with_mcc,rows_ambiguous,share_unlabeled,share_ambiguous,n_categories_present
+dc,280047,279570,25062,0.0017,0.0895,16
+oklahoma,1256589,1255907,76811,0.0005,0.0611,16

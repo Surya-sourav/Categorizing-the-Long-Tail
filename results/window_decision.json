@@ -1,0 +1,23 @@
+{
+  "dataset": "dc",
+  "checked_at": "2026-09-13T09:42:53Z",
+  "primary_window": {
+    "train_start": "2019-01-01",
+    "train_end": "2023-12-31",
+    "test_start": "2024-01-01",
+    "test_end": null
+  },
+  "primary_stats": {
+    "n_test_txns": 90466,
+    "n_test_merchants": 10443,
+    "n_tail_merchants": 8093,
+    "tail_txn_share": 0.25294585811244
+  },
+  "primary_ok": true,
+  "chosen_window": {
+    "train_start": "2019-01-01",
+    "train_end": "2023-12-31",
+    "test_start": "2024-01-01",
+    "test_end": null
+  }
+}
