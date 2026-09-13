@@ -67,11 +67,15 @@ def main() -> None:
         emb = Embedder(bb, cfg.embed.cache_dir, allow_live=live, batch_size=cfg.embed.batch_size)
         try:
             uniq = test["merchant"].drop_duplicates().tolist()
-            t0 = time.perf_counter()
-            emb.embed(
-                uniq[:2000]
-            )  # timing sample; the rest is embedded (or read) inside predict_knn
-            embed_ms_per_merchant = (time.perf_counter() - t0) * 1000 / 2000
+            # time the raw backend on a fresh batch so cache hits do not flatter the number
+            if live:
+                sample = [f"{m} TIMING-{i}" for i, m in enumerate(uniq[:200])]
+                t0 = time.perf_counter()
+                emb.backend.encode(sample)
+                embed_ms_per_merchant = (time.perf_counter() - t0) * 1000 / len(sample)
+            else:
+                embed_ms_per_merchant = float("nan")  # not measurable without live encoding
+            emb.embed(uniq)
             f1s = []
             for seed in seeds:
                 set_seed(seed)
