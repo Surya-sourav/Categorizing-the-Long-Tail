@@ -730,7 +730,7 @@ mcc,mcc_description,category,ambiguous,notes
 5046,"Commercial Equipment, Not Elsewhere Classified",industrial_hardware,0,
 5047,"Medical, Dental Ophthalmic, Hospital Equipment and Supplies",health,0,
 5051,Metal Service Centers and Offices,industrial_hardware,0,
-5065,Electrical Parts and Equipment,software_electronics,0,
+5065,Electrical Parts and Equipment,industrial_hardware,0,
 5072,Hardware Equipment and Supplies,industrial_hardware,0,
 5074,Plumbing and Heating Equipment and Supplies,industrial_hardware,0,
 5085,"Industrial Supplies, Not Elsewhere Classified",industrial_hardware,0,

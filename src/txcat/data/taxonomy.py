@@ -61,7 +61,7 @@ OVERRIDES = {
     5044: "office_supplies", 5111: "office_supplies", 5192: "office_supplies",
     5943: "office_supplies", 5978: "office_supplies", 7338: "office_supplies",
     # software / computers / electronics
-    4816: "software_electronics", 5045: "software_electronics", 5065: "software_electronics",
+    4816: "software_electronics", 5045: "software_electronics",
     5732: "software_electronics", 5734: "software_electronics", 5815: "software_electronics",
     5816: "software_electronics", 5817: "software_electronics", 5818: "software_electronics",
     7371: "software_electronics", 7372: "software_electronics", 7375: "software_electronics",
@@ -100,6 +100,7 @@ OVERRIDES = {
     # education inside 8200 already; testing labs
     8734: "professional_services",
     # reviewer-flagged consistency fixes (2026-09-13)
+    5065: "industrial_hardware",        # electrical parts wholesale, not electronics retail
     5960: "financial_postal_shipping",  # direct marketing - insurance services
     5962: "airlines_travel",            # direct marketing - travel arrangements (cf. 4722)
     4723: "airlines_travel",            # package tour operators (same business as 4722)

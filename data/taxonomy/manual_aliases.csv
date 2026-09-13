@@ -157,3 +157,6 @@ ALA MOANA HOTEL,7011,lodging,manual: hotel/casino brand -> generic lodging MCC
 SNBRU AIR,4511,airlines_travel,manual: airline brand -> generic airline MCC
 VIDEO ENTERTAINMENT RENTAL STORES,7841,entertainment_media,manual: abbreviated MCC description
 PAL AIR,4511,airlines_travel,manual: airline brand -> generic airline MCC
+OTHER SERVICES (NOT ELSEWHERE CLASSIFIED),7299,professional_services,"manual: fuzzy matcher chose 4789 transportation (token subset); misc personal services"
+DELTA HOTELS,7011,lodging,"manual: fuzzy matcher chose 3058 Delta Air Lines; hotel brand -> generic lodging MCC"
+FLORISTS SUPPLIES NURSERY STOCK & FLOWER,5193,industrial_hardware,"manual: fuzzy matcher chose 5992 retail florists; this is the wholesale supply MCC"

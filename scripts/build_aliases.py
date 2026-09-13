@@ -20,7 +20,8 @@ for name in ["dc", "oklahoma"]:
     counts = df.groupby("mcc_description").size().sort_values(ascending=False)
     for desc, n in counts.items():
         mcc, how = match_description(desc, src)
-        if mcc is None and norm_desc(desc) in manual_map:
+        # hand-written aliases override fuzzy matches (token-set matching scores a subset as 100)
+        if how != "exact" and norm_desc(desc) in manual_map:
             mcc, how = manual_map[norm_desc(desc)], "manual"
         if mcc is None:
             unmatched.append({"source": df["source"].iloc[0], "observed_description": desc,
