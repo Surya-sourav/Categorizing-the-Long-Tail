@@ -152,6 +152,9 @@ def main() -> None:
         w = pd.concat(per_seed).groupby("window").mean(numeric_only=True).reset_index()
         w.attrs["window_size"] = args.window
         windows_by_policy[policy] = w
+        w.assign(policy=policy).to_csv(
+            Path(cfg.results_dir, f"exp3_windows_{policy}.csv"), index=False
+        )
     fig_stream_lines(
         windows_by_policy,
         "fallback_rate",

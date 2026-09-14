@@ -160,7 +160,7 @@ def fig_frontier(
 
 
 POLICY_COLORS = {
-    "never": style.SERIES["head"],
+    "never": style.INK,  # baseline: black, distinct from the blue gated ramp
     "always": style.SERIES["tail"],
     "gated@0.5": "#b7d3f6",  # gated policies: one blue ramp, light (permissive) to dark (strict)
     "gated@0.6": "#6da7ec",
