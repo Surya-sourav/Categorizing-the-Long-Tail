@@ -153,7 +153,7 @@ the network.
 `LLMFallback(model, cache_dir, prompt_template).categorize(merchant, evidence | None, taxonomy)
 -> LLMResult(category, confidence, evidence_used, tokens_in, tokens_out, latency_ms)`. One
 OpenAI-compatible client with `base_url` switch: OpenAI (`gpt-5-nano`, `gpt-5-mini`, pinned
-snapshot ids, `reasoning.effort="minimal"`), NVIDIA NIM (`google/diffusiongemma-26b-a4b-it` and `nvidia/nemotron-3-super-120b-a12b`, the open-weight rows, chosen
+snapshot ids, `reasoning.effort="minimal"`), NVIDIA NIM (`google/diffusiongemma-26b-a4b-it`, `nvidia/nemotron-3-super-120b-a12b` and `meta/muse-glimmer-30b`, the open-weight rows, chosen
 after probing every text model on the endpoint: both answer in ~1 s with valid JSON; deepseek-v4-flash became
 unavailable (120 s timeouts even alone), gemma-4-31b and nemotron-3.5-lightning took 50-360 s or garbled JSON;
 free developer endpoint at `integrate.api.nvidia.com/v1`, ~40 requests/minute, so the client throttles to
