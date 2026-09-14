@@ -110,7 +110,7 @@ docs/superpowers/     design spec and implementation plans
 
 Models pinned in `prompts/model_versions.json`. Embeddings: all-MiniLM-L6-v2, bge-small-en-v1.5,
 all-mpnet-base-v2, FinBERT (mean-pooled, as an encoder), text-embedding-3-small. Fallback LLMs:
-gpt-5-nano, gpt-5-mini, and two open-weight models on NVIDIA's free NIM endpoint (OpenAI gpt-oss-20b,
+gpt-5-nano, gpt-5-mini, and two open-weight models on NVIDIA's free NIM endpoint (Google DiffusionGemma 26B-A4B,
 Nemotron 3 Super 120B-A12B). Web evidence: Firecrawl search API (Tavily and Brave also implemented);
 OpenAI built-in web search appears only in a 300-merchant ablation.
 

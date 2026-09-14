@@ -90,18 +90,17 @@ llm:
       price_out_per_1m: 2.00
       reasoning_effort: minimal
       json_mode: json_schema
-    - name: openai/gpt-oss-20b
+    - name: google/diffusiongemma-26b-a4b-it
       provider: nvidia
       base_url: https://integrate.api.nvidia.com/v1
       api_key_env: NVIDIA_API_KEY
-      price_in_per_1m: 0.10       # reference rate for a hosted 20B MoE open-weight model; the NIM endpoint is free
+      price_in_per_1m: 0.10       # reference rate for a hosted ~26B MoE (4B active) open-weight model; the NIM endpoint is free
       price_out_per_1m: 0.40
       reasoning_effort: null
-      json_mode: none             # prompt asks for JSON; extractor takes the last JSON object
-      extra_body: {chat_template_kwargs: {thinking: false, enable_thinking: false}}
+      json_mode: none             # answers in ```json fences; extractor strips them
       timeout_s: 90
       max_completion_tokens: 600
-      note: open-weight row (OpenAI gpt-oss-20b, Apache-2.0); same lab as the API rows, so proprietary-vs-open transfer is testable; NIM free endpoint; prices are reference rates
+      note: open-weight row (Google DiffusionGemma 26B-A4B, diffusion-based LM); NVIDIA NIM free endpoint; prices are reference rates
     - name: nvidia/nemotron-3-super-120b-a12b
       provider: nvidia
       base_url: https://integrate.api.nvidia.com/v1
