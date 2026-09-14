@@ -94,7 +94,15 @@ def main() -> None:
                 search_limiter.acquire()
                 return ws.search(m, cfg.search.num_results)
 
-            run_parallel(_search, merchants, cfg.concurrency.search_workers, "search")
+            out = run_parallel(
+                _search, merchants, cfg.concurrency.search_workers, "search", on_error="collect"
+            )
+            failed = [o for o in out if isinstance(o, Exception)]
+            if failed:
+                logger.warning(
+                    f"search: {len(failed)} merchants failed after retries (uncached; re-run "
+                    f"resumes them). First: {failed[0]}"
+                )
         except BudgetExceeded as e:
             logger.error(f"STOPPED: {e}")
             return

@@ -216,3 +216,53 @@ def test_firecrawl_provider_uses_v2_search_and_records_credits(tmp_path):
     assert payload["provider"] == "firecrawl" and payload["credits_used"] == 2
     assert led.total == pytest.approx(0.0107)
     assert len(c.search("WW GRAINGER")) == 2 and http.calls == 1
+
+
+class FlakyHTTP:
+    """First N responses are 502, then a normal Firecrawl payload."""
+
+    def __init__(self, fail_first=1, status=502):
+        self.calls, self.fail_first, self.status = 0, fail_first, status
+
+    def post(self, url, json, headers, timeout):
+        self.calls += 1
+        status = self.status if self.calls <= self.fail_first else 200
+
+        class R:
+            status_code = status
+
+            def raise_for_status(self):
+                if status >= 400:
+                    import requests as _rq
+
+                    raise _rq.HTTPError(f"{status}", response=self)
+
+            def json(self):
+                return FIRECRAWL_PAYLOAD
+
+        return R()
+
+
+def test_search_retries_transient_5xx_then_succeeds(tmp_path, monkeypatch):
+    import txcat.web_search as ws_mod
+
+    monkeypatch.setattr(ws_mod.time, "sleep", lambda s: None)
+    http = FlakyHTTP(fail_first=2)
+    c = WebSearchClient(
+        "firecrawl", tmp_path / "ws", api_key="k", ledger=None, http=http, min_interval_s=0
+    )
+    assert len(c.search("WW GRAINGER")) == 2 and http.calls == 3
+
+
+def test_search_does_not_retry_4xx_and_refunds_ledger(tmp_path, monkeypatch):
+    import txcat.web_search as ws_mod
+
+    monkeypatch.setattr(ws_mod.time, "sleep", lambda s: None)
+    led = SpendLedger(tmp_path / "l.json", 10)
+    http = FlakyHTTP(fail_first=99, status=404)
+    c = WebSearchClient(
+        "firecrawl", tmp_path / "ws", api_key="k", ledger=led, http=http, min_interval_s=0
+    )
+    with pytest.raises(RuntimeError):
+        c.search("WW GRAINGER")
+    assert http.calls == 1 and led.total == 0.0

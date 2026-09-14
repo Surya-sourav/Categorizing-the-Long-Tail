@@ -136,13 +136,27 @@ class WebSearchClient:
         wait = self.min_interval_s - (time.time() - self._last)
         if wait > 0:
             time.sleep(wait)
-        for attempt in range(4):
-            r = self._request(query, num_results)
-            if getattr(r, "status_code", 200) == 429:
-                time.sleep(2 * (attempt + 1))
-                continue
-            r.raise_for_status()
-            break
+        r, last_exc = None, None
+        for attempt in range(5):
+            try:
+                r = self._request(query, num_results)
+                status = getattr(r, "status_code", 200)
+                if status == 429 or status >= 500:  # rate limited or transient upstream failure
+                    raise requests.HTTPError(f"{status} from {self.provider}", response=r)
+                r.raise_for_status()
+                break
+            except (requests.HTTPError, requests.ConnectionError, requests.Timeout) as e:
+                last_exc, r = e, None
+                status = getattr(getattr(e, "response", None), "status_code", None)
+                if status is not None and 400 <= status < 500 and status != 429:
+                    break  # permanent client error: do not retry
+                logger.warning(f"search {query!r} attempt {attempt}: {e}")
+                if attempt < 4:
+                    time.sleep(3 * (attempt + 1))
+        if r is None:
+            if self.ledger is not None:
+                self.ledger.adjust_last("search", self.provider, 0.0)  # nothing was served
+            raise RuntimeError(f"search failed for {query!r}") from last_exc
         self._last = time.time()
         payload = r.json()
         results = self._parse(payload, num_results)
