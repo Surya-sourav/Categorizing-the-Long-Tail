@@ -70,6 +70,7 @@ def main() -> None:
             # time the raw backend on a fresh batch so cache hits do not flatter the number
             if live:
                 sample = [f"{m} TIMING-{i}" for i, m in enumerate(uniq[:200])]
+                emb.backend.encode(sample[:8])  # warm-up: load weights before timing
                 t0 = time.perf_counter()
                 emb.backend.encode(sample)
                 embed_ms_per_merchant = (time.perf_counter() - t0) * 1000 / len(sample)
