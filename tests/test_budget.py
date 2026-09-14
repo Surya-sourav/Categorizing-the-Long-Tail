@@ -15,3 +15,12 @@ def test_ledger_accumulates_persists_and_caps(tmp_path):
     with pytest.raises(BudgetExceeded):
         led2.add("llm", 0.2, "gpt-5-nano")
     assert led2.total == pytest.approx(0.9)  # rejected call not recorded
+
+
+def test_uncapped_kind_is_recorded_but_not_capped(tmp_path):
+    led = SpendLedger(tmp_path / "l.json", max_usd=1.0, uncapped_kinds=("search",))
+    led.add("search", 5.0, "firecrawl")  # prepaid credits: reference USD only
+    led.add("llm", 0.9, "gpt")
+    assert led.total == pytest.approx(5.9) and led.capped_total == pytest.approx(0.9)
+    with pytest.raises(BudgetExceeded):
+        led.add("llm", 0.2, "gpt")

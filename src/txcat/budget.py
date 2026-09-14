@@ -16,7 +16,10 @@ class BudgetExceeded(RuntimeError):
 
 
 class SpendLedger:
-    def __init__(self, path: str | Path, max_usd: float):
+    def __init__(self, path: str | Path, max_usd: float, uncapped_kinds: tuple[str, ...] = ()):
+        self.uncapped_kinds = set(
+            uncapped_kinds
+        )  # e.g. prepaid search credits: tracked, not capped
         self.path, self.max_usd = Path(path), max_usd
         self.path.parent.mkdir(parents=True, exist_ok=True)
         self.entries: list[dict] = json.loads(self.path.read_text()) if self.path.exists() else []
@@ -32,11 +35,16 @@ class SpendLedger:
             out[e["kind"]] += e["usd"]
         return dict(out)
 
+    @property
+    def capped_total(self) -> float:
+        return float(sum(e["usd"] for e in self.entries if e["kind"] not in self.uncapped_kinds))
+
     def add(self, kind: str, usd: float, detail: str = "") -> None:
         with self._lock:
-            if self.total + usd > self.max_usd:
+            if kind not in self.uncapped_kinds and self.capped_total + usd > self.max_usd:
                 raise BudgetExceeded(
-                    f"spend {self.total:.2f} + {usd:.4f} would exceed cap {self.max_usd:.2f} USD"
+                    f"capped spend {self.capped_total:.2f} + {usd:.4f} would exceed "
+                    f"cap {self.max_usd:.2f} USD"
                 )
             self.entries.append(
                 {"ts": now_iso(), "kind": kind, "usd": float(usd), "detail": detail}

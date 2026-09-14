@@ -40,3 +40,13 @@ def save_fes(df: pd.DataFrame, path: str | Path) -> None:
 
 def load_fes(path: str | Path) -> pd.DataFrame:
     return pd.read_parquet(path)
+
+
+def tail_subset(fes: pd.DataFrame, n: int) -> list[str]:
+    """The first ``n`` unique non-ambiguous tail merchants in FES order.
+
+    Shared by the prompt-sensitivity check, the agentic-search ablation and the free-endpoint
+    open-weight rows, so every subsample is the same 300 merchants.
+    """
+    t = fes[(fes["ambiguous"] == 0) & fes["is_tail"]].drop_duplicates("merchant")
+    return t["merchant"].head(n).tolist()

@@ -102,6 +102,9 @@ class SearchCfg(_Base):
     price_per_1k_usd: float = 5.0
     min_interval_s: float = 1.1
     api_key_env: str = "BRAVE_API_KEY"
+    prepaid: bool = (
+        False  # True: provider bills prepaid credits; USD is a reference figure, not capped
+    )
 
 
 class LLMModelCfg(_Base):

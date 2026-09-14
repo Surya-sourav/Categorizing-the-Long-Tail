@@ -27,7 +27,7 @@ from txcat.data.prepare import load_prepared
 from txcat.data.splits import temporal_split
 from txcat.data.taxonomy import CATEGORIES
 from txcat.embedder import Embedder
-from txcat.fes import load_fes
+from txcat.fes import load_fes, tail_subset
 from txcat.knn import build_merchant_index, predict_knn
 from txcat.llm_fallback import LLMFallback
 from txcat.metrics import (
@@ -311,7 +311,7 @@ def main() -> None:
     pd.DataFrame(okrows).to_csv(tables / "tab2b_oklahoma_coldstart.csv", index=False)
 
     # ---- prompt sensitivity: 2 variants x 300 tail merchants x each model (cached in live mode on first run) ----
-    ps_m = tail_m.index[:300].tolist()
+    ps_m = tail_subset(fes, 300)
     ledger = SpendLedger(cfg.budget.ledger_path, cfg.budget.max_usd)
     ps = []
     for mcfg in cfg.llm.models:

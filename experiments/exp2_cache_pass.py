@@ -21,7 +21,7 @@ from txcat.config import WindowCfg, load_config
 from txcat.data.prepare import load_prepared
 from txcat.data.splits import merchant_frequencies, temporal_split
 from txcat.data.taxonomy import CATEGORIES
-from txcat.fes import build_dc_fes, build_oklahoma_coldstart_fes, load_fes, save_fes
+from txcat.fes import build_dc_fes, build_oklahoma_coldstart_fes, load_fes, save_fes, tail_subset
 from txcat.llm_fallback import LLMFallback
 from txcat.utils import RateLimiter, run_parallel, set_seed, setup_logging
 from txcat.web_search import WebSearchClient
@@ -33,6 +33,12 @@ def main() -> None:
     ap.add_argument("--config", default="configs/dc.yaml")
     ap.add_argument("--stage", choices=["fes", "search", "llm", "all"], default="all")
     ap.add_argument("--models", nargs="*", default=None)
+    ap.add_argument(
+        "--nvidia-subset",
+        type=int,
+        default=0,
+        help="run NVIDIA (free, slow) models only on the first N DC tail merchants (0 = all)",
+    )
     args = ap.parse_args()
     cfg = load_config(args.config)
     set_seed(cfg.seed)
@@ -75,7 +81,11 @@ def main() -> None:
         .sort_values()
         .tolist()
     )
-    ledger = SpendLedger(cfg.budget.ledger_path, cfg.budget.max_usd)
+    ledger = SpendLedger(
+        cfg.budget.ledger_path,
+        cfg.budget.max_usd,
+        uncapped_kinds=("search",) if cfg.search.prepaid else (),
+    )
     logger.info(f"{len(merchants)} unique FES merchants; spend so far {ledger.total:.2f} USD")
 
     ws = WebSearchClient(
@@ -120,6 +130,12 @@ def main() -> None:
                 if not os.environ.get(mcfg.api_key_env):
                     logger.warning(f"skip {mcfg.name}: {mcfg.api_key_env} unset")
                     continue
+                model_merchants = merchants
+                if mcfg.provider == "nvidia" and args.nvidia_subset:
+                    model_merchants = tail_subset(load_fes(dc_path), args.nvidia_subset)
+                    logger.info(
+                        f"{mcfg.name}: NVIDIA subset of {len(model_merchants)} DC tail merchants"
+                    )
                 for cond, prompt in (
                     ("no_web", cfg.llm.prompt_no_web),
                     ("with_web", cfg.llm.prompt_with_web),
@@ -140,7 +156,7 @@ def main() -> None:
 
                     out = run_parallel(
                         _categorize,
-                        merchants,
+                        model_merchants,
                         cfg.concurrency.nvidia_workers
                         if mcfg.provider == "nvidia"
                         else cfg.concurrency.llm_workers,

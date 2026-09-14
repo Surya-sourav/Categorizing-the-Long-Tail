@@ -68,6 +68,7 @@ search:
   price_per_1k_usd: 10.7      # Firecrawl search = 2 credits/query; reference $0.0053/credit (Hobby plan); credits are prepaid
   min_interval_s: 0.5         # free/hobby plans allow 2 concurrent requests; we stay sequential
   api_key_env: FIRECRAWL_API_KEY
+  prepaid: true               # the author's 10k Firecrawl credits are prepaid; reference USD is recorded but not capped
 
 llm:
   cache_dir: cache/llm
@@ -117,5 +118,5 @@ concurrency:
   search_workers: 2             # Firecrawl free/hobby plans allow 2 concurrent requests
   search_rpm: 60
   llm_workers: 16               # OpenAI
-  nvidia_workers: 4             # free NIM endpoint queues badly above a few in-flight requests (pilot: 90 s+ at 16)
+  nvidia_workers: 1             # free NIM endpoint effectively serializes a key's requests (4 in flight -> 190 s/call)
   llm_rpm: 38                   # NVIDIA free tier: 40 RPM per key; OpenAI limits are far higher
