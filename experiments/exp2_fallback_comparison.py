@@ -87,6 +87,11 @@ def main() -> None:
     ap.add_argument("--seeds", type=int, nargs="+", default=None)
     ap.add_argument("--mode", choices=["live", "reproduce"], default="reproduce")
     ap.add_argument("--agentic-n", type=int, default=300)
+    ap.add_argument(
+        "--extras",
+        action="store_true",
+        help="LIVE: run the prompt-sensitivity check and agentic-search ablation (costs money)",
+    )
     args = ap.parse_args()
     cfg = load_config(args.config)
     seeds = args.seeds or cfg.seeds
@@ -126,7 +131,12 @@ def main() -> None:
 
     rows, frontier, knn_cache = [], [], {}
     for bb in backbones:
-        emb = Embedder(bb, cfg.embed.cache_dir, allow_live=live, batch_size=cfg.embed.batch_size)
+        emb = Embedder(
+            bb,
+            cfg.embed.cache_dir,
+            allow_live=(live or not bb.startswith("text-embedding")),
+            batch_size=cfg.embed.batch_size,
+        )
         if bb.startswith("text-embedding") and live and not os.environ.get("OPENAI_API_KEY"):
             logger.warning(f"skipping {bb}: OPENAI_API_KEY not set")
             continue
@@ -314,7 +324,9 @@ def main() -> None:
     # ---- Oklahoma cold-start rows: kNN (DC index) vs LLM with web ----
     okrows = []
     ok_m = ok_fes["merchant"].drop_duplicates().tolist()
-    emb0 = Embedder(bb0, cfg.embed.cache_dir, allow_live=live)
+    emb0 = Embedder(
+        bb0, cfg.embed.cache_dir, allow_live=True
+    )  # local backbone: CPU compute, not an API call
     set_seed(seeds[0])
     idx0 = build_merchant_index(train, emb0, cfg.index.M, cfg.index.ef_construction, seeds[0])
     p = predict_knn(ok_fes, idx0, emb0, cfg.index.k, cfg.index.ef_search)
@@ -352,8 +364,9 @@ def main() -> None:
     ps_m = tail_subset(fes, 300)
     ledger = SpendLedger(cfg.budget.ledger_path, cfg.budget.max_usd)
     ps = []
+    run_extras_live = live and args.extras  # paid extras only when explicitly requested
     for mcfg in cfg.llm.models:
-        if live and not os.environ.get(mcfg.api_key_env):
+        if run_extras_live and not os.environ.get(mcfg.api_key_env):
             continue
         for cond, v1, v2 in (
             ("no_web", cfg.llm.prompt_no_web, "prompts/fallback_no_web_v2.txt"),
@@ -366,8 +379,8 @@ def main() -> None:
                         mcfg,
                         cfg.llm.cache_dir,
                         prompt,
-                        ledger=ledger if live else None,
-                        allow_live=live,
+                        ledger=ledger if run_extras_live else None,
+                        allow_live=run_extras_live,
                     )
                     ok_n = 0
                     for m in ps_m:
@@ -396,10 +409,10 @@ def main() -> None:
         ag = AgenticSearchCategorizer(
             ag_model.name,
             Path(cfg.llm.cache_dir) / "agentic",
-            ledger=ledger if live else None,
+            ledger=ledger if run_extras_live else None,
             price_in_per_1m=ag_model.price_in_per_1m,
             price_out_per_1m=ag_model.price_out_per_1m,
-            allow_live=live,
+            allow_live=run_extras_live,
         )
         try:
             res = {m: ag.categorize(m, CATEGORIES) for m in ps_m[: args.agentic_n]}
