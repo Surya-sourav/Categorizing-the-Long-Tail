@@ -90,17 +90,18 @@ llm:
       price_out_per_1m: 2.00
       reasoning_effort: minimal
       json_mode: json_schema
-    - name: deepseek-ai/deepseek-v4-flash-0731
+    - name: openai/gpt-oss-20b
       provider: nvidia
       base_url: https://integrate.api.nvidia.com/v1
       api_key_env: NVIDIA_API_KEY
-      price_in_per_1m: 0.15       # reference rate for a hosted MoE (~13B active) open-weight model; the NIM endpoint is free
-      price_out_per_1m: 0.60
+      price_in_per_1m: 0.10       # reference rate for a hosted 20B MoE open-weight model; the NIM endpoint is free
+      price_out_per_1m: 0.40
       reasoning_effort: null
       json_mode: none             # prompt asks for JSON; extractor takes the last JSON object
-      timeout_s: 180
-      max_completion_tokens: 600  # DeepSeek sometimes rambles before the JSON; 300 truncated 5% of answers
-      note: open-weight row (DeepSeek V4 Flash, 284B MoE / 13B active); NVIDIA NIM free developer endpoint; prices are reference rates
+      extra_body: {chat_template_kwargs: {thinking: false, enable_thinking: false}}
+      timeout_s: 90
+      max_completion_tokens: 600
+      note: open-weight row (OpenAI gpt-oss-20b, Apache-2.0); same lab as the API rows, so proprietary-vs-open transfer is testable; NIM free endpoint; prices are reference rates
     - name: nvidia/nemotron-3-super-120b-a12b
       provider: nvidia
       base_url: https://integrate.api.nvidia.com/v1
