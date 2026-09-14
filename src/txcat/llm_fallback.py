@@ -162,7 +162,8 @@ class LLMFallback:
             time.sleep(wait)
         t0 = time.perf_counter()
         resp, last_exc = None, None
-        for attempt in range(4):
+        attempts = 6
+        for attempt in range(attempts):
             if self.limiter is not None:
                 self.limiter.acquire()
             try:
@@ -170,11 +171,15 @@ class LLMFallback:
                 break
             except Exception as e:  # noqa: BLE001
                 last_exc = e
+                status = getattr(e, "status_code", None)
+                if status is not None and 400 <= status < 500 and status != 429:
+                    break  # permanent request error; retrying cannot help
                 logger.warning(
                     f"{self.m.name} attempt {attempt}: {type(e).__name__}: {str(e)[:160]}"
                 )
-                if attempt < 3:
-                    time.sleep(2**attempt)
+                if attempt < attempts - 1:
+                    # overloaded/rate-limited/timed-out endpoints need real backoff: 5,10,20,40,80 s
+                    time.sleep(min(120.0, 5.0 * 2**attempt))
         if resp is None:
             raise RuntimeError(f"LLM call failed for {merchant!r}") from last_exc
         latency = (time.perf_counter() - t0) * 1000
