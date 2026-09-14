@@ -1,0 +1,5 @@
+backbone,dim,n_seeds,embed_ms_per_merchant,f1_overall,f1_overall_lo,f1_overall_hi,f1_head,f1_head_lo,f1_head_hi,f1_tail,f1_tail_lo,f1_tail_hi,acc_tail,acc_tail_lo,acc_tail_hi
+sentence-transformers/all-MiniLM-L6-v2,384,3,48.469,0.8458,0.8458,0.8459,0.9319,0.9319,0.9319,0.6329,0.6328,0.6332,0.6891,0.6889,0.6894
+BAAI/bge-small-en-v1.5,384,3,33.2,0.8511,0.851,0.8511,0.9319,0.9319,0.932,0.6338,0.6335,0.634,0.6948,0.6946,0.6949
+sentence-transformers/all-mpnet-base-v2,768,3,36.751,0.8506,0.85,0.8509,0.9316,0.931,0.932,0.6391,0.6386,0.6396,0.692,0.6918,0.6923
+ProsusAI/finbert,768,3,12.385,0.8172,0.8172,0.8172,0.9325,0.9325,0.9325,0.537,0.537,0.537,0.5931,0.5931,0.5931
