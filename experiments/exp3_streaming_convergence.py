@@ -28,8 +28,6 @@ from txcat.web_search import CacheMissError as SearchMiss
 from txcat.web_search import WebSearchClient
 from txcat.writeback import WriteBackPolicy
 
-POLICIES = ["never", "always", "confidence_gated"]
-
 
 class CachedOrUncached:
     """Wraps LLMFallback: on a cache miss return an invalid result (kNN keeps its label) and count it."""
@@ -52,6 +50,20 @@ def main() -> None:
     ap.add_argument("--max-txns", type=int, default=100000)
     ap.add_argument("--window", type=int, default=500)
     ap.add_argument(
+        "--wb-thresholds",
+        type=float,
+        nargs="+",
+        default=[0.5, 0.6, 0.7, 0.8],
+        help="confidence thresholds for the gated write-back policy",
+    )
+    ap.add_argument(
+        "--stream-scope",
+        choices=["fes_tail", "all"],
+        default="fes_tail",
+        help="fes_tail: head rows plus rows of evaluation-set tail merchants (every fallback has a "
+        "cached answer); all: every test row (fallbacks outside the cache fall back to kNN)",
+    )
+    ap.add_argument(
         "--model", default=None, help="LLM model name for the fallback (default: first configured)"
     )
     args = ap.parse_args()
@@ -69,7 +81,21 @@ def main() -> None:
     dc = load_prepared(d.processed_path, cfg.taxonomy_dir)
     dc = dc[dc["category"].notna() & (dc["ambiguous"] == 0)]
     train, test = temporal_split(dc, win)
-    test = test.sort_values("date", kind="stable").head(args.max_txns).reset_index(drop=True)
+    test = test.sort_values("date", kind="stable").reset_index(drop=True)
+    if args.stream_scope == "fes_tail":
+        from txcat.data.splits import freq_of, merchant_frequencies
+        from txcat.fes import load_fes
+
+        fes_m = set(load_fes(Path(cfg.results_dir, "fes", "dc_fes.parquet"))["merchant"])
+        freqs = merchant_frequencies(train)
+        is_head = freq_of(test, freqs) > cfg.tail_k
+        n_all = len(test)
+        test = test[is_head | test["merchant"].isin(fes_m)].reset_index(drop=True)
+        logger.info(
+            f"stream scope fes_tail: {len(test)} of {n_all} test rows (head rows + evaluation-set "
+            f"tail merchants); tail rows outside the evaluation set are excluded"
+        )
+    test = test.head(args.max_txns).reset_index(drop=True)
     mcfg = next(m for m in cfg.llm.models if args.model is None or m.name == args.model)
     ws = WebSearchClient(cfg.search.provider, cfg.search.cache_dir, None, allow_live=False)
 
@@ -82,7 +108,11 @@ def main() -> None:
     bb = cfg.embed.backbones[0]
     emb = Embedder(bb, cfg.embed.cache_dir, allow_live=False)
     windows_by_policy, summary_rows = {}, []
-    for policy in POLICIES:
+    policies = [("never", 0.8), ("always", 0.8)] + [
+        ("confidence_gated", t) for t in args.wb_thresholds
+    ]
+    for mode, wb_thr in policies:
+        policy = mode if mode != "confidence_gated" else f"gated@{wb_thr:.1f}"
         per_seed = []
         for seed in seeds:
             set_seed(seed)
@@ -96,7 +126,7 @@ def main() -> None:
                 emb,
                 ConfidenceGate(cfg.gate.mode, cfg.gate.threshold),
                 fb,
-                WriteBackPolicy(policy, 0.8),
+                WriteBackPolicy(mode, wb_thr),
                 evidence,
                 window=args.window,
                 k=cfg.index.k,
@@ -109,6 +139,8 @@ def main() -> None:
             log.summary.update(
                 {
                     "policy": policy,
+                    "wb_threshold": wb_thr if mode == "confidence_gated" else None,
+                    "stream_scope": args.stream_scope,
                     "seed": seed,
                     "model": mcfg.name,
                     "fallback_uncached": fb.uncached,
