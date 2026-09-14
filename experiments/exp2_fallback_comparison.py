@@ -26,6 +26,7 @@ from txcat.config import WindowCfg, load_config
 from txcat.data.prepare import load_prepared
 from txcat.data.splits import temporal_split
 from txcat.data.taxonomy import CATEGORIES
+from txcat.embedder import CacheMissError as EmbCacheMiss
 from txcat.embedder import Embedder
 from txcat.fes import load_fes, tail_subset
 from txcat.knn import build_merchant_index, predict_knn
@@ -126,6 +127,14 @@ def main() -> None:
     rows, frontier, knn_cache = [], [], {}
     for bb in backbones:
         emb = Embedder(bb, cfg.embed.cache_dir, allow_live=live, batch_size=cfg.embed.batch_size)
+        if bb.startswith("text-embedding") and live and not os.environ.get("OPENAI_API_KEY"):
+            logger.warning(f"skipping {bb}: OPENAI_API_KEY not set")
+            continue
+        try:
+            emb.embed(fes["merchant"].drop_duplicates().tolist()[:5])  # cheap cache presence check
+        except EmbCacheMiss:
+            logger.warning(f"skipping backbone {bb}: not in the embedding cache (reproduce mode)")
+            continue
         per_seed = []
         for seed in seeds:
             set_seed(seed)
