@@ -149,7 +149,7 @@ def fig_frontier(
             edgecolors=style.INK,
             linewidths=1.2,
             zorder=5,
-            label=f"knee t={knee_threshold:.2f}",
+            label=f"best F1, t={knee_threshold:.2f}",
         )
     ax.set_xlabel("cost per 1k transactions (USD)")
     ax.set_ylabel("overall macro-F1")

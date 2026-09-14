@@ -276,13 +276,11 @@ def main() -> None:
                 )
     fr_df = pd.DataFrame(frontier)
     fr_df.to_csv(Path(cfg.results_dir, "exp2_frontier.csv"), index=False)
-    # knee: largest second difference of F1 w.r.t. cost, per first model
+    # marker: the threshold with the highest overall macro-F1 for the first model (the operating point)
     knee = None
     if not fr_df.empty:
-        g = fr_df[fr_df["model"] == fr_df["model"].iloc[0]].sort_values("cost_per_1k")
-        if len(g) > 4:
-            d1 = np.gradient(g["macro_f1"].values, g["cost_per_1k"].values + 1e-9)
-            knee = float(g["threshold"].values[int(np.argmax(-np.gradient(d1)))])
+        g = fr_df[fr_df["model"] == fr_df["model"].iloc[0]]
+        knee = float(g.loc[g["macro_f1"].idxmax(), "threshold"])
         fig_frontier(fr_df, figs / "fig4_acc_cost_frontier", knee_threshold=knee)
     pd.DataFrame(rows).to_csv(tables / "tab2_main_results.csv", index=False)
 

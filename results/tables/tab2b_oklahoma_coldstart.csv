@@ -1,0 +1,6 @@
+method,f1_overall,n_merchants
+knn/sentence-transformers/all-MiniLM-L6-v2,0.3920116594836566,800
+llm_no_web/gpt-5-nano,0.3211817155195861,800
+llm_with_web/gpt-5-nano,0.45865655411068734,800
+llm_no_web/gpt-5-mini,0.502802093561753,800
+llm_with_web/gpt-5-mini,0.5757200625556782,800
