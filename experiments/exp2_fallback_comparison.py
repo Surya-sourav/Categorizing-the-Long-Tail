@@ -29,7 +29,7 @@ from txcat.data.taxonomy import CATEGORIES
 from txcat.embedder import Embedder
 from txcat.fes import load_fes, tail_subset
 from txcat.knn import build_merchant_index, predict_knn
-from txcat.llm_fallback import LLMFallback
+from txcat.llm_fallback import CacheMissError, LLMFallback
 from txcat.metrics import (
     bootstrap_ci,
     cost_per_1k,
@@ -38,6 +38,7 @@ from txcat.metrics import (
     paired_bootstrap_diff,
 )
 from txcat.utils import set_seed, setup_logging
+from txcat.web_search import CacheMissError as SearchMiss
 from txcat.web_search import WebSearchClient
 
 THRESHOLDS = [round(t, 2) for t in np.arange(0.30, 0.951, 0.05)]
@@ -52,11 +53,18 @@ def f1_row(df: pd.DataFrame, pred_col: str) -> dict:
 
 
 def llm_preds(fes_merchants: list[str], mcfg, prompt: str, cfg, ws_ro) -> pd.DataFrame:
+    """Cached predictions for the merchants that have them. Merchants missing from the search or
+    LLM cache (e.g. open-weight rows run on a subset) are skipped; callers report coverage."""
     fb = LLMFallback(mcfg, cfg.llm.cache_dir, prompt, allow_live=False)
     rows = []
     for m in fes_merchants:
-        ev = ws_ro.search(m, cfg.search.num_results) if "with_web" in Path(prompt).stem else None
-        r = fb.categorize(m, ev, CATEGORIES)
+        try:
+            ev = (
+                ws_ro.search(m, cfg.search.num_results) if "with_web" in Path(prompt).stem else None
+            )
+            r = fb.categorize(m, ev, CATEGORIES)
+        except (CacheMissError, SearchMiss):
+            continue
         rows.append(
             {
                 "merchant": m,
@@ -67,7 +75,8 @@ def llm_preds(fes_merchants: list[str], mcfg, prompt: str, cfg, ws_ro) -> pd.Dat
                 "tout": r.tokens_out,
             }
         )
-    return pd.DataFrame(rows).set_index("merchant")
+    cols = ["merchant", "pred", "conf", "lat", "tin", "tout"]
+    return pd.DataFrame(rows, columns=cols).set_index("merchant")
 
 
 def main() -> None:
@@ -159,12 +168,17 @@ def main() -> None:
                 }
             )
 
+    n_fes_merchants = len(merchants)
     for (model, cond), lp in llm.items():
+        if lp.empty:
+            logger.warning(f"{model}/{cond}: no cached predictions; row skipped")
+            continue
         mcfg = next(m for m in cfg.llm.models if m.name == model)
-        t = fes.assign(pred=fes["merchant"].map(lp["pred"]).values)
+        covered = fes[fes["merchant"].isin(lp.index)]
+        t = covered.assign(pred=covered["merchant"].map(lp["pred"]).values)
         p50, p95 = latency_p50_p95(lp["lat"])
         cost = cost_per_1k(
-            n_txn,
+            len(t),
             int(lp["tin"].sum()),
             int(lp["tout"].sum()),
             len(lp) if cond == "with_web" else 0,
@@ -181,13 +195,20 @@ def main() -> None:
                 "cost_per_1k": cost,
                 "fallback_rate": 1.0,
                 "n_seeds": 1,
+                "n_merchants": int(len(lp)),
+                "coverage": round(len(lp) / n_fes_merchants, 3),
             }
         )
 
     # ---- routed system: kNN + gate + LLM-with-web; sweep thresholds ----
     bb0 = cfg.embed.backbones[0]
-    for model in {m for m, c in llm if c == "with_web"}:
+    for model in sorted({m for m, c in llm if c == "with_web"}):
         lp = llm[(model, "with_web")]
+        if len(lp) < 0.99 * n_fes_merchants:
+            logger.info(
+                f"routed/frontier skips {model}: covers {len(lp)}/{n_fes_merchants} merchants"
+            )
+            continue
         mcfg = next(m for m in cfg.llm.models if m.name == model)
         for t_thr in THRESHOLDS:
             f1s, costs, fr = [], [], []
@@ -256,13 +277,21 @@ def main() -> None:
     for model in {m for m, _ in llm}:
         if (model, "with_web") not in llm or (model, "no_web") not in llm:
             continue
-        a = (llm[(model, "with_web")].loc[tail_m.index, "pred"] == tail_m).values
-        b = (llm[(model, "no_web")].loc[tail_m.index, "pred"] == tail_m).values
+        common = tail_m.index.intersection(llm[(model, "with_web")].index).intersection(
+            llm[(model, "no_web")].index
+        )
+        if len(common) < 30:
+            logger.warning(f"ablation skips {model}: only {len(common)} tail merchants covered")
+            continue
+        gold = tail_m.loc[common]
+        a = (llm[(model, "with_web")].loc[common, "pred"] == gold).values
+        b = (llm[(model, "no_web")].loc[common, "pred"] == gold).values
         diff, lo, hi = paired_bootstrap_diff(a, b, seed=seeds[0])
         abl.append(
             {
                 "model": model,
-                "n_tail_merchants": len(tail_m),
+                "n_tail_merchants": int(len(common)),
+                "coverage_of_tail": round(len(common) / len(tail_m), 3),
                 "acc_with_web": a.mean(),
                 "acc_no_web": b.mean(),
                 "diff": diff,
