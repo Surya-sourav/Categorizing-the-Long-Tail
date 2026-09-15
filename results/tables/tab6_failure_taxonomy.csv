@@ -1,0 +1,8 @@
+failure_class,count,example,example_gold,example_pred,share
+ambiguous_merchant,13,NATIONAL SEATING,health,office_supplies,0.065
+no_web_presence,15,AUTOAUTH SERVICE,software_electronics,professional_services,0.075
+web_search_failure,15,GESSCREATIONS,education_gov_membership,entertainment_media,0.075
+llm_reasoning_error,16,BIO COMPANY INC,industrial_hardware,INVALID,0.08
+taxonomy_mismatch,101,WOMEN IN HOUSING & FIN,education_gov_membership,professional_services,0.505
+normalization_failure,6,COURSRA2A12B1FKC1KV9Q,education_gov_membership,industrial_hardware,0.03
+label_noise,34,MAC-ISA,entertainment_media,education_gov_membership,0.17
