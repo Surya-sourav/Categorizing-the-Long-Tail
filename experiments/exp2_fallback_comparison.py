@@ -291,7 +291,7 @@ def main() -> None:
         .set_index("merchant")["category"]
     )
     abl = []
-    for model in {m for m, _ in llm}:
+    for model in sorted({m for m, _ in llm}):  # sorted: deterministic row order
         if (model, "with_web") not in llm or (model, "no_web") not in llm:
             continue
         common = tail_m.index.intersection(llm[(model, "with_web")].index).intersection(

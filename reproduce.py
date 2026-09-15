@@ -68,7 +68,39 @@ def main() -> None:
             cmd += ["--seeds", *seeds]
         logger.info("RUN " + " ".join(cmd))
         subprocess.run(cmd, check=True)
+    verify_tables(Path(args.output, "tables"))
     logger.info("reproduction complete")
+
+
+TIMING_COLS = {"p50_ms", "p95_ms", "embed_ms_per_merchant"}
+
+
+def verify_tables(tables_dir: Path) -> None:
+    """Compare every regenerated CSV with the committed version (git HEAD), ignoring wall-clock timing
+    columns, which are re-measured on every run and are the only non-deterministic values."""
+    import io
+
+    import pandas as pd
+
+    failed = []
+    for csv in sorted(tables_dir.glob("*.csv")):
+        rel = csv.relative_to(Path.cwd()) if csv.is_absolute() else csv
+        try:
+            committed = subprocess.check_output(
+                ["git", "show", f"HEAD:{rel.as_posix()}"], text=True
+            )
+        except subprocess.CalledProcessError:
+            logger.warning(f"verify: {rel} is not committed; skipped")
+            continue
+        a = pd.read_csv(io.StringIO(committed)).drop(columns=TIMING_COLS, errors="ignore")
+        b = pd.read_csv(csv).drop(columns=TIMING_COLS, errors="ignore")
+        same = a.shape == b.shape and a.round(9).equals(b.round(9))
+        logger.info(f"verify: {rel.name}: {'IDENTICAL' if same else 'DIFFERENT'}")
+        if not same:
+            failed.append(rel.name)
+    if failed:
+        raise SystemExit(f"reproduction check FAILED for: {failed}")
+    logger.info("verify: all committed tables reproduced identically (timing columns excluded)")
 
 
 if __name__ == "__main__":
