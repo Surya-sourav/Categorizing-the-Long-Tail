@@ -9,6 +9,7 @@ the per-call file first, then the packed index; both layouts stay valid.
 from __future__ import annotations
 
 import gzip
+import io
 import json
 from pathlib import Path
 
@@ -50,7 +51,12 @@ def pack(cache_dir: str | Path, kind: str, remove: bool = False) -> dict[str, in
     for g, recs in groups.items():
         final = packed_dir / f"{g}.jsonl.gz"
         tmp = packed_dir / f"{g}.jsonl.gz.tmp"
-        with gzip.open(tmp, "wt", encoding="utf-8") as fh:  # write whole file, then atomic rename
+        # Whole file, then atomic rename. mtime=0 + sorted keys => byte-identical repacks, so a
+        # reproduction run never dirties the committed cache.
+        with (
+            gzip.GzipFile(tmp, "wb", mtime=0) as raw,
+            io.TextIOWrapper(raw, encoding="utf-8") as fh,
+        ):
             for key in sorted(recs):
                 fh.write(json.dumps(recs[key], ensure_ascii=False) + "\n")
         tmp.replace(final)
