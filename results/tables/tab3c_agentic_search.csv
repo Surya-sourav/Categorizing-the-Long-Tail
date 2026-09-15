@@ -1,0 +1,2 @@
+model,n,acc_agentic_search,acc_fixed_snippets,acc_no_web,mean_searches_per_merchant,usd_per_1k_merchants
+gpt-5-mini,300,0.62,0.6133333333333333,0.5133333333333333,1.6366666666666667,21.16101583333333
