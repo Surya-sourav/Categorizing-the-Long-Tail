@@ -1,4 +1,4 @@
 tail_k,backbone,window,tail_merchants,tail_merchant_share,tail_txn_share,tail_acc_mean,tail_acc_std,head_acc_mean,head_acc_std,n_seeds
-3,sentence-transformers/all-MiniLM-L6-v2,2019-01-01..2024-01-01+,7066,0.7702,0.2397,0.6891,0.0002,0.9478,0.0,3
-2,sentence-transformers/all-MiniLM-L6-v2,2019-01-01..2024-01-01+,6716,0.7321,0.2245,0.67,0.0002,0.9483,0.0,3
-5,sentence-transformers/all-MiniLM-L6-v2,2019-01-01..2024-01-01+,7527,0.8205,0.264,0.7117,0.0002,0.9483,0.0,3
+3,sentence-transformers/all-MiniLM-L6-v2,2019-01-01..2024-01-01+,7066,0.7702,0.2397,0.6891,0.0002,0.9478,0.0,5
+2,sentence-transformers/all-MiniLM-L6-v2,2019-01-01..2024-01-01+,6716,0.7321,0.2245,0.6701,0.0002,0.9483,0.0,5
+5,sentence-transformers/all-MiniLM-L6-v2,2019-01-01..2024-01-01+,7527,0.8205,0.264,0.7117,0.0002,0.9483,0.0,5
