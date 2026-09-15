@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Manual taxonomy of 200 residual tail errors made by the routed system with web evidence. Two thirds are annotation or taxonomy artifacts rather than model failures.}
+\label{tab:failures}
+\begin{tabular}{lrrl}
+\toprule
+Failure class & Count & Share & Example merchant\\
+\midrule
+taxonomy mismatch & 101 & 50.5\% & \texttt{WOMEN IN HOUSING \& FIN} \\
+label noise & 34 & 17.0\% & \texttt{MAC-ISA} \\
+LLM reasoning error & 16 & 8.0\% & \texttt{BIO COMPANY INC} \\
+no web presence & 15 & 7.5\% & \texttt{AUTOAUTH SERVICE} \\
+web search failure & 15 & 7.5\% & \texttt{GESSCREATIONS} \\
+ambiguous merchant & 13 & 6.5\% & \texttt{NATIONAL SEATING} \\
+normalization failure & 6 & 3.0\% & \texttt{COURSRA2A12B1FKC1KV9Q} \\
+\bottomrule
+\end{tabular}
+\end{table}

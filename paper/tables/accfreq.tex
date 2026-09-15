@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{kNN accuracy by training frequency (MiniLM-L6-v2, full DC test set). The cliff is at zero: a merchant seen once is classified as well as a merchant seen a thousand times.}
+\label{tab:accfreq}
+\begin{tabular}{lrrc}
+\toprule
+Training frequency & Test txns & Top-1 accuracy & 95\% CI\\
+\midrule
+0 (unseen) & 14,983 & 0.599 & [0.591, 0.607] \\
+1 & 2,168 & 0.960 & [0.951, 0.968] \\
+2-5 & 4,793 & 0.950 & [0.944, 0.956] \\
+6-20 & 13,594 & 0.984 & [0.981, 0.986] \\
+21-100 & 9,228 & 0.970 & [0.966, 0.973] \\
+100+ & 38,349 & 0.931 & [0.928, 0.933] \\
+\bottomrule
+\end{tabular}
+\end{table}

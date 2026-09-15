@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\caption{Primary dataset and temporal split. The tail is a quarter of test volume, and one test transaction in five comes from a merchant the index has never seen.}
+\label{tab:datasets}
+\begin{tabular}{lr}
+\toprule
+\textbf{Washington DC Purchase Card} & \textbf{Value}\\
+\midrule
+Training window & 2019-01-01 to 2023-12-31 \\
+Test window & 2024-01-01 onward \\
+Training transactions / merchants & 189,581 / 17,166 \\
+Test transactions / merchants & 90,466 / 10,443 \\
+Tail merchants (train freq $\leq 3$) & 8,093 \\
+Tail share of test transactions & 25.3\% \\
+\quad sensitivity: freq $\leq 2$ / $\leq 5$ & 23.7\% / 27.8\% \\
+Test transactions from never-seen merchants & 19.1\% \\
+Rows without a usable MCC & 0.17\% \\
+Rows with an ambiguous MCC (excluded) & 8.9\% \\
+Label noise (300-row audit) & 4.4\% wrong, 19.7\% upper bound \\
+\bottomrule
+\end{tabular}
+\end{table}

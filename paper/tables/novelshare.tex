@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Generator sweep over the share of brands that appear only after the split date, with the Zipf exponent held at 1.1 (five seeds). Accuracy on genuinely unseen entities is pinned near 0.5 regardless of the dial; only their share of traffic changes.}
+\label{tab:novelshare}
+\begin{tabular}{rrrrrr}
+\toprule
+Novel brand share & Unseen txns & Overall & Tail & Unseen entities & Seen entities\\
+\midrule
+0.00 & 1.1\% & 0.960 & 0.912 & 0.474 & 0.966 \\
+0.05 & 12.1\% & 0.918 & 0.841 & 0.540 & 0.967 \\
+0.10 & 22.1\% & 0.867 & 0.765 & 0.513 & 0.966 \\
+0.20 & 39.7\% & 0.770 & 0.652 & 0.473 & 0.968 \\
+0.30 & 58.8\% & 0.669 & 0.570 & 0.459 & 0.968 \\
+\bottomrule
+\end{tabular}
+\end{table}
