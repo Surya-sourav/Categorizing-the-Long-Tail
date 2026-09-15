@@ -49,7 +49,7 @@ def main() -> None:
     merchants = fes.drop_duplicates("merchant")[["merchant", "category"]].reset_index(drop=True)
     logger.info(f"pilot on {len(merchants)} tail merchants")
 
-    ledger = SpendLedger(cfg.budget.ledger_path, cfg.budget.max_usd)
+    ledger = SpendLedger.from_config(cfg)
     ws = WebSearchClient(
         cfg.search.provider,
         cfg.search.cache_dir,

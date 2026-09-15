@@ -363,7 +363,7 @@ def main() -> None:
 
     # ---- prompt sensitivity: 2 variants x 300 tail merchants x each model (cached in live mode on first run) ----
     ps_m = tail_subset(fes, 300)
-    ledger = SpendLedger(cfg.budget.ledger_path, cfg.budget.max_usd)
+    ledger = SpendLedger.from_config(cfg)
     ps = []
     run_extras_live = live and args.extras  # paid extras only when explicitly requested
     for mcfg in cfg.llm.models:

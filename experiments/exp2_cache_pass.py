@@ -81,11 +81,7 @@ def main() -> None:
         .sort_values()
         .tolist()
     )
-    ledger = SpendLedger(
-        cfg.budget.ledger_path,
-        cfg.budget.max_usd,
-        uncapped_kinds=("search",) if cfg.search.prepaid else (),
-    )
+    ledger = SpendLedger.from_config(cfg)
     logger.info(f"{len(merchants)} unique FES merchants; spend so far {ledger.total:.2f} USD")
 
     ws = WebSearchClient(

@@ -10,18 +10,39 @@ from txcat.data.dc import build_query_params, features_to_frame
 from txcat.data.schema import PROCESSED_COLUMNS, validate_processed
 
 FAKE_FEATURES = [
-    {"attributes": {"OBJECTID": 1, "AGENCY": "Office of Latino Affairs",
-                    "TRANSACTION_DATE": 1704067200000,
-                    "TRANSACTION_AMOUNT": 16.8, "VENDOR_NAME": "USPS 1050050275    QQQ",
-                    "VENDOR_STATE_PROVINCE": "DC",
-                    "MCC_DESCRIPTION": "Postage Services-Government Only"}},
-    {"attributes": {"OBJECTID": 2, "AGENCY": "DDOT", "TRANSACTION_DATE": 1704153600000,
-                    "TRANSACTION_AMOUNT": 229.5, "VENDOR_NAME": "WW GRAINGER 912",
-                    "VENDOR_STATE_PROVINCE": "DC",
-                    "MCC_DESCRIPTION": "Industrial Supplies, Not Elsewhere Classified"}},
-    {"attributes": {"OBJECTID": 3, "AGENCY": "DDOT", "TRANSACTION_DATE": None,
-                    "TRANSACTION_AMOUNT": 1.0, "VENDOR_NAME": None, "VENDOR_STATE_PROVINCE": "DC",
-                    "MCC_DESCRIPTION": "X"}},
+    {
+        "attributes": {
+            "OBJECTID": 1,
+            "AGENCY": "Office of Latino Affairs",
+            "TRANSACTION_DATE": 1704067200000,
+            "TRANSACTION_AMOUNT": 16.8,
+            "VENDOR_NAME": "USPS 1050050275    QQQ",
+            "VENDOR_STATE_PROVINCE": "DC",
+            "MCC_DESCRIPTION": "Postage Services-Government Only",
+        }
+    },
+    {
+        "attributes": {
+            "OBJECTID": 2,
+            "AGENCY": "DDOT",
+            "TRANSACTION_DATE": 1704153600000,
+            "TRANSACTION_AMOUNT": 229.5,
+            "VENDOR_NAME": "WW GRAINGER 912",
+            "VENDOR_STATE_PROVINCE": "DC",
+            "MCC_DESCRIPTION": "Industrial Supplies, Not Elsewhere Classified",
+        }
+    },
+    {
+        "attributes": {
+            "OBJECTID": 3,
+            "AGENCY": "DDOT",
+            "TRANSACTION_DATE": None,
+            "TRANSACTION_AMOUNT": 1.0,
+            "VENDOR_NAME": None,
+            "VENDOR_STATE_PROVINCE": "DC",
+            "MCC_DESCRIPTION": "X",
+        }
+    },
 ]
 
 

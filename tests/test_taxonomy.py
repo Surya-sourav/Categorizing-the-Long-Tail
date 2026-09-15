@@ -12,7 +12,7 @@ def test_spot_checks():
     assert categorize_mcc(5411) == ("groceries", 0)
     assert categorize_mcc(5812) == ("restaurants", 0)
     assert categorize_mcc(7011) == ("lodging", 0)
-    assert categorize_mcc(3501) == ("lodging", 0)        # Holiday Inn brand MCC
+    assert categorize_mcc(3501) == ("lodging", 0)  # Holiday Inn brand MCC
     assert categorize_mcc(3000) == ("airlines_travel", 0)  # United brand MCC
     assert categorize_mcc(3351) == ("transport_auto_fuel", 0)  # car rental brand MCC
     assert categorize_mcc(5734) == ("software_electronics", 0)

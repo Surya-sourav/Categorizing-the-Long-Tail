@@ -24,3 +24,20 @@ def test_uncapped_kind_is_recorded_but_not_capped(tmp_path):
     assert led.total == pytest.approx(5.9) and led.capped_total == pytest.approx(0.9)
     with pytest.raises(BudgetExceeded):
         led.add("llm", 0.2, "gpt")
+
+
+def test_from_config_exempts_prepaid_search(tmp_path):
+    from types import SimpleNamespace
+
+    from txcat.budget import SpendLedger
+
+    cfg = SimpleNamespace(
+        budget=SimpleNamespace(ledger_path=tmp_path / "l.json", max_usd=1.0),
+        search=SimpleNamespace(prepaid=True),
+    )
+    led = SpendLedger.from_config(cfg)
+    led.add("search", 50.0)  # prepaid credits: tracked, never capped
+    led.add("llm", 0.5)
+    assert led.capped_total == 0.5
+    cfg.search.prepaid = False
+    assert SpendLedger.from_config(cfg).uncapped_kinds == set()

@@ -182,8 +182,9 @@ def download_dc(
         page_path = raw_dir / f"page_{offset:07d}.json"
         payload = _load_page(page_path)
         if payload is None:
-            payload = _get_json(session, build_query_params(start_date, offset, page_size),
-                                f"offset {offset}")
+            payload = _get_json(
+                session, build_query_params(start_date, offset, page_size), f"offset {offset}"
+            )
             _write_json_atomic(page_path, payload)
             time.sleep(sleep_s)
         if "features" not in payload:
@@ -217,8 +218,9 @@ def _page_features(page_path: Path) -> list[dict]:
 
 def build_processed(raw_dir: str | Path, out_path: str | Path) -> pd.DataFrame:
     """Concatenate checkpointed pages into the processed parquet."""
-    frames = [features_to_frame(_page_features(p))
-              for p in sorted(Path(raw_dir).glob("page_*.json"))]
+    frames = [
+        features_to_frame(_page_features(p)) for p in sorted(Path(raw_dir).glob("page_*.json"))
+    ]
     if not frames:
         raise ValueError(f"no DC pages found under {raw_dir}")
     df = pd.concat(frames, ignore_index=True).drop_duplicates("txn_id")

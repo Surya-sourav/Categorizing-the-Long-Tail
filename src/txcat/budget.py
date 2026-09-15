@@ -25,6 +25,15 @@ class SpendLedger:
         self.entries: list[dict] = json.loads(self.path.read_text()) if self.path.exists() else []
         self._lock = threading.RLock()
 
+    @classmethod
+    def from_config(cls, cfg) -> SpendLedger:
+        """Ledger per ``configs/*.yaml``: prepaid search credits are tracked but never capped."""
+        return cls(
+            cfg.budget.ledger_path,
+            cfg.budget.max_usd,
+            uncapped_kinds=("search",) if cfg.search.prepaid else (),
+        )
+
     @property
     def total(self) -> float:
         return float(sum(e["usd"] for e in self.entries))

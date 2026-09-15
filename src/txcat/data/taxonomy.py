@@ -13,9 +13,20 @@ import pandas as pd
 from rapidfuzz import fuzz, process
 
 CATEGORIES = [
-    "groceries", "restaurants", "retail", "office_supplies", "software_electronics",
-    "telecom_utilities", "airlines_travel", "lodging", "transport_auto_fuel", "industrial_hardware",
-    "professional_services", "health", "education_gov_membership", "entertainment_media",
+    "groceries",
+    "restaurants",
+    "retail",
+    "office_supplies",
+    "software_electronics",
+    "telecom_utilities",
+    "airlines_travel",
+    "lodging",
+    "transport_auto_fuel",
+    "industrial_hardware",
+    "professional_services",
+    "health",
+    "education_gov_membership",
+    "entertainment_media",
     "financial_postal_shipping",
 ]
 
@@ -24,89 +35,127 @@ AMBIGUOUS_MCCS = {5999, 5399, 7399, 8999}
 
 # (lo, hi, category) inclusive; first match wins after OVERRIDES
 RANGES = [
-    (1, 1499, "industrial_hardware"),          # agricultural services, contractors
-    (1500, 2999, "industrial_hardware"),       # contractors, misc manufacturing
-    (3000, 3299, "airlines_travel"),           # airline brand codes
-    (3300, 3499, "transport_auto_fuel"),       # car rental brand codes
-    (3500, 3999, "lodging"),                   # hotel brand codes
-    (4000, 4799, "transport_auto_fuel"),       # transportation
+    (1, 1499, "industrial_hardware"),  # agricultural services, contractors
+    (1500, 2999, "industrial_hardware"),  # contractors, misc manufacturing
+    (3000, 3299, "airlines_travel"),  # airline brand codes
+    (3300, 3499, "transport_auto_fuel"),  # car rental brand codes
+    (3500, 3999, "lodging"),  # hotel brand codes
+    (4000, 4799, "transport_auto_fuel"),  # transportation
     (4800, 4999, "telecom_utilities"),
-    (5000, 5199, "industrial_hardware"),       # wholesale durable/nondurable
-    (5200, 5299, "industrial_hardware"),       # home supply, lumber, hardware
+    (5000, 5199, "industrial_hardware"),  # wholesale durable/nondurable
+    (5200, 5299, "industrial_hardware"),  # home supply, lumber, hardware
     (5300, 5399, "retail"),
     (5400, 5499, "groceries"),
-    (5500, 5599, "transport_auto_fuel"),       # auto dealers, service stations
-    (5600, 5699, "retail"),                    # apparel
-    (5700, 5799, "retail"),                    # home furnishings
+    (5500, 5599, "transport_auto_fuel"),  # auto dealers, service stations
+    (5600, 5699, "retail"),  # apparel
+    (5700, 5799, "retail"),  # home furnishings
     (5800, 5899, "restaurants"),
-    (5900, 5999, "retail"),                    # misc retail
+    (5900, 5999, "retail"),  # misc retail
     (6000, 6999, "financial_postal_shipping"),
     (7000, 7099, "lodging"),
-    (7200, 7299, "professional_services"),     # personal services
-    (7300, 7499, "professional_services"),     # business services
-    (7500, 7599, "transport_auto_fuel"),       # auto rental/repair
-    (7600, 7699, "industrial_hardware"),       # repair services
+    (7200, 7299, "professional_services"),  # personal services
+    (7300, 7499, "professional_services"),  # business services
+    (7500, 7599, "transport_auto_fuel"),  # auto rental/repair
+    (7600, 7699, "industrial_hardware"),  # repair services
     (7800, 7999, "entertainment_media"),
     (8000, 8099, "health"),
-    (8100, 8199, "professional_services"),     # legal
+    (8100, 8199, "professional_services"),  # legal
     (8200, 8399, "education_gov_membership"),
     (8600, 8699, "education_gov_membership"),  # membership orgs
-    (8700, 8999, "professional_services"),     # engineering, accounting
+    (8700, 8999, "professional_services"),  # engineering, accounting
     (9000, 9999, "education_gov_membership"),  # government
 ]
 
 OVERRIDES = {
     # office / printing
-    2741: "office_supplies", 2791: "office_supplies", 5021: "office_supplies",
-    5044: "office_supplies", 5111: "office_supplies", 5192: "office_supplies",
-    5943: "office_supplies", 5978: "office_supplies", 7338: "office_supplies",
+    2741: "office_supplies",
+    2791: "office_supplies",
+    5021: "office_supplies",
+    5044: "office_supplies",
+    5111: "office_supplies",
+    5192: "office_supplies",
+    5943: "office_supplies",
+    5978: "office_supplies",
+    7338: "office_supplies",
     # software / computers / electronics
-    4816: "software_electronics", 5045: "software_electronics",
-    5732: "software_electronics", 5734: "software_electronics", 5815: "software_electronics",
-    5816: "software_electronics", 5817: "software_electronics", 5818: "software_electronics",
-    7371: "software_electronics", 7372: "software_electronics", 7375: "software_electronics",
+    4816: "software_electronics",
+    5045: "software_electronics",
+    5732: "software_electronics",
+    5734: "software_electronics",
+    5815: "software_electronics",
+    5816: "software_electronics",
+    5817: "software_electronics",
+    5818: "software_electronics",
+    7371: "software_electronics",
+    7372: "software_electronics",
+    7375: "software_electronics",
     7379: "software_electronics",
     # telecom already 4800-4999; money transfer inside that range -> financial
     4829: "financial_postal_shipping",
     # shipping / postal / courier
-    4214: "financial_postal_shipping", 4215: "financial_postal_shipping",
-    4225: "financial_postal_shipping", 9402: "financial_postal_shipping",
+    4214: "financial_postal_shipping",
+    4215: "financial_postal_shipping",
+    4225: "financial_postal_shipping",
+    9402: "financial_postal_shipping",
     # travel agencies / cruise -> airlines_travel
-    4411: "airlines_travel", 4511: "airlines_travel", 4582: "airlines_travel",
+    4411: "airlines_travel",
+    4511: "airlines_travel",
+    4582: "airlines_travel",
     4722: "airlines_travel",
     # boats / marinas -> entertainment
-    4457: "entertainment_media", 4468: "entertainment_media",
+    4457: "entertainment_media",
+    4468: "entertainment_media",
     # ambulance -> health
     4119: "health",
     # fuel dealers, petroleum -> transport_auto_fuel
-    5172: "transport_auto_fuel", 5983: "transport_auto_fuel", 5013: "transport_auto_fuel",
+    5172: "transport_auto_fuel",
+    5983: "transport_auto_fuel",
+    5013: "transport_auto_fuel",
     # retail overrides inside wholesale/industrial ranges
-    5094: "retail", 5137: "retail", 5139: "retail", 5300: "retail", 5309: "retail",
-    5931: "retail", 5932: "retail", 5937: "retail",
-    5935: "industrial_hardware", 5933: "financial_postal_shipping",
+    5094: "retail",
+    5137: "retail",
+    5139: "retail",
+    5300: "retail",
+    5309: "retail",
+    5931: "retail",
+    5932: "retail",
+    5937: "retail",
+    5935: "industrial_hardware",
+    5933: "financial_postal_shipping",
     # health inside retail range
-    5047: "health", 5122: "health", 5912: "health", 5975: "health", 5976: "health",
+    5047: "health",
+    5122: "health",
+    5912: "health",
+    5975: "health",
+    5976: "health",
     # entertainment / media inside retail range
-    5733: "entertainment_media", 5735: "entertainment_media", 5940: "entertainment_media",
-    5941: "entertainment_media", 5945: "entertainment_media", 5946: "entertainment_media",
-    5970: "entertainment_media", 5971: "entertainment_media", 5994: "entertainment_media",
+    5733: "entertainment_media",
+    5735: "entertainment_media",
+    5940: "entertainment_media",
+    5941: "entertainment_media",
+    5945: "entertainment_media",
+    5946: "entertainment_media",
+    5970: "entertainment_media",
+    5971: "entertainment_media",
+    5994: "entertainment_media",
     # photographic studios are media; barbers, spas and massage stay personal services
     7221: "entertainment_media",
     # veterinary -> professional (animal health is not human health)
     742: "professional_services",
     # lodging-range personal services -> lodging stays for 7011/7012/7032/7033 only
     # child care, charities
-    8351: "education_gov_membership", 8398: "education_gov_membership",
+    8351: "education_gov_membership",
+    8398: "education_gov_membership",
     # education inside 8200 already; testing labs
     8734: "professional_services",
     # reviewer-flagged consistency fixes (2026-09-13)
-    5065: "industrial_hardware",        # electrical parts wholesale, not electronics retail
+    5065: "industrial_hardware",  # electrical parts wholesale, not electronics retail
     5960: "financial_postal_shipping",  # direct marketing - insurance services
-    5962: "airlines_travel",            # direct marketing - travel arrangements (cf. 4722)
-    4723: "airlines_travel",            # package tour operators (same business as 4722)
-    5921: "groceries",                  # package stores - beer, wine, liquor (food & beverage)
+    5962: "airlines_travel",  # direct marketing - travel arrangements (cf. 4722)
+    4723: "airlines_travel",  # package tour operators (same business as 4722)
+    5921: "groceries",  # package stores - beer, wine, liquor (food & beverage)
     7321: "financial_postal_shipping",  # consumer credit reporting agencies
-    5972: "entertainment_media",        # stamp and coin stores (hobby/collectibles, like 5945/5971)
+    5972: "entertainment_media",  # stamp and coin stores (hobby/collectibles, like 5945/5971)
 }
 
 

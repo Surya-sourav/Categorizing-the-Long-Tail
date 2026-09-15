@@ -52,9 +52,13 @@ class SentenceTransformerBackend:
 
     def encode(self, texts: list[str]) -> np.ndarray:
         return np.asarray(
-            self.model.encode(texts, batch_size=self.batch_size,
-                              show_progress_bar=len(texts) > 5000,
-                              convert_to_numpy=True, normalize_embeddings=False),
+            self.model.encode(
+                texts,
+                batch_size=self.batch_size,
+                show_progress_bar=len(texts) > 5000,
+                convert_to_numpy=True,
+                normalize_embeddings=False,
+            ),
             dtype=np.float32,
         )
 
@@ -76,8 +80,13 @@ class FinBERTMeanPoolBackend:
         out = []
         with self.torch.no_grad():
             for i in range(0, len(texts), self.batch_size):
-                b = self.tok(texts[i:i + self.batch_size], padding=True, truncation=True,
-                             max_length=32, return_tensors="pt")
+                b = self.tok(
+                    texts[i : i + self.batch_size],
+                    padding=True,
+                    truncation=True,
+                    max_length=32,
+                    return_tensors="pt",
+                )
                 h = self.model(**b).last_hidden_state
                 mask = b["attention_mask"].unsqueeze(-1).float()
                 out.append(((h * mask).sum(1) / mask.sum(1)).cpu().numpy())
@@ -96,7 +105,7 @@ class OpenAIEmbeddingBackend:
     def encode(self, texts: list[str]) -> np.ndarray:
         rows = []
         for i in range(0, len(texts), 512):
-            chunk = texts[i:i + 512]
+            chunk = texts[i : i + 512]
             r = self.client.embeddings.create(model=self.model, input=chunk)
             if self.ledger is not None:
                 self.ledger.add("embedding", r.usage.total_tokens / 1e6 * self.price, self.model)
@@ -116,8 +125,15 @@ def make_backend(model_name: str, batch_size: int = 256, ledger=None) -> Backend
 class Embedder:
     """Cached, L2-normalized embeddings for one model."""
 
-    def __init__(self, model_name: str, cache_dir: str | Path, backend: Backend | None = None,
-                 allow_live: bool = True, batch_size: int = 256, ledger=None):
+    def __init__(
+        self,
+        model_name: str,
+        cache_dir: str | Path,
+        backend: Backend | None = None,
+        allow_live: bool = True,
+        batch_size: int = 256,
+        ledger=None,
+    ):
         self.model_name = model_name
         self.dir = Path(cache_dir) / model_slug(model_name)
         self.dir.mkdir(parents=True, exist_ok=True)

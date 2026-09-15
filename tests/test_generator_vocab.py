@@ -1,4 +1,3 @@
-
 from txcat.generator.vocab import items_to_vocab, load_tag_map
 
 FAKE_NSI = {

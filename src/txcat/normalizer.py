@@ -8,9 +8,26 @@ from dataclasses import dataclass, field
 
 # Processor / channel prefixes. Matched at string start, case-insensitive, optional space/asterisk.
 PREFIXES = [
-    "SQ *", "SQ*", "TST* ", "TST*", "PAYPAL *", "PAYPAL*", "PYPL*", "PP*", "DD *", "DD*",
-    "IN *", "IN*", "CLV*", "IC*", "POS PURCHASE ", "POS ", "DBT PURCHASE ",
-    "CKCD ", "PURCHASE ", "DEBIT CARD PURCHASE ",
+    "SQ *",
+    "SQ*",
+    "TST* ",
+    "TST*",
+    "PAYPAL *",
+    "PAYPAL*",
+    "PYPL*",
+    "PP*",
+    "DD *",
+    "DD*",
+    "IN *",
+    "IN*",
+    "CLV*",
+    "IC*",
+    "POS PURCHASE ",
+    "POS ",
+    "DBT PURCHASE ",
+    "CKCD ",
+    "PURCHASE ",
+    "DEBIT CARD PURCHASE ",
 ]
 _PREFIX_RE = re.compile(r"^(?:" + "|".join(re.escape(p) for p in PREFIXES) + r")", re.IGNORECASE)
 _STORE_NUM_RE = re.compile(r"#\s*\d+")
@@ -46,7 +63,7 @@ def normalize_merchant(raw: str) -> NormalizeResult:
 
     m = _PREFIX_RE.match(s)
     if m:
-        s = s[m.end():]
+        s = s[m.end() :]
         steps.append(f"strip_prefix:{m.group(0).strip().upper()}")
 
     if _STORE_NUM_RE.search(s):
