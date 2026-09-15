@@ -1,0 +1,237 @@
+{
+  "timestamp": "2026-09-15T17:46:02Z",
+  "git_commit": "7bcc58c2033b6901f429b4de5ab612d4d7eb5bb8",
+  "host": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "node": "Suryas-MacBook-Pro.local"
+  },
+  "python": "3.12.14 (main, Sep  1 2026, 14:09:38) [Clang 22.1.3 ]",
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "hnswlib": "0.8.0",
+    "sentence-transformers": "6.0.1",
+    "torch": "2.14.0",
+    "scikit-learn": "1.9.1",
+    "openai": "3.13.0"
+  },
+  "prompt_hashes": {
+    "prompts/fallback_no_web.txt": "c587710ac6effb821c56eaf67b36ef11fa6a3d35d0737e17046ac3f56512bd67",
+    "prompts/fallback_with_web.txt": "156ce9c96480b162d516d0aee6ec6284441d5dd17d86cf1854bab1a48373d625"
+  },
+  "hnsw_params": {
+    "M": 32,
+    "ef_construction": 200,
+    "ef_search": 64,
+    "k": 5
+  },
+  "model_versions": {
+    "embedding_models": {
+      "sentence-transformers/all-MiniLM-L6-v2": "sentence-transformers/all-MiniLM-L6-v2",
+      "BAAI/bge-small-en-v1.5": "BAAI/bge-small-en-v1.5",
+      "sentence-transformers/all-mpnet-base-v2": "sentence-transformers/all-mpnet-base-v2",
+      "ProsusAI/finbert": "ProsusAI/finbert"
+    },
+    "llm_models": {
+      "gpt-5-nano": "gpt-5-nano-2025-08-07",
+      "gpt-5-mini": "gpt-5-mini-2025-08-07",
+      "google/diffusiongemma-26b-a4b-it": "google/diffusiongemma-26b-a4b-it",
+      "nvidia/nemotron-3-super-120b-a12b": "nvidia/nemotron-3-super-120b-a12b",
+      "meta/muse-glimmer-30b": "meta/muse-glimmer-30b"
+    },
+    "web_search": {
+      "provider": "firecrawl",
+      "endpoint": "https://api.firecrawl.dev/v2/search",
+      "collected": "2026-09-14"
+    },
+    "nvidia_nim_endpoint": "https://integrate.api.nvidia.com/v1"
+  },
+  "config": {
+    "seed": 42,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "tail_k": 3,
+    "tail_sensitivity": [
+      2,
+      5
+    ],
+    "results_dir": "results",
+    "logs_dir": "results/logs",
+    "taxonomy_dir": "data/taxonomy",
+    "active_dataset": "dc",
+    "datasets": {
+      "dc": {
+        "name": "dc",
+        "raw_dir": "data/raw/dc",
+        "processed_path": "data/processed/dc.parquet",
+        "window": {
+          "train_start": "2019-01-01",
+          "train_end": "2023-12-31",
+          "test_start": "2024-01-01",
+          "test_end": null
+        },
+        "volume_rule": {
+          "min_test_txns": 20000,
+          "min_tail_merchants": 2500,
+          "fallback_window": {
+            "train_start": "2019-01-01",
+            "train_end": "2022-12-31",
+            "test_start": "2023-01-01",
+            "test_end": null
+          }
+        },
+        "ckan_packages": []
+      },
+      "oklahoma": {
+        "name": "oklahoma",
+        "raw_dir": "data/raw/oklahoma",
+        "processed_path": "data/processed/oklahoma.parquet",
+        "window": null,
+        "volume_rule": null,
+        "ckan_packages": [
+          "purchase-card-pcard-fiscal-year-2023",
+          "purchase-card-pcard-fiscal-year-2024",
+          "purchase-card-pcard-fiscal-year-2025"
+        ]
+      }
+    },
+    "fes": {
+      "n_tail": 2500,
+      "n_head": 500,
+      "n_oklahoma": 800,
+      "pilot_n": 100
+    },
+    "embed": {
+      "cache_dir": "cache/embeddings",
+      "backbones": [
+        "sentence-transformers/all-MiniLM-L6-v2",
+        "BAAI/bge-small-en-v1.5"
+      ],
+      "openai_model": "text-embedding-3-small",
+      "openai_price_per_1m": 0.02,
+      "batch_size": 256
+    },
+    "index": {
+      "M": 32,
+      "ef_construction": 200,
+      "ef_search": 64,
+      "k": 5
+    },
+    "gate": {
+      "mode": "threshold",
+      "threshold": 0.65
+    },
+    "budget": {
+      "max_usd": 40.0,
+      "ledger_path": "cache/spend_ledger.json"
+    },
+    "search": {
+      "provider": "firecrawl",
+      "cache_dir": "cache/web_search",
+      "num_results": 5,
+      "price_per_1k_usd": 10.7,
+      "min_interval_s": 0.5,
+      "api_key_env": "FIRECRAWL_API_KEY",
+      "prepaid": true
+    },
+    "llm": {
+      "cache_dir": "cache/llm",
+      "prompt_with_web": "prompts/fallback_with_web.txt",
+      "prompt_no_web": "prompts/fallback_no_web.txt",
+      "max_completion_tokens": 300,
+      "models": [
+        {
+          "name": "gpt-5-nano",
+          "provider": "openai",
+          "api_key_env": "OPENAI_API_KEY",
+          "base_url": null,
+          "price_in_per_1m": 0.05,
+          "price_out_per_1m": 0.4,
+          "reasoning_effort": "minimal",
+          "min_interval_s": 0.0,
+          "note": null,
+          "extra_body": null,
+          "timeout_s": 90.0,
+          "max_completion_tokens": null,
+          "json_mode": "json_schema"
+        },
+        {
+          "name": "gpt-5-mini",
+          "provider": "openai",
+          "api_key_env": "OPENAI_API_KEY",
+          "base_url": null,
+          "price_in_per_1m": 0.25,
+          "price_out_per_1m": 2.0,
+          "reasoning_effort": "minimal",
+          "min_interval_s": 0.0,
+          "note": null,
+          "extra_body": null,
+          "timeout_s": 90.0,
+          "max_completion_tokens": null,
+          "json_mode": "json_schema"
+        },
+        {
+          "name": "google/diffusiongemma-26b-a4b-it",
+          "provider": "nvidia",
+          "api_key_env": "NVIDIA_API_KEY",
+          "base_url": "https://integrate.api.nvidia.com/v1",
+          "price_in_per_1m": 0.1,
+          "price_out_per_1m": 0.4,
+          "reasoning_effort": null,
+          "min_interval_s": 0.0,
+          "note": "open-weight row (Google DiffusionGemma 26B-A4B, diffusion-based LM); NVIDIA NIM free endpoint; prices are reference rates",
+          "extra_body": null,
+          "timeout_s": 90.0,
+          "max_completion_tokens": 600,
+          "json_mode": "none"
+        },
+        {
+          "name": "nvidia/nemotron-3-super-120b-a12b",
+          "provider": "nvidia",
+          "api_key_env": "NVIDIA_API_KEY",
+          "base_url": "https://integrate.api.nvidia.com/v1",
+          "price_in_per_1m": 0.3,
+          "price_out_per_1m": 0.9,
+          "reasoning_effort": null,
+          "min_interval_s": 0.0,
+          "note": "second open-weight row (Nemotron 3 Super, 120B MoE / 12B active); NVIDIA NIM free developer endpoint; prices are reference rates",
+          "extra_body": null,
+          "timeout_s": 180.0,
+          "max_completion_tokens": 600,
+          "json_mode": "none"
+        },
+        {
+          "name": "meta/muse-glimmer-30b",
+          "provider": "nvidia",
+          "api_key_env": "NVIDIA_API_KEY",
+          "base_url": "https://integrate.api.nvidia.com/v1",
+          "price_in_per_1m": 0.2,
+          "price_out_per_1m": 0.6,
+          "reasoning_effort": null,
+          "min_interval_s": 0.0,
+          "note": "third open-weight row (Meta Muse Glimmer 30B, multimodal reasoning LM); NVIDIA NIM free endpoint; prices are reference rates",
+          "extra_body": {
+            "chat_template_kwargs": {
+              "thinking": false,
+              "enable_thinking": false
+            }
+          },
+          "timeout_s": 150.0,
+          "max_completion_tokens": 600,
+          "json_mode": "none"
+        }
+      ]
+    },
+    "concurrency": {
+      "search_workers": 2,
+      "search_rpm": 60,
+      "llm_workers": 16,
+      "nvidia_workers": 1,
+      "llm_rpm": 38
+    }
+  }
+}

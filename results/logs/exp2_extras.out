@@ -1,0 +1,32 @@
+2026-09-15 21:31:07.023 | INFO     | txcat.embedder:_load:160 - embedding cache sentence-transformers/all-MiniLM-L6-v2: 23700 vectors
+2026-09-15 21:32:57.838 | INFO     | txcat.embedder:_load:160 - embedding cache BAAI/bge-small-en-v1.5: 20412 vectors
+2026-09-15 21:34:38.164 | INFO     | txcat.embedder:_load:160 - embedding cache text-embedding-3-small: 20412 vectors
+2026-09-15 21:41:22.822 | INFO     | __main__:main:227 - routed/frontier skips google/diffusiongemma-26b-a4b-it: covers 300/3000 merchants
+2026-09-15 21:41:34.469 | INFO     | __main__:main:227 - routed/frontier skips meta/muse-glimmer-30b: covers 298/3000 merchants
+2026-09-15 21:41:34.469 | INFO     | __main__:main:227 - routed/frontier skips nvidia/nemotron-3-super-120b-a12b: covers 322/3000 merchants
+2026-09-15 21:41:35.147 | INFO     | txcat.embedder:_load:160 - embedding cache sentence-transformers/all-MiniLM-L6-v2: 23700 vectors
+2026-09-15 23:14:42.040 | INFO     | __main__:main:446 - 
+                                                           method  f1_overall   f1_head   f1_tail  f1_overall_lo  f1_head_lo  f1_tail_lo  f1_overall_hi  f1_head_hi  f1_tail_hi        p50_ms        p95_ms  cost_per_1k  fallback_rate  n_seeds  n_merchants  coverage
+0                      knn/sentence-transformers/all-MiniLM-L6-v2    0.806654  0.952414  0.607187       0.806609    0.952414    0.607067       0.806722    0.952414    0.607330      0.714529      0.714529     0.000000       0.000000        5          NaN       NaN
+1                   emb_lr/sentence-transformers/all-MiniLM-L6-v2    0.619106  0.749441  0.399074            NaN         NaN         NaN            NaN         NaN         NaN      0.000000      0.000000     0.000000       0.000000        1          NaN       NaN
+2                                      knn/BAAI/bge-small-en-v1.5    0.820260  0.952411  0.637050       0.820062    0.952173    0.636603       0.820474    0.952531    0.637541      0.738729      0.738729     0.000000       0.000000        5          NaN       NaN
+3                                      knn/text-embedding-3-small    0.821615  0.952414  0.643495       0.821539    0.952414    0.643408       0.821679    0.952414    0.643609      2.535602      2.535602     0.000000       0.000000        5          NaN       NaN
+4                                           llm_no_web/gpt-5-nano    0.443641  0.461169  0.354038            NaN         NaN         NaN            NaN         NaN         NaN   1212.103396   3523.733810     0.004595       1.000000        1       3000.0     1.000
+5                                         llm_with_web/gpt-5-nano    0.541903  0.541078  0.484781            NaN         NaN         NaN            NaN         NaN         NaN   1310.608334   3752.943524     1.590010       1.000000        1       3000.0     1.000
+6                                           llm_no_web/gpt-5-mini    0.506787  0.517593  0.423849            NaN         NaN         NaN            NaN         NaN         NaN   1941.236875   4056.927244     0.025857       1.000000        1       3000.0     1.000
+7                                         llm_with_web/gpt-5-mini    0.588253  0.576107  0.542562            NaN         NaN         NaN            NaN         NaN         NaN   2077.748813   4228.163227     1.625865       1.000000        1       3000.0     1.000
+8                     llm_no_web/google/diffusiongemma-26b-a4b-it    0.348044       NaN  0.348044            NaN         NaN         NaN            NaN         NaN         NaN  12693.025083  66130.010608     0.011828       1.000000        1        300.0     0.100
+9                   llm_with_web/google/diffusiongemma-26b-a4b-it    0.478966       NaN  0.478966            NaN         NaN         NaN            NaN         NaN         NaN  13572.314166  59242.339394     3.265427       1.000000        1        300.0     0.100
+10                   llm_no_web/nvidia/nemotron-3-super-120b-a12b    0.420753       NaN  0.420753            NaN         NaN         NaN            NaN         NaN         NaN   3519.344750  12861.936881     0.076184       1.000000        1        324.0     0.108
+11                 llm_with_web/nvidia/nemotron-3-super-120b-a12b    0.431437       NaN  0.431437            NaN         NaN         NaN            NaN         NaN         NaN   3756.772937  17771.693023     3.363002       1.000000        1        322.0     0.107
+12                               llm_no_web/meta/muse-glimmer-30b    0.391633       NaN  0.391633            NaN         NaN         NaN            NaN         NaN         NaN   3064.910584  10235.737302     0.041697       1.000000        1        300.0     0.100
+13                             llm_with_web/meta/muse-glimmer-30b    0.499224       NaN  0.499224            NaN         NaN         NaN            NaN         NaN         NaN   3225.931292  19372.808484     3.294040       1.000000        1        298.0     0.099
+14  routed/sentence-transformers/all-MiniLM-L6-v2/gpt-5-mini@0.65    0.861125  0.952414  0.733347            NaN         NaN         NaN            NaN         NaN         NaN           NaN           NaN     0.541744       0.103566        5          NaN       NaN
+15  routed/sentence-transformers/all-MiniLM-L6-v2/gpt-5-nano@0.65    0.799368  0.952414  0.670361            NaN         NaN         NaN            NaN         NaN         NaN           NaN           NaN     0.530296       0.103566        5          NaN       NaN
+2026-09-15 23:14:42.044 | INFO     | __main__:main:447 - 
+                               model  n_tail_merchants  coverage_of_tail  acc_with_web  acc_no_web      diff     ci_lo     ci_hi  significant_95
+0   google/diffusiongemma-26b-a4b-it               300             0.120      0.630000    0.490000  0.140000  0.083333  0.196667            True
+1                         gpt-5-mini              2500             1.000      0.624400    0.500800  0.123600  0.105600  0.141200            True
+2                         gpt-5-nano              2500             1.000      0.537200    0.362000  0.175200  0.154800  0.195200            True
+3              meta/muse-glimmer-30b               298             0.119      0.607383    0.503356  0.104027  0.050336  0.157718            True
+4  nvidia/nemotron-3-super-120b-a12b               319             0.128      0.576803    0.510972  0.065831  0.015674  0.115987            True

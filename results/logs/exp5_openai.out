@@ -1,0 +1,37 @@
+2026-09-15 19:45:54.702 | INFO     | txcat.embedder:_load:144 - embedding cache sentence-transformers/all-MiniLM-L6-v2: 23700 vectors
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 6198.18it/s]
+/Users/suryaparida/Documents/PP/txn-cat-long-tail/src/txcat/embedder.py:51: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  self.dim = int(self.model.get_sentence_embedding_dimension())
+2026-09-15 19:48:01.101 | INFO     | __main__:main:108 - {'backbone': 'sentence-transformers/all-MiniLM-L6-v2', 'dim': 384, 'n_seeds': 5, 'embed_ms_per_merchant': 0.526, 'f1_overall': 0.8458, 'f1_overall_lo': 0.8458, 'f1_overall_hi': 0.8459, 'f1_head': 0.9319, 'f1_head_lo': 0.9319, 'f1_head_hi': 0.932, 'f1_tail': 0.633, 'f1_tail_lo': 0.6328, 'f1_tail_hi': 0.6332, 'acc_tail': 0.6891, 'acc_tail_lo': 0.689, 'acc_tail_hi': 0.6893}
+2026-09-15 19:48:01.107 | INFO     | txcat.embedder:_load:144 - embedding cache BAAI/bge-small-en-v1.5: 20412 vectors
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8717.78it/s]
+/Users/suryaparida/Documents/PP/txn-cat-long-tail/src/txcat/embedder.py:51: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  self.dim = int(self.model.get_sentence_embedding_dimension())
+2026-09-15 19:49:59.852 | INFO     | __main__:main:108 - {'backbone': 'BAAI/bge-small-en-v1.5', 'dim': 384, 'n_seeds': 5, 'embed_ms_per_merchant': 0.909, 'f1_overall': 0.8511, 'f1_overall_lo': 0.851, 'f1_overall_hi': 0.8511, 'f1_head': 0.932, 'f1_head_lo': 0.9319, 'f1_head_hi': 0.932, 'f1_tail': 0.6339, 'f1_tail_lo': 0.6337, 'f1_tail_hi': 0.634, 'acc_tail': 0.6948, 'acc_tail_lo': 0.6947, 'acc_tail_hi': 0.6949}
+2026-09-15 19:49:59.862 | INFO     | txcat.embedder:_load:144 - embedding cache sentence-transformers/all-mpnet-base-v2: 20412 vectors
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8657.11it/s]
+/Users/suryaparida/Documents/PP/txn-cat-long-tail/src/txcat/embedder.py:51: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  self.dim = int(self.model.get_sentence_embedding_dimension())
+2026-09-15 19:53:17.714 | INFO     | __main__:main:108 - {'backbone': 'sentence-transformers/all-mpnet-base-v2', 'dim': 768, 'n_seeds': 5, 'embed_ms_per_merchant': 2.571, 'f1_overall': 0.8507, 'f1_overall_lo': 0.8504, 'f1_overall_hi': 0.8509, 'f1_head': 0.9317, 'f1_head_lo': 0.9313, 'f1_head_hi': 0.9319, 'f1_tail': 0.6392, 'f1_tail_lo': 0.6389, 'f1_tail_hi': 0.6395, 'acc_tail': 0.6921, 'acc_tail_lo': 0.6919, 'acc_tail_hi': 0.6923}
+2026-09-15 19:53:17.725 | INFO     | txcat.embedder:_load:144 - embedding cache ProsusAI/finbert: 20412 vectors
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 41322.17it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: ProsusAI/finbert
+Key               | Status     |  | 
+------------------+------------+--+-
+classifier.weight | UNEXPECTED |  | 
+classifier.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2026-09-15 19:55:54.409 | INFO     | __main__:main:108 - {'backbone': 'ProsusAI/finbert', 'dim': 768, 'n_seeds': 5, 'embed_ms_per_merchant': 2.075, 'f1_overall': 0.8172, 'f1_overall_lo': 0.8172, 'f1_overall_hi': 0.8172, 'f1_head': 0.9325, 'f1_head_lo': 0.9325, 'f1_head_hi': 0.9325, 'f1_tail': 0.537, 'f1_tail_lo': 0.537, 'f1_tail_hi': 0.537, 'acc_tail': 0.5931, 'acc_tail_lo': 0.5931, 'acc_tail_hi': 0.5931}
+2026-09-15 19:55:54.423 | INFO     | txcat.embedder:_load:144 - embedding cache text-embedding-3-small: 16831 vectors
+2026-09-15 20:03:52.890 | INFO     | __main__:main:108 - {'backbone': 'text-embedding-3-small', 'dim': 1536, 'n_seeds': 5, 'embed_ms_per_merchant': 11.957, 'f1_overall': 0.8516, 'f1_overall_lo': 0.8515, 'f1_overall_hi': 0.8516, 'f1_head': 0.9321, 'f1_head_lo': 0.9321, 'f1_head_hi': 0.9321, 'f1_tail': 0.6436, 'f1_tail_lo': 0.6435, 'f1_tail_hi': 0.6437, 'acc_tail': 0.7153, 'acc_tail_lo': 0.7152, 'acc_tail_hi': 0.7154}
+2026-09-15 20:03:52.898 | INFO     | __main__:main:111 - 
+                                  backbone   dim  n_seeds  embed_ms_per_merchant  f1_overall  f1_overall_lo  f1_overall_hi  f1_head  f1_head_lo  f1_head_hi  f1_tail  f1_tail_lo  f1_tail_hi  acc_tail  acc_tail_lo  acc_tail_hi
+0   sentence-transformers/all-MiniLM-L6-v2   384        5                  0.526      0.8458         0.8458         0.8459   0.9319      0.9319      0.9320   0.6330      0.6328      0.6332    0.6891       0.6890       0.6893
+1                   BAAI/bge-small-en-v1.5   384        5                  0.909      0.8511         0.8510         0.8511   0.9320      0.9319      0.9320   0.6339      0.6337      0.6340    0.6948       0.6947       0.6949
+2  sentence-transformers/all-mpnet-base-v2   768        5                  2.571      0.8507         0.8504         0.8509   0.9317      0.9313      0.9319   0.6392      0.6389      0.6395    0.6921       0.6919       0.6923
+3                         ProsusAI/finbert   768        5                  2.075      0.8172         0.8172         0.8172   0.9325      0.9325      0.9325   0.5370      0.5370      0.5370    0.5931       0.5931       0.5931
+4                   text-embedding-3-small  1536        5                 11.957      0.8516         0.8515         0.8516   0.9321      0.9321      0.9321   0.6436      0.6435      0.6437    0.7153       0.7152       0.7154
+exp5 exit 0

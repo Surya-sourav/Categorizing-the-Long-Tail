@@ -19,3 +19,12 @@ results/index/
 # per-call API cache files are local working state; the frozen cache is committed as cache/*/packed/*.jsonl.gz
 cache/llm/*.json
 cache/web_search/*.json
+
+# Run logs. The live cache-pass logs are committed: they document one-time API collection that
+# cannot be repeated (money spent, web results as they were on the day). Everything else under
+# results/logs/ is regenerable offline from the committed caches, so it is ignored to avoid churn.
+results/logs/*.out
+!results/logs/cache_pass.out
+!results/logs/cache_pass_nvidia.out
+!results/logs/exp2_extras.out
+!results/logs/exp5_openai.out
