@@ -3,3 +3,4 @@
 # hold any dc-specific knobs later. Window is verified/possibly slid by exp0
 # (see results/window_decision.json).
 active_dataset: dc
+seeds: [42, 43, 44, 45, 46]  # final paper seeds; default.yaml keeps the 3 dev seeds

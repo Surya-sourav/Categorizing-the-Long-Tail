@@ -1,6 +1,6 @@
 """Exp 1: tail characterization on the DC primary window (kNN with the first configured backbone).
 
-Usage: python -m experiments.exp1_tail_characterization --config configs/dc.yaml --seeds 42 43 44
+Usage: python -m experiments.exp1_tail_characterization --config configs/dc.yaml --seeds 42 43 44 45 46
 Outputs: results/figures/fig1_zipf.{pdf,png}, fig2_acc_by_freq, fig3_acc_vs_sim,
          results/tables/tab1_tail_stats.csv, results/tables/tab1_acc_by_freq.csv
 """

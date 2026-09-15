@@ -64,7 +64,7 @@ count); Oklahoma is 36 monthly CSVs. The generator vocabulary (`data/processed/g
 ## Reproduce from cache (no API calls)
 
 ```bash
-.venv/bin/python reproduce.py --config configs/dc.yaml --seeds 42 43 44
+.venv/bin/python reproduce.py --config configs/dc.yaml   # 5 final seeds from configs/dc.yaml
 ```
 
 Runs Exp 0 to 3 in reproduce mode from the committed caches under `cache/` (web search JSON, LLM JSON,

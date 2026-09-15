@@ -1,7 +1,7 @@
 """Exp 3: replay the DC test window in temporal order under three write-back policies (cache replay, $0).
 Merchants without a cached LLM result are counted as fallback-uncached and served by kNN.
 
-Usage: python -m experiments.exp3_streaming_convergence --config configs/dc.yaml --seeds 42 43 44 [--max-txns 100000]
+Usage: python -m experiments.exp3_streaming_convergence --config configs/dc.yaml --seeds 42 43 44 45 46 [--max-txns 100000]
 Outputs: fig5_fallback_decay, fig6_cumulative_cost, fig7_cumulative_f1 (+_tail), tab5_writeback_policies.csv
 """
 

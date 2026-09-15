@@ -16,9 +16,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends build-essential
 
 WORKDIR /app
 COPY pyproject.toml requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+# CPU-only torch first so the pinned torch in requirements.txt does not pull CUDA wheels (~3 GB).
+RUN pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu "torch==$(grep -E '^torch==' requirements.txt | cut -d= -f3)" \
+    && pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 RUN pip install --no-cache-dir --no-deps -e .
 
-CMD ["python", "reproduce.py", "--config", "configs/dc.yaml", "--seeds", "42", "43", "44"]
+CMD ["python", "reproduce.py", "--config", "configs/dc.yaml"]

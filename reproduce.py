@@ -1,6 +1,6 @@
 """Regenerate every table and figure from committed caches. Zero live API calls. Fails loudly on cache misses.
 
-python reproduce.py --config configs/dc.yaml --seeds 42 43 44 --output results/
+python reproduce.py --config configs/dc.yaml --seeds 42 43 44 45 46 --output results/
 """
 
 from __future__ import annotations

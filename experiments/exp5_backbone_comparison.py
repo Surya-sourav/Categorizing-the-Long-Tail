@@ -3,7 +3,7 @@
 Local backbones run on CPU; the OpenAI backbone is skipped unless OPENAI_API_KEY is set (or in
 reproduce mode, unless its cache is complete).
 
-Usage: python -m experiments.exp5_backbone_comparison --config configs/dc.yaml --seeds 42 43 44 [--mode reproduce]
+Usage: python -m experiments.exp5_backbone_comparison --config configs/dc.yaml --seeds 42 43 44 45 46 [--mode reproduce]
 Outputs: results/tables/tab4_backbone_comparison.csv
 """
 

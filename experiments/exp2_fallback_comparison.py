@@ -1,6 +1,6 @@
 """Exp 2 (offline). Every LLM/search number comes from cache; kNN is recomputed per seed from the embedding cache.
 
-Usage: python -m experiments.exp2_fallback_comparison --config configs/dc.yaml --seeds 42 43 44 [--mode reproduce]
+Usage: python -m experiments.exp2_fallback_comparison --config configs/dc.yaml --seeds 42 43 44 45 46 [--mode reproduce]
 Outputs: tab2_main_results.csv, tab2b_oklahoma_coldstart.csv, tab3_critical_ablation.csv, tab3b_prompt_sensitivity.csv,
          tab3c_agentic_search.csv, fig4_acc_cost_frontier.{pdf,png}, exp2_frontier.csv
 """
@@ -369,7 +369,7 @@ def main() -> None:
     for mcfg in cfg.llm.models:
         if run_extras_live and not os.environ.get(mcfg.api_key_env):
             continue
-        if run_extras_live and mcfg.provider != "openai":
+        if mcfg.provider != "openai":
             continue  # prompt sensitivity is an OpenAI-only check; the free NIM endpoint is too slow
         for cond, v1, v2 in (
             ("no_web", cfg.llm.prompt_no_web, "prompts/fallback_no_web_v2.txt"),

@@ -1,6 +1,6 @@
 """Exp 1 (generator panel): kNN tail/head accuracy as a function of the Zipf exponent alpha. $0.
 
-Usage: python -m experiments.exp1_generator_sweep --config configs/dc.yaml --alphas 0.8 1.0 1.2 1.5 --seeds 42 43 44
+Usage: python -m experiments.exp1_generator_sweep --config configs/dc.yaml --alphas 0.8 1.0 1.2 1.5 --seeds 42 43 44 45 46
 Outputs: results/tables/tab1b_alpha_sweep.csv, results/figures/fig1b_alpha_sweep.{pdf,png}
 """
 
