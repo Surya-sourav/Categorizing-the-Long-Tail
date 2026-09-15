@@ -5,10 +5,10 @@ from __future__ import annotations
 
 import json
 import os
-import re
 import time
 from pathlib import Path
 
+from txcat.llm_fallback import _extract_json
 from txcat.utils import now_iso, sha256_text
 
 PROMPT = """You categorize the merchant behind a card transaction descriptor. Use web search to
@@ -76,8 +76,10 @@ class AgenticSearchCategorizer:
             if getattr(o, "type", "") == "web_search_call"
         ]
         text = resp.output_text or ""
-        m = re.search(r"\{.*\}", text, re.S)
-        parsed = json.loads(m.group(0)) if m else {}
+        try:
+            parsed = _extract_json(text)  # tolerant: fences, prose, last flat object wins
+        except (json.JSONDecodeError, ValueError):
+            parsed = {}  # unparseable answer counts as INVALID instead of aborting the ablation
         cat = str(parsed.get("category", "")).strip()
         usd = (
             resp.usage.input_tokens / 1e6 * self.p_in
@@ -85,8 +87,7 @@ class AgenticSearchCategorizer:
             + len(queries) * self.p_search
         )
         if self.ledger is not None:
-            self.ledger.entries[-1]["usd"] = usd
-            self.ledger.path.write_text(json.dumps(self.ledger.entries))
+            self.ledger.adjust_last("agentic_search", self.model, usd)
         result = {
             "category": cat if cat in taxonomy else "INVALID",
             "valid": cat in taxonomy,

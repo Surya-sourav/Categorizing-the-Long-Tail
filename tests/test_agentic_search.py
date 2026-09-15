@@ -54,3 +54,20 @@ def test_agentic_categorize_caches_queries_and_result(tmp_path):
     r2 = c.categorize("SAFEWAY", TAX)
     assert c.client.responses.calls == 1 and r2["category"] == "groceries"
     assert r["usd"] > 0.01
+
+
+def test_unparseable_answer_becomes_invalid_not_exception(tmp_path, monkeypatch):
+    from types import SimpleNamespace
+
+    from txcat.agentic_search import AgenticSearchCategorizer
+
+    resp = SimpleNamespace(
+        output=[],
+        output_text='{"category": "RETAIL", "evidence": "unterminated',
+        usage=SimpleNamespace(input_tokens=1, output_tokens=1),
+        model="m",
+    )
+    client = SimpleNamespace(responses=SimpleNamespace(create=lambda **kw: resp))
+    ag = AgenticSearchCategorizer("m", tmp_path, client=client)
+    out = ag.categorize("acme", ["RETAIL", "OTHER"])
+    assert out["category"] == "INVALID" and out["valid"] is False
