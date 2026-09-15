@@ -14,7 +14,6 @@ __pycache__/
 results/logs/*.log
 *.bin
 .DS_Store
-cache/embeddings/*/vectors.npy
 results/*.parquet
 results/index/
 # per-call API cache files are local working state; the frozen cache is committed as cache/*/packed/*.jsonl.gz
