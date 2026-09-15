@@ -37,7 +37,13 @@ def main() -> None:
     seeds = args.seeds or cfg.seeds
     setup_logging(cfg.logs_dir, "exp1_gen")
     vocab = pd.read_parquet("data/processed/gen_vocab.parquet")
-    emb = Embedder(cfg.embed.backbones[0], cfg.embed.cache_dir, allow_live=(args.mode == "live"))
+    bb = cfg.embed.backbones[0]
+    # local backbones may embed in any mode (CPU compute, not an API call)
+    emb = Embedder(
+        bb,
+        cfg.embed.cache_dir,
+        allow_live=(args.mode == "live") or not bb.startswith("text-embedding"),
+    )
     win = WindowCfg(
         train_start="2019-01-01",
         train_end="2023-12-31",
