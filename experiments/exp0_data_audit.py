@@ -120,10 +120,17 @@ def main() -> None:
                 np.sort(rng.choice(len(pool), size=min(300, len(pool)), replace=False))
             ]
             audit = pick[["raw_merchant", "merchant", "mcc_description", "mcc", "category"]].copy()
-            audit["judgement"] = ""  # correct | wrong | unclear
-            audit["note"] = ""
-            audit.to_csv(Path(cfg.taxonomy_dir) / "label_noise_audit_sample.csv", index=False)
-            logger.info(f"label-noise audit sample: {len(audit)} rows written")
+            audit_path = Path(cfg.taxonomy_dir) / "label_noise_audit_sample.csv"
+            if audit_path.exists():
+                prior = pd.read_csv(audit_path, dtype=str, keep_default_na=False)
+                if "judgement" in prior and (prior["judgement"] != "").any():
+                    logger.info("label-noise audit already judged; keeping the committed file")
+                    audit = None
+            if audit is not None:
+                audit["judgement"] = ""  # correct | wrong | unclear
+                audit["note"] = ""
+                audit.to_csv(audit_path, index=False)
+                logger.info(f"label-noise audit sample: {len(audit)} rows written")
         else:
             stats_rows.append(
                 {
