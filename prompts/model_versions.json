@@ -2,16 +2,20 @@
   "embedding_models": {
     "sentence-transformers/all-MiniLM-L6-v2": "sentence-transformers/all-MiniLM-L6-v2",
     "BAAI/bge-small-en-v1.5": "BAAI/bge-small-en-v1.5",
-    "openai": "text-embedding-3-small"
+    "sentence-transformers/all-mpnet-base-v2": "sentence-transformers/all-mpnet-base-v2",
+    "ProsusAI/finbert": "ProsusAI/finbert"
   },
   "llm_models": {
     "gpt-5-nano": "gpt-5-nano-2025-08-07",
     "gpt-5-mini": "gpt-5-mini-2025-08-07",
-    "deepseek-ai/deepseek-v4-flash-0731": "deepseek-ai/deepseek-v4-flash-0731",
-    "nvidia/nemotron-3-super-120b-a12b": "nvidia/nemotron-3-super-120b-a12b"
+    "google/diffusiongemma-26b-a4b-it": "google/diffusiongemma-26b-a4b-it",
+    "nvidia/nemotron-3-super-120b-a12b": "nvidia/nemotron-3-super-120b-a12b",
+    "meta/muse-glimmer-30b": "meta/muse-glimmer-30b"
   },
   "web_search": {
     "provider": "firecrawl",
-    "pilot_date": "2026-09-13"
-  }
+    "endpoint": "https://api.firecrawl.dev/v2/search",
+    "collected": "2026-09-14"
+  },
+  "nvidia_nim_endpoint": "https://integrate.api.nvidia.com/v1"
 }
