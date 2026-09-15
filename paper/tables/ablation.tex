@@ -2,6 +2,7 @@
 \centering
 \caption{The critical ablation: identical prompts, merchants and taxonomy, with and without web search evidence. Paired bootstrap over merchants; every interval excludes zero.}
 \label{tab:ablation}
+\small
 \begin{tabular}{lrrrrc}
 \toprule
 Fallback model & Merchants & No web & With web & Difference & 95\% CI\\
@@ -13,6 +14,6 @@ Muse Glimmer 30B & 298 & 0.503 & 0.607 & \textbf{+0.104} & [+0.050, +0.158] \\
 Nemotron 3 Super 120B-A12B & 319 & 0.511 & 0.577 & \textbf{+0.066} & [+0.016, +0.116] \\
 \bottomrule
 \end{tabular}
-\vspace{2pt}
-\footnotesize The three open-weight models run on NVIDIA's free NIM endpoint and are evaluated on the shared 300-merchant tail subset, which is why their intervals are wider.
+\vspace{4pt}
+\begin{minipage}{0.86\textwidth}\footnotesize The three open-weight models run on NVIDIA's free NIM endpoint and are evaluated on the shared 300-merchant tail subset, which is why their intervals are wider.\end{minipage}
 \end{table}

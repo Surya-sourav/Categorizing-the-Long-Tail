@@ -13,6 +13,8 @@
 \usepackage{caption}
 \captionsetup{font=small}
 
+\input{tables/counts}  % \NLLMCACHE, \NSEARCHCACHE, \CASHSPEND: generated from the caches
+
 \title{Categorizing the Long Tail: An Empirical Study of\\ Web-Search-Augmented Fallback for
 Embedding-Based Transaction Classification}
 \author{Surya Parida\\ Independent Researcher\\ \texttt{surya@finlens.app}}
@@ -105,11 +107,11 @@ commercial embedding buys one point of tail macro-F1 over a 384-dimensional CPU 
 searches instead of reading five fixed snippets costs 13$\times$ more for 0.7 points
 (Section~\ref{sec:agentic}).
 
-Everything in this paper is reproducible without network access. Every API response, 17{,}764
-language model calls and 3{,}869 searches, is content-hash cached and committed to the repository
-alongside the frozen prompts, pinned model identifiers, and embedding caches; \texttt{reproduce.py}
-replays them, regenerates all sixteen result tables, and verifies them against the committed copies.
-Total cash spend for the entire study was \$9.45.
+Everything in this paper is reproducible without network access. Every API response,
+\NLLMCACHE{} language model responses and \NSEARCHCACHE{} searches, is content-hash cached and
+committed to the repository alongside the frozen prompts, pinned model identifiers, and embedding
+caches; \texttt{reproduce.py} replays them, regenerates every result table, and verifies each one
+against the committed copy. Total cash spend for the entire study was \$\CASHSPEND{}.
 
 \section{Related work}
 
@@ -238,9 +240,9 @@ commercial models on different subsets.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.48\textwidth]{../results/figures/fig1_zipf.pdf}
+\includegraphics[width=0.48\textwidth]{figures/fig1_zipf.pdf}
 \hfill
-\includegraphics[width=0.48\textwidth]{../results/figures/fig3_acc_vs_sim.pdf}
+\includegraphics[width=0.48\textwidth]{figures/fig3_acc_vs_sim.pdf}
 \caption{Left: merchant rank-frequency in the training window, log-log, with a fitted slope of
 $-1.10$; 47\% of merchants occur exactly once. Right: top-1 accuracy against top-1 cosine
 similarity, head and tail. The two panels together are the argument for the routed design: the tail
@@ -299,7 +301,7 @@ cost here is dominated by the search call, not by tokens.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.72\textwidth]{../results/figures/fig4_acc_cost_frontier.pdf}
+\includegraphics[width=0.72\textwidth]{figures/fig4_acc_cost_frontier.pdf}
 \caption{Accuracy-cost frontier over gate thresholds from 0.30 to 0.95. Cost is dollars per thousand
 transactions; the marked point is the best threshold for each model. Routing more traffic past 0.65
 buys nothing: the transactions it adds are ones retrieval was already getting right.}
@@ -368,9 +370,9 @@ confidence exceeds a threshold.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.48\textwidth]{../results/figures/fig5_fallback_decay.pdf}
+\includegraphics[width=0.48\textwidth]{figures/fig5_fallback_decay.pdf}
 \hfill
-\includegraphics[width=0.48\textwidth]{../results/figures/fig6_cumulative_cost.pdf}
+\includegraphics[width=0.48\textwidth]{figures/fig6_cumulative_cost.pdf}
 \caption{Left: fallback rate per window under each policy. Right: cumulative spend. Write-back bends
 the cost curve early and permanently, because a resolved merchant is answered by retrieval from then
 on.}
@@ -473,8 +475,8 @@ are annotation artifacts.
 \section*{Reproducibility}
 
 The repository contains the pipeline, the frozen prompts with their hashes, pinned model identifiers,
-the committed API caches (17{,}764 language model calls, 3{,}869 searches, and float16 embedding
-caches for five encoders), and the taxonomy and audit files.
+the committed API caches (\NLLMCACHE{} language model responses, \NSEARCHCACHE{} searches, and
+float16 embedding caches for five encoders), and the taxonomy and audit files.
 \texttt{python reproduce.py --config configs/dc.yaml} regenerates every table and figure from those
 caches with no network access and verifies each regenerated table against the committed copy;
 a run manifest records package versions, prompt hashes, index parameters, git commit, and host. A
