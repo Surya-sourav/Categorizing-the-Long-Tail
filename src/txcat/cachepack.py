@@ -48,9 +48,12 @@ def pack(cache_dir: str | Path, kind: str, remove: bool = False) -> dict[str, in
         groups.setdefault(grouper(rec), {})[f.stem] = rec
     counts = {}
     for g, recs in groups.items():
-        with gzip.open(packed_dir / f"{g}.jsonl.gz", "wt", encoding="utf-8") as fh:
+        final = packed_dir / f"{g}.jsonl.gz"
+        tmp = packed_dir / f"{g}.jsonl.gz.tmp"
+        with gzip.open(tmp, "wt", encoding="utf-8") as fh:  # write whole file, then atomic rename
             for key in sorted(recs):
                 fh.write(json.dumps(recs[key], ensure_ascii=False) + "\n")
+        tmp.replace(final)
         counts[g] = len(recs)
     if remove:
         for f in files:

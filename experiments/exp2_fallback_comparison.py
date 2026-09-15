@@ -346,12 +346,15 @@ def main() -> None:
                 cfg,
                 ws_ro,
             )
-            tt = ok_fes.assign(pred=ok_fes["merchant"].map(lp["pred"]).values)
+            cov = ok_fes[ok_fes["merchant"].isin(lp.index)]
+            if cov.empty:
+                continue  # model not run on Oklahoma merchants (subset open-weight rows)
+            tt = cov.assign(pred=cov["merchant"].map(lp["pred"]).values)
             okrows.append(
                 {
                     "method": f"llm_{cond}/{model}",
                     "f1_overall": macro_f1(tt["category"], tt["pred"]),
-                    "n_merchants": len(ok_m),
+                    "n_merchants": int(cov["merchant"].nunique()),
                 }
             )
         except Exception as e:  # noqa: BLE001
