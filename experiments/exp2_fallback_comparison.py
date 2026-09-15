@@ -369,6 +369,8 @@ def main() -> None:
     for mcfg in cfg.llm.models:
         if run_extras_live and not os.environ.get(mcfg.api_key_env):
             continue
+        if run_extras_live and mcfg.provider != "openai":
+            continue  # prompt sensitivity is an OpenAI-only check; the free NIM endpoint is too slow
         for cond, v1, v2 in (
             ("no_web", cfg.llm.prompt_no_web, "prompts/fallback_no_web_v2.txt"),
             ("with_web", cfg.llm.prompt_with_web, "prompts/fallback_with_web_v2.txt"),
