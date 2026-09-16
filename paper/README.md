@@ -5,8 +5,13 @@
 
 ```bash
 brew install tectonic          # or: cargo install tectonic
-tectonic -X compile paper/main.tex
+./paper/build.sh               # byte-identical output on every run
 ```
+
+`build.sh` pins the timestamp LaTeX embeds in the PDF so the same sources always produce the same
+bytes; the title-page date is pinned separately in `main.tex`. Bump both when you post a revision.
+A plain `tectonic -X compile paper/main.tex` works too, it just produces a PDF that differs on
+every build.
 
 Any TeX Live distribution works too (`pdflatex main && bibtex main && pdflatex main && pdflatex main`).
 
