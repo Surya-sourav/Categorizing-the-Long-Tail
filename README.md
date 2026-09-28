@@ -2,13 +2,13 @@
 
 Code, data pipeline and frozen caches for
 
-> **Categorizing the Long Tail: An Empirical Study of Web-Search-Augmented Fallback for
-> Embedding-Based Transaction Classification.** Surya Parida, Independent Researcher.
+> **The Cliff Is at Zero: Retrieval Failure, Web Evidence, and Write-Back Risk in Transaction
+> Categorization.** Surya Parida, Independent Researcher.
 
-The question: embedding + kNN classifiers for card transactions are near-perfect on merchants they
-have seen before and collapse on the long tail of merchants they have not. Does routing low-confidence
-retrievals to an LLM fed with web-search evidence fix the tail, at what cost, and does writing the
-resolved merchants back into the index let the system heal itself over a stream?
+The question: embedding + kNN classifiers for card transactions are near-perfect on any merchant they
+have seen even once, and collapse on merchants they have never seen. The failure is a cliff at zero
+prior observations, not a slope. Does giving a language model web-search evidence recover those unseen
+merchants, at what cost, and what happens to the index when the resolved labels are written back?
 
 ## Evidence stack
 
@@ -32,8 +32,10 @@ inspectable range rules and overrides, then reviewed) and `mcc_description_alias
 description string to an MCC: exact, fuzzy, or one of 200 hand-written `manual_aliases.csv` entries
 for abbreviated text and hotel/airline brand descriptions). Ambiguous "not elsewhere classified" codes
 (5999, 5399, 7399, 8999) are flagged, excluded from headline tables and reported as their own slice.
-A 300-row label-noise audit of DC (judged by the author, `label_noise_audit_sample.csv`) found 4.4%
-clearly wrong labels and 16% unclear; see `results/tables/tab0_label_noise.csv`.
+A 300-merchant label-noise audit of DC (judged by the author, `label_noise_audit_sample.csv`) found
+11 labels (3.7%) clearly wrong and 48 (16.0%) that cannot be judged from the descriptor alone;
+restricted to the 252 judgeable rows, the error rate is 4.4%. See
+`results/tables/tab0_label_noise.csv`.
 
 ## Privacy
 
@@ -115,4 +117,15 @@ OpenAI built-in web search appears only in a 300-merchant ablation.
 
 ## Citation
 
-Preprint forthcoming. Please cite the arXiv version once available.
+If you use this code or the cached data, please cite:
+
+```bibtex
+@misc{parida2026cliff,
+  title  = {The Cliff Is at Zero: Retrieval Failure, Web Evidence, and Write-Back Risk in
+            Transaction Categorization},
+  author = {Parida, Surya},
+  year   = {2026},
+  note   = {Manuscript},
+  url    = {https://github.com/Surya-sourav/Categorizing-the-Long-Tail}
+}
+```
