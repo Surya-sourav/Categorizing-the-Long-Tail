@@ -1,0 +1,17 @@
+{
+  "G3": {
+    "table4_fallback_rate_on_FES": 0.1036,
+    "fes_rows": 20304,
+    "section6.1_rate_on_analysis_slice": 0.0788
+  },
+  "G5": {
+    "table1_ambiguous_pct_reported": 8.9,
+    "table1_unlabeled_pct_reported": 0.17,
+    "source_file": "results/tables/tab0_taxonomy_coverage.csv (exp0_data_audit.py:69-71)",
+    "base_rows": 280047,
+    "base_description": "ALL processed DC rows (every date, train + test + rows outside the window)",
+    "share_ambiguous_flag": 0.0895,
+    "share_unlabeled": 0.0017,
+    "note": "share_ambiguous is df['ambiguous'].mean(), and the ambiguous flag is 1 for BOTH the four NEC codes AND rows with no usable MCC, so 8.9% double-counts the 0.17% unlabeled rows. On test rows only the four NEC codes are 7.97% and unlabeled 0.16%."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "fitted_slope": -1.1029,
+  "n_train_merchants": 17166,
+  "singletons": 8036,
+  "singleton_pct": 46.81,
+  "max_freq": 24781,
+  "freq_basis": "unfiltered training window, normalized merchants"
+}

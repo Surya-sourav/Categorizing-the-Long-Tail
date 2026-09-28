@@ -1,0 +1,107 @@
+{
+  "unseen_test_merchants": {
+    "value": 5492,
+    "numerator": null,
+    "denominator": null,
+    "filters_applied": "test rows with ambiguous==0 (drops no-usable-MCC rows and MCC 5999/5399/7399/8999)",
+    "notes": "distinct normalized merchant strings with training frequency 0"
+  },
+  "observed_tail_test_merchants": {
+    "value": 1574,
+    "numerator": null,
+    "denominator": null,
+    "filters_applied": "test rows with ambiguous==0 (drops no-usable-MCC rows and MCC 5999/5399/7399/8999)",
+    "notes": "distinct normalized merchant strings with 1 <= f <= 3"
+  },
+  "test_volume_unseen_pct": {
+    "value": 18.0,
+    "numerator": 14983,
+    "denominator": 83115,
+    "filters_applied": "test rows with ambiguous==0 (drops no-usable-MCC rows and MCC 5999/5399/7399/8999)",
+    "notes": "share of test transactions, f == 0"
+  },
+  "test_volume_observed_tail_pct": {
+    "value": 5.9,
+    "numerator": 4937,
+    "denominator": 83115,
+    "filters_applied": "test rows with ambiguous==0 (drops no-usable-MCC rows and MCC 5999/5399/7399/8999)",
+    "notes": "share of test transactions, 1<=f<=3"
+  },
+  "test_volume_f_le_3_pct": {
+    "value": 24.0,
+    "numerator": 19920,
+    "denominator": 83115,
+    "filters_applied": "test rows with ambiguous==0 (drops no-usable-MCC rows and MCC 5999/5399/7399/8999)",
+    "notes": "share of test transactions, f <= 3"
+  },
+  "ambiguous_mcc_rate_seen_pct": {
+    "value": 6.8,
+    "numerator": 4946,
+    "denominator": 73221,
+    "filters_applied": "test rows with f >= 1; ambiguous rows deliberately NOT pre-dropped",
+    "notes": "numerator = MCC in [5399, 5999, 7399, 8999]. Denominator includes 143 rows with no usable MCC (those can never be in the numerator); excluding them gives 6.768% over 73078 rows."
+  },
+  "ambiguous_mcc_rate_unseen_pct": {
+    "value": 13.1,
+    "numerator": 2260,
+    "denominator": 17245,
+    "filters_applied": "test rows with f == 0; ambiguous rows deliberately NOT pre-dropped",
+    "notes": "ratio unseen/seen = 1.94; two-proportion z = 27.709, two-sided p = 5.402e-169. Excluding no-usable-MCC rows from the denominator gives 13.107% over 17243 rows."
+  },
+  "ambiguous_mcc_rate_ratio_unseen_over_seen": {
+    "value": 1.94,
+    "numerator": null,
+    "denominator": null,
+    "filters_applied": "as fields 6 and 7",
+    "notes": "z = 27.7093, two-sided p = 5.401606e-169 (pooled-proportion two-sample z-test)"
+  },
+  "unseen_volume_reconciliation": {
+    "value": 19.1,
+    "numerator": 17245,
+    "denominator": 90466,
+    "filters_applied": "all four filter combinations reported",
+    "notes": "{\"combinations\": {\"unfiltered_numerator / unfiltered_denominator\": {\"numerator\": 17245, \"denominator\": 90466, \"pct\": 19.0624, \"pct_1dp\": 19.1, \"matches_19_1\": true}, \"filtered_numerator / filtered_denominator\": {\"numerator\": 14983, \"denominator\": 83115, \"pct\": 18.0268, \"pct_1dp\": 18.0, \"matches_19_1\": false}, \"filtered_numerator / unfiltered_denominator\": {\"numerator\": 14983, \"denominator\": 90466, \"pct\": 16.562, \"pct_1dp\": 16.6, \"matches_19_1\": false}, \"unfiltered_numerator / filtered_denominator\": {\"numerator\": 17245, \"denominator\": 83115, \"pct\": 20.7484, \"pct_1dp\": 20.7, \"matches_19_1\": false}}, \"combination_yielding_19.1pct\": [\"unfiltered_numerator / unfiltered_denominator\"], \"table2_f0_bin_count\": 14983, \"table2_f0_bin_equals_filtered_unseen_count\": true, \"explanation\": \"Table 1's 19.1% is computed on the UNFILTERED test set (exp0_data_audit.py line 40 uses `te` straight from temporal_split), while Table 2's 14,983 comes from the FILTERED headline slice (exp1_tail_characterization.py line 76 applies ambiguous==0). The two numbers are computed on different populations, which is why they do not reconcile against a single denominator.\"}"
+  },
+  "table2_bin_totals": {
+    "value": 83115,
+    "numerator": null,
+    "denominator": null,
+    "filters_applied": "test rows with ambiguous==0 (drops no-usable-MCC rows and MCC 5999/5399/7399/8999)",
+    "notes": "{\"per_bin\": {\"0\": 14983, \"1\": 2168, \"2-5\": 4793, \"6-20\": 13594, \"21-100\": 9228, \"100+\": 38349}, \"committed_table_per_bin\": {\"0\": 14983, \"1\": 2168, \"2-5\": 4793, \"6-20\": 13594, \"21-100\": 9228, \"100+\": 38349}, \"committed_table_sum\": 83115, \"equals_90466\": false, \"unfiltered_test_transactions\": 90466, \"difference_vs_90466\": 7351, \"accounts_for_difference\": \"7351 test rows are dropped by the headline filter: 145 with no usable MCC and 7206 with an ambiguous MCC ([5399, 5999, 7399, 8999]). Table 2 is built on the filtered slice; Table 1's 90,466 is the unfiltered test count.\"}"
+  },
+  "tail_count_provenance": {
+    "value": "b_test_merchants_f_le_3_UNFILTERED",
+    "numerator": null,
+    "denominator": null,
+    "filters_applied": "both filtered and unfiltered variants computed",
+    "notes": "{\"populations\": {\"a_training_merchants_1_to_3\": 12446, \"b_test_merchants_f_le_3_filtered\": 7066, \"c_test_merchants_1_to_3_filtered\": 1574, \"d_test_merchants_f_0_filtered\": 5492, \"b_test_merchants_f_le_3_UNFILTERED\": 8093, \"c_test_merchants_1_to_3_UNFILTERED\": 1815, \"d_test_merchants_f_0_UNFILTERED\": 6278}, \"population_equal_to_8093\": [\"b_test_merchants_f_le_3_UNFILTERED\"], \"training_merchants_total\": 17166, \"training_merchants_f_eq_1\": 8036, \"training_merchants_f_eq_1_pct\": 46.81, \"paper_claim_47pct_supported\": true}"
+  },
+  "wilson_intervals": {
+    "value": null,
+    "numerator": null,
+    "denominator": null,
+    "filters_applied": "counts taken from data/taxonomy/label_noise_audit_sample.csv",
+    "notes": "{\"audit_file_counts\": {\"correct\": 241, \"wrong\": 11, \"unclear\": 48, \"total\": 300}, \"intervals\": {\"repo_clearly_wrong\": {\"count\": 11, \"nobs\": 252, \"pct\": 4.37, \"ci_lo_pct\": 2.45, \"ci_hi_pct\": 7.65}, \"repo_upper_bound\": {\"count\": 59, \"nobs\": 300, \"pct\": 19.67, \"ci_lo_pct\": 15.56, \"ci_hi_pct\": 24.54}, \"as_requested_13_of_300\": {\"count\": 13, \"nobs\": 300, \"pct\": 4.33, \"ci_lo_pct\": 2.55, \"ci_hi_pct\": 7.27}, \"as_requested_59_of_300\": {\"count\": 59, \"nobs\": 300, \"pct\": 19.67, \"ci_lo_pct\": 15.56, \"ci_hi_pct\": 24.54}}, \"method\": \"Wilson score interval, alpha=0.05, computed from the closed form (p + z^2/2n +/- z*sqrt(p(1-p)/n + z^2/4n^2)) / (1 + z^2/n), which is the same formula statsmodels.stats.proportion.proportion_confint(method='wilson') implements. statsmodels is NOT installed in this repo's pinned environment and was deliberately not added, so the cross-check against that library was not run.\", \"discrepancy\": \"The prompt's (count=13, nobs=300) does not match this repository. The audit file records 11 wrong of 300; the paper's 4.4% is 11/252 (unclear rows excluded from the denominator), not 13/300. The prompt's (count=59, nobs=300) does match: 59/300 = 19.67%.\"}"
+  },
+  "_provenance": {
+    "value": null,
+    "numerator": null,
+    "denominator": null,
+    "filters_applied": "test rows with ambiguous==0 (drops no-usable-MCC rows and MCC 5999/5399/7399/8999)",
+    "notes": "{\"git_commit\": \"70c054ed733477c933a04ee57ca9f17dbce36e76\", \"working_tree_clean\": true, \"normalization_function\": \"txcat.normalizer.normalize_merchant (src/txcat/normalizer.py)\", \"normalization_example\": {\"SQ *BLUE BOTTLE 1234\": \"BLUE BOTTLE\"}, \"frequency_definition\": \"f(m) = transactions per normalized merchant over ALL training rows (txcat.data.splits.merchant_frequencies), unfiltered, matching index construction\", \"window\": {\"train_start\": \"2019-01-01\", \"train_end\": \"2023-12-31\", \"test_start\": \"2024-01-01\", \"test_end\": \"None\"}, \"random_seed\": null, \"counts\": {\"train_transactions\": 189581, \"train_merchants\": 17166, \"test_transactions_unfiltered\": 90466, \"test_transactions_filtered\": 83115, \"test_merchants_unfiltered\": 10443, \"test_merchants_filtered\": 9174}, \"versions\": {\"pandas\": \"3.0.5\", \"numpy\": \"2.5.3\"}}"
+  },
+  "test_volume_f_le_2_pct": {
+    "value": 22.4,
+    "numerator": 18657,
+    "denominator": 83115,
+    "filters_applied": "test rows with ambiguous==0 (drops no-usable-MCC rows and MCC 5999/5399/7399/8999)",
+    "notes": "share of test transactions, f <= 2 (includes f == 0); exact 22.4472%; 6,716 distinct merchants; tail-sensitivity companion to test_volume_f_le_3_pct; commit 70c054ed73"
+  },
+  "test_volume_f_le_5_pct": {
+    "value": 26.4,
+    "numerator": 21944,
+    "denominator": 83115,
+    "filters_applied": "test rows with ambiguous==0 (drops no-usable-MCC rows and MCC 5999/5399/7399/8999)",
+    "notes": "share of test transactions, f <= 5 (includes f == 0); exact 26.4020%; 7,527 distinct merchants; tail-sensitivity companion to test_volume_f_le_3_pct; commit 70c054ed73"
+  }
+}

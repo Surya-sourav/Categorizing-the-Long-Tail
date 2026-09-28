@@ -1,0 +1,9 @@
+{
+  "covered_merchants": 3079,
+  "covered_rows": 20493,
+  "analysis_slice_rows": 83115,
+  "analysis_slice_merchants": 9174,
+  "coverage_rows_pct": 24.66,
+  "fallback_model": "gpt-5-mini / fallback_with_web",
+  "membership_gate_equals_f0": false
+}

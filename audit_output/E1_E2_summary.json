@@ -1,0 +1,23 @@
+{
+  "reproduced_summary": {
+    "n_txns": 70333.0,
+    "fallback_rate": 0.013720444172721198,
+    "macro_f1": 0.9055218535199376,
+    "total_cost": 10.382322550000003,
+    "n_writebacks": 948.0,
+    "writeback_error_rate": 0.46835443037974683,
+    "final_index_size": 15826.0
+  },
+  "committed_table8_always": {
+    "fallback_rate": 0.0137,
+    "macro_f1": 0.9055,
+    "total_cost": 10.378,
+    "n_writebacks": 947.6,
+    "writeback_error_rate": 0.4683,
+    "final_index_size": 15825.6,
+    "note": "committed values are means over 5 seeds; this run is seed 42 only"
+  },
+  "wrong_definition": "src/txcat/stream.py:81 \u2014 n_wb_wrong += int(res.category != r.category): exact string mismatch between the model's category and the gold category of the single transaction that triggered the write (not a merchant-level majority vote)",
+  "reconstructed_writes": 948,
+  "reconstructed_wrong": 444
+}

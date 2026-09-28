@@ -1,0 +1,8 @@
+{
+  "stream_rows": 70333,
+  "test_rows_after_category_and_ambiguous_filter": 83115,
+  "full_test_rows_unfiltered": 90466,
+  "analysis_slice_rows": 83115,
+  "filter_chain": "dc[category.notna() & ambiguous==0] -> temporal_split -> keep rows where (train_freq > 3) OR (merchant in the frozen 3,000-merchant evaluation set); tail merchants outside the evaluation set are excluded so every fallback has a cached answer",
+  "excluded_by_scope": 12782
+}

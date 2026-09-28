@@ -114,18 +114,6 @@ gpt-5-nano, gpt-5-mini, and three open-weight models on NVIDIA's free NIM endpoi
 Nemotron 3 Super 120B-A12B, Meta Muse Glimmer 30B). Web evidence: Firecrawl search API (Tavily and Brave also implemented);
 OpenAI built-in web search appears only in a 300-merchant ablation.
 
-## Paper
-
-The preprint source is in `paper/` (`main.tex`, `refs.bib`). Every table in it is generated from the
-committed result CSVs by `scripts/make_paper_tables.py`, so the paper cannot drift from `results/`:
-
-```bash
-.venv/bin/python scripts/make_paper_tables.py   # results/tables/*.csv -> paper/tables/*.tex
-tectonic -X compile paper/main.tex
-```
-
-See `paper/README.md` for the pre-submission checklist.
-
 ## Citation
 
 Preprint forthcoming. Please cite the arXiv version once available.

@@ -1,0 +1,16 @@
+category,FES_tail_rows,full_tail_rows,FES_share_pct,full_share_pct
+airlines_travel,69,327,0.95,1.64
+education_gov_membership,1440,4060,19.73,20.38
+entertainment_media,241,708,3.3,3.55
+financial_postal_shipping,59,192,0.81,0.96
+groceries,16,77,0.22,0.39
+health,170,476,2.33,2.39
+industrial_hardware,1206,2419,16.52,12.14
+lodging,940,2820,12.88,14.16
+office_supplies,299,825,4.1,4.14
+professional_services,628,1806,8.6,9.07
+restaurants,209,680,2.86,3.41
+retail,380,1952,5.21,9.8
+software_electronics,735,2077,10.07,10.43
+telecom_utilities,568,802,7.78,4.03
+transport_auto_fuel,339,699,4.64,3.51

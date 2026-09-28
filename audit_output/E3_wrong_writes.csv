@@ -1,0 +1,445 @@
+merchant,pred_category,gold_category,confidence,sim1,date,txn_id
+1C UNITED CNTR CONCESS,entertainment_media,restaurants,0.58,0.5626782178878784,2024-08-22,dc:586311
+1TROOPER,professional_services,software_electronics,0.58,0.40864038467407227,2025-04-01,dc:613975
+4TE MID-ATLANTIC TECHN,education_gov_membership,industrial_hardware,0.32,0.6253089904785156,2025-05-15,dc:607196
+4WALL ENTERTAINMENT,entertainment_media,professional_services,0.65,0.5214056372642517,2024-08-17,dc:587034
+5 STAR LUXURY TRAN,lodging,professional_services,0.42,0.6130197048187256,2024-04-23,dc:562658
+A MKE HOST,retail,education_gov_membership,0.45,0.5250737071037292,2024-06-06,dc:544971
+"A&A, CENTRIC, COECO",retail,industrial_hardware,0.32,0.4745737314224243,2024-07-11,dc:582828
+AAA IDP,transport_auto_fuel,professional_services,0.58,0.6073557734489441,2026-03-17,dc:628943
+AAMACONF AFRICAN AMER,retail,education_gov_membership,0.28,0.5600587129592896,2025-02-19,dc:596996
+ABOUT COMICS,entertainment_media,office_supplies,0.65,0.4328218698501587,2024-09-09,dc:590119
+ACCESSIBIL INV-937 94,health,education_gov_membership,0.34,0.5528900027275085,2026-01-12,dc:617344
+ACME BIOMASS REDUC,health,industrial_hardware,0.28,0.47290581464767456,2024-08-12,dc:590679
+ACME PAPER AND SUPPLY,office_supplies,industrial_hardware,0.65,0.5152035355567932,2024-03-25,dc:525076
+ADORNED4QWEENZLLC,retail,professional_services,0.25,0.5316622853279114,2025-02-18,dc:596583
+ADVANTAGE SPORT & FITN,health,industrial_hardware,0.28,0.6401407122612,2026-02-25,dc:635386
+AFCA INV-69744,professional_services,education_gov_membership,0.58,0.5649821162223816,2026-01-06,dc:623032
+AFP INSTITUTE FOR INTE,professional_services,education_gov_membership,0.55,0.609892725944519,2024-04-04,dc:558800
+AGP BTPROPANE,transport_auto_fuel,telecom_utilities,0.42,0.4811878204345703,2024-04-04,dc:564216
+AIMEE CUSTIS PHOTOGRAP,professional_services,entertainment_media,0.72,0.5486964583396912,2024-09-25,dc:597254
+AIR RESOURCE SPECIALIS,professional_services,industrial_hardware,0.72,0.5862587690353394,2026-01-14,dc:621415
+AIRCLEAN SYSTEMS,office_supplies,industrial_hardware,0.4,0.4702780246734619,2025-02-05,dc:574406
+AIRCRAFT SPRUCE AND SP,industrial_hardware,transport_auto_fuel,0.62,0.5112879872322083,2024-07-30,dc:588549
+ALL MY SONS OF VA NORT,entertainment_media,financial_postal_shipping,0.35,0.49203962087631226,2025-06-05,dc:619856
+ALLEGION ACCESS TECHNO,office_supplies,industrial_hardware,0.25,0.6328997611999512,2026-02-12,dc:599815
+ALLIANCE LAUNDRY SYSTE,professional_services,industrial_hardware,0.68,0.572902500629425,2024-04-30,dc:529400
+ALLINONE WP MIGRATION,professional_services,software_electronics,0.58,0.4547004699707031,2025-12-21,dc:616217
+ALLPAID 76TH DISTRICT,professional_services,education_gov_membership,0.58,0.6477826833724976,2024-11-22,dc:577531
+ALLTHINGSINSPECOTR,professional_services,software_electronics,0.55,0.5217462778091431,2024-09-24,dc:593595
+ALTEC SENTRY,education_gov_membership,industrial_hardware,0.55,0.6397507190704346,2024-11-07,dc:572137
+AMAZON DIGIT,entertainment_media,software_electronics,0.45,0.6309956312179565,2024-02-17,dc:564895
+AMERICAN AMPLIFIER,telecom_utilities,industrial_hardware,0.35,0.4978513717651367,2024-02-23,dc:570286
+AMERICAN GEOSCI INST,professional_services,education_gov_membership,0.58,0.5847904682159424,2026-07-30,dc:634943
+AMERICAN MEGA LAUN,retail,professional_services,0.2,0.6186878681182861,2024-05-27,dc:551033
+AMERICAN MKTG ASSOC,professional_services,education_gov_membership,0.35,0.6474440097808838,2024-11-26,dc:574261
+AMERICAN PROFICIENCY I,professional_services,industrial_hardware,0.3,0.6261834502220154,2026-05-13,dc:635933
+AMK LFF CONCESSIONS,entertainment_media,restaurants,0.42,0.4748348593711853,2025-01-26,dc:573906
+ANGELA ROSE CULINA,professional_services,restaurants,0.62,0.5082537531852722,2025-08-29,dc:620421
+ANSWR SVC MAPCOMM,professional_services,software_electronics,0.66,0.4925330877304077,2025-12-02,dc:616549
+AP PRO MOVING LLC,transport_auto_fuel,financial_postal_shipping,0.62,0.5300086736679077,2026-07-06,dc:634202
+APPALACHIAN FENCIN,professional_services,industrial_hardware,0.35,0.47094178199768066,2025-08-26,dc:605000
+APPLAUZ,software_electronics,education_gov_membership,0.72,0.4803541898727417,2024-02-28,dc:568249
+APPLIED TECHNOLOGY,industrial_hardware,software_electronics,0.42,0.6389249563217163,2024-04-17,dc:560568
+ASNNA O,retail,education_gov_membership,0.32,0.6446962356567383,2025-01-17,dc:571465
+ASSN OF FISH AND WILDL,health,education_gov_membership,0.42,0.6112623810768127,2026-07-24,dc:633267
+ASSOCIATION OF VAPOR I,retail,education_gov_membership,0.28,0.4301666021347046,2025-12-04,dc:612890
+ASUGSVSUMM ASU+GSV SU,education_gov_membership,entertainment_media,0.75,0.5678543448448181,2024-03-13,dc:569239
+AUTO AND TIRES MASTERS,retail,transport_auto_fuel,0.25,0.5072644352912903,2024-02-01,dc:568460
+AUTOAUTH SERVICE,professional_services,software_electronics,0.42,0.5119758248329163,2024-01-23,dc:528470
+AUTOBKS NO OBESITY FA,health,education_gov_membership,0.4,0.5615025162696838,2025-04-04,dc:613988
+AUTOMATED FASTENING SY,office_supplies,industrial_hardware,0.42,0.47272372245788574,2025-02-05,dc:596518
+AVENU HRS PRO,software_electronics,education_gov_membership,0.62,0.6236301064491272,2024-01-24,dc:529747
+BACKSTAGE LIBRARY,professional_services,retail,0.78,0.6002480387687683,2026-04-08,dc:624996
+BAILEYMANUF,industrial_hardware,health,0.42,0.5750101208686829,2025-03-18,dc:611055
+BAMBOOBALANCEYOGA,retail,professional_services,0.64,0.4811204671859741,2024-06-26,dc:545575
+BEMORE HEALTH COAC,health,professional_services,0.62,0.5684206485748291,2025-09-20,dc:618068
+BEST HIRE CAREER FAIRS,education_gov_membership,professional_services,0.55,0.5566556453704834,2024-07-26,dc:580487
+BIL BLACKBURN CENTER,health,professional_services,0.62,0.5926462411880493,2024-04-24,dc:564064
+BIL EPIPHANY EDUCATION,education_gov_membership,professional_services,0.42,0.5670322775840759,2024-05-02,dc:525740
+BILLABOOK,office_supplies,airlines_travel,0.4,0.5422593355178833,2026-07-27,dc:636914
+BLACKOUT EZ LLC,professional_services,retail,0.4,0.5721555352210999,2024-08-28,dc:585507
+BLAZIN ENTERPRISES,professional_services,retail,0.35,0.6355236172676086,2024-05-16,dc:545621
+BLP,professional_services,retail,0.44,0.5867301225662231,2025-12-10,dc:614978
+BLUE ROBIN DESIGNS,retail,professional_services,0.35,0.536873459815979,2024-03-11,dc:564708
+BOARD ACCOUNTANCY,professional_services,education_gov_membership,0.42,0.5814463496208191,2024-06-26,dc:547180
+BOARDABLE,professional_services,software_electronics,0.58,0.538023829460144,2026-03-24,dc:625309
+BOJIDOG FILMS INC,entertainment_media,professional_services,0.58,0.4789499044418335,2024-05-01,dc:527349
+BOOK CREATOR,education_gov_membership,software_electronics,0.28,0.6412832736968994,2025-01-07,dc:573244
+BOOKPAGEZ,education_gov_membership,software_electronics,0.25,0.5616028308868408,2025-09-09,dc:623291
+BOOKPAL,education_gov_membership,retail,0.35,0.47322237491607666,2024-08-08,dc:589020
+BOOLEAN GIRL,education_gov_membership,entertainment_media,0.62,0.47675180435180664,2024-03-04,dc:567123
+BOSCH AUTOMOTIVE SERVI,professional_services,transport_auto_fuel,0.42,0.5991613268852234,2025-07-25,dc:601197
+BRAD DEEL DRONE PHOTOG,professional_services,entertainment_media,0.58,0.5572330355644226,2024-04-11,dc:563814
+BRANSON GROUP,entertainment_media,professional_services,0.42,0.6239879131317139,2024-07-10,dc:578259
+BRIGHT BEAR YOGA DC,education_gov_membership,professional_services,0.25,0.6070795059204102,2025-09-04,dc:618763
+BROOKE RENTAL CENTER,retail,professional_services,0.55,0.6021648049354553,2024-09-11,dc:587661
+BROTHERS TRANSPORT,transport_auto_fuel,financial_postal_shipping,0.62,0.560396134853363,2025-12-16,dc:611305
+BT PRECISION CAPI,industrial_hardware,professional_services,0.25,0.5552119612693787,2025-01-03,dc:576898
+BT SHIFFLEREQUIP,industrial_hardware,retail,0.58,0.5710948705673218,2026-01-08,dc:607504
+BT TODAY'S CLASSR,education_gov_membership,office_supplies,0.58,0.5600779056549072,2025-01-31,dc:574810
+BULLSEYE LLC,professional_services,software_electronics,0.58,0.6012843251228333,2025-07-17,dc:601963
+BUZZ365MEDIA,entertainment_media,software_electronics,0.35,0.6313601136207581,2024-07-22,dc:582079
+BWY VCIA,professional_services,education_gov_membership,0.52,0.6187704205513,2024-06-20,dc:551219
+CALTOPO,software_electronics,education_gov_membership,0.58,0.49778157472610474,2025-02-22,dc:596609
+CAMPUS LAKE AUSTIN QPS,education_gov_membership,lodging,0.28,0.5542247295379639,2025-10-30,dc:605470
+CANOPY JERSEY CITY,retail,lodging,0.45,0.5974095463752747,2024-06-02,dc:545759
+"CASEGUARD, INC",professional_services,software_electronics,0.6,0.6360139846801758,2025-05-15,dc:606774
+CASIE,retail,education_gov_membership,0.4,0.5255633592605591,2024-07-19,dc:584115
+CAST PUBLISHING,education_gov_membership,software_electronics,0.62,0.5972557663917542,2024-02-09,dc:570983
+CCNJOBFAIR,education_gov_membership,software_electronics,0.42,0.6380101442337036,2025-03-25,dc:611902
+CCSI EFAX CORPORATE,professional_services,retail,0.62,0.6025397181510925,2024-03-25,dc:525068
+CHEERSOUNDS,entertainment_media,software_electronics,0.55,0.6265822052955627,2024-01-12,dc:528426
+CHIARAMONTE CONSTR,professional_services,industrial_hardware,0.72,0.5355907678604126,2026-03-30,dc:625758
+CHILDREN'S NAT'L MEDIA,health,education_gov_membership,0.72,0.5926534533500671,2024-10-09,dc:578477
+CHOP CHOP MOVERS,transport_auto_fuel,professional_services,0.72,0.48914164304733276,2024-10-04,dc:580084
+CHRISTINA CARRILLO,professional_services,health,0.55,0.6009182929992676,2025-02-26,dc:596649
+CHRISTOPHER ORTIZ,health,professional_services,0.54,0.5411555767059326,2024-05-10,dc:548049
+CHRON OF PHILANTHROPY,education_gov_membership,office_supplies,0.66,0.4411117434501648,2024-09-16,dc:595507
+CIVITAS NETWORKS FOR H,health,education_gov_membership,0.72,0.49401915073394775,2024-09-03,dc:586374
+CLACONNECT,professional_services,software_electronics,0.68,0.5688579678535461,2026-05-08,dc:634736
+CLASSKICK,education_gov_membership,software_electronics,0.55,0.5573583245277405,2024-07-09,dc:579905
+CLEANHEALTH ENV,health,professional_services,0.62,0.5801346302032471,2026-03-27,dc:624528
+CLOUDAI TECHNOLOGIES,professional_services,software_electronics,0.54,0.6042101383209229,2025-02-24,dc:592513
+CMS MEDICARE APPLIC FE,health,education_gov_membership,0.58,0.49169719219207764,2024-06-18,dc:548755
+COLLEGE HUNKS - DC,professional_services,financial_postal_shipping,0.72,0.6157689094543457,2024-03-25,dc:527321
+COLLINSON ENTERPRI,professional_services,industrial_hardware,0.58,0.6193415522575378,2024-05-14,dc:547647
+COMMON GOOD CITY F,education_gov_membership,industrial_hardware,0.62,0.5675267577171326,2026-04-30,dc:636678
+CONDOCERTS NE,professional_services,office_supplies,0.62,0.5415050983428955,2024-06-04,dc:545785
+CONTRACTOR RESOURCE,education_gov_membership,retail,0.05,0.6492670774459839,2025-03-31,dc:612735
+COSA INV-1239,professional_services,education_gov_membership,0.28,0.6295862793922424,2025-11-18,dc:598030
+COUNCIL MEMBER DAVID GROSSO,professional_services,education_gov_membership,0.58,0.5411980152130127,2024-03-13,dc:568418
+CREATE A STOLE,education_gov_membership,retail,0.55,0.37468981742858887,2025-04-14,dc:616091
+CREATEASTO CREATE A S,professional_services,retail,0.28,0.3495384454727173,2026-04-14,dc:628332
+"CRUNCHBASE, INC",professional_services,software_electronics,0.66,0.6083934903144836,2026-04-24,dc:626723
+CVENT CHILDRENS NATIO,health,education_gov_membership,0.72,0.6399917602539062,2024-04-18,dc:562208
+CYA WARRANTY,retail,financial_postal_shipping,0.4,0.41045665740966797,2024-02-29,dc:568257
+DANCE WITH JENN,education_gov_membership,entertainment_media,0.28,0.5158805251121521,2026-06-08,dc:632466
+DAVID B. WALKER DE,health,professional_services,0.66,0.5009607076644897,2024-01-25,dc:525664
+DAYDREAMING ABOUT DATA,education_gov_membership,software_electronics,0.55,0.4130737781524658,2026-07-02,dc:625555
+DBA CHARLIE BLACK,professional_services,education_gov_membership,0.42,0.5152782201766968,2024-02-20,dc:569422
+DD MOBILE CREDITS,retail,restaurants,0.55,0.5574905276298523,2024-02-29,dc:568283
+DE ZHI CO,health,groceries,0.58,0.5733741521835327,2026-02-17,dc:597794
+DEEPL DEEPL CUS:3,professional_services,education_gov_membership,0.62,0.48460209369659424,2024-05-22,dc:545253
+DEEPL SUB:BTUAEHUBXKP,software_electronics,education_gov_membership,0.52,0.5635707974433899,2025-05-01,dc:609580
+DEFENDERIND,retail,entertainment_media,0.58,0.5990630388259888,2026-05-20,dc:638032
+DEON SAMAD LLC,professional_services,industrial_hardware,0.62,0.5925554633140564,2025-11-17,dc:601702
+DERRICK J WASHINGT,professional_services,office_supplies,0.58,0.5773395299911499,2026-05-04,dc:637941
+DISYS SOLUTIONS,professional_services,software_electronics,0.58,0.5797768235206604,2025-10-04,dc:604009
+DJ NIEMAN INC,retail,entertainment_media,0.42,0.605445384979248,2025-09-02,dc:623277
+"DORSEY ENTERPRISES, IN",professional_services,industrial_hardware,0.44,0.570094108581543,2025-02-04,dc:574419
+DRAMATIC PUBLISHING EC,entertainment_media,office_supplies,0.72,0.6228974461555481,2025-11-18,dc:600085
+DRUGTESTINGCUP COM,health,professional_services,0.65,0.6215708255767822,2026-05-12,dc:634352
+DSA DETECTION LLC,professional_services,industrial_hardware,0.62,0.5649958252906799,2024-01-16,dc:529291
+DWBFITTINGYOURNEED,professional_services,health,0.28,0.4912024736404419,2026-02-10,dc:601861
+EDUCATIONAL TRAVEL ADV,education_gov_membership,airlines_travel,0.55,0.49386000633239746,2024-05-01,dc:526539
+EJROOYFN-2,entertainment_media,lodging,0.42,0.6023128032684326,2024-04-23,dc:561406
+ELECTRICBARGAINSTORES,retail,software_electronics,0.58,0.5671204328536987,2024-01-03,dc:528761
+EMANUEL TIRE LLC,industrial_hardware,transport_auto_fuel,0.62,0.6421455144882202,2024-01-08,dc:526749
+EMCOR GOVERNMENT SERVI,professional_services,industrial_hardware,0.72,0.5307470560073853,2026-03-26,dc:629803
+EP ATRIUM HEALTH AND,health,software_electronics,0.72,0.3912484645843506,2024-03-18,dc:526237
+EPITOME CREATIONS,entertainment_media,professional_services,0.48,0.4158805012702942,2026-05-31,dc:630256
+EVENT NUIX WORKSTATIO,software_electronics,education_gov_membership,0.6,0.5458469390869141,2024-02-08,dc:567297
+EVENTBKEVENT TICKET,entertainment_media,software_electronics,0.55,0.6093958616256714,2024-07-13,dc:582405
+EVENTBRITE AD CAMPAIGN,entertainment_media,software_electronics,0.58,0.6094093322753906,2025-09-10,dc:623302
+EVENTBRITE PRO SUB,entertainment_media,software_electronics,0.66,0.6395469903945923,2025-06-29,dc:622830
+EYEBUYDIRECT,retail,health,0.72,0.5372999310493469,2025-10-17,dc:606056
+EZ CONTACT,retail,health,0.62,0.5852704644203186,2024-05-07,dc:528214
+EZPRINTHOUZ,professional_services,office_supplies,0.58,0.6125538349151611,2024-07-31,dc:589363
+FALLS ROAD ANIMAL HOSP,health,professional_services,0.72,0.44576096534729004,2025-06-19,dc:617910
+FAR UV TECHNOLOGIE,health,professional_services,0.58,0.5479899048805237,2025-06-18,dc:618711
+FC ARCHAEOLOGY IN COM,entertainment_media,education_gov_membership,0.42,0.5850757956504822,2024-05-07,dc:528643
+FC SLIDESGO UNIVERSAL,education_gov_membership,professional_services,0.28,0.5667625665664673,2024-07-29,dc:581715
+FIERCE SOFTWARE,software_electronics,education_gov_membership,0.6,0.5879775881767273,2026-04-27,dc:627988
+FITNESS MACHINE TE,professional_services,industrial_hardware,0.56,0.6362950801849365,2024-04-04,dc:558848
+"FLUTTERFLOW, INC",professional_services,software_electronics,0.58,0.5151388645172119,2025-07-05,dc:601110
+"FOLLETT HIGHER ED GROUP, LTD",education_gov_membership,retail,0.58,0.5671076774597168,2024-03-22,dc:530355
+FPE AB1SUPPLY CAGE 9BV,retail,industrial_hardware,0.55,0.4525926113128662,2025-04-17,dc:612009
+FRITZPHOTOG,professional_services,entertainment_media,0.68,0.5718225240707397,2025-03-25,dc:612306
+FSP PCI GRAPHICS,industrial_hardware,office_supplies,0.58,0.6330081224441528,2026-05-22,dc:636396
+GAR ENTERPRISE GOLD GA,professional_services,transport_auto_fuel,0.62,0.591083288192749,2024-09-06,dc:586441
+GB MERCHANT ROW ASSOC,professional_services,education_gov_membership,0.58,0.548759400844574,2025-02-28,dc:592574
+GDP GDP AUDIO GUESTBOO,entertainment_media,professional_services,0.48,0.4823448061943054,2024-09-05,dc:586818
+GDP GDP CMP PROPERTY M,professional_services,financial_postal_shipping,0.42,0.45631080865859985,2024-09-11,dc:590534
+GESSCREATIONS,entertainment_media,education_gov_membership,0.42,0.4699741005897522,2024-03-04,dc:567121
+GLOBAL-E JABRA,office_supplies,software_electronics,0.42,0.529470682144165,2024-09-19,dc:591893
+GOOGLE CAMEO,entertainment_media,software_electronics,0.62,0.43810510635375977,2024-05-14,dc:547220
+GORDON TECHNICAL,industrial_hardware,professional_services,0.58,0.6028059124946594,2026-01-21,dc:599310
+GOTTA GO NOW EVENT,entertainment_media,industrial_hardware,0.58,0.6078183650970459,2024-04-10,dc:562176
+GREATER WA INV-24,professional_services,education_gov_membership,0.42,0.5860293507575989,2025-03-24,dc:611481
+GREENSPUR INC,professional_services,restaurants,0.72,0.626447856426239,2025-01-02,dc:573204
+HAISLIP CORPORATION,professional_services,industrial_hardware,0.62,0.5376959443092346,2025-04-04,dc:614811
+HBADA,office_supplies,retail,0.62,0.5975046753883362,2025-12-12,dc:615006
+HBCU CONNECT LLC,education_gov_membership,professional_services,0.62,0.5823766589164734,2024-08-05,dc:588169
+HDVKALEIDO,software_electronics,professional_services,0.38,0.5136092901229858,2025-02-10,dc:591632
+HEADSTART ENTERTAI,entertainment_media,restaurants,0.68,0.6137619614601135,2025-12-18,dc:614182
+HEGENS MCS / GOLDEN,entertainment_media,professional_services,0.25,0.5547125339508057,2024-06-05,dc:547794
+HEMOSTAT LABRATORIES I,health,retail,0.72,0.4485868215560913,2024-08-27,dc:587911
+HERMES CREATIVE AWARDS,entertainment_media,professional_services,0.66,0.5851708650588989,2025-11-13,dc:597996
+HIGH CALIB (1 OF 1 PA,industrial_hardware,professional_services,0.45,0.5754285454750061,2026-03-06,dc:624799
+HIGHVIBEDC,entertainment_media,professional_services,0.62,0.5427442789077759,2024-03-06,dc:567557
+HITEKFILMS,retail,transport_auto_fuel,0.58,0.531732439994812,2024-03-07,dc:566312
+HITT MARKING DEVICES,office_supplies,industrial_hardware,0.62,0.5067825317382812,2024-02-27,dc:567012
+HLS PERMA.CC,professional_services,education_gov_membership,0.62,0.5264748334884644,2026-06-16,dc:631799
+HOTEL RES-GEORGIAN TER,lodging,airlines_travel,0.72,0.6248176097869873,2024-09-07,dc:590081
+HOURLY HUSBANDS,professional_services,industrial_hardware,0.74,0.436456561088562,2024-03-27,dc:529563
+HOUSE OF JROB,professional_services,entertainment_media,0.63,0.570583701133728,2026-05-13,dc:639221
+HUMAN KINETICS,education_gov_membership,retail,0.55,0.38547277450561523,2024-08-13,dc:584974
+IAN WEISSGERBER,professional_services,entertainment_media,0.42,0.5672909617424011,2024-03-06,dc:570406
+ICLEI - LOCAL GOVE,education_gov_membership,professional_services,0.62,0.5404415726661682,2026-01-13,dc:618961
+IEEE PRODUCTS & SERVIC,professional_services,education_gov_membership,0.62,0.5574138760566711,2026-02-02,dc:600179
+IN 100FILMS,entertainment_media,professional_services,0.5,0.48528122901916504,2024-02-14,dc:566951
+INCREDIBLE DESIGNS,retail,office_supplies,0.45,0.5896195769309998,2025-09-17,dc:618454
+INDEPENDENCE BUNTING A,retail,industrial_hardware,0.72,0.5203744173049927,2024-08-02,dc:590158
+INMAR MARINE GROUP,industrial_hardware,lodging,0.55,0.5982677936553955,2024-04-18,dc:560984
+INNOVATIVE USERS GROUP,education_gov_membership,software_electronics,0.58,0.529200553894043,2025-10-21,dc:606853
+INSTA360,retail,software_electronics,0.62,0.6173065304756165,2024-09-06,dc:586848
+INTELLECTUAL ATHLE,professional_services,entertainment_media,0.58,0.5883547067642212,2026-04-24,dc:624711
+INTL ASSOC PRIVACY PRO,professional_services,education_gov_membership,0.48,0.6167793273925781,2024-09-25,dc:594024
+IRA GREEN INC,industrial_hardware,retail,0.58,0.6357501745223999,2025-12-23,dc:612147
+ISFG INT SOC FOREN GEN,professional_services,education_gov_membership,0.62,0.5794349908828735,2026-06-15,dc:631187
+ITHAKA-JSTOR JPASS,education_gov_membership,software_electronics,0.72,0.509063184261322,2026-04-09,dc:627436
+JAMES M CASEY DVM,health,professional_services,0.72,0.5679737329483032,2025-08-29,dc:620435
+JENIYA MANTILLA,education_gov_membership,professional_services,0.42,0.526709258556366,2025-12-19,dc:610908
+JESSICA AMAYA-ZUNI,education_gov_membership,software_electronics,0.28,0.5885300040245056,2024-03-07,dc:565111
+JETCO HOLDINGS LLC,transport_auto_fuel,financial_postal_shipping,0.55,0.6094840168952942,2026-05-08,dc:634737
+JON WRIGHT,entertainment_media,restaurants,0.58,0.5499130487442017,2024-01-03,dc:529997
+JOSHUA LUCAS,entertainment_media,health,0.62,0.5010513663291931,2026-02-10,dc:602260
+JUANITAS FANCY PAN,professional_services,restaurants,0.64,0.5384147763252258,2026-07-06,dc:634614
+JUSTICE WOODS,professional_services,health,0.42,0.5549653172492981,2025-03-03,dc:595426
+KEISHA'S KREATIONZ,professional_services,retail,0.62,0.5110687017440796,2024-06-17,dc:546283
+KEYTRAK,industrial_hardware,software_electronics,0.28,0.6116175651550293,2026-01-06,dc:616914
+"KIBEAM LEARNING, I",education_gov_membership,software_electronics,0.62,0.5293799042701721,2026-01-23,dc:597670
+KICKSTARTBGH,professional_services,entertainment_media,0.35,0.48780328035354614,2024-06-14,dc:547918
+KLETT WORLD LANGUAGES,education_gov_membership,software_electronics,0.62,0.5013863444328308,2024-11-06,dc:574540
+KNK INS E PAYMENT,professional_services,financial_postal_shipping,0.42,0.6176321506500244,2025-11-07,dc:602028
+L & L MUSIC - WIND SHO,retail,entertainment_media,0.66,0.5011945962905884,2024-02-01,dc:565192
+LAKEBRA KEEBEE CLARK,entertainment_media,education_gov_membership,0.65,0.5461612939834595,2026-03-31,dc:628625
+LANCASTER COUNTY FIREM,telecom_utilities,education_gov_membership,0.54,0.4753974676132202,2025-04-16,dc:611993
+LAND AIR SEA SYSTE,telecom_utilities,industrial_hardware,0.32,0.5846778750419617,2025-12-01,dc:614954
+LEAP TICKETS,entertainment_media,software_electronics,0.52,0.6459686160087585,2024-02-27,dc:570723
+LEID DIESEL SERVICE,industrial_hardware,transport_auto_fuel,0.62,0.5793654322624207,2024-07-11,dc:578654
+LESBIANS WHO TECH,professional_services,education_gov_membership,0.58,0.5999003648757935,2024-05-21,dc:548913
+LEVATA: ID PRODUCTS,software_electronics,office_supplies,0.66,0.5719282031059265,2024-01-31,dc:569279
+LEVATAI,software_electronics,office_supplies,0.62,0.5430964827537537,2025-03-22,dc:616799
+LEVEL FRAMES ORDER,retail,professional_services,0.64,0.5109808444976807,2025-08-22,dc:607419
+LIDL,retail,groceries,0.74,0.4976828098297119,2024-06-21,dc:547540
+LITTLE CHANGE MAKE,retail,professional_services,0.42,0.5110929608345032,2024-04-02,dc:562912
+LIZS CREATIONS LLC,retail,industrial_hardware,0.42,0.5820738673210144,2025-01-06,dc:573626
+LOCOBANNERS,retail,office_supplies,0.52,0.4598008394241333,2026-02-27,dc:624354
+LOGTAG NORTH AMERICA,industrial_hardware,software_electronics,0.62,0.5061666369438171,2026-02-11,dc:597363
+LOST MOUNTAIN COMM,professional_services,office_supplies,0.28,0.5835003852844238,2024-08-07,dc:585734
+LS TENNIS TOPIA,retail,entertainment_media,0.62,0.5514285564422607,2026-05-11,dc:635922
+M WELLES,restaurants,professional_services,0.69,0.45502156019210815,2024-05-13,dc:545182
+MACGREGOR COMMUNICATIO,education_gov_membership,professional_services,0.58,0.5402299761772156,2024-09-27,dc:596081
+MAD GETAFE,education_gov_membership,groceries,0.38,0.461505651473999,2026-04-25,dc:625928
+"MADISON AVENUE, IN",retail,professional_services,0.55,0.6469168663024902,2024-07-18,dc:582457
+MANDERS DECORATING CO,professional_services,industrial_hardware,0.72,0.47767186164855957,2024-09-19,dc:593157
+MANNLAK,retail,industrial_hardware,0.72,0.47412240505218506,2025-07-09,dc:599077
+MAPGEARS,professional_services,software_electronics,0.58,0.459926962852478,2024-09-12,dc:591823
+MARCUS AT SERVICE,restaurants,health,0.52,0.5469961762428284,2025-12-11,dc:611701
+MARIANNES MLK LIB,education_gov_membership,restaurants,0.66,0.5511263608932495,2024-01-09,dc:525142
+MATTHEW BACK INC,professional_services,education_gov_membership,0.58,0.5221959948539734,2025-01-02,dc:572818
+MEDTECH FOR,health,professional_services,0.62,0.6174572110176086,2026-03-10,dc:629303
+MEMBERSHIP REGISTER,education_gov_membership,entertainment_media,0.42,0.576621413230896,2026-02-27,dc:629680
+META SOLUTIONS,education_gov_membership,software_electronics,0.62,0.519286572933197,2024-09-12,dc:585227
+MHAMD,health,education_gov_membership,0.72,0.585654616355896,2024-08-10,dc:588630
+MICHAEL BRUCE,entertainment_media,professional_services,0.55,0.5980825424194336,2026-03-21,dc:626941
+MODEL MUTINY,entertainment_media,software_electronics,0.42,0.3916078805923462,2026-05-18,dc:633550
+MODERNFOLIAGE,retail,professional_services,0.55,0.4338981509208679,2025-08-07,dc:607316
+MODFIRST LLC,retail,professional_services,0.58,0.6070649027824402,2024-06-26,dc:547198
+MORELAND SECURITY,professional_services,software_electronics,0.48,0.49378740787506104,2025-11-12,dc:597598
+MOST DEPENDABLE FOUNTA,industrial_hardware,professional_services,0.65,0.3755723237991333,2025-08-07,dc:606509
+MOSTOLES,education_gov_membership,transport_auto_fuel,0.28,0.42257070541381836,2026-04-25,dc:625941
+MOTIONARRY MOTION ARR,entertainment_media,software_electronics,0.72,0.5492770075798035,2025-07-30,dc:601205
+MPOWER SERVICES IN,professional_services,entertainment_media,0.55,0.5942866206169128,2024-09-25,dc:597244
+MS LOCALENASHVILLEAS,health,lodging,0.42,0.5502681732177734,2024-03-18,dc:526239
+MTNPRODUCTIONS,entertainment_media,industrial_hardware,0.72,0.6463980078697205,2024-09-05,dc:588033
+MYBROTHERSK,entertainment_media,education_gov_membership,0.58,0.5251595377922058,2024-07-26,dc:580049
+MYOWERKS MOVEMENT,professional_services,health,0.42,0.424780011177063,2026-02-10,dc:602261
+MYSTAIRE,industrial_hardware,health,0.66,0.5468107461929321,2025-12-18,dc:613777
+NATIONAL T INV-1008,lodging,education_gov_membership,0.32,0.6208478808403015,2024-05-06,dc:527407
+NATL RTCC ASSN,professional_services,education_gov_membership,0.62,0.6437219977378845,2024-04-05,dc:561303
+NATUS SENSORY INC,health,industrial_hardware,0.72,0.6365982294082642,2025-07-15,dc:599528
+NAYAX PARKING,telecom_utilities,transport_auto_fuel,0.28,0.5567618608474731,2024-05-21,dc:551000
+NCSD - STI,education_gov_membership,health,0.72,0.6449500918388367,2025-03-04,dc:596691
+NELSON TREE SPECIA,professional_services,industrial_hardware,0.68,0.45880401134490967,2024-05-09,dc:525880
+NETS OF AMERICA,industrial_hardware,entertainment_media,0.58,0.5670411586761475,2025-03-07,dc:611793
+NEXUS-SPORTSMED-COM,health,retail,0.66,0.6308305859565735,2024-04-24,dc:563260
+NGUOI VIET DAILY,entertainment_media,office_supplies,0.42,0.5680818557739258,2026-05-28,dc:630416
+NORTHEAST TRANSIT FINE,transport_auto_fuel,financial_postal_shipping,0.55,0.5706043839454651,2026-01-27,dc:621885
+NOSIRI EMPOWERMENT,education_gov_membership,professional_services,0.58,0.38763129711151123,2024-06-04,dc:551094
+"NUPARADIGM, INC. F",health,entertainment_media,0.42,0.5677570104598999,2025-09-04,dc:619991
+O2SI SMART SOLUTIONS,professional_services,industrial_hardware,0.42,0.4418182373046875,2025-11-19,dc:599667
+OCPD RECORDS,professional_services,education_gov_membership,0.42,0.47105658054351807,2024-10-02,dc:582979
+OLD TOWN TROLLEY TOURS,entertainment_media,airlines_travel,0.72,0.5958399772644043,2026-01-13,dc:618556
+OREILLYMEDIAPLATFORM,education_gov_membership,retail,0.55,0.5379336476325989,2024-11-08,dc:577013
+ORGWVUPW-1,software_electronics,lodging,0.62,0.4667701721191406,2024-04-22,dc:561014
+OURSISTERSCIRCLE,health,education_gov_membership,0.68,0.5380779504776001,2024-04-22,dc:561820
+OUZTS HVAC AND REFRI,professional_services,industrial_hardware,0.62,0.628782331943512,2025-06-17,dc:619938
+OVERDRIVE DIST,entertainment_media,software_electronics,0.42,0.41848355531692505,2025-07-07,dc:603567
+PAPERROLLS-N-MORE,office_supplies,professional_services,0.62,0.48868268728256226,2024-08-08,dc:587782
+PATCH SECURITY SOL,professional_services,industrial_hardware,0.62,0.46462857723236084,2024-06-25,dc:550848
+PAWTREE,health,retail,0.55,0.6069762706756592,2024-05-01,dc:527361
+PAY,financial_postal_shipping,retail,0.3,0.551530659198761,2024-08-29,dc:587563
+PAY EDENS LP - EVENTS,retail,professional_services,0.58,0.5206452012062073,2026-02-25,dc:633776
+PAYMENT CANVASDISCOUNT,retail,entertainment_media,0.62,0.5363284945487976,2024-08-31,dc:584293
+PBO7.A,transport_auto_fuel,entertainment_media,0.28,0.6093320846557617,2025-12-11,dc:611709
+PEAK TRAMWAYS,transport_auto_fuel,airlines_travel,0.75,0.4624215364456177,2025-06-04,dc:618250
+PERRY AIRE SERVICES IN,professional_services,industrial_hardware,0.76,0.5411580204963684,2026-06-04,dc:632070
+PETE PIRINGER,professional_services,education_gov_membership,0.5,0.6247926950454712,2025-09-26,dc:617299
+PI #WPC25TULSA,industrial_hardware,education_gov_membership,0.58,0.5758532285690308,2024-03-19,dc:527873
+PICASSO GALLERY CUSTOM,professional_services,retail,0.58,0.5126622915267944,2024-05-31,dc:546569
+PITTSBURGH WATER COOLE,office_supplies,industrial_hardware,0.34,0.5208351016044617,2026-03-07,dc:625201
+PLUMAGE AND CAPE - EE,entertainment_media,education_gov_membership,0.28,0.41143858432769775,2024-05-17,dc:548079
+PRH,education_gov_membership,retail,0.4,0.6244553327560425,2024-05-16,dc:545616
+PRINT ORACLE,retail,office_supplies,0.58,0.5781426429748535,2024-08-14,dc:584561
+PROGRESS-IPS,professional_services,software_electronics,0.38,0.5301674008369446,2026-07-20,dc:636070
+PROJECTREAD.AI,education_gov_membership,software_electronics,0.58,0.5765507817268372,2024-07-11,dc:581587
+PROSPECT WATERPROOFING,professional_services,industrial_hardware,0.72,0.47350066900253296,2024-07-19,dc:579150
+PSK CREATIVE,professional_services,entertainment_media,0.66,0.633529543876648,2026-02-24,dc:637804
+PTI ARTECHOUSE DC,entertainment_media,software_electronics,0.66,0.6002782583236694,2024-01-10,dc:527981
+PY COMMERCIAL VEHICLE,transport_auto_fuel,education_gov_membership,0.42,0.5678625702857971,2025-08-20,dc:609827
+PY DC SHIRT AND PRIN,retail,office_supplies,0.58,0.5967181324958801,2025-03-14,dc:612637
+PY NIENHUIS&TOUTABOU,education_gov_membership,office_supplies,0.25,0.49399232864379883,2026-01-20,dc:621038
+PY NORTHEAST RECYCLIN,industrial_hardware,education_gov_membership,0.46,0.460895299911499,2024-09-05,dc:585143
+Q N Q CLEANERS,retail,professional_services,0.62,0.632099449634552,2025-06-18,dc:622366
+QEP PROFESSIONAL B,professional_services,office_supplies,0.58,0.5713335275650024,2026-05-08,dc:633936
+QUALIFICATION TARGETS,professional_services,industrial_hardware,0.42,0.527390718460083,2024-08-06,dc:584891
+QUENTIN WALSTON,education_gov_membership,entertainment_media,0.45,0.5711788535118103,2025-03-14,dc:611018
+R SEDALIA,entertainment_media,professional_services,0.45,0.5858712792396545,2024-09-18,dc:591456
+RACE PROVEN MOTORS,industrial_hardware,transport_auto_fuel,0.42,0.4920109510421753,2025-01-14,dc:574098
+RAJIV PAUL,entertainment_media,education_gov_membership,0.58,0.5827975273132324,2025-11-17,dc:601283
+REAL FUN CONTENT L,entertainment_media,professional_services,0.42,0.46388566493988037,2025-09-23,dc:617687
+REALTYRATESCOM,professional_services,office_supplies,0.55,0.5278869867324829,2024-09-05,dc:588024
+"REINGOLD LINK, LLC",professional_services,retail,0.62,0.6084436774253845,2025-03-19,dc:611059
+RES GARLANDHOT,restaurants,lodging,0.42,0.5910642147064209,2026-04-20,dc:624252
+RESEARCHKICK,professional_services,software_electronics,0.58,0.5875295400619507,2024-10-21,dc:579336
+RESIDENTIAL LIFE,lodging,education_gov_membership,0.45,0.5981519222259521,2024-04-26,dc:558767
+RESPONSE ROADSIDE ASST,transport_auto_fuel,education_gov_membership,0.59,0.5362870097160339,2025-12-12,dc:614577
+RESTORE AMERICAS ESTUA,professional_services,education_gov_membership,0.65,0.4640960097312927,2024-07-26,dc:583320
+REYNOLDS DEVELOPME,professional_services,entertainment_media,0.54,0.41488707065582275,2024-05-07,dc:527817
+RIO@RIOHOLADAY,professional_services,retail,0.62,0.6091687083244324,2024-05-14,dc:547255
+ROAR POSTAL SUPPLIES,financial_postal_shipping,office_supplies,0.66,0.5449185967445374,2024-03-14,dc:570073
+ROLLING SNACK JUNK,entertainment_media,groceries,0.41,0.46391063928604126,2025-05-23,dc:603944
+ROXURY WARBURTON P,professional_services,office_supplies,0.28,0.47067224979400635,2025-12-05,dc:611637
+RUBICON RUBICON NEXT,entertainment_media,software_electronics,0.21,0.49283671379089355,2024-03-15,dc:529888
+RUSH TRANSFORMING CHAP,education_gov_membership,health,0.62,0.5356287360191345,2024-09-10,dc:589298
+SACXS - LDG - HH SACRA,education_gov_membership,lodging,0.28,0.5489383935928345,2025-12-11,dc:613332
+SAWYER BOOKING FEE,professional_services,education_gov_membership,0.42,0.5319522619247437,2024-06-27,dc:546763
+SCANAVENGE #US-2026-0,retail,software_electronics,0.62,0.44090884923934937,2026-03-16,dc:625272
+SCENTAIR TECHNOLOGIES,professional_services,industrial_hardware,0.62,0.44190341234207153,2025-12-18,dc:614171
+SCHOOLSTATUS,education_gov_membership,software_electronics,0.62,0.6211454272270203,2024-04-04,dc:558860
+SECURITIES & INSURANCE,financial_postal_shipping,education_gov_membership,0.42,0.5883259773254395,2024-10-12,dc:582212
+SKYLOTEC NORTH AME,industrial_hardware,professional_services,0.6,0.5486566424369812,2025-09-02,dc:617556
+SMART TINT INC,office_supplies,industrial_hardware,0.28,0.5430580973625183,2025-01-03,dc:573226
+SOCIAL THINKING,education_gov_membership,retail,0.42,0.6196222901344299,2025-01-03,dc:576495
+SOS SUPPLY,industrial_hardware,health,0.42,0.5520612597465515,2026-07-28,dc:636557
+SOUTHVISI B,entertainment_media,education_gov_membership,0.32,0.5590471029281616,2024-08-23,dc:587486
+SP AC WORKS,industrial_hardware,retail,0.62,0.4970061779022217,2024-10-14,dc:583837
+SP ANKER SOLIX,retail,software_electronics,0.58,0.649964451789856,2026-06-22,dc:632377
+SP AVALON,retail,industrial_hardware,0.42,0.6412820816040039,2025-05-27,dc:608438
+SP BASE CASE,retail,software_electronics,0.35,0.5592747926712036,2026-07-07,dc:638661
+SP BRINNOSTORE,retail,entertainment_media,0.58,0.6366171836853027,2025-06-30,dc:599467
+SP CALLEVARIVERSTORE,retail,entertainment_media,0.62,0.5444311499595642,2024-04-02,dc:563766
+SP CRASH DATA GROUP,professional_services,transport_auto_fuel,0.62,0.5436210632324219,2025-02-27,dc:595407
+SP CREATIVE CO BOOKS,education_gov_membership,retail,0.32,0.5964261293411255,2026-04-28,dc:623898
+SP DENCHFIELD NURSER,retail,industrial_hardware,0.62,0.5989920496940613,2024-01-04,dc:527948
+SP DIRECTMAIL,professional_services,retail,0.42,0.5252580046653748,2026-05-15,dc:637194
+SP DISCOUNTFILTERSTORE,retail,industrial_hardware,0.62,0.6209291219711304,2026-03-06,dc:627258
+SP DTF BANK,industrial_hardware,office_supplies,0.64,0.5175498723983765,2026-06-29,dc:631672
+SP FORK FARMS,groceries,industrial_hardware,0.25,0.5872864127159119,2025-06-26,dc:622812
+SP FOX 40 USA,retail,entertainment_media,0.62,0.5211619138717651,2024-10-30,dc:581067
+SP FRESHWATERSYSTEMS,retail,industrial_hardware,0.62,0.5746654272079468,2024-05-01,dc:525292
+SP GEARDRYER,industrial_hardware,entertainment_media,0.58,0.5051659941673279,2025-02-04,dc:576862
+SP GORSKI PUBLICATIO,education_gov_membership,software_electronics,0.42,0.6119145750999451,2024-04-12,dc:563029
+SP KIEFERAUCTIONSUPP,professional_services,retail,0.55,0.504562497138977,2024-02-28,dc:569882
+SP KNOT ROPE,industrial_hardware,software_electronics,0.58,0.5335773825645447,2026-05-31,dc:630618
+SP LAKEWOOD PRODUCTS,retail,entertainment_media,0.62,0.5877873301506042,2026-06-29,dc:631688
+SP LOOPUS,entertainment_media,retail,0.28,0.5508488416671753,2024-04-24,dc:561631
+SP LUXELUTION,health,software_electronics,0.42,0.6246544122695923,2024-05-26,dc:548562
+SP MONOTYPEFONTS,professional_services,software_electronics,0.62,0.4657355546951294,2025-11-17,dc:601697
+SP USA BEARINGS BE,industrial_hardware,software_electronics,0.66,0.42053794860839844,2026-02-27,dc:623951
+SP VANTRUE,transport_auto_fuel,entertainment_media,0.62,0.6039755940437317,2026-04-23,dc:624688
+SP WPE PRODUCTION,professional_services,office_supplies,0.58,0.5083743333816528,2025-05-30,dc:619485
+SPARK FUN ELECTRONICS,retail,software_electronics,0.62,0.5737671852111816,2026-06-26,dc:632573
+SPENCER RESOURCES INC,education_gov_membership,industrial_hardware,0.58,0.6003978252410889,2026-07-17,dc:633671
+SSAADMINISTRATIVE COLL,office_supplies,education_gov_membership,0.28,0.44081175327301025,2024-05-28,dc:545278
+SSWORLDWIDEI,education_gov_membership,entertainment_media,0.55,0.5513803362846375,2025-12-11,dc:611274
+ST. ELIZABETH GARA,professional_services,transport_auto_fuel,0.42,0.4723629951477051,2024-09-16,dc:595107
+ST. JOHNS - HANDSHAKE,education_gov_membership,professional_services,0.55,0.6387963891029358,2024-03-19,dc:528690
+STA CONTRACTING INC,professional_services,industrial_hardware,0.62,0.6356418132781982,2026-07-17,dc:634485
+STARBUCKS ESPLAN LAS,retail,restaurants,0.55,0.6138190627098083,2026-05-19,dc:637630
+STITCHESDC,professional_services,retail,0.66,0.5678502917289734,2024-09-03,dc:585963
+STRATEGIC HOME MED,health,software_electronics,0.58,0.4968852400779724,2025-12-29,dc:616251
+STS EDUCATION,education_gov_membership,software_electronics,0.4,0.5906838774681091,2025-02-10,dc:591247
+SUBURBAN PROPANE,telecom_utilities,transport_auto_fuel,0.55,0.6375918388366699,2024-07-10,dc:583214
+SUMMIT RESPONSIBLE SOL,health,professional_services,0.52,0.6065738201141357,2024-05-10,dc:546417
+SUSAN RAHIMZADEH,professional_services,education_gov_membership,0.42,0.5424145460128784,2025-07-22,dc:600352
+SUTRADHAR INSTITUT,education_gov_membership,entertainment_media,0.58,0.6121610403060913,2025-11-14,dc:599648
+SWP CCS NEW JERSEY E Z,telecom_utilities,professional_services,0.42,0.6275261640548706,2026-06-08,dc:632470
+SXSW LLC INTERNET,entertainment_media,education_gov_membership,0.62,0.5687738656997681,2025-01-17,dc:575107
+T.O.A.O,entertainment_media,retail,0.28,0.5175569653511047,2025-01-29,dc:574336
+TAAL ACADEMY OF DA,education_gov_membership,entertainment_media,0.56,0.5971649289131165,2025-11-17,dc:601282
+TABLE MOUNTAIN GROUP L,professional_services,education_gov_membership,0.42,0.5410939455032349,2024-05-21,dc:546468
+TASKFORCE NATIONAL IM,professional_services,education_gov_membership,0.42,0.5411260724067688,2024-07-10,dc:578254
+TERRY S TASTE,professional_services,restaurants,0.62,0.5369979739189148,2026-06-08,dc:632307
+THE AULD DUBLINER,entertainment_media,restaurants,0.55,0.5135540962219238,2026-06-05,dc:630815
+THE CAKEROOM,retail,restaurants,0.62,0.547678530216217,2025-11-18,dc:597602
+THE CARLYLE ROOM,lodging,restaurants,0.72,0.5914353132247925,2024-02-02,dc:567251
+THE FITGURL STUDIO,health,professional_services,0.55,0.5025465488433838,2024-07-30,dc:579253
+THE MADDEN CORPORATION,professional_services,industrial_hardware,0.55,0.6046428680419922,2026-04-25,dc:625943
+THE PHOTOT (1 OF 1 PA,entertainment_media,professional_services,0.28,0.5634227991104126,2025-10-22,dc:607700
+THE RUSSELL,restaurants,lodging,0.58,0.4311790466308594,2024-07-12,dc:583629
+THE SPROUTS HEALTH,health,education_gov_membership,0.62,0.6302549839019775,2024-03-05,dc:569989
+THELITTLETOWNSMUSEUM,education_gov_membership,entertainment_media,0.58,0.5133614540100098,2026-05-01,dc:637511
+THERECORDXCHANGE,professional_services,software_electronics,0.58,0.4247221350669861,2024-10-16,dc:578890
+THINKAUM LLC,education_gov_membership,professional_services,0.42,0.6383074522018433,2024-07-06,dc:583187
+THINKWAVE,education_gov_membership,software_electronics,0.58,0.5698369145393372,2024-08-22,dc:587910
+THUMB RUN K9 L.L.C,professional_services,industrial_hardware,0.52,0.4339451789855957,2025-12-01,dc:615349
+THY 23,entertainment_media,airlines_travel,0.42,0.48798322677612305,2025-07-17,dc:601570
+TICKETS NET INCLUS,entertainment_media,education_gov_membership,0.58,0.6230992078781128,2025-01-27,dc:576797
+TICKETSPOTTY PROB,entertainment_media,education_gov_membership,0.42,0.5827484726905823,2024-03-04,dc:568350
+TIMOTHY O TOOLE S PUB,entertainment_media,restaurants,0.74,0.4914054870605469,2024-08-16,dc:585442
+TIPPI TOES DC,education_gov_membership,entertainment_media,0.62,0.5257096886634827,2025-06-10,dc:621938
+TIS NO YOLK/RENT T,entertainment_media,professional_services,0.58,0.5986008048057556,2026-04-09,dc:628284
+TRISTAN ALEXANDER,professional_services,entertainment_media,0.6,0.4976469874382019,2024-01-05,dc:526320
+TWWSUBSCRIPTION,entertainment_media,software_electronics,0.62,0.5614848732948303,2024-02-20,dc:569434
+U STREET PARKI00 OF 00,entertainment_media,transport_auto_fuel,0.42,0.5749332308769226,2025-10-23,dc:606876
+UNIONCENTRICS / ICEN,professional_services,software_electronics,0.42,0.5138669013977051,2024-02-16,dc:566119
+USCIS ELIS I90,professional_services,education_gov_membership,0.52,0.48219454288482666,2026-06-18,dc:630357
+USPCA,professional_services,education_gov_membership,0.74,0.6085442304611206,2026-03-30,dc:629442
+VDDZCYIX-1,entertainment_media,lodging,0.42,0.5053972005844116,2024-06-16,dc:549136
+VENTRIS LE VENTRIS LE,education_gov_membership,retail,0.42,0.4799710512161255,2025-06-13,dc:617874
+VERISMA SYSTEMS INC,health,software_electronics,0.74,0.6449940204620361,2024-02-20,dc:569421
+VIEWSONIC,retail,software_electronics,0.42,0.5215743780136108,2025-04-01,dc:613979
+VIRGINIA LAW FOUND,professional_services,education_gov_membership,0.25,0.6041303873062134,2025-09-26,dc:618535
+VOLUNTARY PROTECTION P,professional_services,education_gov_membership,0.42,0.5209529995918274,2024-05-22,dc:545266
+VSP NATIONAL CAPITAL F,professional_services,industrial_hardware,0.42,0.5896618962287903,2025-01-14,dc:573279
+VSP WORKWISE COMPLIANC,professional_services,education_gov_membership,0.58,0.48916661739349365,2025-03-11,dc:610579
+WARREN HYNSON ART,retail,professional_services,0.42,0.528239905834198,2026-02-26,dc:637026
+WAVE - BRANDT BUILDS,entertainment_media,professional_services,0.42,0.5542296171188354,2024-03-26,dc:528744
+WAVE - CUSTOM WHOLESA,retail,entertainment_media,0.56,0.5189833045005798,2026-03-05,dc:624335
+WAVE - HBCU PRIDE NA,entertainment_media,professional_services,0.42,0.5435568690299988,2025-10-07,dc:606024
+WEB BOND BUYER,financial_postal_shipping,office_supplies,0.55,0.5596379637718201,2024-10-14,dc:581778
+WELL DUNN CATERING,professional_services,restaurants,0.73,0.6432216763496399,2024-09-09,dc:590116
+WENDELL S INC,office_supplies,industrial_hardware,0.55,0.5762228965759277,2025-03-21,dc:615146
+WINDRIVERENVIRONMENTAL,professional_services,industrial_hardware,0.66,0.5502126216888428,2024-02-16,dc:566135
+WISEMAN FUNERAL HOME,health,professional_services,0.62,0.5198047757148743,2024-02-09,dc:565664
+WOODLAND APPLIANCE REP,professional_services,industrial_hardware,0.56,0.5822120308876038,2024-01-26,dc:527289
+WOOLFOLK MECHANICAL &,professional_services,transport_auto_fuel,0.62,0.4933086633682251,2026-07-03,dc:633381
+WOOLLY MAMMOTH THEATRE,entertainment_media,education_gov_membership,0.74,0.637795627117157,2026-03-16,dc:625667
+WORDPRESS ETSUQCUSNP,education_gov_membership,software_electronics,0.58,0.3996305465698242,2024-06-06,dc:546222
+WOWBRARY.O INTERACTIV,education_gov_membership,professional_services,0.42,0.5149251222610474,2026-04-27,dc:629210
+WP DOCSYSINC,professional_services,software_electronics,0.66,0.6106166243553162,2025-02-14,dc:592881
+WP GI4-VYOND,professional_services,software_electronics,0.58,0.42002153396606445,2024-03-22,dc:527475
+WP MIDEASTERNAPCO,professional_services,education_gov_membership,0.42,0.4936402440071106,2024-06-26,dc:545948
+WP PRINCETON GROUNDWA,education_gov_membership,professional_services,0.58,0.5486194491386414,2024-05-28,dc:544870
+WP UNISONTB,software_electronics,retail,0.32,0.45954984426498413,2024-03-14,dc:570471
+WP WELLBODYKITCHEN,health,groceries,0.64,0.5077003836631775,2026-03-16,dc:625263
+WWW.ADVANCEAUTOPARTS,retail,transport_auto_fuel,0.62,0.46626734733581543,2025-03-18,dc:616770
+WWW.UNIVERSALBOOT.COM,industrial_hardware,transport_auto_fuel,0.42,0.447887659072876,2025-02-04,dc:571162
+WWW.VARI.COM,office_supplies,retail,0.66,0.5077034831047058,2026-02-27,dc:624363
+XCELEVENTS,entertainment_media,professional_services,0.28,0.5200440287590027,2024-09-06,dc:590103
+XP SOLUTIONS LLC,professional_services,office_supplies,0.44,0.6330277919769287,2026-03-18,dc:628548
+ZZOUNDS,retail,entertainment_media,0.66,0.5792338252067566,2024-02-14,dc:564883

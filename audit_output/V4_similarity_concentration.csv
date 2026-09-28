@@ -1,0 +1,4 @@
+series,rows,pct_sim_ge_0.99,pct_sim_ge_0.95,pct_sim_lt_0.65,median_sim,p05_sim
+unseen (f = 0),14983,0.81,5.17,42.72,0.6837,0.487
+observed tail (1 ≤ f ≤ 3),4937,98.52,98.52,0.97,1.0,1.0
+head (f > 3),63195,99.79,99.79,0.17,1.0,1.0

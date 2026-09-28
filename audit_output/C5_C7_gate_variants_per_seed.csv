@@ -1,0 +1,31 @@
+gate,routed_frac,f1_overall,f1_unseen_f0,f1_obs_tail_1_3,seed
+none (kNN only),0.0,0.8046,0.4806,0.97,42
+threshold t=0.65,0.1048,0.86,0.6482,0.9724,42
+C5 oracle (route exactly the wrong),0.1561,0.8854,0.7178,0.9831,42
+C6 random @ matched coverage,0.1035,0.7403,0.4539,0.9397,42
+C7 membership (not in index),0.2738,0.787,0.5246,0.9698,42
+C7 hybrid (not in index OR cos<0.65),0.2738,0.787,0.5246,0.9698,42
+none (kNN only),0.0,0.8047,0.4808,0.97,43
+threshold t=0.65,0.1048,0.86,0.6482,0.9724,43
+C5 oracle (route exactly the wrong),0.156,0.8854,0.7178,0.9831,43
+C6 random @ matched coverage,0.1049,0.7345,0.4561,0.9439,43
+C7 membership (not in index),0.2738,0.787,0.5246,0.9698,43
+C7 hybrid (not in index OR cos<0.65),0.2738,0.787,0.5246,0.9698,43
+none (kNN only),0.0,0.8047,0.4808,0.97,44
+threshold t=0.65,0.1048,0.86,0.6482,0.9724,44
+C5 oracle (route exactly the wrong),0.156,0.8854,0.7178,0.9831,44
+C6 random @ matched coverage,0.1079,0.7383,0.4945,0.9446,44
+C7 membership (not in index),0.2738,0.787,0.5246,0.9698,44
+C7 hybrid (not in index OR cos<0.65),0.2738,0.787,0.5246,0.9698,44
+none (kNN only),0.0,0.8047,0.4808,0.97,45
+threshold t=0.65,0.1048,0.86,0.6482,0.9724,45
+C5 oracle (route exactly the wrong),0.156,0.8854,0.7178,0.9831,45
+C6 random @ matched coverage,0.104,0.7351,0.4872,0.9154,45
+C7 membership (not in index),0.2738,0.787,0.5246,0.9698,45
+C7 hybrid (not in index OR cos<0.65),0.2738,0.787,0.5246,0.9698,45
+none (kNN only),0.0,0.8048,0.4811,0.97,46
+threshold t=0.65,0.1048,0.86,0.6482,0.9724,46
+C5 oracle (route exactly the wrong),0.1558,0.8854,0.7178,0.9831,46
+C6 random @ matched coverage,0.1052,0.7405,0.464,0.9466,46
+C7 membership (not in index),0.2738,0.787,0.5246,0.9698,46
+C7 hybrid (not in index OR cos<0.65),0.2738,0.787,0.5246,0.9698,46

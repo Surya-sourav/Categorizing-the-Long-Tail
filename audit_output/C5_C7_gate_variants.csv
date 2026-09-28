@@ -1,0 +1,7 @@
+gate,routed_frac,f1_overall,f1_unseen_f0,f1_obs_tail_1_3
+none (kNN only),0.0,0.8047,0.4808,0.97
+threshold t=0.65,0.1048,0.86,0.6482,0.9724
+C5 oracle (route exactly the wrong),0.156,0.8854,0.7178,0.9831
+C6 random @ matched coverage,0.1051,0.7377,0.4711,0.938
+C7 membership (not in index),0.2738,0.787,0.5246,0.9698
+C7 hybrid (not in index OR cos<0.65),0.2738,0.787,0.5246,0.9698

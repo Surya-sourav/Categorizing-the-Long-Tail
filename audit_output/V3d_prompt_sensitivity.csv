@@ -1,0 +1,5 @@
+model,condition,acc_v1,acc_v2,abs_diff_pp,n
+gpt-5-nano,no_web,0.3533,0.37,1.67,300
+gpt-5-nano,with_web,0.5233,0.55,2.67,300
+gpt-5-mini,no_web,0.5133,0.5367,2.33,300
+gpt-5-mini,with_web,0.6133,0.6267,1.33,300

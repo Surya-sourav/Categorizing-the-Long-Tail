@@ -1,0 +1,14 @@
+method,class_set_size,extra_classes,missing_of_15
+knn/sentence-transformers/all-MiniLM-L6-v2,15,,0
+llm_no_web/google/diffusiongemma-26b-a4b-it,15,,0
+llm_with_web/google/diffusiongemma-26b-a4b-it,15,,0
+llm_no_web/gpt-5-mini,16,INVALID,0
+llm_with_web/gpt-5-mini,16,INVALID,0
+llm_no_web/gpt-5-nano,16,INVALID,0
+llm_with_web/gpt-5-nano,16,INVALID,0
+llm_no_web/meta/muse-glimmer-30b,15,,0
+llm_with_web/meta/muse-glimmer-30b,15,,0
+llm_no_web/nvidia/nemotron-3-super-120b-a12b,16,INVALID,0
+llm_with_web/nvidia/nemotron-3-super-120b-a12b,16,INVALID,0
+routed/sentence-transformers/all-MiniLM-L6-v2/gpt-5-mini@0.65,15,,0
+routed/sentence-transformers/all-MiniLM-L6-v2/gpt-5-nano@0.65,16,INVALID,0

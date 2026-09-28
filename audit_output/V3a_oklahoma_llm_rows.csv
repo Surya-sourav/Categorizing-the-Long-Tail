@@ -1,0 +1,5 @@
+method,macro_f1,n_merchants,n_rows,class_set_size,extra_classes
+llm_no_web/gpt-5-nano,0.3212,800,6318,16,INVALID
+llm_with_web/gpt-5-nano,0.4587,800,6318,16,INVALID
+llm_no_web/gpt-5-mini,0.5028,800,6318,16,INVALID
+llm_with_web/gpt-5-mini,0.5757,800,6318,16,INVALID

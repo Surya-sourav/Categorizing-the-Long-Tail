@@ -1,0 +1,4 @@
+strategy,accuracy,searches_per_merchant,usd_per_1k
+no web evidence,0.5133,0.0,
+fixed snippets,0.6133,1.0,11.0
+agent-issued,0.62,1.6367,21.161

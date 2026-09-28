@@ -1,0 +1,949 @@
+merchant,pred_category,gold_category,confidence,sim1,date,txn_id,wrong
+1C UNITED CNTR CONCESS,entertainment_media,restaurants,0.58,0.5626782178878784,2024-08-22,dc:586311,True
+1TROOPER,professional_services,software_electronics,0.58,0.40864038467407227,2025-04-01,dc:613975,True
+360ONLINEPRINT,office_supplies,office_supplies,0.42,0.6189384460449219,2026-06-30,dc:633413,False
+4TE MID-ATLANTIC TECHN,education_gov_membership,industrial_hardware,0.32,0.6253089904785156,2025-05-15,dc:607196,True
+"4TE SETEC, INC",professional_services,professional_services,0.68,0.5422589182853699,2025-01-10,dc:574502,False
+4WALL ENTERTAINMENT,entertainment_media,professional_services,0.65,0.5214056372642517,2024-08-17,dc:587034,True
+5 STAR LUXURY TRAN,lodging,professional_services,0.42,0.6130197048187256,2024-04-23,dc:562658,True
+A MKE HOST,retail,education_gov_membership,0.45,0.5250737071037292,2024-06-06,dc:544971,True
+"A&A, CENTRIC, COECO",retail,industrial_hardware,0.32,0.4745737314224243,2024-07-11,dc:582828,True
+A2WEBHOST A-INV-11664,software_electronics,software_electronics,0.42,0.4991556406021118,2026-06-22,dc:632556,False
+AAA IDP,transport_auto_fuel,professional_services,0.58,0.6073557734489441,2026-03-17,dc:628943,True
+AACC-DESTINY ONE,education_gov_membership,education_gov_membership,0.66,0.5402008295059204,2025-01-29,dc:574329,False
+AAMACONF AFRICAN AMER,retail,education_gov_membership,0.28,0.5600587129592896,2025-02-19,dc:596996,True
+"ABLENET, INC",health,health,0.52,0.6155567169189453,2024-03-14,dc:566780,False
+ABOUT COMICS,entertainment_media,office_supplies,0.65,0.4328218698501587,2024-09-09,dc:590119,True
+ABSOLUTE THAI RESTAURA,restaurants,restaurants,0.66,0.5040267705917358,2026-05-14,dc:634782,False
+ACCESSIBIL INV-937 94,health,education_gov_membership,0.34,0.5528900027275085,2026-01-12,dc:617344,True
+ACCOR PULLMAN PARIS T,lodging,lodging,0.78,0.5540423393249512,2025-03-03,dc:594609,False
+ACME BIOMASS REDUC,health,industrial_hardware,0.28,0.47290581464767456,2024-08-12,dc:590679,True
+ACME PAPER AND SUPPLY,office_supplies,industrial_hardware,0.65,0.5152035355567932,2024-03-25,dc:525076,True
+ACT MASON ARTS ACADEMY,education_gov_membership,education_gov_membership,0.45,0.6187701225280762,2024-05-24,dc:550594,False
+ADORNED4QWEENZLLC,retail,professional_services,0.25,0.5316622853279114,2025-02-18,dc:596583,True
+ADVANTAGE SPORT & FITN,health,industrial_hardware,0.28,0.6401407122612,2026-02-25,dc:635386,True
+AFCA INV-69744,professional_services,education_gov_membership,0.58,0.5649821162223816,2026-01-06,dc:623032,True
+AFP ASSOCIATION OF AFR,education_gov_membership,education_gov_membership,0.62,0.5856882333755493,2024-05-18,dc:549746,False
+AFP INSTITUTE FOR INTE,professional_services,education_gov_membership,0.55,0.609892725944519,2024-04-04,dc:558800,True
+AFP THE CHANDRA LAW FI,professional_services,professional_services,0.58,0.5459215044975281,2025-01-14,dc:576953,False
+AGP BTPROPANE,transport_auto_fuel,telecom_utilities,0.42,0.4811878204345703,2024-04-04,dc:564216,True
+AIA CONV REGISTRTION,education_gov_membership,education_gov_membership,0.45,0.5843544602394104,2024-03-05,dc:565501,False
+AIMEE CUSTIS PHOTOGRAP,professional_services,entertainment_media,0.72,0.5486964583396912,2024-09-25,dc:597254,True
+AIR RESOURCE SPECIALIS,professional_services,industrial_hardware,0.72,0.5862587690353394,2026-01-14,dc:621415,True
+AIRCLEAN SYSTEMS,office_supplies,industrial_hardware,0.4,0.4702780246734619,2025-02-05,dc:574406,True
+AIRCRAFT SPRUCE AND SP,industrial_hardware,transport_auto_fuel,0.62,0.5112879872322083,2024-07-30,dc:588549,True
+AIRLINE FVT,airlines_travel,airlines_travel,0.58,0.6493265628814697,2025-06-05,dc:623098,False
+ALAMO DRFTHS DC BRY RE,entertainment_media,entertainment_media,0.72,0.5964725017547607,2024-11-20,dc:576278,False
+ALL INDUSTRIAL TOOL SU,industrial_hardware,industrial_hardware,0.55,0.5686211585998535,2024-06-09,dc:550746,False
+ALL MY SONS OF VA NORT,entertainment_media,financial_postal_shipping,0.35,0.49203962087631226,2025-06-05,dc:619856,True
+ALLEGION ACCESS TECHNO,office_supplies,industrial_hardware,0.25,0.6328997611999512,2026-02-12,dc:599815,True
+ALLIANCE LAUNDRY SYSTE,professional_services,industrial_hardware,0.68,0.572902500629425,2024-04-30,dc:529400,True
+ALLINONE WP MIGRATION,professional_services,software_electronics,0.58,0.4547004699707031,2025-12-21,dc:616217,True
+ALLPAID 76TH DISTRICT,professional_services,education_gov_membership,0.58,0.6477826833724976,2024-11-22,dc:577531,True
+ALLTHINGSINSPECOTR,professional_services,software_electronics,0.55,0.5217462778091431,2024-09-24,dc:593595,True
+ALOFT KANSAS CITY COUN,lodging,lodging,0.55,0.6318858861923218,2024-04-07,dc:563385,False
+ALOFT LOVEFIELD,lodging,lodging,0.62,0.6133870482444763,2025-08-20,dc:610219,False
+ALTEC SENTRY,education_gov_membership,industrial_hardware,0.55,0.6397507190704346,2024-11-07,dc:572137,True
+AMAZON DIGIT,entertainment_media,software_electronics,0.45,0.6309956312179565,2024-02-17,dc:564895,True
+AMAZON RET 111-737373,retail,retail,0.45,0.5499897003173828,2024-07-18,dc:577883,False
+AMAZON RET LORI TODD,retail,retail,0.45,0.5324505567550659,2024-04-24,dc:562447,False
+AMERICA'S INK AND TONE,office_supplies,office_supplies,0.55,0.6266817450523376,2024-01-04,dc:530407,False
+AMERICAN AMPLIFIER,telecom_utilities,industrial_hardware,0.35,0.4978513717651367,2024-02-23,dc:570286,True
+AMERICAN BD PEDIATRICS,education_gov_membership,education_gov_membership,0.62,0.6297262907028198,2024-01-19,dc:527629,False
+AMERICAN DESIGN ASSOCI,office_supplies,office_supplies,0.62,0.6495270133018494,2024-05-24,dc:550615,False
+AMERICAN FIRE SUPPLY,industrial_hardware,industrial_hardware,0.72,0.6418793797492981,2024-02-08,dc:569759,False
+AMERICAN GEOSCI INST,professional_services,education_gov_membership,0.58,0.5847904682159424,2026-07-30,dc:634943,True
+AMERICAN MEGA LAUN,retail,professional_services,0.2,0.6186878681182861,2024-05-27,dc:551033,True
+AMERICAN MKTG ASSOC,professional_services,education_gov_membership,0.35,0.6474440097808838,2024-11-26,dc:574261,True
+AMERICAN ORNITHOLOGICA,education_gov_membership,education_gov_membership,0.28,0.530076801776886,2024-08-30,dc:586350,False
+AMERICAN PROFICIENCY I,professional_services,industrial_hardware,0.3,0.6261834502220154,2026-05-13,dc:635933,True
+AMESBURY TRUTH,industrial_hardware,industrial_hardware,0.58,0.5975251793861389,2024-01-10,dc:525972,False
+AMIA,education_gov_membership,education_gov_membership,0.45,0.6440783143043518,2026-05-01,dc:639133,False
+AMK LFF CONCESSIONS,entertainment_media,restaurants,0.42,0.4748348593711853,2025-01-26,dc:573906,True
+AMRIZE MIDATLANTIC RMX,industrial_hardware,industrial_hardware,0.42,0.44104135036468506,2025-08-21,dc:605799,False
+ANGAD ARTS HOTEL ST LU,lodging,lodging,0.74,0.5990392565727234,2024-09-20,dc:593551,False
+ANGELA ROSE CULINA,professional_services,restaurants,0.62,0.5082537531852722,2025-08-29,dc:620421,True
+ANSWR SVC MAPCOMM,professional_services,software_electronics,0.66,0.4925330877304077,2025-12-02,dc:616549,True
+AP PRO MOVING LLC,transport_auto_fuel,financial_postal_shipping,0.62,0.5300086736679077,2026-07-06,dc:634202,True
+APARCAMIENTO PZA MAYOR,transport_auto_fuel,transport_auto_fuel,0.45,0.5416256785392761,2026-04-23,dc:623456,False
+APPALACHIAN FENCIN,professional_services,industrial_hardware,0.35,0.47094178199768066,2025-08-26,dc:605000,True
+APPLAUZ,software_electronics,education_gov_membership,0.72,0.4803541898727417,2024-02-28,dc:568249,True
+APPLIED TECHNOLOGY,industrial_hardware,software_electronics,0.42,0.6389249563217163,2024-04-17,dc:560568,True
+ARCHBISHOP CARROLL,education_gov_membership,education_gov_membership,0.58,0.6035722494125366,2024-07-02,dc:549220,False
+ARCIS INTERNATIONA,professional_services,professional_services,0.72,0.6384201049804688,2024-10-22,dc:580583,False
+AREA SAFE & LOCK SERVI,professional_services,professional_services,0.65,0.48861610889434814,2025-10-29,dc:609522,False
+ART ENABLE ART ENABLE,education_gov_membership,education_gov_membership,0.42,0.5436513423919678,2024-04-24,dc:562040,False
+ART OF PROBLEM SOLVING,education_gov_membership,education_gov_membership,0.46,0.5968050360679626,2025-12-22,dc:611337,False
+ASNNA O,retail,education_gov_membership,0.32,0.6446962356567383,2025-01-17,dc:571465,True
+ASSN OF FISH AND WILDL,health,education_gov_membership,0.42,0.6112623810768127,2026-07-24,dc:633267,True
+ASSOC OF AQUATIC PROS,education_gov_membership,education_gov_membership,0.72,0.6272751092910767,2026-01-30,dc:599780,False
+ASSOCIATED SALES & BAG,office_supplies,office_supplies,0.64,0.6413851380348206,2024-03-05,dc:569166,False
+ASSOCIATION OF VAPOR I,retail,education_gov_membership,0.28,0.4301666021347046,2025-12-04,dc:612890,True
+ASTROPHYSICS INC,industrial_hardware,industrial_hardware,0.55,0.6258295774459839,2024-05-10,dc:550095,False
+ASUGSVSUMM ASU+GSV SU,education_gov_membership,entertainment_media,0.75,0.5678543448448181,2024-03-13,dc:569239,True
+ATLXP - LDG - HH ATLAN,lodging,lodging,0.72,0.5320103764533997,2024-11-01,dc:578615,False
+AURAINSTITUTE,education_gov_membership,education_gov_membership,0.55,0.4351273775100708,2024-07-02,dc:547976,False
+"AUTHENTIC8, INC",software_electronics,software_electronics,0.72,0.6119633316993713,2026-05-04,dc:636713,False
+AUTISM TOWING AND,transport_auto_fuel,transport_auto_fuel,0.62,0.6186246275901794,2024-01-16,dc:529269,False
+AUTO AMERICA SERVICE L,transport_auto_fuel,transport_auto_fuel,0.55,0.6314353942871094,2025-01-08,dc:574869,False
+AUTO AND TIRES MASTERS,retail,transport_auto_fuel,0.25,0.5072644352912903,2024-02-01,dc:568460,True
+AUTOAUTH SERVICE,professional_services,software_electronics,0.42,0.5119758248329163,2024-01-23,dc:528470,True
+AUTOBKS NO OBESITY FA,health,education_gov_membership,0.4,0.5615025162696838,2025-04-04,dc:613988,True
+AUTOBKS RESCUE ME EDUC,education_gov_membership,education_gov_membership,0.25,0.4375615119934082,2024-09-03,dc:587176,False
+AUTOMATED FASTENING SY,office_supplies,industrial_hardware,0.42,0.47272372245788574,2025-02-05,dc:596518,True
+AVANTUS FEDERAL LL,professional_services,professional_services,0.62,0.5257295370101929,2025-02-12,dc:593667,False
+AVELO AI BWIHVN,airlines_travel,airlines_travel,0.72,0.5070832371711731,2026-06-02,dc:631739,False
+AVENU HRS PRO,software_electronics,education_gov_membership,0.62,0.6236301064491272,2024-01-24,dc:529747,True
+AXIS FORENSIC TOXICOLO,professional_services,professional_services,0.72,0.4609362483024597,2025-02-10,dc:590825,False
+B2GNOW B2GNOW,software_electronics,software_electronics,0.28,0.49553537368774414,2026-04-02,dc:627841,False
+BACKSTAGE LIBRARY,professional_services,retail,0.78,0.6002480387687683,2026-04-08,dc:624996,True
+BAILEYMANUF,industrial_hardware,health,0.42,0.5750101208686829,2025-03-18,dc:611055,True
+BAMBOOBALANCEYOGA,retail,professional_services,0.64,0.4811204671859741,2024-06-26,dc:545575,True
+BAND SHOPPE,retail,retail,0.75,0.6440823078155518,2024-02-05,dc:566864,False
+BEACON BLDG PROD,industrial_hardware,industrial_hardware,0.62,0.6217730641365051,2024-07-16,dc:580796,False
+BELAIR COMPOSITES,industrial_hardware,industrial_hardware,0.42,0.47376561164855957,2026-04-23,dc:623879,False
+BELLA EVENTS LLC,entertainment_media,entertainment_media,0.35,0.6147697567939758,2025-10-28,dc:608700,False
+BEMORE HEALTH COAC,health,professional_services,0.62,0.5684206485748291,2025-09-20,dc:618068,True
+BERL'S COMMERCIAL SUPP,industrial_hardware,industrial_hardware,0.62,0.5501512885093689,2024-02-21,dc:571071,False
+BEST HIRE CAREER FAIRS,education_gov_membership,professional_services,0.55,0.5566556453704834,2024-07-26,dc:580487,True
+BGTNYCFEE,transport_auto_fuel,transport_auto_fuel,0.66,0.5489562153816223,2026-01-14,dc:623049,False
+BIG JOE THE BARBER,professional_services,professional_services,0.58,0.5085638761520386,2024-09-04,dc:587598,False
+BIGGERPOCKETS,education_gov_membership,education_gov_membership,0.28,0.4256718158721924,2024-02-27,dc:564566,False
+BIL APOGEE EXECUTIVE C,professional_services,professional_services,0.52,0.5378516316413879,2025-07-25,dc:598339,False
+BIL BLACKBURN CENTER,health,professional_services,0.62,0.5926462411880493,2024-04-24,dc:564064,True
+BIL EPIPHANY EDUCATION,education_gov_membership,professional_services,0.42,0.5670322775840759,2024-05-02,dc:525740,True
+BIL VJ CONSULTING FIRM,professional_services,professional_services,0.58,0.6177641749382019,2024-09-17,dc:596745,False
+BIL VOLO INC,professional_services,professional_services,0.4,0.6311919093132019,2024-08-28,dc:585506,False
+BILLABOOK,office_supplies,airlines_travel,0.4,0.5422593355178833,2026-07-27,dc:636914,True
+"BIOFIRE DEFENSE, L",health,health,0.62,0.5840834975242615,2026-05-20,dc:637634,False
+BIOMETRICS4ALL,professional_services,professional_services,0.6,0.5167892575263977,2026-07-21,dc:633237,False
+BLACKOUT EZ LLC,professional_services,retail,0.4,0.5721555352210999,2024-08-28,dc:585507,True
+BLAZIN ENTERPRISES,professional_services,retail,0.35,0.6355236172676086,2024-05-16,dc:545621,True
+BLINK CHARGING CO,transport_auto_fuel,transport_auto_fuel,0.65,0.6050525307655334,2024-04-04,dc:559662,False
+BLOOKET,education_gov_membership,education_gov_membership,0.65,0.5038699507713318,2025-02-10,dc:591246,False
+BLP,professional_services,retail,0.44,0.5867301225662231,2025-12-10,dc:614978,True
+BLUE ROBIN DESIGNS,retail,professional_services,0.35,0.536873459815979,2024-03-11,dc:564708,True
+BLUESTONE WOODWORK,retail,retail,0.45,0.5297790765762329,2026-06-02,dc:632640,False
+BOARD ACCOUNTANCY,professional_services,education_gov_membership,0.42,0.5814463496208191,2024-06-26,dc:547180,True
+BOARDABLE,professional_services,software_electronics,0.58,0.538023829460144,2026-03-24,dc:625309,True
+BOJIDOG FILMS INC,entertainment_media,professional_services,0.58,0.4789499044418335,2024-05-01,dc:527349,True
+BOOK CREATOR,education_gov_membership,software_electronics,0.28,0.6412832736968994,2025-01-07,dc:573244,True
+BOOKPAGEZ,education_gov_membership,software_electronics,0.25,0.5616028308868408,2025-09-09,dc:623291,True
+BOOKPAL,education_gov_membership,retail,0.35,0.47322237491607666,2024-08-08,dc:589020,True
+BOOLEAN GIRL,education_gov_membership,entertainment_media,0.62,0.47675180435180664,2024-03-04,dc:567123,True
+BOOM LEARNING INC,education_gov_membership,education_gov_membership,0.22,0.5821662545204163,2024-05-23,dc:548936,False
+BOSCH AUTOMOTIVE SERVI,professional_services,transport_auto_fuel,0.42,0.5991613268852234,2025-07-25,dc:601197,True
+BRAD DEEL DRONE PHOTOG,professional_services,entertainment_media,0.58,0.5572330355644226,2024-04-11,dc:563814,True
+BRANDIRE,professional_services,professional_services,0.56,0.4991418719291687,2025-05-22,dc:606417,False
+BRANDYWINE PROCESS,professional_services,professional_services,0.62,0.6222779750823975,2024-09-13,dc:595076,False
+BRANSON GROUP,entertainment_media,professional_services,0.42,0.6239879131317139,2024-07-10,dc:578259,True
+BRD-EXMINER AUDIOLOGIS,health,health,0.46,0.48534154891967773,2024-07-30,dc:587720,False
+BRIAN@CHANGEAGENTS,professional_services,professional_services,0.56,0.45558393001556396,2026-04-01,dc:627390,False
+BRIDGE CAPITAL PARTNER,professional_services,professional_services,0.35,0.6401543617248535,2024-05-24,dc:548556,False
+BRIGHT BEAR YOGA DC,education_gov_membership,professional_services,0.25,0.6070795059204102,2025-09-04,dc:618763,True
+BROKEN YOLK CAFE - TOW,restaurants,restaurants,0.76,0.4339550733566284,2024-05-17,dc:551024,False
+BROOKE RENTAL CENTER,retail,professional_services,0.55,0.6021648049354553,2024-09-11,dc:587661,True
+BROTHERHOODSISSOL,education_gov_membership,education_gov_membership,0.62,0.44604212045669556,2024-06-20,dc:551234,False
+BROTHERS TRANSPORT,transport_auto_fuel,financial_postal_shipping,0.62,0.560396134853363,2025-12-16,dc:611305,True
+BT HERCULES BULK,industrial_hardware,industrial_hardware,0.35,0.5809147357940674,2025-01-07,dc:573644,False
+BT PRECISION CAPI,industrial_hardware,professional_services,0.25,0.5552119612693787,2025-01-03,dc:576898,True
+BT SHIFFLEREQUIP,industrial_hardware,retail,0.58,0.5710948705673218,2026-01-08,dc:607504,True
+BT TODAY'S CLASSR,education_gov_membership,office_supplies,0.58,0.5600779056549072,2025-01-31,dc:574810,True
+BULLSEYE LLC,professional_services,software_electronics,0.58,0.6012843251228333,2025-07-17,dc:601963,True
+BURGER MAN,restaurants,restaurants,0.55,0.6001176238059998,2026-07-13,dc:634051,False
+BURSARS OFFICE - PAYPA,education_gov_membership,education_gov_membership,0.28,0.6057841777801514,2026-01-14,dc:621428,False
+BUZZ365MEDIA,entertainment_media,software_electronics,0.35,0.6313601136207581,2024-07-22,dc:582079,True
+BWY VCIA,professional_services,education_gov_membership,0.52,0.6187704205513,2024-06-20,dc:551219,True
+BYPALMASTUDIO,professional_services,professional_services,0.42,0.4594501852989197,2026-04-22,dc:627114,False
+C & R CREATIVE SOL,professional_services,professional_services,0.42,0.6296468377113342,2026-02-04,dc:600146,False
+CAESAR'S PALACE DEPOSI,lodging,lodging,0.68,0.5892401337623596,2025-02-05,dc:571564,False
+CALTOPO,software_electronics,education_gov_membership,0.58,0.49778157472610474,2025-02-22,dc:596609,True
+CAMBRIA-SAVANNAH,lodging,lodging,0.72,0.6480363607406616,2024-08-02,dc:584443,False
+CAMPUS LAKE AUSTIN QPS,education_gov_membership,lodging,0.28,0.5542247295379639,2025-10-30,dc:605470,True
+CANOPY JERSEY CITY,retail,lodging,0.45,0.5974095463752747,2024-06-02,dc:545759,True
+CAP MEMBERSHIPS,education_gov_membership,education_gov_membership,0.58,0.5488058924674988,2026-01-29,dc:602174,False
+CAPITAL ENERGY EQUIPME,industrial_hardware,industrial_hardware,0.65,0.5652675032615662,2025-01-10,dc:574497,False
+CARDIO PARTNERS INC,health,health,0.72,0.6203858256340027,2024-08-22,dc:588321,False
+CARRETAS,restaurants,restaurants,0.72,0.5035089254379272,2026-04-23,dc:624699,False
+CARVEWRIGHT,industrial_hardware,industrial_hardware,0.68,0.6143620014190674,2024-02-01,dc:568442,False
+"CASEGUARD, INC",professional_services,software_electronics,0.6,0.6360139846801758,2025-05-15,dc:606774,True
+CASIE,retail,education_gov_membership,0.4,0.5255633592605591,2024-07-19,dc:584115,True
+CAST PUBLISHING,education_gov_membership,software_electronics,0.62,0.5972557663917542,2024-02-09,dc:570983,True
+CCNJOBFAIR,education_gov_membership,software_electronics,0.42,0.6380101442337036,2025-03-25,dc:611902,True
+CCSI EFAX CORPORATE,professional_services,retail,0.62,0.6025397181510925,2024-03-25,dc:525068,True
+CHC VACATION R BOOKING,lodging,lodging,0.78,0.6346116662025452,2026-04-30,dc:635082,False
+CHEERSOUNDS,entertainment_media,software_electronics,0.55,0.6265822052955627,2024-01-12,dc:528426,True
+CHESS WIZARDS INC,education_gov_membership,education_gov_membership,0.6,0.5833045244216919,2025-06-10,dc:621922,False
+CHEVRON,transport_auto_fuel,transport_auto_fuel,0.78,0.5021023154258728,2026-06-04,dc:629847,False
+CHEZ GEORGES BISTRO &,restaurants,restaurants,0.72,0.5946840047836304,2026-05-23,dc:636797,False
+"CHI SQUARED, LLC",professional_services,professional_services,0.55,0.5974546074867249,2025-09-02,dc:623276,False
+CHIARAMONTE CONSTR,professional_services,industrial_hardware,0.72,0.5355907678604126,2026-03-30,dc:625758,True
+CHICAGO PUBLIC SCHOOL,education_gov_membership,education_gov_membership,0.72,0.5816262364387512,2025-12-23,dc:612566,False
+CHILDREN'S NAT'L MEDIA,health,education_gov_membership,0.72,0.5926534533500671,2024-10-09,dc:578477,True
+CHMS 1 AWARDS BRU,education_gov_membership,education_gov_membership,0.28,0.54649418592453,2024-05-08,dc:526603,False
+CHOP CHOP MOVERS,transport_auto_fuel,professional_services,0.72,0.48914164304733276,2024-10-04,dc:580084,True
+CHOPT - ROSSLYN,restaurants,restaurants,0.74,0.5064414143562317,2025-02-06,dc:573584,False
+CHRISTINA CARRILLO,professional_services,health,0.55,0.6009182929992676,2025-02-26,dc:596649,True
+CHRISTOPHER ORTIZ,health,professional_services,0.54,0.5411555767059326,2024-05-10,dc:548049,True
+CHRON OF PHILANTHROPY,education_gov_membership,office_supplies,0.66,0.4411117434501648,2024-09-16,dc:595507,True
+CINNOVAS DEVELOPME,professional_services,professional_services,0.72,0.5374266505241394,2025-06-11,dc:620332,False
+CITY CAST LLC,entertainment_media,entertainment_media,0.62,0.5270447134971619,2026-05-11,dc:635921,False
+CITY EXPRESS ORLANDO,lodging,lodging,0.66,0.6313568353652954,2026-06-16,dc:631612,False
+CIVITAS NETWORKS FOR H,health,education_gov_membership,0.72,0.49401915073394775,2024-09-03,dc:586374,True
+CLACONNECT,professional_services,software_electronics,0.68,0.5688579678535461,2026-05-08,dc:634736,True
+CLASSKICK,education_gov_membership,software_electronics,0.55,0.5573583245277405,2024-07-09,dc:579905,True
+CLASSTEAMBUILDING,education_gov_membership,education_gov_membership,0.58,0.5503857731819153,2026-04-06,dc:626182,False
+CLEANHEALTH ENV,health,professional_services,0.62,0.5801346302032471,2026-03-27,dc:624528,True
+CLEARSTREAM RECYCL,industrial_hardware,industrial_hardware,0.52,0.5234765410423279,2024-09-26,dc:595229,False
+CLOTHES CALL,professional_services,professional_services,0.62,0.5442903637886047,2026-06-26,dc:632765,False
+CLOUDAI TECHNOLOGIES,professional_services,software_electronics,0.54,0.6042101383209229,2025-02-24,dc:592513,True
+CMS MEDICARE APPLIC FE,health,education_gov_membership,0.58,0.49169719219207764,2024-06-18,dc:548755,True
+COATS COMPANY,industrial_hardware,industrial_hardware,0.42,0.5252973437309265,2024-07-25,dc:580029,False
+COLLEGE HUNKS - DC,professional_services,financial_postal_shipping,0.72,0.6157689094543457,2024-03-25,dc:527321,True
+COLLEGE PARK HYUNDAI,transport_auto_fuel,transport_auto_fuel,0.74,0.5266962051391602,2026-02-17,dc:599039,False
+COLLINSON ENTERPRI,professional_services,industrial_hardware,0.58,0.6193415522575378,2024-05-14,dc:547647,True
+COMMON GOOD CITY F,education_gov_membership,industrial_hardware,0.62,0.5675267577171326,2026-04-30,dc:636678,True
+CONCRETE BLOCK SUPPLY,industrial_hardware,industrial_hardware,0.62,0.4636338949203491,2025-02-22,dc:597015,False
+CONDOCERTS NE,professional_services,office_supplies,0.62,0.5415050983428955,2024-06-04,dc:545785,True
+"CONTINUED.COM, LLC",education_gov_membership,education_gov_membership,0.62,0.6196132898330688,2024-06-07,dc:549084,False
+CONTRACTOR RESOURCE,education_gov_membership,retail,0.05,0.6492670774459839,2025-03-31,dc:612735,True
+COPPIN STATE MARKETPLA,education_gov_membership,education_gov_membership,0.55,0.588738739490509,2025-03-06,dc:616688,False
+COPYRITE PRINTING,office_supplies,office_supplies,0.58,0.6195197105407715,2025-12-10,dc:616160,False
+COSA INV-1239,professional_services,education_gov_membership,0.28,0.6295862793922424,2025-11-18,dc:598030,True
+COUNCIL MEMBER DAVID GROSSO,professional_services,education_gov_membership,0.58,0.5411980152130127,2024-03-13,dc:568418,True
+COURSEFORHIPAA,education_gov_membership,education_gov_membership,0.58,0.57347172498703,2024-01-23,dc:527664,False
+COURSRA,education_gov_membership,education_gov_membership,0.75,0.6198648810386658,2024-08-26,dc:587093,False
+COURTYARD EDISON WOODB,lodging,lodging,0.72,0.616047203540802,2025-12-05,dc:612467,False
+CQ CHICAGO WACKER,lodging,lodging,0.72,0.6408977508544922,2026-06-27,dc:632963,False
+CQ GRAND CENTRAL,lodging,lodging,0.78,0.6480255126953125,2026-05-05,dc:637567,False
+CREATE A STOLE,education_gov_membership,retail,0.55,0.37468981742858887,2025-04-14,dc:616091,True
+CREATEASTO CREATE A S,professional_services,retail,0.28,0.3495384454727173,2026-04-14,dc:628332,True
+CREATESTUDIO,software_electronics,software_electronics,0.72,0.5325011610984802,2024-03-01,dc:565081,False
+"CRUNCHBASE, INC",professional_services,software_electronics,0.66,0.6083934903144836,2026-04-24,dc:626723,True
+CRYSTAL FLOOR SCRUBBER,industrial_hardware,industrial_hardware,0.58,0.4815201163291931,2025-03-10,dc:615896,False
+CSP SUPPLY,industrial_hardware,industrial_hardware,0.55,0.5739673972129822,2026-02-05,dc:600984,False
+CURVATURE,software_electronics,software_electronics,0.28,0.43032801151275635,2025-12-08,dc:614564,False
+CVENT CHILDRENS NATIO,health,education_gov_membership,0.72,0.6399917602539062,2024-04-18,dc:562208,True
+CYA WARRANTY,retail,financial_postal_shipping,0.4,0.41045665740966797,2024-02-29,dc:568257,True
+DAIKIN CAPITOL HEIGHTS,industrial_hardware,industrial_hardware,0.55,0.6079474091529846,2024-01-02,dc:529183,False
+DAISY KHAN,professional_services,professional_services,0.58,0.534533679485321,2025-01-24,dc:576371,False
+DANCE WITH JENN,education_gov_membership,entertainment_media,0.28,0.5158805251121521,2026-06-08,dc:632466,True
+DATA STRATEGY PROS,education_gov_membership,education_gov_membership,0.58,0.5469198822975159,2024-09-24,dc:593996,False
+DATAWATCH CARDSHOP,professional_services,professional_services,0.55,0.4793216586112976,2026-07-02,dc:637466,False
+DAUPHINES,restaurants,restaurants,0.72,0.46791625022888184,2024-03-11,dc:570455,False
+DAVID B. WALKER DE,health,professional_services,0.66,0.5009607076644897,2024-01-25,dc:525664,True
+DAYDREAMING ABOUT DATA,education_gov_membership,software_electronics,0.55,0.4130737781524658,2026-07-02,dc:625555,True
+DBA CHARLIE BLACK,professional_services,education_gov_membership,0.42,0.5152782201766968,2024-02-20,dc:569422,True
+DC FACE PAINTING L,entertainment_media,entertainment_media,0.58,0.5796945095062256,2024-09-13,dc:596708,False
+DC MEDIATION INSTITUTE,professional_services,professional_services,0.72,0.5957927703857422,2025-06-18,dc:618722,False
+DC TOWING AND RECOVERY,transport_auto_fuel,transport_auto_fuel,0.72,0.5499582290649414,2024-03-08,dc:568803,False
+DCPEACETEAM,education_gov_membership,education_gov_membership,0.62,0.6068008542060852,2025-02-18,dc:593688,False
+DCPS-WOODSON,education_gov_membership,education_gov_membership,0.72,0.5641841292381287,2024-03-20,dc:527872,False
+DD MOBILE CREDITS,retail,restaurants,0.55,0.5574905276298523,2024-02-29,dc:568283,True
+DE ZHI CO,health,groceries,0.58,0.5733741521835327,2026-02-17,dc:597794,True
+DEEPL DEEPL CUS:3,professional_services,education_gov_membership,0.62,0.48460209369659424,2024-05-22,dc:545253,True
+DEEPL SUB:BTUAEHUBXKP,software_electronics,education_gov_membership,0.52,0.5635707974433899,2025-05-01,dc:609580,True
+DEFENDERIND,retail,entertainment_media,0.58,0.5990630388259888,2026-05-20,dc:638032,True
+DENTAL GLITTERS LLC,health,health,0.72,0.556286633014679,2025-05-07,dc:605503,False
+DEON SAMAD LLC,professional_services,industrial_hardware,0.62,0.5925554633140564,2025-11-17,dc:601702,True
+DEPARTMENT OF MOTOR VE,education_gov_membership,education_gov_membership,0.52,0.6128112077713013,2025-11-12,dc:597591,False
+DERRICK J WASHINGT,professional_services,office_supplies,0.58,0.5773395299911499,2026-05-04,dc:637941,True
+DEXIS LLC,health,health,0.66,0.6401031017303467,2026-05-07,dc:637548,False
+DFW AIRPORT PARKING,transport_auto_fuel,transport_auto_fuel,0.72,0.586065411567688,2025-10-17,dc:610117,False
+DIANA BRUCE AND AS,professional_services,professional_services,0.42,0.5224743485450745,2024-03-01,dc:564572,False
+DISABILITY SUMMIT,education_gov_membership,education_gov_membership,0.42,0.6097925305366516,2024-07-18,dc:581214,False
+DISTRICT CONSULTIN,professional_services,professional_services,0.68,0.6292906999588013,2025-12-02,dc:616149,False
+DISTRICT RICO - BR,restaurants,restaurants,0.73,0.617275595664978,2026-02-10,dc:601018,False
+DISTRICTTACOCATERING,restaurants,restaurants,0.74,0.5973160862922668,2025-11-20,dc:598848,False
+DISYS SOLUTIONS,professional_services,software_electronics,0.58,0.5797768235206604,2025-10-04,dc:604009,True
+DIVAL SAFETY EQUIPMENT,industrial_hardware,industrial_hardware,0.74,0.5397462248802185,2026-01-20,dc:621050,False
+DIVEDUI,retail,retail,0.58,0.6327192783355713,2024-08-29,dc:588769,False
+DJ DAN GOLDMAN LLC,entertainment_media,entertainment_media,0.72,0.5696108937263489,2024-09-18,dc:596350,False
+DJ DOLA,entertainment_media,entertainment_media,0.42,0.5918205976486206,2026-05-28,dc:636026,False
+DJ EAZ EVENT SERVI,entertainment_media,entertainment_media,0.56,0.5779675245285034,2025-03-13,dc:615508,False
+DJ NIEMAN INC,retail,entertainment_media,0.42,0.605445384979248,2025-09-02,dc:623277,True
+"DORSEY ENTERPRISES, IN",professional_services,industrial_hardware,0.44,0.570094108581543,2025-02-04,dc:574419,True
+DRAMATIC PUBLISHING EC,entertainment_media,office_supplies,0.72,0.6228974461555481,2025-11-18,dc:600085,True
+DREXEL ONLINE,education_gov_membership,education_gov_membership,0.72,0.6198287010192871,2024-04-12,dc:562191,False
+DROP ANCHOR RESORT & M,lodging,lodging,0.72,0.474601149559021,2024-02-06,dc:570150,False
+DRUGTESTINGCUP COM,health,professional_services,0.65,0.6215708255767822,2026-05-12,dc:634352,True
+DSA DETECTION LLC,professional_services,industrial_hardware,0.62,0.5649958252906799,2024-01-16,dc:529291,True
+DWBFITTINGYOURNEED,professional_services,health,0.28,0.4912024736404419,2026-02-10,dc:601861,True
+E PHILDELPHIA DWNTN FD,lodging,lodging,0.68,0.5227612853050232,2025-09-30,dc:609684,False
+EASYKEYS,industrial_hardware,industrial_hardware,0.72,0.6374427676200867,2025-02-20,dc:594958,False
+EATANDYSPIZZALLC,restaurants,restaurants,0.72,0.5368847250938416,2026-05-05,dc:634301,False
+EATON POWER QUALITY,industrial_hardware,industrial_hardware,0.66,0.48081743717193604,2024-03-29,dc:559631,False
+ECOLOGICAL SOCIETY OF,education_gov_membership,education_gov_membership,0.65,0.6119053959846497,2025-06-24,dc:619965,False
+EDGARTOWN DINER,restaurants,restaurants,0.7,0.6061779856681824,2025-08-11,dc:607366,False
+EDUCATIONAL TRAVEL ADV,education_gov_membership,airlines_travel,0.55,0.49386000633239746,2024-05-01,dc:526539,True
+EEMUSICCL,education_gov_membership,education_gov_membership,0.42,0.5692346096038818,2024-11-15,dc:576668,False
+EJROOYFN-2,entertainment_media,lodging,0.42,0.6023128032684326,2024-04-23,dc:561406,True
+ELECTRICBARGAINSTORES,retail,software_electronics,0.58,0.5671204328536987,2024-01-03,dc:528761,True
+ELEMENT DENVER DOWNTOW,lodging,lodging,0.72,0.621904730796814,2024-07-17,dc:579132,False
+ELEVATION INN AND SUIT,lodging,lodging,0.72,0.628913938999176,2026-07-14,dc:635662,False
+ELEVENLABS,software_electronics,software_electronics,0.66,0.526232123374939,2024-02-01,dc:570919,False
+ELITE FORENSIC SER,professional_services,professional_services,0.58,0.6294731497764587,2025-10-29,dc:609917,False
+ELITESPORTSOCKS,retail,retail,0.66,0.6486724019050598,2025-11-17,dc:601699,False
+EMANUEL TIRE LLC,industrial_hardware,transport_auto_fuel,0.62,0.6421455144882202,2024-01-08,dc:526749,True
+EMCOR GOVERNMENT SERVI,professional_services,industrial_hardware,0.72,0.5307470560073853,2026-03-26,dc:629803,True
+EP ATRIUM HEALTH AND,health,software_electronics,0.72,0.3912484645843506,2024-03-18,dc:526237,True
+EPITOME CREATIONS,entertainment_media,professional_services,0.48,0.4158805012702942,2026-05-31,dc:630256,True
+ETOLLAVIS,transport_auto_fuel,transport_auto_fuel,0.62,0.5996790528297424,2024-06-08,dc:549917,False
+EVENT NUIX WORKSTATIO,software_electronics,education_gov_membership,0.6,0.5458469390869141,2024-02-08,dc:567297,True
+EVENTBKEVENT TICKET,entertainment_media,software_electronics,0.55,0.6093958616256714,2024-07-13,dc:582405,True
+EVENTBRITE AD CAMPAIGN,entertainment_media,software_electronics,0.58,0.6094093322753906,2025-09-10,dc:623302,True
+EVENTBRITE PRO SUB,entertainment_media,software_electronics,0.66,0.6395469903945923,2025-06-29,dc:622830,True
+EVERON LLC,professional_services,professional_services,0.62,0.6447558999061584,2026-04-22,dc:626708,False
+"EVOLVE FORENSICS, LLC",education_gov_membership,education_gov_membership,0.55,0.6250290870666504,2024-07-17,dc:579141,False
+EXECUTIVE GIFT SHOPPE,retail,retail,0.56,0.6163849830627441,2024-05-01,dc:526538,False
+EXTREME TOWING & RECOV,transport_auto_fuel,transport_auto_fuel,0.68,0.6064997315406799,2024-02-07,dc:566026,False
+EYEBUYDIRECT,retail,health,0.72,0.5372999310493469,2025-10-17,dc:606056,True
+"EYETH CONSULTANTS, LLC",professional_services,professional_services,0.66,0.6154565811157227,2024-06-18,dc:547510,False
+EZ CONTACT,retail,health,0.62,0.5852704644203186,2024-05-07,dc:528214,True
+EZCATERITALIAN KITCHE,restaurants,restaurants,0.72,0.6292616724967957,2024-03-20,dc:529089,False
+EZCATERSOL MEXICAN GR,restaurants,restaurants,0.58,0.5631401538848877,2024-01-31,dc:565196,False
+EZPRINTHOUZ,professional_services,office_supplies,0.58,0.6125538349151611,2024-07-31,dc:589363,True
+FAIRYDUSTTEACHING,education_gov_membership,education_gov_membership,0.58,0.45278799533843994,2024-04-26,dc:557927,False
+FALLS ROAD ANIMAL HOSP,health,professional_services,0.72,0.44576096534729004,2025-06-19,dc:617910,True
+FAMU WEB CARD PAYMENTS,education_gov_membership,education_gov_membership,0.58,0.5546708703041077,2026-04-15,dc:629547,False
+FAR UV TECHNOLOGIE,health,professional_services,0.58,0.5479899048805237,2025-06-18,dc:618711,True
+FAT BABYS PIZZA SUB,restaurants,restaurants,0.74,0.5878556370735168,2026-05-26,dc:637652,False
+FATHER BULL,restaurants,restaurants,0.65,0.4295503497123718,2024-07-29,dc:582940,False
+FC ARCHAEOLOGY IN COM,entertainment_media,education_gov_membership,0.42,0.5850757956504822,2024-05-07,dc:528643,True
+FC SLIDESGO UNIVERSAL,education_gov_membership,professional_services,0.28,0.5667625665664673,2024-07-29,dc:581715,True
+FC VIRGINIA FARMERS,education_gov_membership,education_gov_membership,0.42,0.6381548047065735,2024-11-04,dc:571296,False
+FCPA CUB RUN REC CENTE,education_gov_membership,education_gov_membership,0.74,0.47230660915374756,2024-07-16,dc:580783,False
+FEVER USA MONET THE I,entertainment_media,entertainment_media,0.68,0.4502331614494324,2024-06-05,dc:548251,False
+FEWELL INNOVATION,professional_services,professional_services,0.68,0.4771002531051636,2024-09-09,dc:588063,False
+FIERCE SOFTWARE,software_electronics,education_gov_membership,0.6,0.5879775881767273,2026-04-27,dc:627988,True
+FIRSTEDU FIRST EDUCAT,education_gov_membership,education_gov_membership,0.56,0.6249825358390808,2026-06-18,dc:630708,False
+FISHTANK LEARNING,education_gov_membership,education_gov_membership,0.65,0.5214350819587708,2024-01-24,dc:526463,False
+FITNESS MACHINE TE,professional_services,industrial_hardware,0.56,0.6362950801849365,2024-04-04,dc:558848,True
+FIU CAS,education_gov_membership,education_gov_membership,0.55,0.4940323829650879,2024-02-08,dc:569762,False
+FIVE O AUTOCARE,transport_auto_fuel,transport_auto_fuel,0.56,0.5097523927688599,2024-02-21,dc:570648,False
+FLUIDX EQUIPMENT INC,industrial_hardware,industrial_hardware,0.66,0.637023389339447,2025-05-29,dc:619483,False
+"FLUTTERFLOW, INC",professional_services,software_electronics,0.58,0.5151388645172119,2025-07-05,dc:601110,True
+"FOLLETT HIGHER ED GROUP, LTD",education_gov_membership,retail,0.58,0.5671076774597168,2024-03-22,dc:530355,True
+FPE AB1SUPPLY CAGE 9BV,retail,industrial_hardware,0.55,0.4525926113128662,2025-04-17,dc:612009,True
+FREDRIC RIEDERS FAMILY,education_gov_membership,education_gov_membership,0.55,0.5572593212127686,2026-07-01,dc:635412,False
+FRIENDS OF ANACOST,education_gov_membership,education_gov_membership,0.55,0.5730686187744141,2024-07-29,dc:581305,False
+FRIENDS OF THE NATIONA,education_gov_membership,education_gov_membership,0.58,0.5189741849899292,2024-02-12,dc:568154,False
+FRITZPHOTOG,professional_services,entertainment_media,0.68,0.5718225240707397,2025-03-25,dc:612306,True
+FRONTIER RFYYSP,airlines_travel,airlines_travel,0.62,0.6494016647338867,2026-06-11,dc:631967,False
+FSP CAMDEN ON THE LAKE,lodging,lodging,0.78,0.6375712156295776,2024-05-29,dc:545739,False
+FSP CAPITAL CITY LIMOU,transport_auto_fuel,transport_auto_fuel,0.42,0.5520515441894531,2026-01-13,dc:618557,False
+FSP CHARM CITY PAYROLL,education_gov_membership,education_gov_membership,0.72,0.5267404913902283,2025-02-20,dc:595356,False
+FSP JUNIOR THEATER FES,education_gov_membership,education_gov_membership,0.62,0.5871105790138245,2026-07-14,dc:635272,False
+FSP PCI GRAPHICS,industrial_hardware,office_supplies,0.58,0.6330081224441528,2026-05-22,dc:636396,True
+FULLTILT TEAM DEVE,professional_services,professional_services,0.54,0.5209863781929016,2025-03-03,dc:594244,False
+GA MIT,education_gov_membership,education_gov_membership,0.58,0.5682526230812073,2025-09-05,dc:620799,False
+GAIL A KIRKLAND BRISCO,health,health,0.74,0.5118074417114258,2024-03-21,dc:525872,False
+GALCO- MOTO,industrial_hardware,industrial_hardware,0.66,0.6070280075073242,2024-04-26,dc:557926,False
+GAR ENTERPRISE GOLD GA,professional_services,transport_auto_fuel,0.62,0.591083288192749,2024-09-06,dc:586441,True
+GAYLORD PALMS RSRT CC,lodging,lodging,0.78,0.6213730573654175,2024-07-08,dc:578229,False
+GB MERCHANT ROW ASSOC,professional_services,education_gov_membership,0.58,0.548759400844574,2025-02-28,dc:592574,True
+GDP GDP ACADEMY OF RE,education_gov_membership,education_gov_membership,0.35,0.6130746603012085,2025-09-30,dc:608071,False
+GDP GDP AUDIO GUESTBOO,entertainment_media,professional_services,0.48,0.4823448061943054,2024-09-05,dc:586818,True
+GDP GDP CMP PROPERTY M,professional_services,financial_postal_shipping,0.42,0.45631080865859985,2024-09-11,dc:590534,True
+GEOVONI LIVE,entertainment_media,entertainment_media,0.42,0.4580879807472229,2026-06-08,dc:632467,False
+GESSCREATIONS,entertainment_media,education_gov_membership,0.42,0.4699741005897522,2024-03-04,dc:567121,True
+GH PACIFIC RST & CC,lodging,lodging,0.72,0.4850839376449585,2025-07-03,dc:601513,False
+GIMKIT,education_gov_membership,education_gov_membership,0.42,0.5661099553108215,2025-10-24,dc:604222,False
+GIORGIO ARMANI CORP,retail,retail,0.72,0.49026262760162354,2024-06-13,dc:545439,False
+GIRLSGLOBAL,education_gov_membership,education_gov_membership,0.62,0.4802713394165039,2025-03-11,dc:614705,False
+GLENNIS SOLUTIONS,software_electronics,software_electronics,0.55,0.5171306133270264,2024-02-22,dc:567391,False
+GLOBAL-E JABRA,office_supplies,software_electronics,0.42,0.529470682144165,2024-09-19,dc:591893,True
+GOOGLE CAMEO,entertainment_media,software_electronics,0.62,0.43810510635375977,2024-05-14,dc:547220,True
+GORDON TECHNICAL,industrial_hardware,professional_services,0.58,0.6028059124946594,2026-01-21,dc:599310,True
+GOTTA GO NOW EVENT,entertainment_media,industrial_hardware,0.58,0.6078183650970459,2024-04-10,dc:562176,True
+GRANT ST INN,lodging,lodging,0.72,0.6201343536376953,2024-04-18,dc:562634,False
+GRASSHOPPER,retail,retail,0.25,0.5016372203826904,2024-09-24,dc:595204,False
+GREATER WA INV-24,professional_services,education_gov_membership,0.42,0.5860293507575989,2025-03-24,dc:611481,True
+GREEN STUFF ABSORBENT,industrial_hardware,industrial_hardware,0.42,0.6300573348999023,2024-11-15,dc:576665,False
+GREENBRIER,lodging,lodging,0.72,0.5557951927185059,2026-04-10,dc:623814,False
+GREENLYTE CPR,education_gov_membership,education_gov_membership,0.52,0.56766277551651,2026-05-01,dc:637512,False
+GREENSPUR INC,professional_services,restaurants,0.72,0.626447856426239,2025-01-02,dc:573204,True
+GREGORY EDWARDS LLC,professional_services,professional_services,0.72,0.6369808316230774,2024-10-30,dc:580250,False
+GROSSMAN MARKETING GRO,professional_services,professional_services,0.72,0.535679042339325,2024-11-07,dc:573758,False
+GU ADV EVENTS,education_gov_membership,education_gov_membership,0.55,0.6372470259666443,2025-01-24,dc:573114,False
+GU OFC OF TRANSPORTATI,education_gov_membership,education_gov_membership,0.56,0.4900103807449341,2024-11-20,dc:577096,False
+GUARDIAN FIRE PROTECTI,professional_services,professional_services,0.58,0.6031066179275513,2024-07-01,dc:549636,False
+GWU HOSPITAL,health,health,0.72,0.6201905012130737,2025-02-09,dc:571571,False
+H STREET FESTIVAL,entertainment_media,entertainment_media,0.72,0.5718895792961121,2024-07-19,dc:584101,False
+HAISLIP CORPORATION,professional_services,industrial_hardware,0.62,0.5376959443092346,2025-04-04,dc:614811,True
+HAPPY CHEF UNIFORMS,retail,retail,0.62,0.6470396518707275,2024-02-21,dc:565753,False
+HARRAH'S FRONT DESK,lodging,lodging,0.66,0.6291207671165466,2024-03-09,dc:565924,False
+HBADA,office_supplies,retail,0.62,0.5975046753883362,2025-12-12,dc:615006,True
+HBCU CONNECT LLC,education_gov_membership,professional_services,0.62,0.5823766589164734,2024-08-05,dc:588169,True
+HCM ACHIEVEMENT NETWOR,education_gov_membership,education_gov_membership,0.62,0.5590649247169495,2025-09-11,dc:622101,False
+HDVKALEIDO,software_electronics,professional_services,0.38,0.5136092901229858,2025-02-10,dc:591632,True
+HEADSTART ENTERTAI,entertainment_media,restaurants,0.68,0.6137619614601135,2025-12-18,dc:614182,True
+HEGENS MCS / GOLDEN,entertainment_media,professional_services,0.25,0.5547125339508057,2024-06-05,dc:547794,True
+HEMOSTAT LABRATORIES I,health,retail,0.72,0.4485868215560913,2024-08-27,dc:587911,True
+HERMES CREATIVE AWARDS,entertainment_media,professional_services,0.66,0.5851708650588989,2025-11-13,dc:597996,True
+HESTIA - THEMEISLE,software_electronics,software_electronics,0.62,0.53246009349823,2024-07-05,dc:582777,False
+HEXAGRAMMBOOKS,education_gov_membership,education_gov_membership,0.58,0.5193226933479309,2026-01-07,dc:611363,False
+HIGH CALIB (1 OF 1 PA,industrial_hardware,professional_services,0.45,0.5754285454750061,2026-03-06,dc:624799,True
+HIGHVIBEDC,entertainment_media,professional_services,0.62,0.5427442789077759,2024-03-06,dc:567557,True
+HILTI INC,industrial_hardware,industrial_hardware,0.72,0.6445753574371338,2024-04-04,dc:559670,False
+HILTON SCRANTON & CONF,lodging,lodging,0.72,0.6465581655502319,2024-04-05,dc:562963,False
+HILTON SKIRVIN OK FD,lodging,lodging,0.78,0.6426235437393188,2025-07-24,dc:601585,False
+HIP HOP SHERIFF RD,restaurants,restaurants,0.66,0.6221951842308044,2024-06-12,dc:549935,False
+HITEKFILMS,retail,transport_auto_fuel,0.58,0.531732439994812,2024-03-07,dc:566312,True
+HITT MARKING DEVICES,office_supplies,industrial_hardware,0.62,0.5067825317382812,2024-02-27,dc:567012,True
+HLS PERMA.CC,professional_services,education_gov_membership,0.62,0.5264748334884644,2026-06-16,dc:631799,True
+HOLCIM MAR AGGREGATES,industrial_hardware,industrial_hardware,0.55,0.6383289694786072,2025-05-12,dc:603860,False
+HONEYBAKED HAM,groceries,groceries,0.62,0.44949865341186523,2026-04-23,dc:628373,False
+HOOP CULTURE,retail,retail,0.62,0.5701817870140076,2024-08-01,dc:584448,False
+HOPEWELL FORT LEE INN,lodging,lodging,0.78,0.6180356740951538,2024-05-15,dc:550931,False
+HORSESHOE ADVANCE DEPO,lodging,lodging,0.58,0.5166411995887756,2024-06-19,dc:549595,False
+HOTEL METRO AUTOGRAPH,lodging,lodging,0.72,0.531913161277771,2025-10-02,dc:609280,False
+HOTEL RES-GEORGIAN TER,lodging,airlines_travel,0.72,0.6248176097869873,2024-09-07,dc:590081,True
+HOURLY HUSBANDS,professional_services,industrial_hardware,0.74,0.436456561088562,2024-03-27,dc:529563,True
+HOUSE OF JROB,professional_services,entertainment_media,0.63,0.570583701133728,2026-05-13,dc:639221,True
+HTL CLEVELAND AUTOGPH,lodging,lodging,0.72,0.5507546067237854,2024-07-12,dc:577876,False
+HUGE MASONRY,professional_services,professional_services,0.42,0.6499367356300354,2024-05-13,dc:545185,False
+HUMAN KINETICS,education_gov_membership,retail,0.55,0.38547277450561523,2024-08-13,dc:584974,True
+HYATT THE BARNETT,lodging,lodging,0.72,0.6290724873542786,2024-07-30,dc:589364,False
+"HYPERTUNITY, INC",professional_services,professional_services,0.42,0.546755850315094,2024-06-10,dc:551145,False
+IAHXB - LDG - HYATT HO,lodging,lodging,0.74,0.6161157488822937,2025-10-25,dc:603833,False
+IAN WEISSGERBER,professional_services,entertainment_media,0.42,0.5672909617424011,2024-03-06,dc:570406,True
+ICLEI - LOCAL GOVE,education_gov_membership,professional_services,0.62,0.5404415726661682,2026-01-13,dc:618961,True
+IDWHOLESALER,office_supplies,office_supplies,0.58,0.5872191786766052,2025-01-08,dc:573635,False
+IEEE PRODUCTS & SERVIC,professional_services,education_gov_membership,0.62,0.5574138760566711,2026-02-02,dc:600179,True
+IEL,education_gov_membership,education_gov_membership,0.62,0.597084105014801,2026-02-05,dc:601391,False
+IN 100FILMS,entertainment_media,professional_services,0.5,0.48528122901916504,2024-02-14,dc:566951,True
+INCORD AND BAYNETS SAF,industrial_hardware,industrial_hardware,0.62,0.43284130096435547,2026-06-29,dc:634241,False
+INCREDIBLE DESIGNS,retail,office_supplies,0.45,0.5896195769309998,2025-09-17,dc:618454,True
+INDEED USI25-01164193,professional_services,professional_services,0.66,0.5990960597991943,2025-03-07,dc:616689,False
+INDEPENDENCE BUNTING A,retail,industrial_hardware,0.72,0.5203744173049927,2024-08-02,dc:590158,True
+INDIANA UNV-STUDENT BI,education_gov_membership,education_gov_membership,0.58,0.5749191641807556,2024-08-01,dc:589357,False
+INFLUENCE SPORTS &,professional_services,professional_services,0.72,0.5660838484764099,2024-09-21,dc:593948,False
+INMAR MARINE GROUP,industrial_hardware,lodging,0.55,0.5982677936553955,2024-04-18,dc:560984,True
+INNOVATIVE USERS GROUP,education_gov_membership,software_electronics,0.58,0.529200553894043,2025-10-21,dc:606853,True
+INSTA360,retail,software_electronics,0.62,0.6173065304756165,2024-09-06,dc:586848,True
+INSTITUTIONALEYECARELL,health,health,0.72,0.6368091702461243,2025-07-10,dc:599910,False
+INTELLECTUAL ATHLE,professional_services,entertainment_media,0.58,0.5883547067642212,2026-04-24,dc:624711,True
+"INTHINKING, SL",education_gov_membership,education_gov_membership,0.55,0.5335460901260376,2024-11-07,dc:577025,False
+INTL ASSOC PRIVACY PRO,professional_services,education_gov_membership,0.48,0.6167793273925781,2024-09-25,dc:594024,True
+IRA GREEN INC,industrial_hardware,retail,0.58,0.6357501745223999,2025-12-23,dc:612147,True
+IRIS HOTEL CAPE COD,lodging,lodging,0.72,0.5897751450538635,2025-08-11,dc:608138,False
+ISFG INT SOC FOREN GEN,professional_services,education_gov_membership,0.62,0.5794349908828735,2026-06-15,dc:631187,True
+ISHMAEL CONSULTING,professional_services,professional_services,0.55,0.546951174736023,2024-07-30,dc:583780,False
+IT STRAPS ON INC,industrial_hardware,industrial_hardware,0.68,0.6045697927474976,2024-09-12,dc:593438,False
+ITHAKA-JSTOR JPASS,education_gov_membership,software_electronics,0.72,0.509063184261322,2026-04-09,dc:627436,True
+JAMES M CASEY DVM,health,professional_services,0.72,0.5679737329483032,2025-08-29,dc:620435,True
+JENIYA MANTILLA,education_gov_membership,professional_services,0.42,0.526709258556366,2025-12-19,dc:610908,True
+JESSICA AMAYA-ZUNI,education_gov_membership,software_electronics,0.28,0.5885300040245056,2024-03-07,dc:565111,True
+JETCO HOLDINGS LLC,transport_auto_fuel,financial_postal_shipping,0.55,0.6094840168952942,2026-05-08,dc:634737,True
+JON WRIGHT,entertainment_media,restaurants,0.58,0.5499130487442017,2024-01-03,dc:529997,True
+JOSHUA LUCAS,entertainment_media,health,0.62,0.5010513663291931,2026-02-10,dc:602260,True
+JOYCE PARKING,transport_auto_fuel,transport_auto_fuel,0.56,0.586368203163147,2025-06-16,dc:619548,False
+JP'S BRAID BAR,professional_services,professional_services,0.58,0.5321534872055054,2026-03-06,dc:624391,False
+JUANITAS FANCY PAN,professional_services,restaurants,0.64,0.5384147763252258,2026-07-06,dc:634614,True
+JUSTICE WOODS,professional_services,health,0.42,0.5549653172492981,2025-03-03,dc:595426,True
+JWMARRIOTT MINNEAPMAL,lodging,lodging,0.78,0.5435270667076111,2024-10-31,dc:575767,False
+K1 SPEED-JESSUP,entertainment_media,entertainment_media,0.72,0.5850317478179932,2024-02-15,dc:565731,False
+KALAVERAS LB INC,restaurants,restaurants,0.72,0.61419278383255,2026-06-05,dc:630632,False
+KAYU NEW,restaurants,restaurants,0.72,0.4497807025909424,2025-11-07,dc:597947,False
+KEG STEAKHOUSE AND BAR,restaurants,restaurants,0.82,0.5688790678977966,2025-10-17,dc:610118,False
+KEISHA'S KREATIONZ,professional_services,retail,0.62,0.5110687017440796,2024-06-17,dc:546283,True
+KEYTRAK,industrial_hardware,software_electronics,0.28,0.6116175651550293,2026-01-06,dc:616914,True
+"KIBEAM LEARNING, I",education_gov_membership,software_electronics,0.62,0.5293799042701721,2026-01-23,dc:597670,True
+KICKSTARTBGH,professional_services,entertainment_media,0.35,0.48780328035354614,2024-06-14,dc:547918,True
+KIDZINMOTIO,education_gov_membership,education_gov_membership,0.42,0.5365634560585022,2024-04-15,dc:560146,False
+KILLINGTON - H LODGING,lodging,lodging,0.68,0.5637242794036865,2025-09-10,dc:618412,False
+KLEEN RITE CORP,industrial_hardware,industrial_hardware,0.6,0.5310395359992981,2025-03-04,dc:596699,False
+KLETT WORLD LANGUAGES,education_gov_membership,software_electronics,0.62,0.5013863444328308,2024-11-06,dc:574540,True
+KNK INS E PAYMENT,professional_services,financial_postal_shipping,0.42,0.6176321506500244,2025-11-07,dc:602028,True
+KONICA MINOLTA USA,office_supplies,office_supplies,0.62,0.5407782196998596,2026-03-27,dc:623692,False
+KUNDAN EVENTS LLC,entertainment_media,entertainment_media,0.66,0.6080938577651978,2024-06-20,dc:551235,False
+KW COURT REPORTING,professional_services,professional_services,0.72,0.5009196400642395,2024-05-14,dc:546858,False
+L & L MUSIC - WIND SHO,retail,entertainment_media,0.66,0.5011945962905884,2024-02-01,dc:565192,True
+LA POSADA DE SANTA FE,lodging,lodging,0.78,0.6071324348449707,2024-07-26,dc:580475,False
+LAKEBRA KEEBEE CLARK,entertainment_media,education_gov_membership,0.65,0.5461612939834595,2026-03-31,dc:628625,True
+LANCASTER COUNTY FIREM,telecom_utilities,education_gov_membership,0.54,0.4753974676132202,2025-04-16,dc:611993,True
+LAND AIR SEA SYSTE,telecom_utilities,industrial_hardware,0.32,0.5846778750419617,2025-12-01,dc:614954,True
+LE MERIDIEN HOUSTON,lodging,lodging,0.78,0.6114658117294312,2025-11-10,dc:600479,False
+LEAGUE OF AMERICAN WHE,education_gov_membership,education_gov_membership,0.74,0.5678501725196838,2026-02-12,dc:603492,False
+LEAP TICKETS,entertainment_media,software_electronics,0.52,0.6459686160087585,2024-02-27,dc:570723,True
+LEATHEROLOGY,retail,retail,0.72,0.46595215797424316,2024-05-02,dc:526140,False
+LEBANON VALLEY COLLEGE,education_gov_membership,education_gov_membership,0.68,0.6456100940704346,2024-02-13,dc:564866,False
+LEGIT SPORT STATS,professional_services,professional_services,0.46,0.6013671159744263,2024-07-10,dc:582376,False
+LEID DIESEL SERVICE,industrial_hardware,transport_auto_fuel,0.62,0.5793654322624207,2024-07-11,dc:578654,True
+LEONTYNE WILLIAMS,professional_services,professional_services,0.62,0.6414408683776855,2025-02-24,dc:594979,False
+LESBIANS WHO TECH,professional_services,education_gov_membership,0.58,0.5999003648757935,2024-05-21,dc:548913,True
+LEVATA: ID PRODUCTS,software_electronics,office_supplies,0.66,0.5719282031059265,2024-01-31,dc:569279,True
+LEVATAI,software_electronics,office_supplies,0.62,0.5430964827537537,2025-03-22,dc:616799,True
+LEVEL FRAMES ORDER,retail,professional_services,0.64,0.5109808444976807,2025-08-22,dc:607419,True
+LEVEL99 TYSONS,entertainment_media,entertainment_media,0.66,0.5336186289787292,2026-03-04,dc:628458,False
+LEXITAS,professional_services,professional_services,0.72,0.6067326664924622,2026-02-04,dc:601836,False
+LIBERTY TICKETS,entertainment_media,entertainment_media,0.58,0.5863403677940369,2025-02-02,dc:573992,False
+LIDL,retail,groceries,0.74,0.4976828098297119,2024-06-21,dc:547540,True
+LIFELONG WELLNESS,health,health,0.66,0.6261653900146484,2024-02-09,dc:567316,False
+LIFESAVERS CONFERENCE,education_gov_membership,education_gov_membership,0.62,0.6037328243255615,2025-01-10,dc:573661,False
+LINDSAY FORD,transport_auto_fuel,transport_auto_fuel,0.68,0.601686418056488,2026-04-01,dc:626989,False
+LITLAB.AI KOALLUH INC,education_gov_membership,education_gov_membership,0.66,0.5833899974822998,2025-11-07,dc:600821,False
+LITTLE CHANGE MAKE,retail,professional_services,0.42,0.5110929608345032,2024-04-02,dc:562912,True
+LIZS CREATIONS LLC,retail,industrial_hardware,0.42,0.5820738673210144,2025-01-06,dc:573626,True
+LKN DRIVING SCHOOL,education_gov_membership,education_gov_membership,0.55,0.6080196499824524,2025-02-05,dc:574416,False
+LOCAL SOURCE GROUP,restaurants,restaurants,0.58,0.49145078659057617,2026-04-20,dc:624267,False
+LOCOBANNERS,retail,office_supplies,0.52,0.4598008394241333,2026-02-27,dc:624354,True
+LOGTAG NORTH AMERICA,industrial_hardware,software_electronics,0.62,0.5061666369438171,2026-02-11,dc:597363,True
+LONGHORN STEAK,restaurants,restaurants,0.78,0.5333011150360107,2024-12-31,dc:571202,False
+LOST MOUNTAIN COMM,professional_services,office_supplies,0.28,0.5835003852844238,2024-08-07,dc:585734,True
+LS TENNIS TOPIA,retail,entertainment_media,0.62,0.5514285564422607,2026-05-11,dc:635922,True
+LUCYS MARIGOLD,retail,retail,0.42,0.49060308933258057,2024-01-04,dc:526319,False
+LUDLUM MEASUREMENTS,industrial_hardware,industrial_hardware,0.65,0.47567272186279297,2025-04-04,dc:614402,False
+M WELLES,restaurants,professional_services,0.69,0.45502156019210815,2024-05-13,dc:545182,True
+MACGREGOR COMMUNICATIO,education_gov_membership,professional_services,0.58,0.5402299761772156,2024-09-27,dc:596081,True
+MAD GETAFE,education_gov_membership,groceries,0.38,0.461505651473999,2026-04-25,dc:625928,True
+"MADISON AVENUE, IN",retail,professional_services,0.55,0.6469168663024902,2024-07-18,dc:582457,True
+MANDERS DECORATING CO,professional_services,industrial_hardware,0.72,0.47767186164855957,2024-09-19,dc:593157,True
+MANNLAK,retail,industrial_hardware,0.72,0.47412240505218506,2025-07-09,dc:599077,True
+MAPGEARS,professional_services,software_electronics,0.58,0.459926962852478,2024-09-12,dc:591823,True
+MARCUS AT SERVICE,restaurants,health,0.52,0.5469961762428284,2025-12-11,dc:611701,True
+MARIANNES MLK LIB,education_gov_membership,restaurants,0.66,0.5511263608932495,2024-01-09,dc:525142,True
+MARINERS SCHOOL,education_gov_membership,education_gov_membership,0.62,0.6133596301078796,2024-02-15,dc:570641,False
+MARKETINGPROFS,education_gov_membership,education_gov_membership,0.35,0.5717555284500122,2024-06-17,dc:545894,False
+MARRIOTT NORFOLK WATER,lodging,lodging,0.78,0.6271494030952454,2024-09-19,dc:593929,False
+MARYS CENTER FOR MATER,health,health,0.75,0.620755136013031,2024-07-02,dc:548813,False
+"MASIMO AMERICAS, INC",health,health,0.72,0.6105207800865173,2024-08-12,dc:591920,False
+MASSANUTTEN ONLINE,lodging,lodging,0.72,0.5530928373336792,2025-02-12,dc:593669,False
+MASTER TOOL REPAIR,industrial_hardware,industrial_hardware,0.58,0.5499359369277954,2024-01-03,dc:529583,False
+MATHENY MOTOR TRUCK CO,transport_auto_fuel,transport_auto_fuel,0.65,0.631600022315979,2024-07-18,dc:583271,False
+MATTHEW BACK INC,professional_services,education_gov_membership,0.58,0.5221959948539734,2025-01-02,dc:572818,True
+MCCARTHY TIRE SERVICE,transport_auto_fuel,transport_auto_fuel,0.72,0.6348250508308411,2025-05-06,dc:607165,False
+MCG HHS DENNIS A,health,health,0.62,0.5079272389411926,2024-10-04,dc:580934,False
+MCKULA INC,professional_services,professional_services,0.64,0.6058483719825745,2026-03-04,dc:626397,False
+MCPHS,education_gov_membership,education_gov_membership,0.58,0.6345095634460449,2024-09-23,dc:597235,False
+MCWARD REAL ESTATE,professional_services,professional_services,0.58,0.48514628410339355,2026-03-17,dc:626919,False
+MECHANICAL & AUTOMATED,industrial_hardware,industrial_hardware,0.52,0.6261928677558899,2025-10-28,dc:608710,False
+MEDICALESHO,health,health,0.64,0.5886952877044678,2025-03-12,dc:613031,False
+MEDTECH FOR,health,professional_services,0.62,0.6174572110176086,2026-03-10,dc:629303,True
+MEGAPHASE,industrial_hardware,industrial_hardware,0.42,0.5906815528869629,2024-02-01,dc:566845,False
+MEMBERSHIP REGISTER,education_gov_membership,entertainment_media,0.42,0.576621413230896,2026-02-27,dc:629680,True
+"MENSA ANKH MAA, LL",education_gov_membership,education_gov_membership,0.42,0.5067365169525146,2024-04-18,dc:563449,False
+META SOLUTIONS,education_gov_membership,software_electronics,0.62,0.519286572933197,2024-09-12,dc:585227,True
+MGM TOWING,transport_auto_fuel,transport_auto_fuel,0.55,0.5896004438400269,2025-02-07,dc:594865,False
+MGM-SIG - FRONT DESK,lodging,lodging,0.64,0.6457611918449402,2024-09-18,dc:593528,False
+MHAMD,health,education_gov_membership,0.72,0.585654616355896,2024-08-10,dc:588630,True
+MICHAEL BRUCE,entertainment_media,professional_services,0.55,0.5980825424194336,2026-03-21,dc:626941,True
+MICROSOFT-G055924612,software_electronics,software_electronics,0.72,0.5898882150650024,2024-08-09,dc:590648,False
+MINGHIN STREETERVILLE,restaurants,restaurants,0.78,0.5585751533508301,2024-08-17,dc:585439,False
+MISSION PCFC HOTEL HYA,lodging,lodging,0.72,0.6300935745239258,2024-11-22,dc:575059,False
+MITCHELL INTERNATIONAL,software_electronics,software_electronics,0.68,0.6003380417823792,2025-12-23,dc:612554,False
+MODEL MUTINY,entertainment_media,software_electronics,0.42,0.3916078805923462,2026-05-18,dc:633550,True
+MODERNFOLIAGE,retail,professional_services,0.55,0.4338981509208679,2025-08-07,dc:607316,True
+MODFIRST LLC,retail,professional_services,0.58,0.6070649027824402,2024-06-26,dc:547198,True
+MOORE CONTEMPORARY,entertainment_media,entertainment_media,0.54,0.5522167086601257,2025-08-29,dc:609084,False
+MORELAND SECURITY,professional_services,software_electronics,0.48,0.49378740787506104,2025-11-12,dc:597598,True
+MORGANE OIL,transport_auto_fuel,transport_auto_fuel,0.62,0.5430659055709839,2026-04-28,dc:624719,False
+MOST DEPENDABLE FOUNTA,industrial_hardware,professional_services,0.65,0.3755723237991333,2025-08-07,dc:606509,True
+MOSTOLES,education_gov_membership,transport_auto_fuel,0.28,0.42257070541381836,2026-04-25,dc:625941,True
+MOTE MARINE LABORATORY,education_gov_membership,education_gov_membership,0.62,0.5157216191291809,2024-06-06,dc:550717,False
+MOTIONARRY MOTION ARR,entertainment_media,software_electronics,0.72,0.5492770075798035,2025-07-30,dc:601205,True
+MOXY BROOKLYN WILLIMSB,lodging,lodging,0.72,0.6161839962005615,2024-05-17,dc:549740,False
+MPOWER SERVICES IN,professional_services,entertainment_media,0.55,0.5942866206169128,2024-09-25,dc:597244,True
+MS LOCALENASHVILLEAS,health,lodging,0.42,0.5502681732177734,2024-03-18,dc:526239,True
+MS MEMOIRWAREHOUSEDI,lodging,lodging,0.66,0.4169904589653015,2026-02-03,dc:603022,False
+MTNPRODUCTIONS,entertainment_media,industrial_hardware,0.72,0.6463980078697205,2024-09-05,dc:588033,True
+MURPHY6515ATWALMRT,transport_auto_fuel,transport_auto_fuel,0.74,0.6141694188117981,2026-05-21,dc:634009,False
+MUSICPLAYONLINE,education_gov_membership,education_gov_membership,0.42,0.560279369354248,2025-09-05,dc:621623,False
+MY AUTO STORE,transport_auto_fuel,transport_auto_fuel,0.62,0.6051003336906433,2026-07-22,dc:635332,False
+MYBROTHERSK,entertainment_media,education_gov_membership,0.58,0.5251595377922058,2024-07-26,dc:580049,True
+MYDRUGTESTTRAINING,education_gov_membership,education_gov_membership,0.58,0.5898874998092651,2025-09-10,dc:618002,False
+MYOWERKS MOVEMENT,professional_services,health,0.42,0.424780011177063,2026-02-10,dc:602261,True
+MYQRCODE,software_electronics,software_electronics,0.42,0.4921255111694336,2024-01-30,dc:528544,False
+MYSTAIRE,industrial_hardware,health,0.66,0.5468107461929321,2025-12-18,dc:613777,True
+NAGARA,education_gov_membership,education_gov_membership,0.6,0.5972587466239929,2025-11-05,dc:599182,False
+NATI EMP LAW INSTITUTE,education_gov_membership,education_gov_membership,0.58,0.6269838809967041,2024-02-07,dc:570955,False
+NATIONAL CREDIT REPORT,financial_postal_shipping,financial_postal_shipping,0.25,0.5493208765983582,2024-07-26,dc:578419,False
+NATIONAL INDEPENDENT L,education_gov_membership,education_gov_membership,0.45,0.592020571231842,2024-08-07,dc:588184,False
+NATIONAL OSHA FDN,education_gov_membership,education_gov_membership,0.58,0.6029050946235657,2024-02-13,dc:565696,False
+NATIONAL SPEECH DEBAT,education_gov_membership,education_gov_membership,0.72,0.5677902102470398,2024-11-26,dc:573435,False
+NATIONAL T INV-1008,lodging,education_gov_membership,0.32,0.6208478808403015,2024-05-06,dc:527407,True
+NATL ASSOC OF EMS EDUC,education_gov_membership,education_gov_membership,0.72,0.6162870526313782,2025-06-26,dc:622815,False
+NATL RTCC ASSN,professional_services,education_gov_membership,0.62,0.6437219977378845,2024-04-05,dc:561303,True
+NATUS SENSORY INC,health,industrial_hardware,0.72,0.6365982294082642,2025-07-15,dc:599528,True
+NAUTILUS SONESTA MIAMI,lodging,lodging,0.78,0.576108455657959,2024-06-17,dc:547091,False
+NAYAX PARKING,telecom_utilities,transport_auto_fuel,0.28,0.5567618608474731,2024-05-21,dc:551000,True
+NCSD - STI,education_gov_membership,health,0.72,0.6449500918388367,2025-03-04,dc:596691,True
+NELSON TREE SPECIA,professional_services,industrial_hardware,0.68,0.45880401134490967,2024-05-09,dc:525880,True
+NESTOR COURT REPOR,professional_services,professional_services,0.38,0.534755289554596,2025-03-31,dc:612743,False
+NETS OF AMERICA,industrial_hardware,entertainment_media,0.58,0.5670411586761475,2025-03-07,dc:611793,True
+NEW CONCEPT TOOLS,industrial_hardware,industrial_hardware,0.65,0.5753837823867798,2024-04-03,dc:557987,False
+NEXT LEVEL GAMING,entertainment_media,entertainment_media,0.42,0.5597057938575745,2026-07-22,dc:634104,False
+NEXUS-SPORTSMED-COM,health,retail,0.66,0.6308305859565735,2024-04-24,dc:563260,True
+NGUOI VIET DAILY,entertainment_media,office_supplies,0.42,0.5680818557739258,2026-05-28,dc:630416,True
+NIKKO,lodging,lodging,0.42,0.6322274208068848,2024-03-27,dc:530201,False
+NO SILOS COMMUNICATION,professional_services,professional_services,0.42,0.4781409502029419,2025-03-31,dc:612754,False
+NONPROFIT LEARNING LAB,education_gov_membership,education_gov_membership,0.58,0.6023688316345215,2024-09-10,dc:592622,False
+NORTH AMERICAN RESCUE,health,health,0.62,0.6368671655654907,2024-09-20,dc:595578,False
+NORTHEAST TRANSIT FINE,transport_auto_fuel,financial_postal_shipping,0.55,0.5706043839454651,2026-01-27,dc:621885,True
+NOSIRI EMPOWERMENT,education_gov_membership,professional_services,0.58,0.38763129711151123,2024-06-04,dc:551094,True
+"NOVO SOLUTIONS, IN",software_electronics,software_electronics,0.66,0.5285561680793762,2025-12-10,dc:614970,False
+NRA LE TRAINING ONLINE,education_gov_membership,education_gov_membership,0.56,0.6271930932998657,2026-05-29,dc:630953,False
+"NUPARADIGM, INC. F",health,entertainment_media,0.42,0.5677570104598999,2025-09-04,dc:619991,True
+NYEC REGTBZH6W5L,education_gov_membership,education_gov_membership,0.55,0.5336607694625854,2024-02-07,dc:564828,False
+O2SI SMART SOLUTIONS,professional_services,industrial_hardware,0.42,0.4418182373046875,2025-11-19,dc:599667,True
+OAK RIDGE ASSOC UNIV I,education_gov_membership,education_gov_membership,0.65,0.5598186254501343,2025-01-20,dc:572672,False
+OCPD RECORDS,professional_services,education_gov_membership,0.42,0.47105658054351807,2024-10-02,dc:582979,True
+"OCTANE, LLC",professional_services,professional_services,0.42,0.5986776351928711,2026-05-01,dc:639142,False
+ODU CME TRACKER,education_gov_membership,education_gov_membership,0.58,0.49142986536026,2025-01-29,dc:572323,False
+OHIO VALLEY SPECIALTY,industrial_hardware,industrial_hardware,0.55,0.5680884122848511,2025-07-16,dc:599508,False
+OLD TOWN TROLLEY TOURS,entertainment_media,airlines_travel,0.72,0.5958399772644043,2026-01-13,dc:618556,True
+OMEGA EXECUTIVE SECURI,professional_services,professional_services,0.58,0.5364824533462524,2025-09-30,dc:608465,False
+ONLINE METAL,industrial_hardware,industrial_hardware,0.62,0.5895559191703796,2024-07-10,dc:584022,False
+ONTHECLOCK LLC,software_electronics,software_electronics,0.72,0.6201225519180298,2024-01-04,dc:530037,False
+ONTHEINLETS,education_gov_membership,education_gov_membership,0.62,0.4411888122558594,2024-07-25,dc:578797,False
+OPTION TECHNOLOGIE,software_electronics,software_electronics,0.55,0.5384282469749451,2024-09-06,dc:587238,False
+OREILLYMEDIAPLATFORM,education_gov_membership,retail,0.55,0.5379336476325989,2024-11-08,dc:577013,True
+ORGANIC GOODZ LLC,retail,retail,0.42,0.6498006582260132,2024-09-05,dc:586000,False
+ORGANIZATION OF AMER,education_gov_membership,education_gov_membership,0.45,0.6366162300109863,2025-02-20,dc:597009,False
+ORGWVUPW-1,software_electronics,lodging,0.62,0.4667701721191406,2024-04-22,dc:561014,True
+OURSISTERSCIRCLE,health,education_gov_membership,0.68,0.5380779504776001,2024-04-22,dc:561820,True
+OUZTS HVAC AND REFRI,professional_services,industrial_hardware,0.62,0.628782331943512,2025-06-17,dc:619938,True
+OVERDRIVE DIST,entertainment_media,software_electronics,0.42,0.41848355531692505,2025-07-07,dc:603567,True
+"OYE PALAVER HUT, I",education_gov_membership,education_gov_membership,0.58,0.4646437168121338,2025-06-09,dc:621145,False
+P3 PAGE PARTY PLAN,entertainment_media,entertainment_media,0.62,0.4837151765823364,2025-02-25,dc:595383,False
+PACE UNIVERSITY WEB,education_gov_membership,education_gov_membership,0.68,0.5996994376182556,2026-04-30,dc:636272,False
+PAN PACIFIC HOTEL SEAT,lodging,lodging,0.74,0.6036416888237,2024-03-07,dc:569617,False
+PAPERROLLS-N-MORE,office_supplies,professional_services,0.62,0.48868268728256226,2024-08-08,dc:587782,True
+PARK AVENUE PHYSICAL T,health,health,0.72,0.6157880425453186,2024-07-25,dc:581280,False
+PARKING VANGUARD,transport_auto_fuel,transport_auto_fuel,0.55,0.6056917905807495,2026-04-14,dc:627057,False
+PATCH SECURITY SOL,professional_services,industrial_hardware,0.62,0.46462857723236084,2024-06-25,dc:550848,True
+PAUL BROWN JR,professional_services,professional_services,0.42,0.6120998859405518,2025-03-06,dc:616264,False
+PAWTREE,health,retail,0.55,0.6069762706756592,2024-05-01,dc:527361,True
+PAXUSA LLC,health,health,0.42,0.5540434122085571,2026-05-07,dc:637966,False
+PAY,financial_postal_shipping,retail,0.3,0.551530659198761,2024-08-29,dc:587563,True
+PAY EDENS LP - EVENTS,retail,professional_services,0.58,0.5206452012062073,2026-02-25,dc:633776,True
+PAY TALKIN TACOS,restaurants,restaurants,0.63,0.5089836716651917,2026-07-29,dc:636523,False
+PAYMENT CANVASDISCOUNT,retail,entertainment_media,0.62,0.5363284945487976,2024-08-31,dc:584293,True
+PBLWORKS PBL OPEN ONL,education_gov_membership,education_gov_membership,0.66,0.620427668094635,2025-06-23,dc:621578,False
+PBO7.A,transport_auto_fuel,entertainment_media,0.28,0.6093320846557617,2025-12-11,dc:611709,True
+PEAK TRAMWAYS,transport_auto_fuel,airlines_travel,0.75,0.4624215364456177,2025-06-04,dc:618250,True
+PEMBERTON FABRICATORS,industrial_hardware,industrial_hardware,0.6,0.5203378200531006,2026-04-27,dc:627993,False
+PEOPLECERT,education_gov_membership,education_gov_membership,0.68,0.568149745464325,2025-07-29,dc:600389,False
+PERRY AIRE SERVICES IN,professional_services,industrial_hardware,0.76,0.5411580204963684,2026-06-04,dc:632070,True
+PETE PIRINGER,professional_services,education_gov_membership,0.5,0.6247926950454712,2025-09-26,dc:617299,True
+PHLXK - LDG - HH PHILA,lodging,lodging,0.72,0.5129543542861938,2025-05-27,dc:610081,False
+PI #WPC25TULSA,industrial_hardware,education_gov_membership,0.58,0.5758532285690308,2024-03-19,dc:527873,True
+PICASSO GALLERY CUSTOM,professional_services,retail,0.58,0.5126622915267944,2024-05-31,dc:546569,True
+PITTSBURGH WATER COOLE,office_supplies,industrial_hardware,0.34,0.5208351016044617,2026-03-07,dc:625201,True
+PLANABLE,software_electronics,software_electronics,0.42,0.5132836103439331,2024-05-30,dc:549817,False
+PLASTEK CARDS,office_supplies,office_supplies,0.55,0.542532205581665,2025-01-29,dc:571537,False
+PLUMAGE AND CAPE - EE,entertainment_media,education_gov_membership,0.28,0.41143858432769775,2024-05-17,dc:548079,True
+POLAR LEASING COMPANY,industrial_hardware,industrial_hardware,0.55,0.571037232875824,2024-05-09,dc:564123,False
+POLLO D ORO,restaurants,restaurants,0.68,0.6195016503334045,2024-09-05,dc:586442,False
+POLLYS AT THE PIER,restaurants,restaurants,0.74,0.522987425327301,2025-08-03,dc:608157,False
+PRESTIGERID,transport_auto_fuel,transport_auto_fuel,0.62,0.5513071417808533,2026-06-14,dc:631778,False
+PRH,education_gov_membership,retail,0.4,0.6244553327560425,2024-05-16,dc:545616,True
+PRINT ORACLE,retail,office_supplies,0.58,0.5781426429748535,2024-08-14,dc:584561,True
+PROFESSOR MESSER,education_gov_membership,education_gov_membership,0.52,0.6210924386978149,2025-10-16,dc:609312,False
+PROGRESS-IPS,professional_services,software_electronics,0.38,0.5301674008369446,2026-07-20,dc:636070,True
+PROJECTREAD.AI,education_gov_membership,software_electronics,0.58,0.5765507817268372,2024-07-11,dc:581587,True
+"PROPPER E-COMMERCE, IN",retail,retail,0.65,0.5899785161018372,2025-11-04,dc:599224,False
+PROSPECT WATERPROOFING,professional_services,industrial_hardware,0.72,0.47350066900253296,2024-07-19,dc:579150,True
+PSDSHOPCC,software_electronics,software_electronics,0.42,0.6283313632011414,2024-10-13,dc:583440,False
+PSK CREATIVE,professional_services,entertainment_media,0.66,0.633529543876648,2026-02-24,dc:637804,True
+PTI ARTECHOUSE DC,entertainment_media,software_electronics,0.66,0.6002782583236694,2024-01-10,dc:527981,True
+PULLERBEAR,industrial_hardware,industrial_hardware,0.66,0.5444636344909668,2025-06-13,dc:617470,False
+PURPLEPATCHDC,restaurants,restaurants,0.72,0.5305942893028259,2026-04-23,dc:629192,False
+PY COMMERCIAL VEHICLE,transport_auto_fuel,education_gov_membership,0.42,0.5678625702857971,2025-08-20,dc:609827,True
+PY DC SHIRT AND PRIN,retail,office_supplies,0.58,0.5967181324958801,2025-03-14,dc:612637,True
+PY DUNBAR HS ALUMNI F,education_gov_membership,education_gov_membership,0.58,0.5719552040100098,2024-01-24,dc:527273,False
+PY LIFE LAB SCIENCE,education_gov_membership,education_gov_membership,0.55,0.5337254405021667,2025-06-12,dc:622745,False
+PY NIENHUIS&TOUTABOU,education_gov_membership,office_supplies,0.25,0.49399232864379883,2026-01-20,dc:621038,True
+PY NORTHEAST RECYCLIN,industrial_hardware,education_gov_membership,0.46,0.460895299911499,2024-09-05,dc:585143,True
+Q N Q CLEANERS,retail,professional_services,0.62,0.632099449634552,2025-06-18,dc:622366,True
+QEP PROFESSIONAL B,professional_services,office_supplies,0.58,0.5713335275650024,2026-05-08,dc:633936,True
+QUALIFICATION TARGETS,professional_services,industrial_hardware,0.42,0.527390718460083,2024-08-06,dc:584891,True
+QUENTIN WALSTON,education_gov_membership,entertainment_media,0.45,0.5711788535118103,2025-03-14,dc:611018,True
+QUENTINS CUSTOM FA,industrial_hardware,industrial_hardware,0.42,0.6059541702270508,2024-04-09,dc:560091,False
+QUESTHEALTH,health,health,0.72,0.6309473514556885,2026-07-21,dc:633236,False
+R SEDALIA,entertainment_media,professional_services,0.45,0.5858712792396545,2024-09-18,dc:591456,True
+RACE PROVEN MOTORS,industrial_hardware,transport_auto_fuel,0.42,0.4920109510421753,2025-01-14,dc:574098,True
+RADIATION DETECTION CO,health,health,0.55,0.4750572443008423,2025-11-17,dc:601286,False
+RAJIV PAUL,entertainment_media,education_gov_membership,0.58,0.5827975273132324,2025-11-17,dc:601283,True
+REAL FUN CONTENT L,entertainment_media,professional_services,0.42,0.46388566493988037,2025-09-23,dc:617687,True
+REALTYRATESCOM,professional_services,office_supplies,0.55,0.5278869867324829,2024-09-05,dc:588024,True
+RECON POWER BIKES,transport_auto_fuel,transport_auto_fuel,0.48,0.49620503187179565,2025-01-06,dc:572835,False
+RED ROOSTER - OVE,restaurants,restaurants,0.72,0.44438862800598145,2024-01-23,dc:526446,False
+REDWOOD TOXICOLOGY LAB,health,health,0.55,0.5301067233085632,2024-02-07,dc:565652,False
+REDWOODARTGROUP,entertainment_media,entertainment_media,0.58,0.5461823344230652,2024-11-25,dc:574645,False
+"REINGOLD LINK, LLC",professional_services,retail,0.62,0.6084436774253845,2025-03-19,dc:611059,True
+RELYCO SALES INC,office_supplies,office_supplies,0.63,0.5898264646530151,2024-09-09,dc:589694,False
+RENELL ROBERTS,professional_services,professional_services,0.42,0.6367969512939453,2025-03-11,dc:610595,False
+RES CROWNEPLAZ,lodging,lodging,0.72,0.5565792322158813,2025-09-10,dc:617595,False
+RES GARLANDHOT,restaurants,lodging,0.42,0.5910642147064209,2026-04-20,dc:624252,True
+RES INTERCONTI,lodging,lodging,0.72,0.47589194774627686,2026-04-22,dc:625083,False
+RES SPRINGHILL,lodging,lodging,0.58,0.6028047204017639,2026-01-30,dc:598540,False
+RESEARCHKICK,professional_services,software_electronics,0.58,0.5875295400619507,2024-10-21,dc:579336,True
+RESIDENTIAL LIFE,lodging,education_gov_membership,0.45,0.5981519222259521,2024-04-26,dc:558767,True
+RESPONSE ROADSIDE ASST,transport_auto_fuel,education_gov_membership,0.59,0.5362870097160339,2025-12-12,dc:614577,True
+RESTORE AMERICAS ESTUA,professional_services,education_gov_membership,0.65,0.4640960097312927,2024-07-26,dc:583320,True
+REVIVEENTP,education_gov_membership,education_gov_membership,0.4,0.4975837469100952,2025-01-26,dc:573512,False
+REXEL,industrial_hardware,industrial_hardware,0.45,0.46981334686279297,2024-07-23,dc:579222,False
+REYNOLDS DEVELOPME,professional_services,entertainment_media,0.54,0.41488707065582275,2024-05-07,dc:527817,True
+"RICOH USA, INC",office_supplies,office_supplies,0.63,0.6445959806442261,2026-02-22,dc:635354,False
+RIO@RIOHOLADAY,professional_services,retail,0.62,0.6091687083244324,2024-05-14,dc:547255,True
+ROAR POSTAL SUPPLIES,financial_postal_shipping,office_supplies,0.66,0.5449185967445374,2024-03-14,dc:570073,True
+ROCKY GAP CASINO HOTE,lodging,lodging,0.72,0.5389721393585205,2024-09-04,dc:589644,False
+ROLLING SNACK JUNK,entertainment_media,groceries,0.41,0.46391063928604126,2025-05-23,dc:603944,True
+ROXURY WARBURTON P,professional_services,office_supplies,0.28,0.47067224979400635,2025-12-05,dc:611637,True
+ROYAL SONESTA CHASE PA,lodging,lodging,0.72,0.6231075525283813,2024-08-14,dc:587401,False
+RSS.APP,software_electronics,software_electronics,0.54,0.49111735820770264,2026-01-05,dc:608751,False
+RUBICON RUBICON NEXT,entertainment_media,software_electronics,0.21,0.49283671379089355,2024-03-15,dc:529888,True
+RUSH TRANSFORMING CHAP,education_gov_membership,health,0.62,0.5356287360191345,2024-09-10,dc:589298,True
+RYDER EIPP US,transport_auto_fuel,transport_auto_fuel,0.65,0.5553606748580933,2025-06-17,dc:622769,False
+SACXS - LDG - HH SACRA,education_gov_membership,lodging,0.28,0.5489383935928345,2025-12-11,dc:613332,True
+SAFE QUALITY SEAFO,professional_services,professional_services,0.58,0.5101152658462524,2025-04-02,dc:615606,False
+SAGAMORE RESORT LODGIN,lodging,lodging,0.74,0.642557680606842,2024-02-17,dc:564912,False
+SAHARA HOTEL OPER,lodging,lodging,0.78,0.6323467493057251,2024-04-08,dc:560913,False
+SANDISK,software_electronics,software_electronics,0.55,0.5199762582778931,2026-02-26,dc:637842,False
+SAWYER BOOKING FEE,professional_services,education_gov_membership,0.42,0.5319522619247437,2024-06-27,dc:546763,True
+SCANAVENGE #US-2026-0,retail,software_electronics,0.62,0.44090884923934937,2026-03-16,dc:625272,True
+SCENTAIR TECHNOLOGIES,professional_services,industrial_hardware,0.62,0.44190341234207153,2025-12-18,dc:614171,True
+SCHOOL OF STORY DESIGN,education_gov_membership,education_gov_membership,0.66,0.5537551641464233,2024-07-18,dc:582469,False
+SCHOOL SW INV-40881,education_gov_membership,education_gov_membership,0.55,0.6278886198997498,2025-01-27,dc:576378,False
+SCHOOLSTATUS,education_gov_membership,software_electronics,0.62,0.6211454272270203,2024-04-04,dc:558860,True
+SCOREBOARD ENTERPRISES,entertainment_media,entertainment_media,0.58,0.5816959142684937,2024-07-18,dc:582883,False
+SECURITIES & INSURANCE,financial_postal_shipping,education_gov_membership,0.42,0.5883259773254395,2024-10-12,dc:582212,True
+SEE IN COLORS,professional_services,professional_services,0.62,0.5148182511329651,2024-11-07,dc:572134,False
+SELFIE BOO (2 OF 2 PA,entertainment_media,entertainment_media,0.55,0.5386554002761841,2025-02-11,dc:592055,False
+SG COMMANDERS TICKETS,entertainment_media,entertainment_media,0.62,0.5213096737861633,2024-10-03,dc:583809,False
+SHAREFILE PAYLINK,software_electronics,software_electronics,0.58,0.45330625772476196,2025-11-03,dc:597563,False
+SHEEO,education_gov_membership,education_gov_membership,0.55,0.6259607076644897,2024-06-14,dc:547064,False
+SHEPHERD UNIV BUSINESS,education_gov_membership,education_gov_membership,0.58,0.6067231893539429,2024-03-01,dc:568267,False
+SHERATON PALO ALTO HOT,lodging,lodging,0.72,0.5845730304718018,2025-01-10,dc:573673,False
+SHIP U CAREER CTR,education_gov_membership,education_gov_membership,0.58,0.5778319835662842,2024-03-18,dc:525435,False
+SILVER LINING DESI,professional_services,professional_services,0.32,0.5163488388061523,2025-09-24,dc:618094,False
+SKYLOTEC NORTH AME,industrial_hardware,professional_services,0.6,0.5486566424369812,2025-09-02,dc:617556,True
+SMART TINT INC,office_supplies,industrial_hardware,0.28,0.5430580973625183,2025-01-03,dc:573226,True
+SMCM,education_gov_membership,education_gov_membership,0.56,0.623499870300293,2024-10-30,dc:579839,False
+"SMILE BIG, DREAM B",education_gov_membership,education_gov_membership,0.4,0.4147777557373047,2024-07-30,dc:578035,False
+SMU DEA,education_gov_membership,education_gov_membership,0.58,0.5498465299606323,2024-02-16,dc:565302,False
+SOCIAL THINKING,education_gov_membership,retail,0.42,0.6196222901344299,2025-01-03,dc:576495,True
+SOCIALPILOT,software_electronics,software_electronics,0.64,0.6245296001434326,2024-07-25,dc:580044,False
+SOIL AND LAND USE TECH,professional_services,professional_services,0.72,0.5312449932098389,2024-08-02,dc:585296,False
+SOKA TRIBE,entertainment_media,entertainment_media,0.65,0.5048249363899231,2026-07-01,dc:636632,False
+"SONJA L. REEVES, R",professional_services,professional_services,0.62,0.4438728094100952,2024-07-29,dc:582525,False
+SOS SUPPLY,industrial_hardware,health,0.42,0.5520612597465515,2026-07-28,dc:636557,True
+SOULTARIAN,restaurants,restaurants,0.62,0.585452675819397,2024-04-25,dc:564496,False
+SOURCE NORTH AMERICA,industrial_hardware,industrial_hardware,0.42,0.6327202320098877,2025-04-13,dc:616507,False
+SOUTHVISI B,entertainment_media,education_gov_membership,0.32,0.5590471029281616,2024-08-23,dc:587486,True
+SP AC WORKS,industrial_hardware,retail,0.62,0.4970061779022217,2024-10-14,dc:583837,True
+SP ACPARTSDISTRIBUTO,industrial_hardware,industrial_hardware,0.62,0.6043938994407654,2024-07-15,dc:579529,False
+SP ANKER SOLIX,retail,software_electronics,0.58,0.649964451789856,2026-06-22,dc:632377,True
+SP AVALON,retail,industrial_hardware,0.42,0.6412820816040039,2025-05-27,dc:608438,True
+SP BASE CASE,retail,software_electronics,0.35,0.5592747926712036,2026-07-07,dc:638661,True
+SP BRINNOSTORE,retail,entertainment_media,0.58,0.6366171836853027,2025-06-30,dc:599467,True
+SP CALLEVARIVERSTORE,retail,entertainment_media,0.62,0.5444311499595642,2024-04-02,dc:563766,True
+SP CINESTILLFILM,entertainment_media,entertainment_media,0.55,0.6028444766998291,2026-03-03,dc:629662,False
+SP CRASH DATA GROUP,professional_services,transport_auto_fuel,0.62,0.5436210632324219,2025-02-27,dc:595407,True
+SP CREATIVE CO BOOKS,education_gov_membership,retail,0.32,0.5964261293411255,2026-04-28,dc:623898,True
+SP DENCHFIELD NURSER,retail,industrial_hardware,0.62,0.5989920496940613,2024-01-04,dc:527948,True
+SP DIRECTMAIL,professional_services,retail,0.42,0.5252580046653748,2026-05-15,dc:637194,True
+SP DISCOUNTFILTERSTORE,retail,industrial_hardware,0.62,0.6209291219711304,2026-03-06,dc:627258,True
+SP DTF BANK,industrial_hardware,office_supplies,0.64,0.5175498723983765,2026-06-29,dc:631672,True
+SP FANSIDEA,retail,retail,0.62,0.5928027033805847,2024-03-08,dc:569218,False
+SP FCSPORTS,retail,retail,0.42,0.64113450050354,2026-04-24,dc:626338,False
+SP FIREKING,office_supplies,office_supplies,0.58,0.6034263968467712,2025-06-12,dc:623150,False
+SP FIRESTATIONFURNIT,retail,retail,0.42,0.6109341979026794,2026-04-29,dc:625124,False
+SP FORK FARMS,groceries,industrial_hardware,0.25,0.5872864127159119,2025-06-26,dc:622812,True
+SP FOX 40 USA,retail,entertainment_media,0.62,0.5211619138717651,2024-10-30,dc:581067,True
+SP FRESHWATERSYSTEMS,retail,industrial_hardware,0.62,0.5746654272079468,2024-05-01,dc:525292,True
+SP FUEL SAFE SYSTEMS,industrial_hardware,industrial_hardware,0.58,0.49894165992736816,2026-03-03,dc:629668,False
+SP GEARDRYER,industrial_hardware,entertainment_media,0.58,0.5051659941673279,2025-02-04,dc:576862,True
+SP GORSKI PUBLICATIO,education_gov_membership,software_electronics,0.42,0.6119145750999451,2024-04-12,dc:563029,True
+SP GORUCK,retail,retail,0.58,0.5476256608963013,2025-11-07,dc:600828,False
+SP HAIVISION,software_electronics,software_electronics,0.68,0.6313586235046387,2024-06-17,dc:545457,False
+SP HEARTLANDHATTERS,retail,retail,0.75,0.6116320490837097,2025-04-22,dc:613250,False
+SP HIGH TOP CAPES LTD,retail,retail,0.58,0.5036135315895081,2026-04-08,dc:626606,False
+SP INDUSTRIAL CLEAR,industrial_hardware,industrial_hardware,0.58,0.617055356502533,2024-01-31,dc:570503,False
+SP ISLAMICPLACE,retail,retail,0.58,0.5534918904304504,2026-07-29,dc:636527,False
+SP KIEFERAUCTIONSUPP,professional_services,retail,0.55,0.504562497138977,2024-02-28,dc:569882,True
+SP KNOT ROPE,industrial_hardware,software_electronics,0.58,0.5335773825645447,2026-05-31,dc:630618,True
+SP LAKEWOOD PRODUCTS,retail,entertainment_media,0.62,0.5877873301506042,2026-06-29,dc:631688,True
+SP LOOPUS,entertainment_media,retail,0.28,0.5508488416671753,2024-04-24,dc:561631,True
+SP LUXELUTION,health,software_electronics,0.42,0.6246544122695923,2024-05-26,dc:548562,True
+SP MECHMAXX,industrial_hardware,industrial_hardware,0.62,0.4897618293762207,2025-08-04,dc:607752,False
+SP MILTON INDUSTRIES,industrial_hardware,industrial_hardware,0.62,0.5406185984611511,2025-01-30,dc:575190,False
+SP MONOTYPEFONTS,professional_services,software_electronics,0.62,0.4657355546951294,2025-11-17,dc:601697,True
+SP NICKOFTIME3,retail,retail,0.58,0.5512341856956482,2024-04-29,dc:563686,False
+SP PROVIZ-SPORTS,retail,retail,0.72,0.6248654127120972,2025-01-24,dc:573124,False
+SP STOUTBUCKETS,industrial_hardware,industrial_hardware,0.65,0.5999539494514465,2026-03-26,dc:629807,False
+SP TELEMETRYTV SHOP,software_electronics,software_electronics,0.66,0.5501516461372375,2025-03-18,dc:616350,False
+SP USA BEARINGS BE,industrial_hardware,software_electronics,0.66,0.42053794860839844,2026-02-27,dc:623951,True
+SP VANTRUE,transport_auto_fuel,entertainment_media,0.62,0.6039755940437317,2026-04-23,dc:624688,True
+SP W. R. LONG INC. PAR,industrial_hardware,industrial_hardware,0.66,0.636189877986908,2025-09-12,dc:620466,False
+SP WPE PRODUCTION,professional_services,office_supplies,0.58,0.5083743333816528,2025-05-30,dc:619485,True
+SPARK FUN ELECTRONICS,retail,software_electronics,0.62,0.5737671852111816,2026-06-26,dc:632573,True
+SPENCER RESOURCES INC,education_gov_membership,industrial_hardware,0.58,0.6003978252410889,2026-07-17,dc:633671,True
+SPORTS LAWYERS ASSOC,education_gov_membership,education_gov_membership,0.68,0.6281399726867676,2024-05-06,dc:526179,False
+SSAADMINISTRATIVE COLL,office_supplies,education_gov_membership,0.28,0.44081175327301025,2024-05-28,dc:545278,True
+SSP INSTITUTECHILDSUC,education_gov_membership,education_gov_membership,0.58,0.6136330962181091,2026-01-22,dc:621472,False
+SSSR TRIPL,education_gov_membership,education_gov_membership,0.62,0.6252539753913879,2024-09-19,dc:595965,False
+SSWORLDWIDEI,education_gov_membership,entertainment_media,0.55,0.5513803362846375,2025-12-11,dc:611274,True
+ST. ELIZABETH GARA,professional_services,transport_auto_fuel,0.42,0.4723629951477051,2024-09-16,dc:595107,True
+ST. JOHNS - HANDSHAKE,education_gov_membership,professional_services,0.55,0.6387963891029358,2024-03-19,dc:528690,True
+STA CONTRACTING INC,professional_services,industrial_hardware,0.62,0.6356418132781982,2026-07-17,dc:634485,True
+STANFORD EB YOUCUBED G,education_gov_membership,education_gov_membership,0.72,0.5930646657943726,2025-01-22,dc:574725,False
+STARBUCKS ESPLAN LAS,retail,restaurants,0.55,0.6138190627098083,2026-05-19,dc:637630,True
+STARLING ATLANTA MIDTO,lodging,lodging,0.74,0.4611109495162964,2024-06-01,dc:546151,False
+STATE OF BLK LEARNING,education_gov_membership,education_gov_membership,0.59,0.5506247282028198,2024-05-01,dc:527752,False
+STAUFFER-HENLEY INC,industrial_hardware,industrial_hardware,0.62,0.5942049622535706,2025-04-28,dc:614909,False
+STEADFAST SUPPLY,retail,retail,0.58,0.5585730671882629,2026-02-04,dc:600160,False
+STERN CTR FOR LANGUAGE,education_gov_membership,education_gov_membership,0.62,0.5650007128715515,2026-04-08,dc:623780,False
+STITCHESDC,professional_services,retail,0.66,0.5678502917289734,2024-09-03,dc:585963,True
+STRATEGIC HOME MED,health,software_electronics,0.58,0.4968852400779724,2025-12-29,dc:616251,True
+STROZZI INSTITUTE FOR,education_gov_membership,education_gov_membership,0.56,0.5405150055885315,2024-07-31,dc:577604,False
+STRYKER MEDICAL,health,health,0.72,0.45822227001190186,2025-12-03,dc:616152,False
+STS EDUCATION,education_gov_membership,software_electronics,0.4,0.5906838774681091,2025-02-10,dc:591247,True
+SUBURBAN PROPANE,telecom_utilities,transport_auto_fuel,0.55,0.6375918388366699,2024-07-10,dc:583214,True
+SUITE NATION,entertainment_media,entertainment_media,0.68,0.5462592840194702,2025-10-17,dc:609712,False
+SUMMIT RESPONSIBLE SOL,health,professional_services,0.52,0.6065738201141357,2024-05-10,dc:546417,True
+SUPABASE,software_electronics,software_electronics,0.55,0.6022324562072754,2025-08-28,dc:608682,False
+SUPER SEER CORPORATION,industrial_hardware,industrial_hardware,0.58,0.5889803171157837,2025-02-05,dc:571960,False
+SUSAN RAHIMZADEH,professional_services,education_gov_membership,0.42,0.5424145460128784,2025-07-22,dc:600352,True
+SUTRADHAR INSTITUT,education_gov_membership,entertainment_media,0.58,0.6121610403060913,2025-11-14,dc:599648,True
+SWP CCS NEW JERSEY E Z,telecom_utilities,professional_services,0.42,0.6275261640548706,2026-06-08,dc:632470,True
+SXSW LLC INTERNET,entertainment_media,education_gov_membership,0.62,0.5687738656997681,2025-01-17,dc:575107,True
+T STATS SUPPLY INC,industrial_hardware,industrial_hardware,0.62,0.6034050583839417,2024-01-02,dc:530829,False
+T.O.A.O,entertainment_media,retail,0.28,0.5175569653511047,2025-01-29,dc:574336,True
+TAAL ACADEMY OF DA,education_gov_membership,entertainment_media,0.56,0.5971649289131165,2025-11-17,dc:601282,True
+TABLE FOR TWO USA,education_gov_membership,education_gov_membership,0.66,0.46301865577697754,2026-05-26,dc:637673,False
+TABLE MOUNTAIN GROUP L,professional_services,education_gov_membership,0.42,0.5410939455032349,2024-05-21,dc:546468,True
+TALKING STICK RESORT L,lodging,lodging,0.72,0.5459374785423279,2024-04-09,dc:562163,False
+TAPESTRY ATLANTA,lodging,lodging,0.72,0.4930580258369446,2024-11-08,dc:575389,False
+TASKFORCE NATIONAL IM,professional_services,education_gov_membership,0.42,0.5411260724067688,2024-07-10,dc:578254,True
+TEAMUP BUSINESS,software_electronics,software_electronics,0.58,0.5915500521659851,2025-02-10,dc:596525,False
+TED'S BULLETIN NO,restaurants,restaurants,0.78,0.5521860122680664,2025-10-16,dc:607259,False
+TEE SHIRT PALACE,retail,retail,0.68,0.5770750045776367,2025-12-02,dc:610859,False
+TEMI CO TRANSCRIPTION,professional_services,professional_services,0.58,0.6321812272071838,2025-08-15,dc:606978,False
+TERRY S TASTE,professional_services,restaurants,0.62,0.5369979739189148,2026-06-08,dc:632307,True
+TESOL TRAINERS,education_gov_membership,education_gov_membership,0.58,0.6075651049613953,2024-07-24,dc:577985,False
+TEXAS ROADHOUSE,restaurants,restaurants,0.78,0.6040197610855103,2025-12-28,dc:611324,False
+THE AULD DUBLINER,entertainment_media,restaurants,0.55,0.5135540962219238,2026-06-05,dc:630815,True
+THE BROADMOOR RESRVATI,lodging,lodging,0.68,0.4691436290740967,2024-11-11,dc:571772,False
+THE CAKEROOM,retail,restaurants,0.62,0.547678530216217,2025-11-18,dc:597602,True
+THE CARLYLE ROOM,lodging,restaurants,0.72,0.5914353132247925,2024-02-02,dc:567251,True
+THE CHIRON PROJECT,professional_services,professional_services,0.42,0.5683457255363464,2026-04-20,dc:629581,False
+THE EXPERIENCE BAN,entertainment_media,entertainment_media,0.58,0.37525177001953125,2025-02-18,dc:593699,False
+THE FITGURL STUDIO,health,professional_services,0.55,0.5025465488433838,2024-07-30,dc:579253,True
+THE JOSEPH NASHVILLE,lodging,lodging,0.74,0.6289225220680237,2025-02-22,dc:591728,False
+"THE LEO KENT HOTEL, TU",lodging,lodging,0.78,0.6189802289009094,2024-10-16,dc:580992,False
+THE LIONS STORY,education_gov_membership,education_gov_membership,0.28,0.6052471995353699,2024-05-13,dc:545194,False
+THE MADDEN CORPORATION,professional_services,industrial_hardware,0.55,0.6046428680419922,2026-04-25,dc:625943,True
+THE MILL OF WHITEFORD,retail,retail,0.62,0.5862890481948853,2025-04-15,dc:611208,False
+THE PHOTOT (1 OF 1 PA,entertainment_media,professional_services,0.28,0.5634227991104126,2025-10-22,dc:607700,True
+THE RUSSELL,restaurants,lodging,0.58,0.4311790466308594,2024-07-12,dc:583629,True
+THE SALON PROFESSIONAL,education_gov_membership,education_gov_membership,0.58,0.5331104397773743,2024-05-21,dc:549357,False
+THE SPROUTS HEALTH,health,education_gov_membership,0.62,0.6302549839019775,2024-03-05,dc:569989,True
+THE SUNWATER INSTITUTE,education_gov_membership,education_gov_membership,0.62,0.620734691619873,2026-05-20,dc:636775,False
+THE TOGETHER GROUP,education_gov_membership,education_gov_membership,0.42,0.6465362310409546,2026-05-05,dc:638765,False
+THE WEST VIRGINIA STAT,education_gov_membership,education_gov_membership,0.54,0.6406640410423279,2024-01-22,dc:525220,False
+THE WESTIN SD GASLAMP,lodging,lodging,0.72,0.6488779783248901,2025-04-07,dc:611964,False
+THELITTLETOWNSMUSEUM,education_gov_membership,entertainment_media,0.58,0.5133614540100098,2026-05-01,dc:637511,True
+THEPESPECIALIST,education_gov_membership,education_gov_membership,0.45,0.5175097584724426,2024-09-04,dc:589652,False
+THERECORDXCHANGE,professional_services,software_electronics,0.58,0.4247221350669861,2024-10-16,dc:578890,True
+THINKAUM LLC,education_gov_membership,professional_services,0.42,0.6383074522018433,2024-07-06,dc:583187,True
+THINKWAVE,education_gov_membership,software_electronics,0.58,0.5698369145393372,2024-08-22,dc:587910,True
+THREE FIFTY,restaurants,restaurants,0.58,0.5431566834449768,2024-05-29,dc:548586,False
+THUMB RUN K9 L.L.C,professional_services,industrial_hardware,0.52,0.4339451789855957,2025-12-01,dc:615349,True
+THY 23,entertainment_media,airlines_travel,0.42,0.48798322677612305,2025-07-17,dc:601570,True
+TICKETS NET INCLUS,entertainment_media,education_gov_membership,0.58,0.6230992078781128,2025-01-27,dc:576797,True
+TICKETSPOTTY PROB,entertainment_media,education_gov_membership,0.42,0.5827484726905823,2024-03-04,dc:568350,True
+TIME MISSION MANASSAS,entertainment_media,entertainment_media,0.72,0.4731888175010681,2025-04-16,dc:612006,False
+TIMOTHY O TOOLE S PUB,entertainment_media,restaurants,0.74,0.4914054870605469,2024-08-16,dc:585442,True
+TIPPI TOES DC,education_gov_membership,entertainment_media,0.62,0.5257096886634827,2025-06-10,dc:621938,True
+TIS NO YOLK/RENT T,entertainment_media,professional_services,0.58,0.5986008048057556,2026-04-09,dc:628284,True
+TLS SECURITY MANAG,professional_services,professional_services,0.68,0.6054457426071167,2024-02-26,dc:565774,False
+TO BE DONE STUDIO,professional_services,professional_services,0.58,0.5403384566307068,2026-02-03,dc:602236,False
+TONYLAMAR PRODUCTI,entertainment_media,entertainment_media,0.32,0.618183970451355,2026-05-18,dc:634790,False
+TOO TIGHT SERVICES,professional_services,professional_services,0.72,0.5194931626319885,2024-07-15,dc:578700,False
+TRAYPML,office_supplies,office_supplies,0.65,0.5159637928009033,2025-01-27,dc:571503,False
+TREATMENT INNOVATI,health,health,0.58,0.5978832244873047,2026-06-18,dc:630712,False
+TRISTAN ALEXANDER,professional_services,entertainment_media,0.6,0.4976469874382019,2024-01-05,dc:526320,True
+TSHIRTIST BY DEAD BAT,retail,retail,0.56,0.4910944104194641,2024-08-30,dc:586762,False
+TWWSUBSCRIPTION,entertainment_media,software_electronics,0.62,0.5614848732948303,2024-02-20,dc:569434,True
+U STREET PARKI00 OF 00,entertainment_media,transport_auto_fuel,0.42,0.5749332308769226,2025-10-23,dc:606876,True
+UA LIBRARY,education_gov_membership,education_gov_membership,0.6,0.6244529485702515,2025-07-17,dc:602374,False
+UNIONCENTRICS / ICEN,professional_services,software_electronics,0.42,0.5138669013977051,2024-02-16,dc:566119,True
+UNITED REFRIG BR,industrial_hardware,industrial_hardware,0.62,0.5386756658554077,2025-06-20,dc:617071,False
+UNIVERSITY OF TOLEDO M,education_gov_membership,education_gov_membership,0.74,0.6126314401626587,2024-02-06,dc:570545,False
+UPMC EDUCATION,education_gov_membership,education_gov_membership,0.55,0.5415480732917786,2025-02-26,dc:594194,False
+US GRANT SANDIEGO FD,lodging,lodging,0.78,0.5172179341316223,2025-02-12,dc:590851,False
+USCIS ELIS I90,professional_services,education_gov_membership,0.52,0.48219454288482666,2026-06-18,dc:630357,True
+USPCA,professional_services,education_gov_membership,0.74,0.6085442304611206,2026-03-30,dc:629442,True
+UWORLD,education_gov_membership,education_gov_membership,0.42,0.6034508943557739,2025-08-15,dc:606577,False
+UWSP CONTINUING ED ONL,education_gov_membership,education_gov_membership,0.66,0.6114040613174438,2024-09-17,dc:591863,False
+VAISALA,industrial_hardware,industrial_hardware,0.58,0.6033229231834412,2024-08-28,dc:585918,False
+VCJT LLC DBA VETER,industrial_hardware,industrial_hardware,0.58,0.5931668281555176,2026-03-18,dc:628543,False
+VDDZCYIX-1,entertainment_media,lodging,0.42,0.5053972005844116,2024-06-16,dc:549136,True
+VENTRIS LE VENTRIS LE,education_gov_membership,retail,0.42,0.4799710512161255,2025-06-13,dc:617874,True
+VERISMA SYSTEMS INC,health,software_electronics,0.74,0.6449940204620361,2024-02-20,dc:569421,True
+VERSATERM PUBLIC SAFET,software_electronics,software_electronics,0.78,0.5685631632804871,2026-04-08,dc:627858,False
+VEVOX VEVOX SUBSCRIPT,software_electronics,software_electronics,0.42,0.4805476665496826,2024-02-16,dc:566517,False
+VHLV- LODGING,lodging,lodging,0.79,0.5766170620918274,2024-08-03,dc:586870,False
+VIEWSONIC,retail,software_electronics,0.42,0.5215743780136108,2025-04-01,dc:613979,True
+VIP ATTRACTIONS - ECOM,airlines_travel,airlines_travel,0.66,0.526077926158905,2024-07-13,dc:584058,False
+VIRGINIA LAW FOUND,professional_services,education_gov_membership,0.25,0.6041303873062134,2025-09-26,dc:618535,True
+VIRGINIA OUTDR PWR-FAI,industrial_hardware,industrial_hardware,0.58,0.519402265548706,2026-04-29,dc:627160,False
+VOCO CHICAGO DOWNTOWN,lodging,lodging,0.72,0.564144492149353,2026-04-16,dc:627904,False
+VOLUNTARY PROTECTION P,professional_services,education_gov_membership,0.42,0.5209529995918274,2024-05-22,dc:545266,True
+VSGB2B,industrial_hardware,industrial_hardware,0.55,0.5565975308418274,2024-10-22,dc:581022,False
+VSP NATIONAL CAPITAL F,professional_services,industrial_hardware,0.42,0.5896618962287903,2025-01-14,dc:573279,True
+VSP WORKWISE COMPLIANC,professional_services,education_gov_membership,0.58,0.48916661739349365,2025-03-11,dc:610579,True
+WARREN HYNSON ART,retail,professional_services,0.42,0.528239905834198,2026-02-26,dc:637026,True
+WATCOFLOORS,industrial_hardware,industrial_hardware,0.72,0.44119155406951904,2026-07-17,dc:634066,False
+WATERGATE INTEGRAT,software_electronics,software_electronics,0.28,0.45585721731185913,2026-04-29,dc:626354,False
+WAVE - BRANDT BUILDS,entertainment_media,professional_services,0.42,0.5542296171188354,2024-03-26,dc:528744,True
+WAVE - CUSTOM WHOLESA,retail,entertainment_media,0.56,0.5189833045005798,2026-03-05,dc:624335,True
+WAVE - GOOD VIDEO,entertainment_media,entertainment_media,0.42,0.6436622142791748,2026-04-13,dc:625838,False
+WAVE - HBCU PRIDE NA,entertainment_media,professional_services,0.42,0.5435568690299988,2025-10-07,dc:606024,True
+WEB BOND BUYER,financial_postal_shipping,office_supplies,0.55,0.5596379637718201,2024-10-14,dc:581778,True
+WELL DUNN CATERING,professional_services,restaurants,0.73,0.6432216763496399,2024-09-09,dc:590116,True
+WENDELL S INC,office_supplies,industrial_hardware,0.55,0.5762228965759277,2025-03-21,dc:615146,True
+WESTIN ATLANTA PERIMET,lodging,lodging,0.72,0.6484797596931458,2026-05-11,dc:636769,False
+WESTIN GALLERIA DALL F,lodging,lodging,0.82,0.5741985440254211,2024-06-12,dc:545044,False
+WHOLEFOODS,groceries,groceries,0.65,0.5852466821670532,2024-05-29,dc:544893,False
+WINDRIVERENVIRONMENTAL,professional_services,industrial_hardware,0.66,0.5502126216888428,2024-02-16,dc:566135,True
+WISEMAN FUNERAL HOME,health,professional_services,0.62,0.5198047757148743,2024-02-09,dc:565664,True
+WOMEN IN GOVERNMENT RE,education_gov_membership,education_gov_membership,0.58,0.6047438383102417,2025-05-07,dc:603899,False
+WOODLAND APPLIANCE REP,professional_services,industrial_hardware,0.56,0.5822120308876038,2024-01-26,dc:527289,True
+WOOLFOLK MECHANICAL &,professional_services,transport_auto_fuel,0.62,0.4933086633682251,2026-07-03,dc:633381,True
+WOOLLY MAMMOTH THEATRE,entertainment_media,education_gov_membership,0.74,0.637795627117157,2026-03-16,dc:625667,True
+WORDPRESS ETSUQCUSNP,education_gov_membership,software_electronics,0.58,0.3996305465698242,2024-06-06,dc:546222,True
+WORKING FIRE FURNI,retail,retail,0.65,0.5226450562477112,2026-04-29,dc:625123,False
+WORLD MARKET ECOMM,retail,retail,0.68,0.6103590130805969,2026-03-19,dc:624482,False
+WOWBRARY.O INTERACTIV,education_gov_membership,professional_services,0.42,0.5149251222610474,2026-04-27,dc:629210,True
+WP DOCSYSINC,professional_services,software_electronics,0.66,0.6106166243553162,2025-02-14,dc:592881,True
+WP GI4-VYOND,professional_services,software_electronics,0.58,0.42002153396606445,2024-03-22,dc:527475,True
+WP MIDEASTERNAPCO,professional_services,education_gov_membership,0.42,0.4936402440071106,2024-06-26,dc:545948,True
+WP PRINCETON GROUNDWA,education_gov_membership,professional_services,0.58,0.5486194491386414,2024-05-28,dc:544870,True
+WP TRUSS SUPPLY,industrial_hardware,industrial_hardware,0.56,0.5789588689804077,2026-05-20,dc:638040,False
+WP UNISONTB,software_electronics,retail,0.32,0.45954984426498413,2024-03-14,dc:570471,True
+WP WELLBODYKITCHEN,health,groceries,0.64,0.5077003836631775,2026-03-16,dc:625263,True
+WWW.ADVANCEAUTOPARTS,retail,transport_auto_fuel,0.62,0.46626734733581543,2025-03-18,dc:616770,True
+WWW.CLIPTO.COM,software_electronics,software_electronics,0.55,0.47940993309020996,2024-09-08,dc:590090,False
+WWW.COLORVOWEL.COM,education_gov_membership,education_gov_membership,0.55,0.6325534582138062,2024-02-22,dc:567004,False
+WWW.FBLA.ORG,education_gov_membership,education_gov_membership,0.68,0.5924549102783203,2024-05-24,dc:547733,False
+WWW.ISFG.ORG,education_gov_membership,education_gov_membership,0.62,0.590297281742096,2025-01-02,dc:574035,False
+WWW.NJAFP.ORG,education_gov_membership,education_gov_membership,0.66,0.5454681515693665,2024-09-04,dc:588402,False
+WWW.RAMAPO.EDU,education_gov_membership,education_gov_membership,0.72,0.6202042102813721,2024-03-19,dc:525824,False
+WWW.RAZER.COM,software_electronics,software_electronics,0.78,0.5159345269203186,2024-03-15,dc:529075,False
+WWW.SEPAPOWER.ORG,education_gov_membership,education_gov_membership,0.72,0.5243120193481445,2026-05-14,dc:635162,False
+WWW.TD.ORG,education_gov_membership,education_gov_membership,0.62,0.566939651966095,2024-08-03,dc:588523,False
+WWW.TES.COM,education_gov_membership,education_gov_membership,0.55,0.5596632957458496,2024-02-20,dc:569827,False
+WWW.UNIVERSALBOOT.COM,industrial_hardware,transport_auto_fuel,0.42,0.447887659072876,2025-02-04,dc:571162,True
+WWW.VARI.COM,office_supplies,retail,0.66,0.5077034831047058,2026-02-27,dc:624363,True
+WWW.WVUF.ORG,education_gov_membership,education_gov_membership,0.42,0.5934585928916931,2024-07-31,dc:588130,False
+XCELEVENTS,entertainment_media,professional_services,0.28,0.5200440287590027,2024-09-06,dc:590103,True
+XP SOLUTIONS LLC,professional_services,office_supplies,0.44,0.6330277919769287,2026-03-18,dc:628548,True
+YALA GREEK ICE CRE,restaurants,restaurants,0.72,0.43461620807647705,2026-07-15,dc:635463,False
+YORK ANALYTICAL LABORA,professional_services,professional_services,0.62,0.5173182487487793,2024-09-25,dc:596843,False
+YORK UPG HANOVER HUB,industrial_hardware,industrial_hardware,0.48,0.47991323471069336,2024-10-22,dc:580156,False
+ZOTERO,software_electronics,software_electronics,0.6,0.6340588331222534,2024-04-04,dc:558459,False
+ZZOUNDS,retail,entertainment_media,0.66,0.5792338252067566,2024-02-14,dc:564883,True

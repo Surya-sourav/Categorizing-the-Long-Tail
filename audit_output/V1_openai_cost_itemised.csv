@@ -1,0 +1,17 @@
+model,prompt,set,calls,merchants,tokens_in,tokens_out,usd
+gpt-5-mini,fallback_no_web,dc_fes,3000,3000,602629,187174,0.525
+gpt-5-mini,fallback_no_web,oklahoma,798,798,160979,48511,0.1373
+gpt-5-mini,fallback_no_web,other (pilot-only etc.),71,71,14270,4427,0.0124
+gpt-5-mini,fallback_no_web_v2,dc_fes,300,300,57577,16887,0.0482
+gpt-5-mini,fallback_with_web,dc_fes,3000,3000,2095195,193879,0.9116
+gpt-5-mini,fallback_with_web,oklahoma,798,798,520900,51844,0.2339
+gpt-5-mini,fallback_with_web,other (pilot-only etc.),71,71,44107,4632,0.0203
+gpt-5-mini,fallback_with_web_v2,dc_fes,300,300,204086,18751,0.0885
+gpt-5-nano,fallback_no_web,dc_fes,3000,3000,602629,157902,0.0933
+gpt-5-nano,fallback_no_web,oklahoma,798,798,160979,42288,0.025
+gpt-5-nano,fallback_no_web,other (pilot-only etc.),71,71,14270,3724,0.0022
+gpt-5-nano,fallback_no_web_v2,dc_fes,300,300,57577,13964,0.0085
+gpt-5-nano,fallback_with_web,dc_fes,3000,3000,2095195,196988,0.1836
+gpt-5-nano,fallback_with_web,oklahoma,798,798,520900,52787,0.0472
+gpt-5-nano,fallback_with_web,other (pilot-only etc.),71,71,44107,4673,0.0041
+gpt-5-nano,fallback_with_web_v2,dc_fes,300,300,204086,19159,0.0179

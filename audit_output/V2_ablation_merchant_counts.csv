@@ -1,0 +1,6 @@
+model,tail_merchants_with_web_only,tail_merchants_no_web_only,paired_intersection_TABLE7,union
+google/diffusiongemma-26b-a4b-it,300,300,300,300
+gpt-5-mini,2500,2500,2500,2500
+gpt-5-nano,2500,2500,2500,2500
+meta/muse-glimmer-30b,298,300,298,300
+nvidia/nemotron-3-super-120b-a12b,322,324,319,327

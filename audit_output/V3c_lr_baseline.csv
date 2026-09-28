@@ -1,0 +1,4 @@
+slice,recomputed,published,delta
+overall,0.6191,0.619,0.0001
+head (f>3),0.7494,0.749,0.0004
+old tail (f<=3),0.3991,0.399,0.0001

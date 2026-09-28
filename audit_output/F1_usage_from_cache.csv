@@ -1,0 +1,6 @@
+model,calls,tokens_in,tokens_out,usd_at_list_price,billable
+google/diffusiongemma-26b-a4b-it,600,269167,35300,0.041,no (free NIM endpoint)
+gpt-5-mini,8338,3699743,526105,1.9771,yes (OpenAI)
+gpt-5-nano,8338,3699743,491485,0.3816,yes (OpenAI)
+meta/muse-glimmer-30b,598,269599,94414,0.1106,no (free NIM endpoint)
+nvidia/nemotron-3-super-120b-a12b,754,341751,163358,0.2495,no (free NIM endpoint)
