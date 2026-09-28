@@ -105,7 +105,6 @@ prompts/              frozen prompt templates, PROMPT_HASHES.json, model_version
 cache/                committed API caches (web_search/, llm/, embeddings/)
 data/taxonomy/        committed MCC mapping, aliases, audit sample
 results/              tables/, figures/, fes/, logs/, window_decision.json
-docs/superpowers/     design spec and implementation plans
 ```
 
 Models pinned in `prompts/model_versions.json`. Embeddings: all-MiniLM-L6-v2, bge-small-en-v1.5,
